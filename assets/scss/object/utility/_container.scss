@@ -1,0 +1,16 @@
+/*
+* コンテナユーティリティ
+*/
+@use "../../foundation/mixin" as *;
+@use "../../foundation/variables" as *;
+
+.u-container {
+  width: min(85.94%, 1100px);
+  margin-inline: auto;
+  &--min {
+    width: min(75%, 960px);
+    @include bp("pc-s") {
+      width: min(85.94%, 1100px);
+    }
+  }
+}

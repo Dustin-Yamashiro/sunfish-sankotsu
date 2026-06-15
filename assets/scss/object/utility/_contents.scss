@@ -1,0 +1,59 @@
+/*
+* WordPress本文用ユーティリティ
+*/
+@use "../../foundation/mixin" as *;
+@use "../../foundation/variables" as *;
+
+.u-contents {
+  line-height: 1.9;
+
+  > * + * {
+    margin-top: 1.5em;
+  }
+
+  h2,
+  h3,
+  h4 {
+    font-weight: 700;
+    line-height: 1.5;
+  }
+
+  h2 {
+    margin-top: 2.5em;
+    padding-bottom: 0.5em;
+    border-bottom: 2px solid $color-main;
+    @include fz(22, 30, "all");
+  }
+
+  h3 {
+    margin-top: 2em;
+    @include fz(20, 24, "all");
+  }
+
+  h4 {
+    margin-top: 1.75em;
+    @include fz(18, 20, "all");
+  }
+
+  a {
+    color: $color-main;
+    text-decoration: underline;
+  }
+
+  ul,
+  ol {
+    padding-left: 1.4em;
+  }
+
+  ul {
+    list-style: disc;
+  }
+
+  ol {
+    list-style: decimal;
+  }
+
+  img {
+    height: auto;
+  }
+}

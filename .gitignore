@@ -1,0 +1,15 @@
+node_modules
+theme/assets
+theme/localhost.json
+vite.log
+localhost.json
+.env
+.env.*
+!.env.example
+.local
+.wp-env.override.json
+.vscode/*
+!.vscode/extensions.json
+.DS_Store
+CLAUDE.local.md
+/original-blocks/build

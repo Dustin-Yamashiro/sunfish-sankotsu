@@ -1,0 +1,27 @@
+/*
+* タグコンポーネント
+*/
+@use "../../foundation/variables" as *;
+
+.c-tag {
+  display: inline-flex;
+  align-items: center;
+  min-height: 28px;
+  padding-inline: 0.8em;
+  border: 1px solid $color-border;
+  border-radius: 999px;
+  color: $color-muted;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  line-height: 1.4;
+
+  &--main {
+    border-color: $color-main;
+    color: $color-main;
+  }
+
+  &--accent {
+    border-color: $color-accent;
+    color: $color-accent;
+  }
+}

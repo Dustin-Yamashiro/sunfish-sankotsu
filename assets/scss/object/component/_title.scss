@@ -1,0 +1,10 @@
+@use "../../foundation/mixin" as *;
+@use "../../foundation/variables" as *;
+
+.c-title {
+  color: $color-black;
+  font-weight: 700;
+  line-height: 1.4;
+  letter-spacing: 0.08em;
+  @include fz(28, 44, "all");
+}

@@ -1,0 +1,55 @@
+/*
+* フォント変数
+*/
+// @font-face {
+//     font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+//     font-family: "Spline Sans";
+//     font-style: normal;
+//     font-weight: 700;
+//     src: url('../fonts/spline-sans-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+// }
+// @font-face {
+//     font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+//     font-family: 'Noto Sans JP';
+//     font-style: normal;
+//     font-weight: 400;
+//     src: url('../fonts/noto-sans-jp.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+// }
+// @font-face {
+//     font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+//     font-family: 'Noto Sans JP';
+//     font-style: normal;
+//     font-weight: 700;
+//     src: url('../fonts/noto-sans-jp-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+// }
+
+// Google Fontsのインポート(一時的に)
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Spline+Sans:wght@700&display=swap');
+
+$font-spline: "Spline Sans", sans-serif;
+$font-noto: "Noto Sans JP", sans-serif;
+
+/*
+* ベースフォント設定
+*/
+$base-font-size: 16px;
+$base-line-height: 1.5;
+
+/*
+* カラー変数
+*/
+$color-white: #fff;
+$color-black: #0B2128;
+$color-gray: #F2F4F5;
+$color-base: $color-white;
+$color-main: #38A5C9;
+$color-accent: #DBB004;
+
+
+
+
+
+
+
+
+

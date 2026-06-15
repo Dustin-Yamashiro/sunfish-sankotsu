@@ -1,0 +1,126 @@
+@use 'sass:math';
+@use 'sass:map';
+@use 'sass:meta';
+@use "../foundation/variables" as *;
+
+/*
+* ブレイクポイント値の配列
+*/
+$breakpoints: (
+  "sp-s": 320px,
+  "sp": 480px,
+  "sp-l": 740px,
+  "tb": 960px,
+  "pc-s" : 1100px,
+  "pc" : 1280px,
+);
+
+// 共通関数
+
+/*
+* 単位を削除する関数
+*/
+@function stripUnit($number) {
+  @if meta.type-of($number) == 'number' and not math.is-unitless($number) {
+    @return math.div($number, ($number * 0 + 1));
+  }
+
+  @return $number;
+}
+
+/*
+* 小数点の四捨五入を行う関数
+*/
+@function roundToDecimal($number, $decimalPlaces) {
+  $multiplier: math.pow(10, $decimalPlaces);
+  @return math.div(math.round($number * $multiplier), $multiplier);
+}
+
+
+// mixin
+
+/*
+* ブレイクポイント用のmixin
+*/
+@mixin bp($device) {
+  @if $device == "pc-l" {
+    @media screen and (width > map.get($breakpoints, "pc")) {
+      @content;
+    }
+  }
+  @if $device == "pc-s" {
+    @media screen and (width <= map.get($breakpoints, "pc-s")) {
+      @content;
+    }
+  }
+  @if $device == "tb" {
+    @media screen and (width <= map.get($breakpoints, "tb")) {
+      @content;
+    }
+  }
+  @if $device == "sp-l" {
+    @media screen and (width <= map.get($breakpoints, "sp-l")) {
+      @content;
+    }
+  }
+  @if $device == "sp" {
+    @media screen and (width <= map.get($breakpoints, "sp")) {
+      @content;
+    }
+  }
+}
+
+/*
+* フォントサイズのレスポンシブ用のmixin
+*/
+@mixin fz($minPx, $maxPx, $device) {
+  // ブレイクポイントの値を取得
+  $maxBreakpoint: "";
+  $minBreakpoint: "";
+  @if $device == "pc" {
+    $maxBreakpoint: stripUnit(map.get($breakpoints, "pc"));
+    $minBreakpoint: stripUnit(map.get($breakpoints, "tb"));
+  }
+  @else if $device == "tb" {
+    $maxBreakpoint: stripUnit(map.get($breakpoints, "tb"));
+    $minBreakpoint: stripUnit(map.get($breakpoints, "sp"));
+  }
+  @else if $device == "sp" {
+    $maxBreakpoint: stripUnit(map.get($breakpoints, "sp"));
+    $minBreakpoint: stripUnit(map.get($breakpoints, "sp-s"));
+  }
+  @else if $device == "all" {
+    $maxBreakpoint: stripUnit(map.get($breakpoints, "pc"));
+    $minBreakpoint: stripUnit(map.get($breakpoints, "sp"));
+  }
+
+  // ベースフォントサイズを取得
+  $baseFz: stripUnit($base-font-size);
+
+  // ベースフォントサイズを基準にしたremフォントサイズを取得
+  $minRem: math.div($minPx, $baseFz);
+  $maxRem: math.div($maxPx, $baseFz);
+  $variablePart: math.div($maxPx - $minPx, $maxBreakpoint - $minBreakpoint);
+  $variableSize: roundToDecimal(
+    math.div($maxPx - $maxBreakpoint * $variablePart, $baseFz), 3
+  );
+
+  // フォントサイズを取得
+  font-size: clamp(
+    #{$minRem}rem,
+    #{$variableSize}rem + #{roundToDecimal($variablePart, 4) * 100}vw,
+    #{$maxRem}rem
+  );
+}
+
+/*
+* z-indexのmixin
+*/
+$layer: (
+  default : 1,
+  header : 10
+);
+@mixin z-index($key) {
+	z-index: map.get($layer, $key);
+}
+

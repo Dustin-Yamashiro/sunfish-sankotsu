@@ -1,0 +1,14 @@
+/*
+* 背景ユーティリティ
+*/
+@use "../../foundation/mixin" as *;
+@use "../../foundation/variables" as *;
+
+.u-bg {
+    &--main {
+        background-color: $color-main;
+    }
+    &--accent {
+        background-color: $color-accent;
+    }
+}

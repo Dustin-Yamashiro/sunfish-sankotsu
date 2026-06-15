@@ -1,0 +1,47 @@
+/*
+* セクションボタンコンポーネント
+*/
+@use "../../foundation/variables" as *;
+
+.c-section-btn {
+  --button-color: #{$color-main};
+
+  &--accent {
+    --button-color: #{$color-accent};
+  }
+
+  &--prev > a::before {
+    content: "←";
+    display: inline-block;
+    margin-right: 0.5em;
+  }
+
+  &--next > a::after {
+    content: "→";
+    display: inline-block;
+    margin-left: 0.5em;
+  }
+
+  & > a,
+  & > button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 160px;
+    min-height: 48px;
+    padding: 0.8em 1.75em;
+    border: 2px solid var(--button-color);
+    border-radius: 999px;
+    background-color: $color-white;
+    color: var(--button-color);
+    font-weight: 700;
+    line-height: 1.4;
+    white-space: nowrap;
+
+    &:hover,
+    &:focus-visible {
+      background-color: var(--button-color);
+      color: $color-white;
+    }
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "name": "local-env",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "engines": {
+    "node": ">=22.12",
+    "npm": ">=10"
+  },
+  "scripts": {
+    "setup": "npm ci && npm run blocks:install && npm run wp:start && npm run wp:setup",
+    "dev": "vite --host 0.0.0.0 --port 5173 --strictPort",
+    "local:start": "bash scripts/local-start.sh",
+    "local:stop": "bash scripts/local-stop.sh",
+    "local:destroy": "bash scripts/local-destroy.sh",
+    "wp:start": "bash scripts/wp-start.sh",
+    "wp:stop": "wp-env stop",
+    "wp:destroy": "wp-env destroy",
+    "wp:setup": "wp-env run cli bash ./wp-setup.sh",
+    "clean": "node scripts/clean.mjs",
+    "build": "npm run clean && npm run build:vite && npm run build:assets && npm run build:blocks",
+    "build:vite": "vite build",
+    "build:assets": "node scripts/build-assets.mjs",
+    "build:blocks": "npm --prefix original-blocks run build",
+    "blocks:install": "npm --prefix original-blocks ci",
+    "deploy:dry": "DRY_RUN=true bash scripts/deploy.sh",
+    "deploy:dev": "bash scripts/deploy.sh dev",
+    "deploy:prod": "bash scripts/deploy.sh prod",
+    "lint:php": "find theme -name '*.php' -print0 | xargs -0 -n1 php -l",
+    "verify": "npm run build && npm run lint:php"
+  },
+  "dependencies": {
+    "glob": "^13.0.6"
+  },
+  "devDependencies": {
+    "@wordpress/env": "^10.13.0",
+    "sass": "^1.82.0",
+    "sharp": "^0.35.1",
+    "svgo": "^4.0.0",
+    "vite": "^8.0.16"
+  }
+}

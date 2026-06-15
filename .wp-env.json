@@ -1,0 +1,14 @@
+{
+    "core": "https://ja.wordpress.org/latest-ja.zip",
+    "themes": [ "./theme" ],
+    "plugins": [ "./original-blocks" ],
+    "mappings" : {
+        "./wp-setup.sh": "./scripts/wp-setup.sh"
+    },
+    "config": {
+        "WP_ENVIRONMENT_TYPE": "local",
+        "WP_DEBUG": true,
+        "SCRIPT_DEBUG": true
+    },
+    "port": 8888
+}

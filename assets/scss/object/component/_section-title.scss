@@ -1,0 +1,32 @@
+/*
+* セクションタイトルコンポーネント
+*/
+@use "../../foundation/mixin" as *;
+@use "../../foundation/variables" as *;
+
+.c-section-title {
+  display: grid;
+  gap: 8px;
+  color: $color-text;
+
+  &--center {
+    width: fit-content;
+    margin-inline: auto;
+    text-align: center;
+  }
+
+  &__main {
+    font-family: $font-heading;
+    font-weight: 700;
+    line-height: 1.35;
+    letter-spacing: 0.08em;
+    @include fz(28, 48, "all");
+  }
+
+  &__sub {
+    color: $color-main;
+    font-weight: 700;
+    line-height: 1.5;
+    @include fz(14, 18, "all");
+  }
+}

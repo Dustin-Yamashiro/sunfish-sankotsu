@@ -1,0 +1,31 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "create-block/original-blocks-simple-list",
+	"version": "0.1.0",
+	"title": "シンプルリスト",
+	"category": "original",
+	"icon": "editor-ul",
+	"description": "箇条書きまたは番号付きのシンプルなリストを表示します。",
+	"example": {},
+	"attributes": {
+		"listType": {
+			"type": "string",
+			"default": "ul"
+		},
+		"items": {
+			"type": "array",
+			"default": [
+				{
+					"text": ""
+				}
+			]
+		}
+	},
+	"supports": {
+		"html": false
+	},
+	"textdomain": "original-blocks",
+	"editorScript": "file:./index.js",
+	"style": "file:./style-index.css"
+}

@@ -1,0 +1,24 @@
+/*
+* セクション共通レイアウト
+*/
+@use "../foundation/mixin" as *;
+
+.l-section {
+  padding-block: 96px;
+
+  @include bp("tb") {
+    padding-block: 72px;
+  }
+
+  @include bp("sp-l") {
+    padding-block: 56px;
+  }
+
+  &--narrow {
+    padding-block: 64px;
+
+    @include bp("sp-l") {
+      padding-block: 40px;
+    }
+  }
+}

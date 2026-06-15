@@ -1,0 +1,45 @@
+/*
+* フォーム共通レイアウト
+*/
+@use "../foundation/mixin" as *;
+@use "../foundation/variables" as *;
+
+.l-form {
+  display: grid;
+  gap: 24px;
+
+  &__row {
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    gap: 24px;
+    align-items: start;
+
+    @include bp("sp-l") {
+      grid-template-columns: 1fr;
+      gap: 8px;
+    }
+  }
+
+  &__label {
+    font-weight: 700;
+  }
+
+  &__control {
+    width: 100%;
+  }
+
+  input,
+  textarea,
+  select {
+    width: 100%;
+    border: 1px solid $color-border;
+    border-radius: $radius-sm;
+    background-color: $color-white;
+    padding: 0.875em 1em;
+  }
+
+  textarea {
+    min-height: 180px;
+    resize: vertical;
+  }
+}

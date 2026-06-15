@@ -1,0 +1,26 @@
+/*
+* 改行ユーティリティ
+*/
+@use "../../foundation/mixin" as *;
+@use "../../foundation/variables" as *;
+
+.u-br {
+    @include bp("sp-l") {
+        display: none;
+    }
+    &--tb {
+        display: none;
+        @include bp("tb") {
+            display: block;
+        }
+        @include bp("sp-l") {
+            display: none;
+        }
+    }
+    &--sp {
+        display: none;
+        @include bp("sp-l") {
+            display: block;
+        }
+    }
+}
