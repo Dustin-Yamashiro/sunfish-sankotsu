@@ -1,6 +1,6 @@
 ---
 name: wordpress-site-build
-description: この local-env テンプレートで WordPress オリジナルテーマを制作・修正するための手順。ページ、セクション、SCSS、PHP テンプレート、カスタムフィールド、カスタムブロック、レスポンシブ対応、Figma やスクリーンショットからの実装時に使う。
+description: この local-env テンプレートで WordPress オリジナルテーマを制作・修正するための手順。ページ、セクション、SCSS、PHP テンプレート、カスタムフィールド、レスポンシブ対応、Figma やスクリーンショットからの実装時に使う。
 ---
 
 # WordPress サイト制作

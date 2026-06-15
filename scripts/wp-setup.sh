@@ -16,8 +16,6 @@ if [ -n "$inactive_themes" ]; then
   wp theme delete $inactive_themes || true
 fi
 
-wp plugin activate original-blocks || true
-
 if wp user get admin >/dev/null 2>&1; then
   db_prefix="$(wp db prefix)"
   wp db query "UPDATE ${db_prefix}users SET user_login = 'test' WHERE user_login = 'admin';"

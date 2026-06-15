@@ -11,7 +11,7 @@
 - `style.scss` の `@use` は明示順で管理し、まとめ読み込みに戻さない。
 - GSAP、ScrollTrigger、Splide、フェードイン、パララックスを扱う場合は `docs/animation.md` と `.agents/skills/rich-animation/SKILL.md` を確認する。
 - 画像は `assets/images` に置き、PHP からは `theme_image_url()` を使う。
-- build 生成物の `theme/assets` と `original-blocks/build` は手編集しない。
+- build 生成物の `theme/assets` は手編集しない。
 - デプロイは必ず `npm run deploy:dry -- dev|prod` で dry-run を確認してから行う。
 - 本番デプロイは `CONFIRM_PROD=1` または確認プロンプトなしに実行しない。
 - Copilot と Cursor 用の設定はこのテンプレートでは管理しない。
@@ -35,7 +35,6 @@ npm run deploy:dev
 - ソース JS: `assets/js/**/*.js`
 - ソース SCSS: `assets/scss/**/*.scss`
 - ソース画像: `assets/images/**/*`
-- カスタムブロック: `original-blocks/src/**/*`
 - 案件仕様: `docs/design-brief.md`
 
 ## 参照順

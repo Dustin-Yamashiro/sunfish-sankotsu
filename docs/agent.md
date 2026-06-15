@@ -12,7 +12,6 @@
 - build 済み assets: `theme/assets`
 - 元画像: `assets/images`
 - build 済み画像: `theme/assets/images`
-- カスタムブロック: `original-blocks`
 - デプロイ: `scripts/deploy.sh` によるローカル rsync
 
 ## 制作の流れ

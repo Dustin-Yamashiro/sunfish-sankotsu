@@ -2,7 +2,7 @@
 
 ## wp-env
 
-`.wp-env.json` は WordPress 日本語版、このテーマ、`original-blocks` プラグインを読み込みます。
+`.wp-env.json` は WordPress 日本語版と、このテーマを読み込みます。
 
 - 標準ポート: `8888`
 - 上書き: `WP_ENV_PORT`
@@ -53,10 +53,9 @@ npm run build
 
 処理順:
 
-1. `theme/assets` と `original-blocks/build` を削除。
+1. `theme/assets` を削除。
 2. Vite が JS/SCSS を `theme/assets` に出力。
 3. `scripts/build-assets.mjs` が画像、SVG、font、video を処理。
-4. `original-blocks` を build。
 
 ## 画像処理
 

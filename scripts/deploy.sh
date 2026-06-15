@@ -27,11 +27,9 @@ fi
 if [ "$TARGET" = "dev" ]; then
   SSH_HOST="${DEV_SSH_HOST:?DEV_SSH_HOST is required}"
   THEME_PATH="${DEV_THEME_PATH:?DEV_THEME_PATH is required}"
-  BLOCK_PLUGIN_PATH="${DEV_BLOCK_PLUGIN_PATH:-}"
 else
   SSH_HOST="${PRD_SSH_HOST:?PRD_SSH_HOST is required}"
   THEME_PATH="${PRD_THEME_PATH:?PRD_THEME_PATH is required}"
-  BLOCK_PLUGIN_PATH="${PRD_BLOCK_PLUGIN_PATH:-}"
 fi
 
 if [ "$TARGET" = "prod" ] && [ "$DRY_RUN" != "true" ] && [ "${CONFIRM_PROD:-}" != "1" ]; then
@@ -54,15 +52,6 @@ fi
 
 echo "Sync theme to $TARGET..."
 rsync "${RSYNC_FLAGS[@]}" ./theme/ "$SSH_HOST:$THEME_PATH"
-
-if [ -n "$BLOCK_PLUGIN_PATH" ] && [ -d "./original-blocks/build" ]; then
-  echo "Sync original-blocks to $TARGET..."
-  rsync "${RSYNC_FLAGS[@]}" \
-    --exclude="node_modules" \
-    --exclude="src" \
-    --exclude="package*.json" \
-    ./original-blocks/ "$SSH_HOST:$BLOCK_PLUGIN_PATH"
-fi
 
 if [ "$DRY_RUN" = "true" ]; then
   echo "Dry-run completed."

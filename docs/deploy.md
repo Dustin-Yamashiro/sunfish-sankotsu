@@ -14,12 +14,8 @@ cp .env.example .env
 
 - `DEV_SSH_HOST`
 - `DEV_THEME_PATH`
-- `DEV_BLOCK_PLUGIN_PATH`
 - `PRD_SSH_HOST`
 - `PRD_THEME_PATH`
-- `PRD_BLOCK_PLUGIN_PATH`
-
-`*_BLOCK_PLUGIN_PATH` は不要なら空で構いません。
 
 ## dry-run
 
