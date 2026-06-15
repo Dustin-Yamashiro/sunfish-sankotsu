@@ -11,4 +11,6 @@ if [ -f ".env" ]; then
   set +a
 fi
 
-exec ./node_modules/.bin/wp-env start
+./node_modules/.bin/wp-env start
+
+bash scripts/show-local-urls.sh

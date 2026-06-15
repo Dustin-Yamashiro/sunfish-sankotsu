@@ -16,11 +16,15 @@ if [ -n "$inactive_themes" ]; then
   wp theme delete $inactive_themes || true
 fi
 
-if wp user get admin >/dev/null 2>&1; then
+if wp user get test >/dev/null 2>&1; then
+  wp user update test --user_pass=test || true
+elif wp user get admin >/dev/null 2>&1; then
   db_prefix="$(wp db prefix)"
   wp db query "UPDATE ${db_prefix}users SET user_login = 'test' WHERE user_login = 'admin';"
+  wp user update test --user_pass=test || true
+else
+  wp user create test test@example.com --role=administrator --user_pass=test >/dev/null
 fi
-wp user update test --user_pass=test || true
 
 post_ids="$(wp post list --post_type=post --format=ids)"
 if [ -n "$post_ids" ]; then

@@ -5,7 +5,8 @@ ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 PID_FILE="$ROOT_DIR/.local/vite.pid"
 LOG_FILE="$ROOT_DIR/vite.log"
 URLS_FILE="$ROOT_DIR/.local/urls.json"
-VITE_SESSION_NAME="local-env-vite"
+PROJECT_NAME="$(basename "$ROOT_DIR" | tr -c '[:alnum:]_-' '-')"
+VITE_SESSION_NAME="${PROJECT_NAME}-vite"
 
 detect_lan_ip() {
   local detected_ip=""
@@ -22,6 +23,37 @@ detect_lan_ip() {
 
   if command -v hostname >/dev/null 2>&1; then
     detected_ip="$(hostname -I 2>/dev/null | awk '{ print $1 }' || true)"
+    if [ -n "$detected_ip" ]; then
+      printf '%s\n' "$detected_ip"
+      return 0
+    fi
+  fi
+
+  if command -v ifconfig >/dev/null 2>&1; then
+    detected_ip="$(
+      ifconfig 2>/dev/null | awk '
+        /^[[:alnum:]]/ {
+          if (ip && active) {
+            printed = 1;
+            print ip;
+            exit;
+          }
+          ip = "";
+          active = 0;
+        }
+        /inet / && $2 !~ /^127\./ {
+          ip = $2;
+        }
+        /status: active/ {
+          active = 1;
+        }
+        END {
+          if (!printed && ip && active) {
+            print ip;
+          }
+        }
+      '
+    )"
     if [ -n "$detected_ip" ]; then
       printf '%s\n' "$detected_ip"
       return 0

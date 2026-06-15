@@ -39,6 +39,7 @@ npm run setup
 1. `npm ci` でルート依存を入れる。
 2. `npm run wp:start` で wp-env を起動する。
 3. `npm run wp:setup` でテーマ有効化、初期投稿削除、パーマリンク設定などを行う。
+4. localhost と LAN IP の WordPress URL を表示する。
 
 ログイン情報:
 
@@ -62,7 +63,7 @@ npm run local:start
 5. `wp-env start` を実行する。
 6. PC 用 URL とスマホ確認用 URL を表示する。
 
-macOS では `screen` が使える場合、Vite は `local-env-vite` という detached session で起動します。これによりターミナルや AI 実行環境の終了に巻き込まれにくくなります。`npm run local:stop` でこの session も停止します。
+macOS では `screen` が使える場合、Vite は `<リポジトリ名>-vite` という detached session で起動します。これによりターミナルや AI 実行環境の終了に巻き込まれにくくなります。`npm run local:stop` でこの session も停止します。
 
 起動後に表示される URL の例:
 
@@ -209,7 +210,9 @@ CONFIRM_PROD=1 npm run deploy:prod
 - `scripts/local-start.sh`: Vite と wp-env を起動し、PC/スマホ確認用 URL を準備する。
 - `scripts/local-stop.sh`: このリポジトリの Vite だけを停止し、wp-env を停止する。
 - `scripts/local-destroy.sh`: 停止後に wp-env 環境を破棄する。
+- `scripts/wp-run-setup.sh`: Docker Compose の TTY 問題を避けて、`scripts/wp-setup.sh` を CLI コンテナで実行する。
 - `scripts/wp-setup.sh`: WordPress 初期設定、テーマ有効化、不要投稿削除、パーマリンク設定を行う。
+- `scripts/show-local-urls.sh`: localhost と LAN IP の WordPress URL を表示する。
 - `scripts/clean.mjs`: build 生成物を削除する。
 - `scripts/build-assets.mjs`: 画像変換、SVG 最適化、font/video コピーを行う。
 - `scripts/deploy.sh`: rsync の dry-run と dev/prod 反映を行う。

@@ -8,7 +8,7 @@
     "npm": ">=10"
   },
   "scripts": {
-    "setup": "npm ci && npm run wp:start && npm run wp:setup",
+    "setup": "npm ci && npm run local:start && npm run wp:setup && bash scripts/show-local-urls.sh",
     "dev": "vite --host 0.0.0.0 --port 5173 --strictPort",
     "local:start": "bash scripts/local-start.sh",
     "local:stop": "bash scripts/local-stop.sh",
@@ -16,7 +16,7 @@
     "wp:start": "bash scripts/wp-start.sh",
     "wp:stop": "wp-env stop",
     "wp:destroy": "wp-env destroy",
-    "wp:setup": "wp-env run cli bash ./wp-setup.sh",
+    "wp:setup": "bash scripts/wp-run-setup.sh",
     "clean": "node scripts/clean.mjs",
     "build": "npm run clean && npm run build:vite && npm run build:assets",
     "build:vite": "vite build",
