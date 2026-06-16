@@ -8,13 +8,17 @@ wp option update date_format 'Y-m-d'
 wp option update time_format 'H:i'
 wp option update blog_public 0
 
-wp theme activate theme
-
-inactive_themes="$(wp theme list --status=inactive --field=name || true)"
-if [ -n "$inactive_themes" ]; then
-  # shellcheck disable=SC2086
-  wp theme delete $inactive_themes || true
+if ! wp theme is-installed swell; then
+  echo "SWELL parent theme is not installed."
+  exit 1
 fi
+
+if ! wp theme is-installed swell_child; then
+  echo "SWELL child theme is not installed."
+  exit 1
+fi
+
+wp theme activate swell_child
 
 if wp user get test >/dev/null 2>&1; then
   wp user update test --user_pass=test || true

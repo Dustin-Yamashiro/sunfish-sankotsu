@@ -5,6 +5,7 @@ ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 PID_FILE="$ROOT_DIR/.local/vite.pid"
 LOG_FILE="$ROOT_DIR/vite.log"
 URLS_FILE="$ROOT_DIR/.local/urls.json"
+THEME_DIR="$ROOT_DIR/themes/swell_child"
 PROJECT_NAME="$(basename "$ROOT_DIR" | tr -c '[:alnum:]_-' '-')"
 VITE_SESSION_NAME="${PROJECT_NAME}-vite"
 
@@ -123,7 +124,7 @@ else
   fi
 fi
 
-printf '{ "url": "%s", "localhostUrl": "http://localhost:5173/", "networkUrl": "%s" }\n' "$VITE_URL" "$DEFAULT_VITE_URL" > "$ROOT_DIR/theme/localhost.json"
+printf '{ "url": "%s", "localhostUrl": "http://localhost:5173/", "networkUrl": "%s" }\n' "$VITE_URL" "$DEFAULT_VITE_URL" > "$THEME_DIR/localhost.json"
 printf '{ "wordpressLocalhost": "%s", "wordpressNetwork": "%s", "vite": "%s" }\n' "$WP_LOCALHOST_URL" "$WP_NETWORK_URL" "$VITE_URL" > "$URLS_FILE"
 
 echo "Starting wp-env..."

@@ -1,6 +1,7 @@
 node_modules
-theme/assets
-theme/localhost.json
+themes/swell/
+themes/swell_child/assets
+themes/swell_child/localhost.json
 vite.log
 localhost.json
 .env

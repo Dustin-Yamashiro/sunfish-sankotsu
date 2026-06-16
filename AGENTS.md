@@ -5,13 +5,16 @@
 ## 基本方針
 
 - 既存動作を明示的な理由なく変えない。
-- `theme/functions.php` へ処理を増やさず、`theme/inc/*.php` に責務ごとに追加する。
+- `themes/swell_child/functions.php` へ処理を増やさず、`themes/swell_child/inc/*.php` に責務ごとに追加する。
 - PHP の URL、属性、テキスト出力は `esc_url()`, `esc_attr()`, `esc_html()` を使う。
 - SCSS は FLOCSS/BEM を守り、`l-`, `c-`, `p-`, `u-`, `is-`, `js-` の接頭辞を使う。
+- この案件は SWELL 子テーマのため、SWELL 親テーマの既存 class と干渉しない命名を優先する。独自のヘッダー、フッター、固定パーツは `l-custom-*` など案件側だと分かる名前にする。
+- 余白やスペース調整の `margin`, `padding`, `gap` などは、原則 4 の倍数の px 値で指定する。
+- 通常の可読テキストの `font-size` は原則 `16px` 以上にする。明示指示やデザイン上の必要性がある場合だけ例外を許容する。
 - `style.scss` の `@use` は明示順で管理し、まとめ読み込みに戻さない。
 - GSAP、ScrollTrigger、Splide、フェードイン、パララックスを扱う場合は `docs/animation.md` と `.agents/skills/rich-animation/SKILL.md` を確認する。
 - 画像は `assets/images` に置き、PHP からは `theme_image_url()` を使う。
-- build 生成物の `theme/assets` は手編集しない。
+- build 生成物の `themes/swell_child/assets` は手編集しない。
 - デプロイは必ず `npm run deploy:dry -- dev|prod` で dry-run を確認してから行う。
 - 本番デプロイは `CONFIRM_PROD=1` または確認プロンプトなしに実行しない。
 - Copilot と Cursor 用の設定はこのテンプレートでは管理しない。
@@ -31,7 +34,7 @@ npm run deploy:dev
 
 ## 編集対象
 
-- テーマ PHP: `theme/**/*.php`
+- テーマ PHP: `themes/swell_child/**/*.php`
 - ソース JS: `assets/js/**/*.js`
 - ソース SCSS: `assets/scss/**/*.scss`
 - ソース画像: `assets/images/**/*`

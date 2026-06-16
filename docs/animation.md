@@ -27,7 +27,7 @@
 
 ## 依存関係の考え方
 
-GSAP、ScrollTrigger、Splide は `theme/inc/assets.php` で vendor asset として登録済みです。npm パッケージとしては追加しません。
+GSAP、ScrollTrigger、Splide は `themes/swell_child/inc/assets.php` で vendor asset として登録済みです。npm パッケージとしては追加しません。
 
 登録済み handle:
 

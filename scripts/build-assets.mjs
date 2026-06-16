@@ -5,11 +5,11 @@ import sharp from 'sharp';
 import { optimize } from 'svgo';
 
 const imageInputDir = 'assets/images';
-const imageOutputDir = 'theme/assets/images';
+const imageOutputDir = 'themes/swell_child/assets/images';
 const fontInputDir = 'assets/fonts';
-const fontOutputDir = 'theme/assets/fonts';
+const fontOutputDir = 'themes/swell_child/assets/fonts';
 const videoInputDir = 'assets/video';
-const videoOutputDir = 'theme/assets/video';
+const videoOutputDir = 'themes/swell_child/assets/video';
 const webpQuality = Number.parseInt(process.env.WEBP_QUALITY ?? '82', 10);
 
 const outputTargets = new Map();
@@ -88,16 +88,7 @@ async function buildImages() {
       const result = optimize(source, {
         multipass: true,
         path: input,
-        plugins: [
-          {
-            name: 'preset-default',
-            params: {
-              overrides: {
-                removeViewBox: false,
-              },
-            },
-          },
-        ],
+        plugins: [{ name: 'preset-default' }],
       });
       await fs.writeFile(output, result.data);
       continue;

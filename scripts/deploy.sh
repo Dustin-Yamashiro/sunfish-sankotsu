@@ -6,6 +6,7 @@ TARGET="${1:-}"
 DRY_RUN="${DRY_RUN:-false}"
 
 cd "$ROOT_DIR"
+THEME_SOURCE_DIR="themes/swell_child"
 
 if [ "$TARGET" != "dev" ] && [ "$TARGET" != "prod" ]; then
   echo "Usage: bash scripts/deploy.sh dev|prod"
@@ -19,8 +20,8 @@ if [ -f ".env" ]; then
   set +a
 fi
 
-if [ ! -d "theme/assets" ]; then
-  echo "theme/assets がありません。先に npm run build を実行してください。"
+if [ ! -d "$THEME_SOURCE_DIR/assets" ]; then
+  echo "$THEME_SOURCE_DIR/assets がありません。先に npm run build を実行してください。"
   exit 1
 fi
 
@@ -50,8 +51,8 @@ if [ "$DRY_RUN" = "true" ]; then
   RSYNC_FLAGS+=(--dry-run)
 fi
 
-echo "Sync theme to $TARGET..."
-rsync "${RSYNC_FLAGS[@]}" ./theme/ "$SSH_HOST:$THEME_PATH"
+echo "Sync child theme to $TARGET..."
+rsync "${RSYNC_FLAGS[@]}" "$THEME_SOURCE_DIR/" "$SSH_HOST:$THEME_PATH"
 
 if [ "$DRY_RUN" = "true" ]; then
   echo "Dry-run completed."

@@ -3,7 +3,7 @@ set -euo pipefail
 
 ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 PID_FILE="$ROOT_DIR/.local/vite.pid"
-VITE_CONFIG_FILE="$ROOT_DIR/theme/localhost.json"
+VITE_CONFIG_FILE="$ROOT_DIR/themes/swell_child/localhost.json"
 URLS_FILE="$ROOT_DIR/.local/urls.json"
 PROJECT_NAME="$(basename "$ROOT_DIR" | tr -c '[:alnum:]_-' '-')"
 VITE_SESSION_NAME="${PROJECT_NAME}-vite"

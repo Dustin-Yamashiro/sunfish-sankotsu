@@ -44,6 +44,6 @@ CONFIRM_PROD=1 npm run deploy:prod
 
 - deploy script に `git push` を混ぜない。
 - deploy script に DB 操作を混ぜない。
-- `theme/assets` がない場合は deploy しない。
+- `themes/swell_child/assets` がない場合は deploy しない。
 - `--delete` は `scripts/deploy.sh` 内だけで扱う。
 - dry-run で意図しない削除がある場合は本実行しない。

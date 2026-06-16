@@ -35,7 +35,7 @@ export default defineConfig({
     },
   },
   build: {
-    outDir: 'theme/assets',
+    outDir: 'themes/swell_child/assets',
     assetsInlineLimit: 0,
     manifest: true,
     emptyOutDir: true,

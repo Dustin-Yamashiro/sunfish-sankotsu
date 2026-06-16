@@ -23,7 +23,7 @@ description: GSAP、ScrollTrigger、Splide、IntersectionObserver を使った W
 - stagger、timeline、複数要素の制御が必要なら GSAP を使う。
 - スクロール量に連動する演出、pin、scrub、parallax は GSAP ScrollTrigger を使う。
 - 写真、投稿、カード、ロゴのスライダーは Splide を使う。
-- GSAP、ScrollTrigger、Splide は `theme/inc/assets.php` に登録済みの handle を必要箇所だけ enqueue する。
+- GSAP、ScrollTrigger、Splide は `themes/swell_child/inc/assets.php` に登録済みの handle を必要箇所だけ enqueue する。
 - 追加ライブラリは GSAP と Splide に限定する。他のライブラリはユーザーから明示指示がある場合だけ検討する。
 - GSAP を使う場合は、timeline、stagger、matchMedia、context/revert、utils、kill/revert などを活用し、後から調整・破棄しやすい構成にする。
 - `prefers-reduced-motion: reduce` で動きを止める、または大幅に弱める。

@@ -24,7 +24,7 @@
     "deploy:dry": "DRY_RUN=true bash scripts/deploy.sh",
     "deploy:dev": "bash scripts/deploy.sh dev",
     "deploy:prod": "bash scripts/deploy.sh prod",
-    "lint:php": "find theme -name '*.php' -print0 | xargs -0 -n1 php -l",
+    "lint:php": "find themes/swell_child -name '*.php' -print0 | xargs -0 -n1 php -l",
     "verify": "npm run build && npm run lint:php"
   },
   "dependencies": {

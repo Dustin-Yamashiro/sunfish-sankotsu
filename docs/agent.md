@@ -9,10 +9,11 @@
 - JavaScript 入口: `assets/js/main.js`
 - SCSS 入口: `assets/scss/style.scss`
 - アニメーション仕様: `docs/animation.md`
-- build 済み assets: `theme/assets`
+- build 済み assets: `themes/swell_child/assets`
 - 元画像: `assets/images`
-- build 済み画像: `theme/assets/images`
+- build 済み画像: `themes/swell_child/assets/images`
 - デプロイ: `scripts/deploy.sh` によるローカル rsync
+- 案件固有デザイン: `docs/design-brief.md`
 
 ## 制作の流れ
 
@@ -26,11 +27,11 @@
 
 ## WordPress 実装ルール
 
-- `functions.php` は `theme/inc/*.php` を読み込むだけにする。
-- `theme/inc/setup.php`: テーマサポート、メニュー、エディタ設定。
-- `theme/inc/assets.php`: Vite dev server、本番 manifest、ローカル URL 調整。
-- `theme/inc/helpers.php`: URL、パス、画像などの helper。
-- `theme/inc/post-types.php`: カスタム投稿タイプ、taxonomy。
+- `functions.php` は `themes/swell_child/inc/*.php` を読み込むだけにする。
+- `themes/swell_child/inc/setup.php`: テーマサポート、メニュー、エディタ設定。
+- `themes/swell_child/inc/assets.php`: Vite dev server、本番 manifest、ローカル URL 調整。
+- `themes/swell_child/inc/helpers.php`: URL、パス、画像などの helper。
+- `themes/swell_child/inc/post-types.php`: カスタム投稿タイプ、taxonomy。
 - テンプレートには markup と単純な loop だけを書く。
 - URL は `esc_url()`、属性は `esc_attr()`、通常テキストは `esc_html()` を使う。
 - WordPress 管理画面で編集される本文には `the_content()` を使ってよい。
@@ -42,7 +43,7 @@
 - `jpg`, `jpeg`, `png` は build 時に WebP へ変換する。
 - PHP では元画像の拡張子で指定する。例: `theme_image_url( 'hero.jpg' )`
 - ローカル開発では Vite の `assets/images/hero.jpg` を読む。
-- 本番では `theme/assets/images/hero.webp` を読む。
+- 本番では `themes/swell_child/assets/images/hero.webp` を読む。
 - 同じディレクトリで拡張子だけ違う同名画像を置かない。
 
 ## スマホ実機確認のルール
@@ -52,11 +53,27 @@
 - スマホ確認は `http://<LAN IP>:8888` を使う。
 - LAN IP を自動検出できない場合は `.env` に `LOCAL_NETWORK_IP` を設定する。
 - ローカル環境に限り、WordPress の `home` / `siteurl` は現在のアクセスホストを使う。
-- `theme/localhost.json` はローカル専用ファイルで、本番へ送らない。
+- `themes/swell_child/localhost.json` はローカル専用ファイルで、本番へ送らない。
 
 ## CSS ルール
 
 詳細は `docs/css-design.md` を参照する。読み込み順は固定し、まとめ読み込みを使わず、FLOCSS/BEM の接頭辞を守る。
+
+この案件は SWELL 子テーマのため、SWELL 親テーマの CSS も同時に読み込まれる。class を作成する際は親テーマの既存 class と干渉しない命名を優先し、独自のヘッダー、フッター、固定パーツは `l-custom-*` など案件側だと分かる class にする。SWELL class を直接上書きする場合は、影響範囲を確認して最小限にする。
+
+`margin`, `padding`, `gap` などの余白・スペース調整は、原則として 4 の倍数の px 値で指定する。例外は `1px` の border、画像やアイコンの実寸、フォントサイズ、line-height、デザイン上どうしても必要な厳密値に限定する。
+
+通常の可読テキストの `font-size` は原則 `16px` 以上にする。デザイン上必要な補助ラベル、注釈、装飾的テキスト、またはユーザーから明示的に小さくする指示がある場合だけ、可読性を確認して `16px` 未満を使う。
+
+## 案件固有デザインルール
+
+石垣島海洋散骨センターのデザイン仕様は `docs/design-brief.md` を正式な参照先とする。
+
+- SWELLのオリジナル子テーマとして制作予定。
+- 白、水色、薄い水色、海や花の写真、広い余白を基調にする。
+- 投稿/ニュース/コラムのカード部分はSWELL標準デザインを優先する。
+- セクション実装前に、添付スクリーンショット、Figma、`docs/design-brief.md` の差分を確認する。
+- SP版の正確値は未確認のため、実装時に推測を断定せず、確認事項として残す。
 
 ## アニメーションルール
 
@@ -66,7 +83,7 @@
 - 単純なフェードインは IntersectionObserver + CSS transition を優先する。
 - 複数要素の timeline、stagger、スクロール連動は GSAP を使う。
 - 写真、投稿、カードのスライダーは Splide を標準候補にする。
-- GSAP、ScrollTrigger、Splide は `theme/inc/assets.php` の登録済み handle を必要箇所だけ enqueue する。
+- GSAP、ScrollTrigger、Splide は `themes/swell_child/inc/assets.php` の登録済み handle を必要箇所だけ enqueue する。
 - 追加ライブラリは GSAP と Splide に限定する。他のライブラリはユーザーから明示指示がある場合だけ検討する。
 - `prefers-reduced-motion: reduce` で過剰な動きを止める。
 - JS hook の `js-` class に CSS を書かない。
