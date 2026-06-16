@@ -3,8 +3,8 @@
 @use "foundation/mixin";
 @use "foundation/base";
 
-@use "layout/header";
-@use "layout/footer";
+@use "layout/custom-header";
+@use "layout/custom-footer";
 @use "layout/page";
 @use "layout/section";
 @use "layout/form";
@@ -23,4 +23,5 @@
 @use "object/utility/bg";
 @use "object/utility/br";
 @use "object/utility/container";
+@use "object/utility/section-space";
 @use "object/utility/contents";

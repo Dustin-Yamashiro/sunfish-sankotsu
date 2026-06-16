@@ -5,12 +5,19 @@
 @use "../../foundation/variables" as *;
 
 .u-container {
-  width: min(85.94%, 1100px);
+  width: min(calc(100% - 48px), 1200px);
   margin-inline: auto;
+
+  @include bp("sp-l") {
+    width: 90%;
+  }
+
+  &--narrow,
   &--min {
-    width: min(75%, 960px);
-    @include bp("pc-s") {
-      width: min(85.94%, 1100px);
+    width: min(calc(100% - 48px), 900px);
+
+    @include bp("sp-l") {
+      width: 90%;
     }
   }
 }

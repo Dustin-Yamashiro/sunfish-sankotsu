@@ -1,0 +1,321 @@
+@use "../foundation/mixin" as *;
+@use "../foundation/variables" as *;
+
+.l-custom-footer {
+  color: $color-white;
+  letter-spacing: 0.08em;
+
+  &-area {
+    color: $color-white;
+    letter-spacing: 0.08em;
+  }
+
+  &-contact {
+    color: $color-white;
+    letter-spacing: 0.08em;
+    text-align: center;
+
+    &__inner {
+      display: grid;
+      justify-items: stretch;
+    }
+
+    &__lead {
+      margin-top: 80px;
+      display: grid;
+      gap: 12px;
+
+      @include bp("tb") {
+        margin-top: 72px;
+        line-height: 1.95;
+      }
+
+      @include bp("sp-l") {
+        margin-top: 64px;
+        gap: 16px;
+      }
+
+      &-text {
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 2;
+        letter-spacing: 0.1em;
+
+        @include bp("tb") {
+          font-size: 15px;
+          line-height: 1.95;
+        }
+
+        @include bp("sp-l") {
+          font-size: 15px;
+          line-height: 1.9;
+          letter-spacing: 0.08em;
+        }
+      }
+    }
+
+    &__cards {
+      margin-top: 64px;
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 44px;
+
+      @include bp("pc-s") {
+        gap: 28px;
+      }
+
+      @include bp("tb") {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        width: min(100%, 520px);
+        margin-inline: auto;
+      }
+
+      @include bp("sp-l") {
+        margin-top: 40px;
+      }
+    }
+
+    &__card {
+      min-height: 104px;
+      padding: 24px 20px 22px;
+      display: grid;
+      place-items: center;
+      gap: 12px;
+      color: $color-main;
+      background-color: rgba($color-white, 0.88);
+      transition: background-color $duration-base $ease-base;
+
+      @include bp("sp-l") {
+        min-height: 96px;
+        padding: 22px 18px 20px;
+        gap: 16px;
+      }
+
+      @media (hover: hover) {
+        &:hover {
+          background-color: $color-white;
+        }
+      }
+
+      &:focus-visible {
+        outline: 2px solid $color-white;
+        outline-offset: 4px;
+      }
+    }
+
+    &__card-heading {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+    }
+
+    &__card-icon {
+      width: 26px;
+      height: 26px;
+      object-fit: contain;
+    }
+
+    &__card-label {
+      font-family: $font-heading;
+      font-size: 18px;
+      font-weight: 500;
+      line-height: 1.35;
+      letter-spacing: 0.08em;
+
+      @include bp("sp-l") {
+        font-size: 16px;
+      }
+    }
+
+    &__card-text {
+      color: $color-main;
+      font-size: 12px;
+      font-weight: 500;
+      line-height: 1.45;
+      letter-spacing: 0.08em;
+    }
+  }
+
+  &__inner {
+    padding-block: 92px 82px;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(500px, 520px);
+    gap: 80px;
+    border-top: 1px solid rgba($color-white, 0.82);
+
+    @include bp("tb") {
+      width: min(88.8%, 720px);
+      grid-template-columns: 1fr;
+      gap: 56px;
+      padding-block: 68px 56px;
+    }
+
+    @include bp("sp-l") {
+      gap: 64px;
+      padding-block: 54px 48px;
+    }
+  }
+
+  &--standalone &__inner {
+    border-top: 0;
+  }
+
+  &__company {
+    width: fit-content;
+    max-width: 100%;
+    display: grid;
+    justify-items: center;
+    justify-self: start;
+    gap: 40px;
+    text-align: left;
+
+    @include bp("tb") {
+      justify-items: center;
+      justify-self: center;
+      text-align: center;
+    }
+  }
+
+  &__logo {
+    width: 190px;
+    display: block;
+
+    @include bp("sp-l") {
+      width: 184px;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+
+    &:focus-visible {
+      outline: 2px solid $color-white;
+      outline-offset: 6px;
+    }
+  }
+
+  &__address {
+    width: max-content;
+    max-width: 100%;
+    display: grid;
+    gap: 16px;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.7;
+    letter-spacing: 0.08em;
+
+    @include bp("sp-l") {
+      gap: 16px;
+      font-size: 14px;
+      line-height: 1.8;
+    }
+  }
+
+  &__nav {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 64px;
+    align-self: end;
+
+    @include bp("tb") {
+      align-self: auto;
+      width: min(100%, 520px);
+      margin-inline: auto;
+      gap: 40px;
+    }
+
+    @include bp("sp-l") {
+      grid-template-columns: 1fr;
+      width: 100%;
+      text-align: center;
+    }
+  }
+
+  &__nav-list {
+    display: grid;
+    gap: 28px;
+    @include bp("tb") {
+      gap: 40px;
+    }
+  }
+
+  &__nav-item {
+    @include bp("sp-l") {
+      border-bottom: 0;
+    }
+  }
+
+  &__nav-link,
+  &__nav-label {
+    color: $color-white;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 0.1em;
+    white-space: nowrap;
+
+    @include bp("sp-l") {
+      min-height: auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 16px;
+      text-align: center;
+    }
+  }
+
+  &__nav-link {
+    @media (hover: hover) {
+      &:hover {
+        opacity: 0.72;
+      }
+    }
+
+    &:focus-visible {
+      outline: 2px solid $color-white;
+      outline-offset: 4px;
+    }
+  }
+
+  &__child-list {
+    margin-top: 24px;
+    display: grid;
+    gap: 16px;
+
+    @include bp("sp-l") {
+      margin-top: 32px;
+      gap: 24px;
+      padding-bottom: 0;
+    }
+  }
+
+  &__nav-link--child {
+    font-size: 15px;
+
+    @include bp("sp-l") {
+      min-height: auto;
+      padding-left: 0;
+    }
+  }
+
+  &__copyright {
+    padding: 14px 20px;
+    color: $color-main;
+    background-color: $color-white;
+    font-family: $font-en;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.4;
+    letter-spacing: 0.12em;
+    text-align: center;
+
+    @include bp("sp-l") {
+      padding-inline: 16px;
+      font-size: 13px;
+    }
+  }
+}

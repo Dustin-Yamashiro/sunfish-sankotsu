@@ -1,0 +1,28 @@
+/*
+* セクション余白ユーティリティ
+*/
+@use "../../foundation/mixin" as *;
+
+.u-section-space {
+  padding-block: 120px;
+
+  @include bp("tb") {
+    padding-block: 100px;
+  }
+
+  @include bp("sp-l") {
+    padding-block: 80px;
+  }
+
+  &--small {
+    padding-block: 80px;
+
+    @include bp("tb") {
+      padding-block: 72px;
+    }
+
+    @include bp("sp-l") {
+      padding-block: 64px;
+    }
+  }
+}

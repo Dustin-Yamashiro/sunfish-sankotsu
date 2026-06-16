@@ -3,9 +3,11 @@
 */
 // 案件ごとのフォントは docs/design-brief.md を元にここへ集約する。
 // ローカルフォントを使う場合は assets/fonts に配置し、必要に応じて @font-face を追加する。
-$font-noto: "Noto Sans JP", sans-serif;
-$font-base: $font-noto;
-$font-heading: $font-noto;
+$font-ja: "Zen Kaku Gothic New", sans-serif;
+$font-serif: "Noto Serif JP", serif;
+$font-en: "Cormorant Garamond", serif;
+$font-base: $font-ja;
+$font-heading: $font-serif;
 
 /*
 * ベースフォント設定
@@ -18,15 +20,24 @@ $base-line-height: 1.5;
 */
 // 既存案件の標準に合わせ、まずは白・黒・グレー・base・main・accent を必ず定義する。
 // 案件固有の派生色は $color-blue-01 のように用途が明確な名前で追加する。
-$color-white: #fff;
-$color-black: #0B2128;
-$color-gray: #F2F4F5;
+$color-white: #FFFFFF;
+$color-black: #333333;
+$color-gray: #F0F5F6;
 $color-base: $color-white;
-$color-main: #38A5C9;
-$color-accent: #DBB004;
+$color-main: #76BDD0;
+$color-accent: #4AACD3;
+$color-line: #61C475;
 $color-border: #DDE5E8;
 $color-text: $color-black;
 $color-muted: #667A81;
+$gradient-main: linear-gradient(
+  to bottom left,
+  #B0E4E8 0%,
+  #98D9E1 18%,
+  #78C9D8 46%,
+  #5CBBD0 72%,
+  #3AA8C5 100%
+);
 
 /*
 * 余白・角丸・アニメーション変数
@@ -35,11 +46,6 @@ $duration-base: 0.3s;
 $ease-base: ease;
 $radius-sm: 4px;
 $radius-md: 8px;
-
-
-
-
-
 
 
 

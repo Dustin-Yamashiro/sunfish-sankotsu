@@ -5,9 +5,13 @@
 @use "../../foundation/variables" as *;
 
 .c-section-title {
+  --section-title-main-color: #{$color-text};
+  --section-title-sub-color: #{$color-main};
+
   display: grid;
-  gap: 8px;
-  color: $color-text;
+  gap: 22px;
+  color: var(--section-title-main-color);
+  letter-spacing: 0.08em;
 
   &--center {
     width: fit-content;
@@ -15,18 +19,39 @@
     text-align: center;
   }
 
+  &--accent {
+    --section-title-sub-color: #{$color-accent};
+  }
+
+  &--white {
+    --section-title-main-color: #{$color-white};
+    --section-title-sub-color: #{$color-white};
+  }
+
   &__main {
+    color: var(--section-title-main-color);
     font-family: $font-heading;
-    font-weight: 700;
+    font-weight: 500;
     line-height: 1.35;
-    letter-spacing: 0.08em;
-    @include fz(28, 48, "all");
+    letter-spacing: 0.12em;
+    font-size: 32px;
+
+    @include bp("sp-l") {
+      font-size: 28px;
+      letter-spacing: 0.1em;
+    }
   }
 
   &__sub {
-    color: $color-main;
-    font-weight: 700;
+    color: var(--section-title-sub-color);
+    font-family: $font-en;
+    font-size: 15px;
+    font-weight: 600;
     line-height: 1.5;
-    @include fz(14, 18, "all");
+    letter-spacing: 0.12em;
+
+    @include bp("sp-l") {
+      font-size: 14px;
+    }
   }
 }

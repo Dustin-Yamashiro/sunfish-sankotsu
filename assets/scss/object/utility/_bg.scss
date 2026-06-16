@@ -5,10 +5,19 @@
 @use "../../foundation/variables" as *;
 
 .u-bg {
-    &--main {
-        background-color: $color-main;
-    }
-    &--accent {
-        background-color: $color-accent;
-    }
+  &--main {
+    background-color: $color-main;
+  }
+
+  &--accent {
+    background-color: $color-accent;
+  }
+
+  &--pale {
+    background-color: $color-gray;
+  }
+
+  &--gradient {
+    background: $gradient-main;
+  }
 }
