@@ -1,0 +1,131 @@
+@use "../foundation/mixin" as *;
+@use "../foundation/variables" as *;
+
+.l-kv {
+  --kv-header-height: 100px;
+
+  height: clamp(700px, 52vw, 760px);
+  position: relative;
+  overflow: hidden;
+  color: $color-white;
+  background-color: #8ed4de;
+  isolation: isolate;
+
+  &::before {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    content: "";
+    pointer-events: none;
+    background:
+      linear-gradient(
+        90deg,
+        rgba($color-main, 0.06) 0%,
+        rgba($color-white, 0.02) 42%,
+        rgba($color-white, 0) 76%
+      ),
+      linear-gradient(
+        180deg,
+        rgba($color-white, 0.06) 0%,
+        rgba($color-white, 0) 48%,
+        rgba($color-main, 0.04) 100%
+      );
+  }
+
+  @include bp("tb") {
+    --kv-header-height: 78px;
+    height: clamp(660px, 74vw, 720px);
+  }
+
+  @include bp("sp-l") {
+    height: clamp(
+      620px,
+      calc(100svh - var(--kv-header-height) - 24px),
+      700px
+    );
+  }
+
+  &__media {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center center;
+      filter: brightness(1.08) saturate(1.03) contrast(0.98);
+    }
+  }
+
+  &__content {
+    min-height: 100%;
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-block: 180px 96px;
+
+    @include bp("tb") {
+      padding-block: 104px 80px;
+    }
+
+    @include bp("sp-l") {
+      padding-block: 72px 72px;
+    }
+  }
+
+  &__title {
+    width: fit-content;
+    margin: 0;
+    color: $color-white;
+    font-family: $font-heading;
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 1.8;
+    letter-spacing: 0.12em;
+    text-shadow:
+      0 2px 6px rgba($color-main, 0.52),
+      2px 3px 10px rgba(37, 118, 142, 0.24);
+    animation: l-kv-title-in 1.8s cubic-bezier(0.16, 1, 0.3, 1) 0.18s both;
+
+    @include bp("tb") {
+      font-size: 28px;
+      line-height: 1.75;
+      letter-spacing: 0.1em;
+    }
+
+    @include bp("sp-l") {
+      font-size: 22px;
+      line-height: 1.72;
+      letter-spacing: 0.04em;
+      text-shadow:
+        0 2px 5px rgba($color-main, 0.52),
+        2px 3px 9px rgba(37, 118, 142, 0.24);
+    }
+  }
+}
+
+@keyframes l-kv-title-in {
+  from {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translate3d(0, 4px, 0);
+  }
+
+  to {
+    opacity: 1;
+    filter: blur(0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .l-kv__title {
+    animation: none;
+  }
+}

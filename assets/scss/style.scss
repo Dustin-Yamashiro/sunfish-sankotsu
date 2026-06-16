@@ -5,6 +5,7 @@
 
 @use "layout/custom-header";
 @use "layout/custom-footer";
+@use "layout/kv";
 @use "layout/page";
 @use "layout/section";
 @use "layout/form";
@@ -17,7 +18,6 @@
 @use "object/component/breadcrumb";
 @use "object/component/tag";
 
-@use "object/project/front-page";
 @use "object/project/content";
 
 @use "object/utility/bg";
