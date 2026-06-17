@@ -190,6 +190,22 @@ function theme_enqueue_fonts() {
 add_action( 'wp_enqueue_scripts', 'theme_enqueue_fonts', 10 );
 
 /**
+ * Enqueue assets used only on the front page.
+ */
+function theme_enqueue_front_page_assets() {
+	if ( ! is_front_page() ) {
+		return;
+	}
+
+	wp_enqueue_style( 'splide' );
+	wp_enqueue_script( 'splide' );
+	wp_enqueue_script( 'splide-auto-scroll' );
+	wp_enqueue_script( 'gsap' );
+	wp_enqueue_script( 'gsap-scrolltrigger' );
+}
+add_action( 'wp_enqueue_scripts', 'theme_enqueue_front_page_assets', 15 );
+
+/**
  * Enqueue one Vite manifest entry.
  *
  * @param array  $manifest Manifest data.

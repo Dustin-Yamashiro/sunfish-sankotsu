@@ -89,6 +89,31 @@ get_header();
 			<a href="<?php echo esc_url( home_url( '/beginner/' ) ); ?>">初めての方へ</a>
 		</div>
 	</div>
+
+	<div class="p-split__gallery splide js-intro-gallery" aria-label="海洋散骨の写真ギャラリー">
+		<div class="splide__track">
+			<ul class="p-split__gallery-list splide__list">
+				<li class="p-split__gallery-slide p-split__gallery-slide--01 splide__slide">
+					<img src="<?php echo esc_url( theme_image_url( 'front-page/intro-gallery/gallery-02.jpeg' ) ); ?>" width="4032" height="3024" alt="石垣島の青い海と空" loading="lazy">
+				</li>
+				<li class="p-split__gallery-slide p-split__gallery-slide--02 splide__slide">
+					<img src="<?php echo esc_url( theme_image_url( 'front-page/intro-gallery/gallery-01.png' ) ); ?>" width="941" height="1672" alt="船上で手を重ねる様子" loading="lazy">
+				</li>
+				<li class="p-split__gallery-slide p-split__gallery-slide--03 splide__slide">
+					<img src="<?php echo esc_url( theme_image_url( 'front-page/intro-gallery/gallery-03.png' ) ); ?>" width="1122" height="1402" alt="海へ向かって手を合わせる様子" loading="lazy">
+				</li>
+				<li class="p-split__gallery-slide p-split__gallery-slide--04 splide__slide">
+					<img src="<?php echo esc_url( theme_image_url( 'front-page/intro-gallery/gallery-04.png' ) ); ?>" width="1448" height="1086" alt="花を海へ手向ける様子" loading="lazy">
+				</li>
+				<li class="p-split__gallery-slide p-split__gallery-slide--05 splide__slide">
+					<img src="<?php echo esc_url( theme_image_url( 'front-page/intro-gallery/gallery-06.png' ) ); ?>" width="1672" height="941" alt="家族で海を見つめる様子" loading="lazy">
+				</li>
+				<li class="p-split__gallery-slide p-split__gallery-slide--06 splide__slide">
+					<img src="<?php echo esc_url( theme_image_url( 'front-page/intro-gallery/gallery-05.JPG' ) ); ?>" width="1920" height="1440" alt="海に浮かぶ散骨用の船" loading="lazy">
+				</li>
+			</ul>
+		</div>
+	</div>
 </section>
 
 <?php get_footer(); ?>
