@@ -116,10 +116,10 @@
 
   &__button {
     margin-top: 60px;
+    margin-left: auto;
 
     @include bp("sp-l") {
       margin-top: 48px;
-      margin-inline: auto;
     }
   }
 

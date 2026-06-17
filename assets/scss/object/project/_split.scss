@@ -127,13 +127,13 @@
     grid-column: 1;
     grid-row: 2;
     margin-top: 72px;
+    margin-left: auto;
 
     @include bp("tb") {
       display: block;
       grid-row: auto;
       order: 3;
       margin-top: 48px;
-      margin-inline: auto;
     }
   }
 

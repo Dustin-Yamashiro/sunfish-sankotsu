@@ -199,4 +199,65 @@ get_header();
 	</div>
 </section>
 
+<section class="p-plan-sec" aria-labelledby="front-plan-title">
+	<div class="p-plan-sec__heading u-container">
+		<div class="p-plan-sec__title c-section-title">
+			<p class="c-section-title__sub">Plan</p>
+			<h2 id="front-plan-title" class="c-section-title__main">散骨プラン</h2>
+		</div>
+	</div>
+
+	<div class="p-plan-sec__list u-container">
+		<article class="p-plan-sec__card p-plan-sec__card--charter">
+			<picture class="p-plan-sec__image">
+				<img src="<?php echo esc_url( theme_image_url( 'front-page/plan/charter.png' ) ); ?>" width="1672" height="941" alt="石垣島の海を家族で見つめる貸切散骨の様子" loading="lazy">
+			</picture>
+			<div class="p-plan-sec__panel">
+				<div class="p-plan-sec__content">
+					<div class="p-plan-sec__summary">
+						<h3 class="p-plan-sec__name">家族で見送る、<br>海への旅立ちプラン<span class="p-plan-sec__name-note">（貸切）</span></h3>
+						<p class="p-plan-sec__price">
+							<span class="p-plan-sec__price-label">税込</span>
+							<span class="p-plan-sec__price-number">132,000</span>
+							<span class="p-plan-sec__price-unit">円〜</span>
+						</p>
+					</div>
+					<div class="p-plan-sec__body">
+						<p>完全貸切の船で、ご家族やご親族とともに散骨を行うプランです。</p>
+						<p>事前に伺ったご希望に沿って、船長が準備から進行まで担当し、故人様らしい海への旅立ちをお手伝いします。</p>
+					</div>
+					<div class="p-plan-sec__button c-section-btn c-section-btn--next c-section-btn--white c-section-btn--small">
+						<a href="<?php echo esc_url( home_url( '/kashikiri/' ) ); ?>">詳しくはこちら</a>
+					</div>
+				</div>
+			</div>
+		</article>
+
+		<article class="p-plan-sec__card p-plan-sec__card--proxy">
+			<picture class="p-plan-sec__image">
+				<img src="<?php echo esc_url( theme_image_url( 'front-page/plan/proxy.png' ) ); ?>" width="1536" height="1024" alt="石垣島の海へ花を手向ける委託散骨の様子" loading="lazy">
+			</picture>
+			<div class="p-plan-sec__panel">
+				<div class="p-plan-sec__content">
+					<div class="p-plan-sec__summary">
+						<h3 class="p-plan-sec__name">想いを託す、<br>委託散骨プラン<span class="p-plan-sec__name-note">（代理）</span></h3>
+						<p class="p-plan-sec__price">
+							<span class="p-plan-sec__price-label">税込</span>
+							<span class="p-plan-sec__price-number">55,000</span>
+							<span class="p-plan-sec__price-unit">円〜</span>
+						</p>
+					</div>
+					<div class="p-plan-sec__body">
+						<p>ご遺族に代わり、船長が散骨を行うプランです。</p>
+						<p>大切なご遺骨をお預かりし、ご遺族の想いを受け止めながら、責任を持って石垣島の海へお見送りします。</p>
+					</div>
+					<div class="p-plan-sec__button c-section-btn c-section-btn--next c-section-btn--white c-section-btn--small">
+						<a href="<?php echo esc_url( home_url( '/dairi/' ) ); ?>">詳しくはこちら</a>
+					</div>
+				</div>
+			</div>
+		</article>
+	</div>
+</section>
+
 <?php get_footer(); ?>
