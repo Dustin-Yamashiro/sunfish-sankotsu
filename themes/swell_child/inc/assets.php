@@ -119,7 +119,6 @@ add_action( 'wp_head', 'theme_print_vite_client', 1 );
  */
 function theme_script_loader_tag( $tag, $handle, $src ) {
 	$module_handles = array(
-		'theme-vite-style',
 		'theme-vite-main',
 		'theme-main',
 	);
@@ -256,12 +255,11 @@ function theme_enqueue_vite_manifest_entry( $manifest, $entry, $handle ) {
  */
 function theme_enqueue_assets() {
 	if ( theme_is_vite_development() ) {
-		wp_enqueue_script(
+		wp_enqueue_style(
 			'theme-vite-style',
 			theme_vite_asset_url( 'assets/scss/style.scss' ),
 			array(),
-			null,
-			array( 'in_footer' => true )
+			null
 		);
 		wp_enqueue_script(
 			'theme-vite-main',
