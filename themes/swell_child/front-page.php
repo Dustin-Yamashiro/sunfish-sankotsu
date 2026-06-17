@@ -260,4 +260,83 @@ get_header();
 	</div>
 </section>
 
+<?php
+$front_step_items = array(
+	array(
+		'number' => '1',
+		'title'  => 'お問い合わせ',
+		'image'  => 'front-page/step/contact.png',
+		'alt'    => '電話で海洋散骨について問い合わせる人のイラスト',
+	),
+	array(
+		'number' => '2',
+		'title'  => '申込み',
+		'image'  => 'front-page/step/contact.png',
+		'alt'    => '海洋散骨の申込みを行うイラスト',
+	),
+	array(
+		'number' => '3',
+		'title'  => '粉骨',
+		'image'  => 'front-page/step/contact.png',
+		'alt'    => '散骨前に粉骨を行うイラスト',
+	),
+	array(
+		'number' => '4',
+		'title'  => '散骨',
+		'image'  => 'front-page/step/contact.png',
+		'alt'    => '海で散骨を行うイラスト',
+	),
+	array(
+		'number' => '5',
+		'title'  => '証明書の発行',
+		'image'  => 'front-page/step/contact.png',
+		'alt'    => '散骨証明書を発行するイラスト',
+	),
+	array(
+		'number' => '6',
+		'title'  => 'これからの再会',
+		'image'  => 'front-page/step/contact.png',
+		'alt'    => '散骨した海を再び訪れるイラスト',
+	),
+);
+?>
+<section class="p-step-sec" aria-labelledby="front-step-title">
+	<picture class="p-step-sec__bg" aria-hidden="true">
+		<source media="(max-width: 740px)" srcset="<?php echo esc_url( theme_image_url( 'front-page/key-visual-sea-flowers-sp.png' ) ); ?>">
+		<img src="<?php echo esc_url( theme_image_url( 'front-page/key-visual-sea-flowers.png' ) ); ?>" width="2688" height="1408" alt="" loading="lazy">
+	</picture>
+
+	<div class="p-step-sec__inner u-container">
+		<div class="p-step-sec__title c-section-title c-section-title--white c-section-title--center">
+			<p class="c-section-title__sub">Step</p>
+			<h2 id="front-step-title" class="c-section-title__main">散骨の流れ</h2>
+		</div>
+
+		<ol class="p-step-sec__list">
+			<?php foreach ( $front_step_items as $front_step_item ) : ?>
+				<li class="p-step-sec__item">
+					<article class="p-step-sec__card">
+						<p class="p-step-sec__label">
+							<span class="p-step-sec__label-text">Step</span>
+							<span class="p-step-sec__number"><?php echo esc_html( $front_step_item['number'] ); ?></span>
+						</p>
+						<div class="p-step-sec__icon">
+							<img src="<?php echo esc_url( theme_image_url( $front_step_item['image'] ) ); ?>" width="1024" height="1024" alt="<?php echo esc_attr( $front_step_item['alt'] ); ?>">
+						</div>
+						<h3 class="p-step-sec__name"><?php echo esc_html( $front_step_item['title'] ); ?></h3>
+					</article>
+				</li>
+			<?php endforeach; ?>
+		</ol>
+
+		<div class="p-step-sec__message">
+			<h4 class="p-step-sec__lead">初めての海洋散骨も、<br class="u-br--sp">一つずつ丁寧にご案内します。</h4>
+			<div class="p-step-sec__body">
+				<p>海洋散骨が初めての方もご安心ください。</p>
+				<p>石垣島海洋散骨センターでは、<br class="u-br--sp">ご遺族様の不安やご希望を伺いながら、<br>最後までサポートします。</p>
+			</div>
+		</div>
+	</div>
+</section>
+
 <?php get_footer(); ?>

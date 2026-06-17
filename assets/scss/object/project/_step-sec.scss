@@ -1,0 +1,274 @@
+@use "../../foundation/mixin" as *;
+@use "../../foundation/variables" as *;
+
+.p-step-sec {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  padding-block: 120px 144px;
+  color: $color-white;
+
+  @include bp("tb") {
+    padding-block: 104px 120px;
+  }
+
+  @include bp("sp-l") {
+    padding-block: 80px 88px;
+  }
+
+  &::before {
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    background: linear-gradient(
+      rgba($color-main, 0.24),
+      rgba($color-main, 0.16)
+    );
+    content: "";
+  }
+
+  &__bg {
+    position: absolute;
+    z-index: -2;
+    inset: -48px;
+    display: block;
+
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      filter: blur(14px) brightness(1.1) contrast(0.95) saturate(0.88);
+      transform: scale(1.04);
+    }
+  }
+
+  &__inner {
+    position: relative;
+    z-index: 1;
+  }
+
+  &__title {
+    .c-section-title__sub,
+    .c-section-title__main {
+      text-shadow:
+        0 2px 16px rgba($color-main, 0.68),
+        0 0 20px rgba($color-white, 0.28);
+    }
+  }
+
+  &__list {
+    --step-circle-size: clamp(160px, 15vw, 200px);
+    --step-row-gap: 64px;
+    --step-col-gap: 88px;
+    --step-label-icon-gap: 32px;
+    --step-number-line-height: 0.9;
+    --step-label-size: 14px;
+    --step-number-size: 32px;
+
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: var(--step-row-gap) var(--step-col-gap);
+    max-width: 920px;
+    margin: 56px auto 0;
+    padding: 0;
+    list-style: none;
+
+    @include bp("tb") {
+      --step-circle-size: clamp(140px, 18vw, 164px);
+      --step-row-gap: 56px;
+      --step-col-gap: 40px;
+      --step-label-icon-gap: 24px;
+      --step-label-size: 13px;
+      --step-number-size: 28px;
+
+      margin-top: 48px;
+    }
+
+    @include bp("sp-l") {
+      --step-circle-size: clamp(120px, 34vw, 132px);
+      --step-row-gap: 52px;
+      --step-col-gap: 32px;
+      --step-number-size: 24px;
+
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      margin-top: 48px;
+    }
+  }
+
+  &__item {
+    position: relative;
+
+    &:not(:last-child)::after {
+      position: absolute;
+      top: calc(
+        (var(--step-number-size) * var(--step-number-line-height)) +
+          var(--step-label-icon-gap) + (var(--step-circle-size) / 2)
+      );
+      left: calc(100% + (var(--step-col-gap) / 2));
+      color: rgba($color-white, 0.95);
+      content: "\2192";
+      font-family: $font-heading;
+      font-size: 36px;
+      font-weight: 600;
+      line-height: 1;
+      text-shadow: 0 2px 12px rgba($color-main, 0.35);
+      transform: translate(-50%, -50%);
+
+      @include bp("tb") {
+        font-size: 30px;
+      }
+
+      @include bp("sp-l") {
+        font-size: 26px;
+      }
+    }
+
+    &:nth-child(3)::after {
+      @media screen and (width > 740px) {
+        content: none;
+      }
+    }
+
+    &:nth-child(2n)::after {
+      @include bp("sp-l") {
+        content: none;
+      }
+    }
+
+    &:last-child::after {
+      content: none;
+    }
+  }
+
+  &__card {
+    display: grid;
+    justify-items: center;
+    text-align: center;
+  }
+
+  &__label {
+    display: inline-flex;
+    align-items: flex-end;
+    gap: 6px;
+    margin: 0;
+    color: $color-white;
+    font-family: $font-heading;
+    font-weight: 700;
+    line-height: var(--step-number-line-height);
+    letter-spacing: 0.04em;
+    text-shadow: 0 2px 12px rgba($color-main, 0.45);
+  }
+
+  &__label-text {
+    font-size: var(--step-label-size);
+    line-height: 1;
+    white-space: nowrap;
+  }
+
+  &__number {
+    font-size: var(--step-number-size);
+    line-height: var(--step-number-line-height);
+  }
+
+  &__icon {
+    display: grid;
+    place-items: center;
+    width: var(--step-circle-size);
+    aspect-ratio: 1;
+    overflow: hidden;
+    border-radius: 50%;
+    background-color: $color-white;
+    margin-top: var(--step-label-icon-gap);
+
+    img {
+      display: block;
+      width: 64%;
+      height: 64%;
+      object-fit: contain;
+
+      @include bp("sp-l") {
+        width: 62%;
+        height: 62%;
+      }
+    }
+  }
+
+  &__name {
+    margin: 32px 0 0;
+    color: $color-white;
+    font-size: clamp(16px, 1.7vw, 22px);
+    font-weight: 700;
+    line-height: 1.55;
+    letter-spacing: 0.08em;
+    text-shadow: 0 2px 12px rgba($color-main, 0.45);
+    white-space: nowrap;
+    font-family: $font-heading;
+
+    @include bp("sp-l") {
+      margin-top: 28px;
+      font-size: 18px;
+    }
+  }
+
+  &__message {
+    display: grid;
+    justify-items: center;
+    gap: 28px;
+    margin-top: 88px;
+    text-align: center;
+
+    @include bp("sp-l") {
+      gap: 24px;
+      margin-top: 48px;
+    }
+  }
+
+  &__lead {
+    margin: 0;
+    padding: 12px 24px;
+    background-color: $color-white;
+    color: $color-main;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.6;
+    letter-spacing: 0.08em;
+
+    @include bp("tb") {
+      width: 100%;
+      max-width: 100%;
+    }
+
+    @include bp("sp-l") {
+      padding: 12px 16px;
+      font-size: 16px;
+    }
+  }
+
+  &__body {
+    display: grid;
+    gap: 12px;
+    max-width: 720px;
+    color: $color-white;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 2;
+    letter-spacing: 0.08em;
+    text-shadow: 0 2px 12px rgba($color-main, 0.42);
+
+    @include bp("tb") {
+      width: 100%;
+      max-width: 100%;
+    }
+
+    @include bp("sp-l") {
+      line-height: 1.9;
+      letter-spacing: 0.04em;
+    }
+
+    p {
+      margin: 0;
+    }
+  }
+}
