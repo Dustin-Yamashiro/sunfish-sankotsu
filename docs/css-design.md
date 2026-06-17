@@ -80,6 +80,10 @@ assets/scss/
 .p-section__button--primary {}
 ```
 
+写真やカードなど中身の差し替えが起きる要素で、modifier が配置スロットを表す場合は、内容名ではなく `--01`, `--02` のような番号名を使う。例: `.p-front-appeal__photo--01`。写真そのものの意味に依存する `--beach`, `--flower` のような名前は、差し替え時に class 名まで変更が必要になるため避ける。
+
+固定フォーマットの画像枠は、原則 `width` と `aspect-ratio` で形を定義し、任意の `width` + `height` 固定だけで縦横を決めない。`img` には `object-fit` と必要に応じた `object-position` を指定し、写真差し替え時のトリミングだけを調整できる状態にする。
+
 ## 新しいセクションを追加する手順
 
 1. 汎用化できる見出しやボタンは `object/component` に置く。

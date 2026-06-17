@@ -1,0 +1,301 @@
+@use "../../foundation/mixin" as *;
+@use "../../foundation/variables" as *;
+
+.p-front-appeal {
+  padding-top: 120px;
+  overflow: hidden;
+  background-color: $color-white;
+
+  @include bp("tb") {
+    padding-top: 96px;
+  }
+
+  @include bp("sp-l") {
+    padding-top: 80px;
+  }
+
+  &__main {
+    display: grid;
+    position: relative;
+
+    @include bp("pc-s") {
+      display: block;
+    }
+  }
+
+  &__content {
+    grid-area: 1 / 1;
+    max-width: 760px;
+    margin-inline: auto;
+    position: relative;
+    z-index: 2;
+  }
+
+  &__title {
+    margin: 0;
+    color: $color-text;
+    font-family: $font-heading;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 1.7;
+    text-align: center;
+    letter-spacing: 0.12em;
+    transform: translateX(-12px);
+
+    @include bp("tb") {
+      font-size: 28px;
+      line-height: 1.8;
+      transform: translateX(-8px);
+    }
+
+    @include bp("sp-l") {
+      font-size: 23px;
+      line-height: 1.75;
+      letter-spacing: 0.04em;
+      transform: none;
+    }
+  }
+
+  &__body {
+    width: fit-content;
+    max-width: 100%;
+    margin-top: 64px;
+    margin-inline: auto;
+    color: $color-text;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 2;
+    letter-spacing: 0.08em;
+
+    @include bp("sp-l") {
+      width: 100%;
+      margin-top: 48px;
+      line-height: 1.9;
+      letter-spacing: 0.05em;
+    }
+
+    p {
+      margin: 0;
+
+      & + p {
+        margin-top: 28px;
+      }
+    }
+  }
+
+  &__list {
+    display: grid;
+    gap: 4px;
+    margin: 0 0 28px;
+    padding: 0;
+    list-style: none;
+  }
+
+  &__list li {
+    position: relative;
+    padding-left: 1.2em;
+
+    &::before {
+      position: absolute;
+      left: 0;
+      content: "・";
+    }
+  }
+
+  &__collage {
+    grid-area: 1 / 1;
+    width: 100%;
+    aspect-ratio: 1200 / 744;
+    position: relative;
+    z-index: 1;
+    pointer-events: none;
+
+    @include bp("pc-s") {
+      width: min(100%, 500px);
+      aspect-ratio: 3 / 2;
+      margin: 80px auto 0;
+    }
+
+    @include bp("tb") {
+      width: min(100%, 500px);
+      aspect-ratio: 3 / 2;
+      margin-top: 64px;
+    }
+
+    @include bp("sp-l") {
+      width: 100%;
+      aspect-ratio: 3 / 2;
+      margin-top: 56px;
+    }
+
+    @include bp("sp") {
+      aspect-ratio: 3 / 2;
+    }
+  }
+
+  &__photo {
+    position: absolute;
+    display: block;
+    overflow: hidden;
+    background-color: $color-gray;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+  }
+
+  &__photo--01 {
+    width: 204px;
+    aspect-ratio: 25 / 18;
+    top: 64px;
+    left: -16px;
+
+    img {
+      object-position: center 62%;
+    }
+
+    @include bp("pc-s") {
+      display: none;
+    }
+  }
+
+  &__photo--02 {
+    width: 288px;
+    aspect-ratio: 4 / 3;
+    top: 24px;
+    right: -64px;
+
+    img {
+      object-position: center 58%;
+    }
+
+    @include bp("pc-s") {
+      width: 100%;
+      aspect-ratio: 3 / 2;
+      top: 0;
+      right: 0;
+      z-index: 1;
+    }
+
+    @include bp("tb") {
+      width: 100%;
+      aspect-ratio: 3 / 2;
+      top: 0;
+      right: 0;
+    }
+
+    @include bp("sp-l") {
+      width: 100%;
+      aspect-ratio: 3 / 2;
+      top: 0;
+      right: 0;
+    }
+  }
+
+  &__photo--03 {
+    width: 316px;
+    aspect-ratio: 15 / 16;
+    top: 348px;
+    left: -100px;
+
+    img {
+      object-position: 38% center;
+    }
+
+    @include bp("pc-s") {
+      display: none;
+    }
+  }
+
+  &__photo--04 {
+    width: 268px;
+    aspect-ratio: 4 / 5;
+    top: 408px;
+    right: -80px;
+
+    img {
+      object-position: center center;
+    }
+
+    @include bp("pc-s") {
+      display: none;
+    }
+  }
+
+  &__choice {
+    margin-top: 80px;
+    padding-block: 120px;
+    background-color: rgba($color-main, 0.12);
+
+    @include bp("tb") {
+      padding-block: 96px;
+    }
+
+    @include bp("sp-l") {
+      margin-top: 64px;
+      padding-block: 64px;
+    }
+  }
+
+  &__choice-text {
+    margin: 0;
+    color: $color-text;
+    font-family: $font-heading;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: baseline;
+    column-gap: 24px;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 1.7;
+    text-align: center;
+    letter-spacing: 0.12em;
+
+    @include bp("tb") {
+      font-size: 28px;
+    }
+
+    @include bp("sp-l") {
+      display: block;
+      font-size: 22px;
+      line-height: 1.9;
+      letter-spacing: 0.08em;
+    }
+  }
+
+  &__choice-prefix {
+    justify-self: end;
+
+    @include bp("sp-l") {
+      display: block;
+      width: 100%;
+      justify-self: auto;
+    }
+  }
+
+  &__choice-keyword {
+    color: $color-main;
+    font-size: 40px;
+    font-weight: 600;
+
+    @include bp("tb") {
+      font-size: 34px;
+    }
+
+    @include bp("sp-l") {
+      display: inline-block;
+      font-size: 28px;
+    }
+  }
+
+  &__choice-suffix {
+    justify-self: start;
+
+    @include bp("sp-l") {
+      display: inline;
+    }
+  }
+}
