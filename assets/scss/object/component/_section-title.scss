@@ -7,11 +7,16 @@
 .c-section-title {
   --section-title-main-color: #{$color-text};
   --section-title-sub-color: #{$color-main};
+  --section-title-gap: 36px;
 
   display: grid;
-  gap: 22px;
+  gap: var(--section-title-gap);
   color: var(--section-title-main-color);
   letter-spacing: 0.08em;
+
+  @include bp("sp-l") {
+    --section-title-gap: 24px;
+  }
 
   &--center {
     width: fit-content;

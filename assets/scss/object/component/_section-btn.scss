@@ -4,44 +4,79 @@
 @use "../../foundation/variables" as *;
 
 .c-section-btn {
-  --button-color: #{$color-main};
+  --section-btn-color: #{$color-main};
+  --section-btn-bg: transparent;
+  --section-btn-hover-bg: #{$color-main};
+  --section-btn-hover-color: #{$color-white};
+
+  inline-size: 100%;
+  max-width: 300px;
 
   &--accent {
-    --button-color: #{$color-accent};
+    --section-btn-color: #{$color-accent};
+    --section-btn-hover-bg: #{$color-accent};
   }
 
-  &--prev > a::before {
+  &--prev > a::before,
+  &--prev > button::before {
     content: "←";
     display: inline-block;
-    margin-right: 0.5em;
+    transition: transform $duration-base $ease-base;
   }
 
-  &--next > a::after {
+  &--next > a::after,
+  &--next > button::after {
     content: "→";
     display: inline-block;
-    margin-left: 0.5em;
+    transition: transform $duration-base $ease-base;
   }
 
   & > a,
   & > button {
     display: inline-flex;
     align-items: center;
-    justify-content: center;
-    min-width: 160px;
-    min-height: 48px;
-    padding: 0.8em 1.75em;
-    border: 2px solid var(--button-color);
-    border-radius: 999px;
-    background-color: $color-white;
-    color: var(--button-color);
-    font-weight: 700;
+    justify-content: space-between;
+    gap: 24px;
+    inline-size: 100%;
+    min-height: 50px;
+    padding: 12px 24px;
+    border: 1px solid var(--section-btn-color);
+    background-color: var(--section-btn-bg);
+    color: var(--section-btn-color);
+    font-size: 16px;
+    font-weight: 600;
     line-height: 1.4;
+    letter-spacing: 0.08em;
     white-space: nowrap;
+    transition:
+      background-color $duration-base $ease-base,
+      border-color $duration-base $ease-base,
+      color $duration-base $ease-base;
 
     &:hover,
     &:focus-visible {
-      background-color: var(--button-color);
-      color: $color-white;
+      border-color: var(--section-btn-hover-bg);
+      background-color: var(--section-btn-hover-bg);
+      color: var(--section-btn-hover-color);
     }
+
+    &:focus-visible {
+      outline: 2px solid rgba($color-main, 0.35);
+      outline-offset: 4px;
+    }
+  }
+
+  &--prev > a:hover::before,
+  &--prev > a:focus-visible::before,
+  &--prev > button:hover::before,
+  &--prev > button:focus-visible::before {
+    transform: translateX(-6px);
+  }
+
+  &--next > a:hover::after,
+  &--next > a:focus-visible::after,
+  &--next > button:hover::after,
+  &--next > button:focus-visible::after {
+    transform: translateX(6px);
   }
 }

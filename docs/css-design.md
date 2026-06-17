@@ -27,7 +27,8 @@ assets/scss/
       _breadcrumb.scss
       _tag.scss
     project/
-      _front-page.scss
+      _front-appeal.scss
+      _split.scss
       _content.scss
     utility/
       _bg.scss
@@ -80,6 +81,8 @@ assets/scss/
 .p-section__button--primary {}
 ```
 
+BEM の block 名は、できるだけ接頭辞を除いて 1 単語にする。1 単語で意味が曖昧になる場合だけ、ハイフン区切りの 2 単語までを基本にする。3 単語以上の block 名は、責務が広すぎる、または component/project の分類が誤っている可能性を疑う。
+
 写真やカードなど中身の差し替えが起きる要素で、modifier が配置スロットを表す場合は、内容名ではなく `--01`, `--02` のような番号名を使う。例: `.p-front-appeal__photo--01`。写真そのものの意味に依存する `--beach`, `--flower` のような名前は、差し替え時に class 名まで変更が必要になるため避ける。
 
 固定フォーマットの画像枠は、原則 `width` と `aspect-ratio` で形を定義し、任意の `width` + `height` 固定だけで縦横を決めない。`img` には `object-fit` と必要に応じた `object-position` を指定し、写真差し替え時のトリミングだけを調整できる状態にする。
@@ -87,9 +90,10 @@ assets/scss/
 ## 新しいセクションを追加する手順
 
 1. 汎用化できる見出しやボタンは `object/component` に置く。
-2. ページ固有の配置や余白は `object/project` に置く。
-3. `assets/scss/style.scss` に読み込みを追加する。
-4. 同じ見た目が 2 箇所以上に増えたら component 化を検討する。
+2. 写真とテキストを横並びにするセクション構成は `object/project` の `p-split` を使う。これは見出しやボタンのような独立 UI component ではなく、案件内で使い回すセクションパターンとして扱う。
+3. ページ固有の配置や余白は `object/project` に置く。
+4. `assets/scss/style.scss` に読み込みを追加する。
+5. 同じ見た目が 2 箇所以上に増えたら component 化を検討する。
 
 ## 余白とスペース調整
 
@@ -121,3 +125,4 @@ assets/scss/
 - SWELL 親テーマの既存 class と干渉しない命名を優先し、独自パーツは `l-custom-*` や用途が分かる `p-*` で作る。
 - 余白やスペース調整の px 値は原則 4 の倍数にする。
 - 通常の可読テキストの font-size は原則 16px 以上にする。
+- ユーザーが後から調整したと判断できる幅、余白、font-size、配置、class 名は、依頼対象に直接関係しない限り戻さない。変更が必要な場合は、既存値を変更する理由を明確にして最小範囲で触る。
