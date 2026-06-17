@@ -10,11 +10,17 @@
   --section-btn-hover-color: #{$color-white};
 
   inline-size: 100%;
-  max-width: 300px;
+  max-width: 280px;
 
   &--accent {
     --section-btn-color: #{$color-accent};
     --section-btn-hover-bg: #{$color-accent};
+  }
+
+  &--white {
+    --section-btn-color: #{$color-white};
+    --section-btn-hover-bg: #{$color-white};
+    --section-btn-hover-color: #{$color-main};
   }
 
   &--prev > a::before,
