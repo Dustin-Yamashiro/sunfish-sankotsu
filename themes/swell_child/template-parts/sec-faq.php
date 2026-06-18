@@ -46,7 +46,7 @@ $sec_faq_items      = array(
 	),
 );
 ?>
-<section class="l-sec-faq u-section-space" aria-labelledby="front-faq-title">
+<section class="l-sec-faq" aria-labelledby="front-faq-title">
 	<div class="l-sec-faq__inner u-container">
 		<div class="l-sec-faq__title c-sec-title c-sec-title--center u-fade-up">
 			<p class="c-sec-title__sub u-text-fade u-text-fade--chars">FAQ</p>

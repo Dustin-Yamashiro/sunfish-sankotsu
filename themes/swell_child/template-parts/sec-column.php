@@ -22,7 +22,7 @@ if ( $sec_column_category ) {
 
 $sec_column_query = new WP_Query( $sec_column_query_args );
 ?>
-<section class="l-sec-column u-section-space" aria-labelledby="front-column-title">
+<section class="l-sec-column" aria-labelledby="front-column-title">
 	<div class="l-sec-column__heading u-container">
 		<div class="l-sec-column__title c-sec-title c-sec-title--center u-fade-up">
 			<p class="c-sec-title__sub u-text-fade u-text-fade--chars">Blog</p>

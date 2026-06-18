@@ -11,7 +11,7 @@
 - 共通セクションは `template-parts/sec-*.php`、`layout/_sec-*.scss`、`.l-sec-*` で管理する。トップページ固有セクションは `front-page.php`、`layout/_front-*.scss`、`.l-front-*` で管理する。詳細は `docs/css-design.md` を参照する。
 - `template-parts/sec-*.php` の冒頭には、何のセクションか分かる日本語 docblock を書く。
 - この案件は SWELL 子テーマのため、SWELL 親テーマの既存 class と干渉しない命名を優先する。独自のヘッダー、フッター、固定パーツは `l-custom-*` など案件側だと分かる名前にする。
-- 余白やスペース調整の `margin`, `padding`, `gap` などは、原則 4 の倍数の px 値で指定する。
+- 余白やスペース調整の `margin`, `padding`, `gap` などは、原則 4 の倍数の px 値で指定する。ただし、ボタン、ラベル、短冊、見出し背景、カード内テキスト面など、文字を包むボックス要素の上下 padding は `em` を優先し、font-size に追従させる。
 - 通常の可読テキストの `font-size` は原則 `16px` 以上にする。明示指示やデザイン上の必要性がある場合だけ例外を許容する。
 - `style.scss` の `@use` は明示順で管理し、まとめ読み込みに戻さない。
 - GSAP、ScrollTrigger、Splide、フェードイン、パララックスを扱う場合は `docs/animation.md` と `.agents/skills/rich-animation/SKILL.md` を確認する。

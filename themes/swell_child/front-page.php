@@ -18,7 +18,7 @@ get_header();
 	</div>
 </section>
 
-<section class="l-front-appeal u-section-space u-section-space--top-only" aria-labelledby="front-appeal-title">
+<section class="l-front-appeal" aria-labelledby="front-appeal-title">
 	<div class="l-front-appeal__main u-container">
 		<div class="l-front-appeal__content">
 			<h2 id="front-appeal-title" class="l-front-appeal__title u-fade-up">お墓ではない<br>「想い」を残す、供養のカタチ</h2>
@@ -61,7 +61,7 @@ get_header();
 	</div>
 </section>
 
-<section class="l-sec-split u-section-space u-section-space--btm-large" aria-labelledby="front--title">
+<section class="l-sec-split l-sec-split--front" aria-labelledby="front--title">
 	<div class="l-sec-split__inner u-container">
 		<div class="l-sec-split__content">
 			<div class="l-sec-split__title c-sec-title u-fade-up">
@@ -69,8 +69,9 @@ get_header();
 				<h2 id="front--title" class="c-sec-title__main">海洋散骨とは</h2>
 			</div>
 			<div class="l-sec-split__body">
-				<p>海洋散骨とは、お墓へ納骨する代わりに、ご遺骨を粉骨して海へ供養する自然葬の一つです。<br>ただ海に還すだけでなく、散骨した海をこれからも故人様を想う場所として残す、新しい供養のカタチです。</p>
-				<p>海洋散骨には、粉骨の手続きや必要書類の用意、当日の進行など、初めての方には分かりにくいことが多々あります。<br>石垣島海洋散骨センターでは、初めての方でも安心して故人様をお見送りできるよう、分かりやすく丁寧にサポートいたします。</p>
+				<p>海洋散骨とは、お墓へ納骨する代わりに、ご遺骨を粉骨して海へ供養する自然葬の一つです。</p>
+				<p>ただ海に還すだけでなく、散骨した海をこれからも故人様を想う場所として残す、新しい供養のカタチ。</p>
+				<p>石垣島海洋散骨センターでは、海洋散骨が初めての方でも安心して故人様をお見送りできるよう、分かりやすく丁寧にサポートいたします。</p>
 			</div>
 		</div>
 
@@ -215,7 +216,7 @@ $front_step_items = array(
 	),
 );
 ?>
-<section class="l-front-step u-section-space u-section-space--btm-large" aria-labelledby="front-step-title">
+<section class="l-front-step" aria-labelledby="front-step-title">
 	<picture class="l-front-step__bg" aria-hidden="true">
 		<source media="(max-width: 740px)" srcset="<?php echo esc_url( theme_image_url( 'front-page/key-visual-sea-flowers-sp.png' ) ); ?>">
 		<img src="<?php echo esc_url( theme_image_url( 'front-page/key-visual-sea-flowers.png' ) ); ?>" width="2688" height="1408" alt="" loading="lazy">

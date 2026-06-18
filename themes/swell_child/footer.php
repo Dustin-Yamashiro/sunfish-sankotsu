@@ -114,7 +114,7 @@ $footer_nav_columns = array(
 
 <div class="l-custom-footer-area u-bg--gradient">
 	<?php if ( $show_footer_contact ) : ?>
-		<section class="l-custom-footer-contact u-section-space" aria-labelledby="footer-contact-title">
+		<section class="l-custom-footer-contact" aria-labelledby="footer-contact-title">
 			<div class="l-custom-footer-contact__inner u-container">
 				<div class="c-sec-title c-sec-title--center c-sec-title--white">
 					<p class="c-sec-title__sub">Contact</p>

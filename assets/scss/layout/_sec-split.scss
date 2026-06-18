@@ -8,6 +8,28 @@
   overflow: hidden;
   background-color: $color-white;
 
+  padding-top: 80px;
+
+  @include bp("tb") {
+    padding-top: 60px;
+  }
+
+  @include bp("sp-l") {
+    padding-top: 40px;
+  }
+
+  &--front {
+    padding-block: 120px 160px;
+
+    @include bp("tb") {
+      padding-block: 100px 120px;
+    }
+
+    @include bp("sp-l") {
+      padding-block: 80px 100px;
+    }
+  }
+
   &__inner {
     display: grid;
     grid-template-columns: minmax(0, 520px) minmax(0, 1fr);

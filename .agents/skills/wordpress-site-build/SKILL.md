@@ -12,7 +12,7 @@ description: この local-env テンプレートで WordPress オリジナルテ
 5. SCSS は適切な FLOCSS 階層に partial を追加し、`assets/scss/style.scss` に読み込む。
 6. PHP の処理は `themes/swell_child/inc` に置き、テンプレートは markup 中心に保つ。
 7. フェードイン、スライダー、GSAP、ScrollTrigger、Splide、パララックスを扱う場合は `.agents/skills/rich-animation/SKILL.md` と `docs/animation.md` を読む。
-8. 余白やスペース調整の `margin`, `padding`, `gap` などは、原則 4 の倍数の px 値で指定する。
+8. 余白やスペース調整の `margin`, `padding`, `gap` などは、原則 4 の倍数の px 値で指定する。ただし、ボタン、ラベル、短冊、見出し背景、カード内テキスト面など、文字を包むボックス要素の上下 padding は `em` を優先し、font-size に追従させる。
 9. 通常の可読テキストの `font-size` は原則 `16px` 以上にする。明示指示やデザイン上の必要性がある場合だけ例外を許容する。
 10. PHP、JS、SCSS、assets を触った場合は `npm run build` と `npm run lint:php` で確認する。
 

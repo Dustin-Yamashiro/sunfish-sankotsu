@@ -6,7 +6,16 @@
 
 .l-front-appeal {
   overflow: hidden;
+  padding-block: 120px 0;
   background-color: $color-white;
+
+  @include bp("tb") {
+    padding-block: 96px 0;
+  }
+
+  @include bp("sp-l") {
+    padding-block: 80px 0;
+  }
 
   &__main {
     display: grid;
@@ -220,7 +229,7 @@
   }
 
   &__choice {
-    margin-top: 80px;
+    margin-top: 100px;
     padding-block: 120px;
     background-color: rgba($color-main, 0.12);
 
