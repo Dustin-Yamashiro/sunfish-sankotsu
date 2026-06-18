@@ -22,10 +22,12 @@
 @use "object/project/plan-sec";
 @use "object/project/step-sec";
 @use "object/project/faq-sec";
-@use "object/project/content";
+@use "object/project/news-sec";
+@use "object/project/column-sec";
 
 @use "object/utility/bg";
 @use "object/utility/br";
 @use "object/utility/container";
 @use "object/utility/section-space";
 @use "object/utility/contents";
+@use "object/utility/animation";

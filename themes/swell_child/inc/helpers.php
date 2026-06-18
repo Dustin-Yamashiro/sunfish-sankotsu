@@ -96,3 +96,30 @@ if ( ! function_exists( 'theme_uses_swell_content_shell' ) ) {
 		return (bool) apply_filters( 'theme_uses_swell_content_shell', $uses_swell_shell );
 	}
 }
+
+if ( ! function_exists( 'theme_output_swell_breadcrumb' ) ) {
+	/**
+	 * Output SWELL's breadcrumb at the configured position.
+	 *
+	 * @param string $position Breadcrumb position. Accepts `top` or `bottom`.
+	 * @return void
+	 */
+	function theme_output_swell_breadcrumb( $position ) {
+		if ( ! class_exists( 'SWELL_Theme' ) || SWELL_Theme::is_top() ) {
+			return;
+		}
+
+		$swell_setting          = SWELL_Theme::get_setting();
+		$is_top_breadcrumb_pos = ! empty( $swell_setting['pos_breadcrumb'] ) && 'top' === $swell_setting['pos_breadcrumb'];
+
+		if ( 'top' === $position && ! $is_top_breadcrumb_pos ) {
+			return;
+		}
+
+		if ( 'bottom' === $position && $is_top_breadcrumb_pos ) {
+			return;
+		}
+
+		SWELL_Theme::get_parts( 'parts/breadcrumb' );
+	}
+}

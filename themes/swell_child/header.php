@@ -1,12 +1,17 @@
+<?php
+$use_swell_content_shell = theme_uses_swell_content_shell();
+$swell_setting           = class_exists( 'SWELL_Theme' ) ? SWELL_Theme::get_setting() : array();
+?>
 <!DOCTYPE html>
-<html <?php language_attributes(); ?>>
+<html <?php language_attributes(); ?> <?php class_exists( 'SWELL_Theme' ) ? SWELL_Theme::root_attrs() : ''; ?>>
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<?php wp_head(); ?>
 </head>
-<body <?php body_class(); ?>>
+<body>
 <?php wp_body_open(); ?>
+<div id="body_wrap" <?php body_class(); ?> <?php class_exists( 'SWELL_Theme' ) ? SWELL_Theme::body_attrs() : ''; ?>>
 <?php
 $header_utility_links = array(
 	array(
@@ -158,4 +163,28 @@ $header_mobile_links = array_merge( $header_primary_links, $header_utility_links
 		</div>
 	</div>
 </header>
-<main id="primary" class="l-page">
+<?php if ( $use_swell_content_shell ) : ?>
+	<?php
+	if ( class_exists( 'SWELL_Theme' ) ) {
+		if ( SWELL_Theme::is_use( 'pjax' ) ) {
+			echo '<div data-barba="container" data-barba-namespace="home">';
+		}
+
+		if ( SWELL_Theme::is_show_ttltop() ) {
+			SWELL_Theme::get_parts( 'parts/top_title_area' );
+		}
+
+		theme_output_swell_breadcrumb( 'top' );
+	}
+	?>
+	<div id="content" class="l-content l-container" <?php class_exists( 'SWELL_Theme' ) ? SWELL_Theme::content_attrs() : ''; ?>>
+		<?php
+		if ( class_exists( 'SWELL_Theme' ) && SWELL_Theme::is_show_pickup_banner() ) {
+			$cache_key = ! empty( $swell_setting['cache_top'] ) ? 'pickup_banner' : '';
+			SWELL_Theme::get_parts( 'parts/top/pickup_banner', null, $cache_key );
+		}
+		?>
+<?php else : ?>
+	<?php theme_output_swell_breadcrumb( 'top' ); ?>
+	<main id="primary" class="l-page">
+<?php endif; ?>

@@ -395,4 +395,133 @@ $front_faq_items = array(
 	</div>
 </section>
 
+<?php
+$front_news_category = get_category_by_slug( 'news' );
+$front_news_args     = array(
+	'post_type'           => 'post',
+	'post_status'         => 'publish',
+	'posts_per_page'      => 3,
+	'ignore_sticky_posts' => true,
+	'no_found_rows'       => true,
+);
+
+if ( $front_news_category ) {
+	$front_news_args['cat'] = (int) $front_news_category->term_id;
+}
+
+$front_news_query = new WP_Query( $front_news_args );
+?>
+<section class="p-news-sec u-section-space" aria-labelledby="front-news-title">
+	<div class="p-news-sec__inner u-container">
+		<div class="p-news-sec__title c-section-title u-fade-up">
+			<p class="c-section-title__sub u-text-fade u-text-fade--chars">News</p>
+			<h2 id="front-news-title" class="c-section-title__main">お知らせ</h2>
+		</div>
+
+		<div class="p-news-sec__list">
+			<?php if ( $front_news_query->have_posts() ) : ?>
+				<?php while ( $front_news_query->have_posts() ) : ?>
+					<?php
+					$front_news_query->the_post();
+					$front_news_item_id = 'front-news-item-' . get_the_ID();
+					$front_news_terms   = get_the_category();
+					$front_news_term    = null;
+					$front_news_base_id = $front_news_category ? (int) $front_news_category->term_id : 0;
+
+					foreach ( $front_news_terms as $front_news_candidate ) {
+						if ( (int) $front_news_candidate->term_id !== $front_news_base_id ) {
+							$front_news_term = $front_news_candidate;
+							break;
+						}
+					}
+
+					if ( ! $front_news_term && ! empty( $front_news_terms[0] ) ) {
+						$front_news_term = $front_news_terms[0];
+					}
+					?>
+						<article class="p-news-sec__item" aria-labelledby="<?php echo esc_attr( $front_news_item_id ); ?>">
+							<a class="p-news-sec__link" href="<?php echo esc_url( get_permalink() ); ?>">
+								<span class="p-news-sec__meta">
+									<time class="p-news-sec__date" datetime="<?php echo esc_attr( get_the_date( 'Y-m-d' ) ); ?>"><?php echo esc_html( get_the_date( 'Y.m.d' ) ); ?></time>
+									<?php if ( $front_news_term ) : ?>
+										<span class="p-news-sec__category"><?php echo esc_html( $front_news_term->name ); ?></span>
+									<?php endif; ?>
+								</span>
+								<h3 id="<?php echo esc_attr( $front_news_item_id ); ?>" class="p-news-sec__item-title"><?php echo esc_html( get_the_title() ); ?></h3>
+							</a>
+						</article>
+				<?php endwhile; ?>
+				<?php wp_reset_postdata(); ?>
+			<?php else : ?>
+				<p class="p-news-sec__empty">現在お知らせはありません。</p>
+			<?php endif; ?>
+		</div>
+
+		<div class="p-news-sec__more c-section-btn c-section-btn--next">
+			<a href="<?php echo esc_url( home_url( '/news/' ) ); ?>">もっとみる</a>
+		</div>
+	</div>
+</section>
+
+<?php
+$front_column_category = get_category_by_slug( 'column' );
+$front_column_args     = array(
+	'post_type'           => 'post',
+	'post_status'         => 'publish',
+	'posts_per_page'      => 8,
+	'ignore_sticky_posts' => true,
+	'no_found_rows'       => true,
+);
+
+if ( $front_column_category ) {
+	$front_column_args['cat'] = (int) $front_column_category->term_id;
+}
+
+$front_column_query = new WP_Query( $front_column_args );
+?>
+<section class="p-column-sec u-section-space" aria-labelledby="front-column-title">
+	<div class="p-column-sec__heading u-container">
+		<div class="p-column-sec__title c-section-title c-section-title--center u-fade-up">
+			<p class="c-section-title__sub u-text-fade u-text-fade--chars">Blog</p>
+			<h2 id="front-column-title" class="c-section-title__main">海洋散骨コラム</h2>
+		</div>
+	</div>
+
+	<div class="p-column-sec__list-wrap u-container">
+		<div class="p-column-sec__slider splide js-column-slider" aria-label="海洋散骨コラム記事一覧">
+			<div class="splide__track">
+				<?php
+				SWELL_Theme::get_parts(
+					'parts/post_list/loop_sub',
+					array(
+						'query'     => $front_column_query,
+						'list_args' => array(
+							'type'           => 'card',
+							'max_col'        => '4',
+							'max_col_sp'     => '1',
+							'ul_add_class'   => 'p-column-sec__list splide__list',
+							'show_infeed'    => false,
+							'cat_pos'        => 'on_thumb',
+							'show_date'      => true,
+							'show_modified'  => false,
+							'show_author'    => false,
+							'excerpt_length' => 80,
+							'h_tag'          => 'h3',
+						),
+					)
+				);
+				?>
+			</div>
+		</div>
+	</div>
+
+	<div class="p-column-sec__more-wrap u-container">
+		<div class="p-column-sec__more c-section-btn c-section-btn--next">
+			<a href="<?php echo esc_url( home_url( '/column/' ) ); ?>">もっと見る</a>
+		</div>
+	</div>
+</section>
+
+<?php wp_reset_postdata(); ?>
+
 <?php get_footer(); ?>

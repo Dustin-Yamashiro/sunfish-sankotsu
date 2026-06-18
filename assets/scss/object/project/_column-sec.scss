@@ -1,0 +1,92 @@
+@use "../../foundation/mixin" as *;
+@use "../../foundation/variables" as *;
+
+.p-column-sec {
+  background-color: $color-white;
+
+  &__list-wrap {
+    overflow: hidden;
+    margin-top: 80px;
+
+    @include bp("tb") {
+      margin-top: 64px;
+    }
+
+    @include bp("sp-l") {
+      margin-top: 48px;
+    }
+  }
+
+  &__slider {
+    max-width: 100%;
+    overflow: hidden;
+  }
+
+  &__slider .splide__track {
+    overflow: hidden;
+  }
+
+  &__list {
+    width: 100%;
+    max-width: 100%;
+    margin-inline: 0;
+  }
+
+  &__slider.is-initialized &__list.splide__list {
+    gap: 0;
+    align-items: stretch;
+    display: flex;
+    flex-wrap: nowrap;
+  }
+
+  &__slider.is-initialized .splide__slide {
+    margin: 0;
+  }
+
+  .splide__pagination {
+    position: static;
+    gap: 8px;
+    margin-top: 32px;
+    padding: 0;
+
+    @include bp("sp-l") {
+      margin-top: 24px;
+    }
+  }
+
+  .splide__pagination li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 12px;
+    height: 12px;
+    line-height: 1;
+  }
+
+  .splide__pagination__page {
+    display: block;
+    flex: 0 0 auto;
+    width: 8px;
+    height: 8px;
+    margin: 0;
+    background-color: rgba($color-main, 0.28);
+    opacity: 1;
+    transform-origin: center;
+    transition:
+      background-color $duration-base $ease-base,
+      transform $duration-base $ease-base;
+  }
+
+  .splide__pagination__page.is-active {
+    background-color: $color-main;
+    transform: scale(1.25);
+  }
+
+  &__more.c-section-btn {
+    margin: 56px auto 0;
+
+    @include bp("tb") {
+      margin: 48px 0 0 auto;
+    }
+  }
+}

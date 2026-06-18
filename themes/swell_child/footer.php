@@ -1,5 +1,31 @@
-</main>
 <?php
+$use_swell_content_shell = theme_uses_swell_content_shell();
+$swell_setting           = class_exists( 'SWELL_Theme' ) ? SWELL_Theme::get_setting() : array();
+
+if ( $use_swell_content_shell ) {
+	if ( class_exists( 'SWELL_Theme' ) && SWELL_Theme::is_show_sidebar() ) {
+		get_sidebar();
+	}
+	echo '</div>';
+
+	if ( class_exists( 'SWELL_Theme' ) && SWELL_Theme::is_use( 'pjax' ) ) {
+		echo '</div>';
+	}
+
+	if ( is_active_sidebar( 'before_footer' ) ) {
+		echo '<div id="before_footer_widget" class="w-beforeFooter">';
+		if ( class_exists( 'SWELL_Theme' ) && ! SWELL_Theme::is_use( 'ajax_footer' ) ) {
+			SWELL_Theme::get_parts( 'parts/footer/before_footer' );
+		}
+		echo '</div>';
+	}
+
+	theme_output_swell_breadcrumb( 'bottom' );
+} else {
+	echo '</main>';
+	theme_output_swell_breadcrumb( 'bottom' );
+}
+
 $show_footer_contact = theme_should_show_footer_contact();
 
 $footer_contact_cards = array(
@@ -43,11 +69,11 @@ $footer_nav_columns = array(
 			'label' => '散骨プラン',
 			'children' => array(
 				array(
-					'label' => 'ー 貸切散骨プラン',
+					'label' => '貸切散骨プラン',
 					'url'   => home_url( '/kashikiri/' ),
 				),
 				array(
-					'label' => 'ー 代行散骨プラン',
+					'label' => '代行散骨プラン',
 					'url'   => home_url( '/dairi/' ),
 				),
 			),
@@ -164,6 +190,23 @@ $footer_nav_columns = array(
 		<p class="l-custom-footer__copyright">&copy; <?php echo esc_html( date_i18n( 'Y' ) ); ?> Sun Fish Co.,Ltd. All Rights Reserved.</p>
 	</footer>
 </div>
+<?php
+if ( $use_swell_content_shell && class_exists( 'SWELL_Theme' ) ) {
+	if ( has_nav_menu( 'fix_bottom_menu' ) ) {
+		$cache_key = ! empty( $swell_setting['cache_bottom_menu'] ) ? 'fix_bottom_menu' : '';
+		SWELL_Theme::get_parts( 'parts/footer/fix_menu', null, $cache_key );
+	}
+
+	SWELL_Theme::get_parts( 'parts/footer/fix_btns' );
+	SWELL_Theme::get_parts( 'parts/footer/modals' );
+}
+?>
+</div><!--/ #body_wrap-->
 <?php wp_footer(); ?>
+<?php
+if ( ! empty( $swell_setting['foot_code'] ) ) {
+	echo $swell_setting['foot_code']; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+}
+?>
 </body>
 </html>
