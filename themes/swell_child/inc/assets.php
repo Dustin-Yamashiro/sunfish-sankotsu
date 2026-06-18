@@ -57,16 +57,25 @@ function theme_local_request_base_url() {
 	}
 
 	$host = sanitize_text_field( wp_unslash( $_SERVER['HTTP_HOST'] ) );
-	$is_local_host = (bool) preg_match(
-		'/^(localhost|127\.0\.0\.1|10\.\d{1,3}\.\d{1,3}\.\d{1,3}|172\.(1[6-9]|2\d|3[01])\.\d{1,3}\.\d{1,3}|192\.168\.\d{1,3}\.\d{1,3})(:\d+)?$/',
-		$host
-	);
 
-	if ( ! $is_local_host ) {
+	if ( ! theme_is_safe_local_host( $host ) ) {
 		return '';
 	}
 
 	return ( is_ssl() ? 'https://' : 'http://' ) . $host;
+}
+
+/**
+ * Determine whether a host is safe for local URL rewriting.
+ *
+ * @param string $host Host with optional port.
+ * @return bool
+ */
+function theme_is_safe_local_host( $host ) {
+	return (bool) preg_match(
+		'/^(localhost|127\.0\.0\.1|10\.\d{1,3}\.\d{1,3}\.\d{1,3}|172\.(1[6-9]|2\d|3[01])\.\d{1,3}\.\d{1,3}|192\.168\.\d{1,3}\.\d{1,3})(:\d+)?$/',
+		$host
+	);
 }
 
 /**
@@ -82,6 +91,110 @@ function theme_filter_local_site_url( $url ) {
 }
 add_filter( 'option_home', 'theme_filter_local_site_url' );
 add_filter( 'option_siteurl', 'theme_filter_local_site_url' );
+
+/**
+ * Replace a safe local URL origin with the current request origin.
+ *
+ * @param string $url URL to rewrite.
+ * @return string
+ */
+function theme_replace_local_url_origin( $url ) {
+	if ( ! is_string( $url ) || '' === $url ) {
+		return $url;
+	}
+
+	$request_url = theme_local_request_base_url();
+
+	if ( ! $request_url ) {
+		return $url;
+	}
+
+	$parts = wp_parse_url( $url );
+
+	if ( empty( $parts['scheme'] ) || empty( $parts['host'] ) ) {
+		return $url;
+	}
+
+	$host = $parts['host'];
+
+	if ( ! empty( $parts['port'] ) ) {
+		$host .= ':' . $parts['port'];
+	}
+
+	if ( ! theme_is_safe_local_host( $host ) ) {
+		return $url;
+	}
+
+	$path     = isset( $parts['path'] ) ? $parts['path'] : '';
+	$query    = isset( $parts['query'] ) ? '?' . $parts['query'] : '';
+	$fragment = isset( $parts['fragment'] ) ? '#' . $parts['fragment'] : '';
+
+	return $request_url . $path . $query . $fragment;
+}
+
+/**
+ * Use the current local request host for media URLs as well.
+ *
+ * @param string $url Attachment URL.
+ * @return string
+ */
+function theme_filter_local_attachment_url( $url ) {
+	return theme_replace_local_url_origin( $url );
+}
+add_filter( 'wp_get_attachment_url', 'theme_filter_local_attachment_url' );
+
+/**
+ * Use the current local request host for upload base URLs.
+ *
+ * @param array $uploads Upload directory data.
+ * @return array
+ */
+function theme_filter_local_upload_dir( $uploads ) {
+	if ( ! empty( $uploads['baseurl'] ) ) {
+		$uploads['baseurl'] = theme_replace_local_url_origin( $uploads['baseurl'] );
+	}
+
+	if ( ! empty( $uploads['url'] ) ) {
+		$uploads['url'] = theme_replace_local_url_origin( $uploads['url'] );
+	}
+
+	return $uploads;
+}
+add_filter( 'upload_dir', 'theme_filter_local_upload_dir' );
+
+/**
+ * Use the current local request host for theme and loader asset URLs.
+ *
+ * SWELL generates parent theme CSS/JS from theme directory URLs. When the site
+ * is reviewed through a LAN IP, leaving those URLs on localhost makes icon
+ * fonts cross-origin and causes missing or garbled icons.
+ *
+ * @param string $url Asset URL.
+ * @return string
+ */
+function theme_filter_local_asset_url( $url ) {
+	return theme_replace_local_url_origin( $url );
+}
+add_filter( 'theme_file_uri', 'theme_filter_local_asset_url' );
+add_filter( 'template_directory_uri', 'theme_filter_local_asset_url' );
+add_filter( 'stylesheet_directory_uri', 'theme_filter_local_asset_url' );
+
+/**
+ * Use the current request host for enqueued assets except Vite dev assets.
+ *
+ * @param string $url    Asset URL.
+ * @param string $handle Asset handle.
+ * @return string
+ */
+function theme_filter_local_loader_asset_url( $url, $handle ) {
+	if ( in_array( $handle, array( 'theme-vite-style', 'theme-vite-main' ), true ) ) {
+		return $url;
+	}
+
+	return theme_replace_local_url_origin( $url );
+}
+add_filter( 'style_loader_src', 'theme_filter_local_loader_asset_url', 10, 2 );
+add_filter( 'script_loader_src', 'theme_filter_local_loader_asset_url', 10, 2 );
 
 /**
  * Prevent canonical redirects from forcing localhost during LAN review.

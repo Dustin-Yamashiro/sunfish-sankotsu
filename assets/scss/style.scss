@@ -9,8 +9,6 @@
 @use "layout/page";
 @use "layout/section";
 @use "layout/form";
-@use "layout/single";
-@use "layout/archive";
 
 @use "object/component/title";
 @use "object/component/section-title";
@@ -23,6 +21,7 @@
 @use "object/project/feature-sec";
 @use "object/project/plan-sec";
 @use "object/project/step-sec";
+@use "object/project/faq-sec";
 @use "object/project/content";
 
 @use "object/utility/bg";

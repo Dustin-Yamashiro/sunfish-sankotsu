@@ -79,3 +79,20 @@ if ( ! function_exists( 'theme_should_show_footer_contact' ) ) {
 		return (bool) apply_filters( 'theme_should_show_footer_contact', $should_show );
 	}
 }
+
+if ( ! function_exists( 'theme_uses_swell_content_shell' ) ) {
+	/**
+	 * Whether the current request should keep SWELL's standard content wrapper.
+	 *
+	 * Custom-designed pages use the child theme's `#primary.l-page` wrapper.
+	 * Posts, archives, search, and 404 screens rely on SWELL templates and need
+	 * `#content.l-content.l-container` plus sidebar/breadcrumb handling.
+	 *
+	 * @return bool
+	 */
+	function theme_uses_swell_content_shell() {
+		$uses_swell_shell = ! is_front_page() && ! is_page();
+
+		return (bool) apply_filters( 'theme_uses_swell_content_shell', $uses_swell_shell );
+	}
+}
