@@ -2,16 +2,7 @@
 @use "../../foundation/variables" as *;
 
 .p-faq-sec {
-  padding-block: 120px 136px;
   background-color: $color-white;
-
-  @include bp("tb") {
-    padding-block: 96px 112px;
-  }
-
-  @include bp("sp-l") {
-    padding-block: 80px 88px;
-  }
 
   &__list {
     display: grid;
@@ -189,8 +180,8 @@
   &__more.c-section-btn {
     margin: 64px auto 0;
 
-    @include bp("sp-l") {
-      margin-top: 48px;
+    @include bp("tb") {
+      margin: 48px 0 0 auto;
     }
   }
 }

@@ -3,16 +3,7 @@
 
 .p-plan-sec {
   overflow: hidden;
-  padding-block: 128px 160px;
   background-color: $color-white;
-
-  @include bp("tb") {
-    padding-block: 96px 120px;
-  }
-
-  @include bp("sp-l") {
-    padding-block: 80px 96px;
-  }
 
   &__heading {
     position: relative;
@@ -37,7 +28,6 @@
 
   &__card {
     position: relative;
-    min-height: 520px;
 
     @include bp("tb") {
       --plan-panel-padding: 48px 48px 64px;

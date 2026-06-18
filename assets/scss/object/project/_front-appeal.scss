@@ -2,17 +2,8 @@
 @use "../../foundation/variables" as *;
 
 .p-front-appeal {
-  padding-top: 120px;
   overflow: hidden;
   background-color: $color-white;
-
-  @include bp("tb") {
-    padding-top: 96px;
-  }
-
-  @include bp("sp-l") {
-    padding-top: 80px;
-  }
 
   &__main {
     display: grid;

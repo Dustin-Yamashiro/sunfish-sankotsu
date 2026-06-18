@@ -18,10 +18,10 @@ get_header();
 	</div>
 </section>
 
-<section class="p-front-appeal" aria-labelledby="front-appeal-title">
+<section class="p-front-appeal u-section-space u-section-space--top-only" aria-labelledby="front-appeal-title">
 	<div class="p-front-appeal__main u-container">
 		<div class="p-front-appeal__content">
-			<h2 id="front-appeal-title" class="p-front-appeal__title">お墓ではない<br>「想い」を残す、供養のカタチ</h2>
+			<h2 id="front-appeal-title" class="p-front-appeal__title u-fade-up">お墓ではない<br>「想い」を残す、供養のカタチ</h2>
 			<div class="p-front-appeal__body">
 				<ul class="p-front-appeal__list">
 					<li>お墓を継ぐ人がいない。</li>
@@ -35,16 +35,16 @@ get_header();
 		</div>
 
 		<div class="p-front-appeal__collage" aria-hidden="true">
-			<picture class="p-front-appeal__photo p-front-appeal__photo--01">
+			<picture class="p-front-appeal__photo p-front-appeal__photo--01 u-photo-fade u-photo-fade--left">
 				<img src="<?php echo esc_url( theme_image_url( 'front-page/appeal/beach-wave.jpg' ) ); ?>" width="3792" height="2844" alt="" loading="lazy">
 			</picture>
-			<picture class="p-front-appeal__photo p-front-appeal__photo--02">
+			<picture class="p-front-appeal__photo p-front-appeal__photo--02 u-photo-fade u-photo-fade--right">
 				<img src="<?php echo esc_url( theme_image_url( 'front-page/appeal/floating-flowers.png' ) ); ?>" width="1672" height="941" alt="" loading="lazy">
 			</picture>
-			<picture class="p-front-appeal__photo p-front-appeal__photo--03">
+			<picture class="p-front-appeal__photo p-front-appeal__photo--03 u-photo-fade u-photo-fade--left">
 				<img src="<?php echo esc_url( theme_image_url( 'front-page/appeal/scattering-flowers.png' ) ); ?>" width="1122" height="1402" alt="" loading="lazy">
 			</picture>
-			<picture class="p-front-appeal__photo p-front-appeal__photo--04">
+			<picture class="p-front-appeal__photo p-front-appeal__photo--04 u-photo-fade u-photo-fade--right">
 				<img src="<?php echo esc_url( theme_image_url( 'front-page/appeal/boat-sky.jpg' ) ); ?>" width="4032" height="3024" alt="" loading="lazy">
 			</picture>
 		</div>
@@ -54,18 +54,18 @@ get_header();
 		<div class="u-container">
 			<p class="p-front-appeal__choice-text">
 				<span class="p-front-appeal__choice-prefix">その想いに</span>
-				<span class="p-front-appeal__choice-keyword">“海洋散骨”</span>
+				<span class="p-front-appeal__choice-keyword u-text-fade">“海洋散骨”</span>
 				<span class="p-front-appeal__choice-suffix">という選択肢を</span>
 			</p>
 		</div>
 	</div>
 </section>
 
-<section class="p-split u-section-space" aria-labelledby="marine-scattering-introduction-title">
+<section class="p-split u-section-space u-section-space--btm-large" aria-labelledby="marine-scattering-introduction-title">
 	<div class="p-split__inner u-container">
 		<div class="p-split__content">
-			<div class="p-split__title c-section-title">
-				<p class="c-section-title__sub">Introduction</p>
+			<div class="p-split__title c-section-title u-fade-up">
+				<p class="c-section-title__sub u-text-fade u-text-fade--chars">Introduction</p>
 				<h2 id="marine-scattering-introduction-title" class="c-section-title__main">海洋散骨とは</h2>
 			</div>
 			<div class="p-split__body">
@@ -90,37 +90,13 @@ get_header();
 		</div>
 	</div>
 
-	<div class="p-split__gallery splide js-intro-gallery" aria-label="海洋散骨の写真ギャラリー">
-		<div class="splide__track">
-			<ul class="p-split__gallery-list splide__list">
-				<li class="p-split__gallery-slide p-split__gallery-slide--01 splide__slide">
-					<img src="<?php echo esc_url( theme_image_url( 'front-page/intro-gallery/gallery-02.jpeg' ) ); ?>" width="4032" height="3024" alt="石垣島の青い海と空" loading="lazy">
-				</li>
-				<li class="p-split__gallery-slide p-split__gallery-slide--02 splide__slide">
-					<img src="<?php echo esc_url( theme_image_url( 'front-page/intro-gallery/gallery-01.png' ) ); ?>" width="941" height="1672" alt="船上で手を重ねる様子" loading="lazy">
-				</li>
-				<li class="p-split__gallery-slide p-split__gallery-slide--03 splide__slide">
-					<img src="<?php echo esc_url( theme_image_url( 'front-page/intro-gallery/gallery-03.png' ) ); ?>" width="1122" height="1402" alt="海へ向かって手を合わせる様子" loading="lazy">
-				</li>
-				<li class="p-split__gallery-slide p-split__gallery-slide--04 splide__slide">
-					<img src="<?php echo esc_url( theme_image_url( 'front-page/intro-gallery/gallery-04.png' ) ); ?>" width="1448" height="1086" alt="花を海へ手向ける様子" loading="lazy">
-				</li>
-				<li class="p-split__gallery-slide p-split__gallery-slide--05 splide__slide">
-					<img src="<?php echo esc_url( theme_image_url( 'front-page/intro-gallery/gallery-06.png' ) ); ?>" width="1672" height="941" alt="家族で海を見つめる様子" loading="lazy">
-				</li>
-				<li class="p-split__gallery-slide p-split__gallery-slide--06 splide__slide">
-					<img src="<?php echo esc_url( theme_image_url( 'front-page/intro-gallery/gallery-05.JPG' ) ); ?>" width="1920" height="1440" alt="海に浮かぶ散骨用の船" loading="lazy">
-				</li>
-			</ul>
-		</div>
-	</div>
 </section>
 
 <section class="p-feature-sec js-feature-sec" aria-labelledby="feature-sec-title" data-feature-sec>
 	<div class="p-feature-sec__inner u-container">
 		<div class="p-feature-sec__message">
-			<div class="p-feature-sec__title c-section-title c-section-title--white">
-				<p class="c-section-title__sub">About</p>
+			<div class="p-feature-sec__title c-section-title c-section-title--white u-fade-up">
+				<p class="c-section-title__sub u-text-fade u-text-fade--chars">About</p>
 				<h2 id="feature-sec-title" class="c-section-title__main">故人様を想える海を、<br>これからも</h2>
 			</div>
 			<div class="p-feature-sec__body">
@@ -199,10 +175,10 @@ get_header();
 	</div>
 </section>
 
-<section class="p-plan-sec" aria-labelledby="front-plan-title">
-	<div class="p-plan-sec__heading u-container">
+<section class="p-plan-sec u-section-space u-section-space--btm-large" aria-labelledby="front-plan-title">
+	<div class="p-plan-sec__heading u-container u-fade-up">
 		<div class="p-plan-sec__title c-section-title">
-			<p class="c-section-title__sub">Plan</p>
+			<p class="c-section-title__sub u-text-fade u-text-fade--chars">Plan</p>
 			<h2 id="front-plan-title" class="c-section-title__main">散骨プラン</h2>
 		</div>
 	</div>
@@ -215,7 +191,7 @@ get_header();
 			<div class="p-plan-sec__panel">
 				<div class="p-plan-sec__content">
 					<div class="p-plan-sec__summary">
-						<h3 class="p-plan-sec__name">家族で見送る、<br>海への旅立ちプラン<span class="p-plan-sec__name-note">（貸切）</span></h3>
+						<h3 class="p-plan-sec__name u-text-fade">家族で見送る、<br>海への旅立ちプラン<span class="p-plan-sec__name-note">（貸切）</span></h3>
 						<p class="p-plan-sec__price">
 							<span class="p-plan-sec__price-label">税込</span>
 							<span class="p-plan-sec__price-number">132,000</span>
@@ -240,7 +216,7 @@ get_header();
 			<div class="p-plan-sec__panel">
 				<div class="p-plan-sec__content">
 					<div class="p-plan-sec__summary">
-						<h3 class="p-plan-sec__name">想いを託す、<br>委託散骨プラン<span class="p-plan-sec__name-note">（代理）</span></h3>
+						<h3 class="p-plan-sec__name u-text-fade">想いを託す、<br>委託散骨プラン<span class="p-plan-sec__name-note">（代理）</span></h3>
 						<p class="p-plan-sec__price">
 							<span class="p-plan-sec__price-label">税込</span>
 							<span class="p-plan-sec__price-number">55,000</span>
@@ -300,25 +276,25 @@ $front_step_items = array(
 	),
 );
 ?>
-<section class="p-step-sec" aria-labelledby="front-step-title">
+<section class="p-step-sec u-section-space u-section-space--btm-large" aria-labelledby="front-step-title">
 	<picture class="p-step-sec__bg" aria-hidden="true">
 		<source media="(max-width: 740px)" srcset="<?php echo esc_url( theme_image_url( 'front-page/key-visual-sea-flowers-sp.png' ) ); ?>">
 		<img src="<?php echo esc_url( theme_image_url( 'front-page/key-visual-sea-flowers.png' ) ); ?>" width="2688" height="1408" alt="" loading="lazy">
 	</picture>
 
 	<div class="p-step-sec__inner u-container">
-		<div class="p-step-sec__title c-section-title c-section-title--white c-section-title--center">
-			<p class="c-section-title__sub">Step</p>
+		<div class="p-step-sec__title c-section-title c-section-title--white c-section-title--center u-fade-up">
+			<p class="c-section-title__sub u-text-fade u-text-fade--chars">Step</p>
 			<h2 id="front-step-title" class="c-section-title__main">散骨の流れ</h2>
 		</div>
 
-		<ol class="p-step-sec__list">
+		<ol class="p-step-sec__list u-step-flow">
 			<?php foreach ( $front_step_items as $front_step_item ) : ?>
 				<li class="p-step-sec__item">
 					<article class="p-step-sec__card">
-						<p class="p-step-sec__label">
-							<span class="p-step-sec__label-text">Step</span>
-							<span class="p-step-sec__number"><?php echo esc_html( $front_step_item['number'] ); ?></span>
+						<p class="p-step-sec__label u-step-flow-group">
+							<span class="p-step-sec__label-text u-step-flow-label u-step-flow-label--text u-text-fade--chars">Step</span>
+							<span class="p-step-sec__number u-step-flow-label u-step-flow-label--number u-text-fade--chars"><?php echo esc_html( $front_step_item['number'] ); ?></span>
 						</p>
 						<div class="p-step-sec__icon">
 							<img src="<?php echo esc_url( theme_image_url( $front_step_item['image'] ) ); ?>" width="1024" height="1024" alt="<?php echo esc_attr( $front_step_item['alt'] ); ?>">
@@ -330,7 +306,7 @@ $front_step_items = array(
 		</ol>
 
 		<div class="p-step-sec__message">
-			<h4 class="p-step-sec__lead">初めての海洋散骨も、<br class="u-br--sp">一つずつ丁寧にご案内します。</h4>
+			<h4 class="p-step-sec__lead u-bg-wipe">初めての海洋散骨も、<br class="u-br--sp">一つずつ丁寧にご案内します。</h4>
 			<div class="p-step-sec__body">
 				<p>海洋散骨が初めての方もご安心ください。</p>
 				<p>石垣島海洋散骨センターでは、<br class="u-br--sp">ご遺族様の不安やご希望を伺いながら、<br>最後までサポートします。</p>
@@ -378,10 +354,10 @@ $front_faq_items = array(
 	),
 );
 ?>
-<section class="p-faq-sec" aria-labelledby="front-faq-title">
+<section class="p-faq-sec u-section-space" aria-labelledby="front-faq-title">
 	<div class="p-faq-sec__inner u-container">
-		<div class="p-faq-sec__title c-section-title c-section-title--center">
-			<p class="c-section-title__sub">FAQ</p>
+		<div class="p-faq-sec__title c-section-title c-section-title--center u-fade-up">
+			<p class="c-section-title__sub u-text-fade u-text-fade--chars">FAQ</p>
 			<h2 id="front-faq-title" class="c-section-title__main">よくある質問</h2>
 		</div>
 
