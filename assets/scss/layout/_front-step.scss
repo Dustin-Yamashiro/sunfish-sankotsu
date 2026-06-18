@@ -1,7 +1,10 @@
-@use "../../foundation/mixin" as *;
-@use "../../foundation/variables" as *;
+/*
+* トップページ散骨の流れセクション
+*/
+@use "../foundation/mixin" as *;
+@use "../foundation/variables" as *;
 
-.p-step-sec {
+.l-front-step {
   position: relative;
   isolation: isolate;
   overflow: hidden;
@@ -41,8 +44,8 @@
   }
 
   &__title {
-    .c-section-title__sub,
-    .c-section-title__main {
+    .c-sec-title__sub,
+    .c-sec-title__main {
       text-shadow:
         0 2px 16px rgba($color-main, 0.68),
         0 0 20px rgba($color-white, 0.28);

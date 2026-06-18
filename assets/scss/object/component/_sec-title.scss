@@ -4,18 +4,18 @@
 @use "../../foundation/mixin" as *;
 @use "../../foundation/variables" as *;
 
-.c-section-title {
-  --section-title-main-color: #{$color-text};
-  --section-title-sub-color: #{$color-main};
-  --section-title-gap: 36px;
+.c-sec-title {
+  --sec-title-main-color: #{$color-text};
+  --sec-title-sub-color: #{$color-main};
+  --sec-title-gap: 36px;
 
   display: grid;
-  gap: var(--section-title-gap);
-  color: var(--section-title-main-color);
+  gap: var(--sec-title-gap);
+  color: var(--sec-title-main-color);
   letter-spacing: 0.08em;
 
   @include bp("sp-l") {
-    --section-title-gap: 24px;
+    --sec-title-gap: 24px;
   }
 
   &--center {
@@ -25,16 +25,16 @@
   }
 
   &--accent {
-    --section-title-sub-color: #{$color-accent};
+    --sec-title-sub-color: #{$color-accent};
   }
 
   &--white {
-    --section-title-main-color: #{$color-white};
-    --section-title-sub-color: #{$color-white};
+    --sec-title-main-color: #{$color-white};
+    --sec-title-sub-color: #{$color-white};
   }
 
   &__main {
-    color: var(--section-title-main-color);
+    color: var(--sec-title-main-color);
     font-family: $font-heading;
     font-weight: 600;
     line-height: 1.35;
@@ -48,7 +48,7 @@
   }
 
   &__sub {
-    color: var(--section-title-sub-color);
+    color: var(--sec-title-sub-color);
     font-family: $font-en;
     font-size: 15px;
     font-weight: 600;

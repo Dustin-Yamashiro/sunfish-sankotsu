@@ -18,12 +18,12 @@ get_header();
 	</div>
 </section>
 
-<section class="p-front-appeal u-section-space u-section-space--top-only" aria-labelledby="front-appeal-title">
-	<div class="p-front-appeal__main u-container">
-		<div class="p-front-appeal__content">
-			<h2 id="front-appeal-title" class="p-front-appeal__title u-fade-up">お墓ではない<br>「想い」を残す、供養のカタチ</h2>
-			<div class="p-front-appeal__body">
-				<ul class="p-front-appeal__list">
+<section class="l-front-appeal u-section-space u-section-space--top-only" aria-labelledby="front-appeal-title">
+	<div class="l-front-appeal__main u-container">
+		<div class="l-front-appeal__content">
+			<h2 id="front-appeal-title" class="l-front-appeal__title u-fade-up">お墓ではない<br>「想い」を残す、供養のカタチ</h2>
+			<div class="l-front-appeal__body">
+				<ul class="l-front-appeal__list">
 					<li>お墓を継ぐ人がいない。</li>
 					<li>子どもや孫に負担を残したくない。</li>
 					<li>墓じまい後の遺骨の供養先に悩んでいる。</li>
@@ -34,207 +34,38 @@ get_header();
 			</div>
 		</div>
 
-		<div class="p-front-appeal__collage" aria-hidden="true">
-			<picture class="p-front-appeal__photo p-front-appeal__photo--01 u-photo-fade u-photo-fade--left">
+		<div class="l-front-appeal__collage" aria-hidden="true">
+			<picture class="l-front-appeal__photo l-front-appeal__photo--01 u-photo-fade u-photo-fade--left">
 				<img src="<?php echo esc_url( theme_image_url( 'front-page/appeal/beach-wave.jpg' ) ); ?>" width="3792" height="2844" alt="" loading="lazy">
 			</picture>
-			<picture class="p-front-appeal__photo p-front-appeal__photo--02 u-photo-fade u-photo-fade--right">
+			<picture class="l-front-appeal__photo l-front-appeal__photo--02 u-photo-fade u-photo-fade--right">
 				<img src="<?php echo esc_url( theme_image_url( 'front-page/appeal/floating-flowers.png' ) ); ?>" width="1672" height="941" alt="" loading="lazy">
 			</picture>
-			<picture class="p-front-appeal__photo p-front-appeal__photo--03 u-photo-fade u-photo-fade--left">
+			<picture class="l-front-appeal__photo l-front-appeal__photo--03 u-photo-fade u-photo-fade--left">
 				<img src="<?php echo esc_url( theme_image_url( 'front-page/appeal/scattering-flowers.png' ) ); ?>" width="1122" height="1402" alt="" loading="lazy">
 			</picture>
-			<picture class="p-front-appeal__photo p-front-appeal__photo--04 u-photo-fade u-photo-fade--right">
+			<picture class="l-front-appeal__photo l-front-appeal__photo--04 u-photo-fade u-photo-fade--right">
 				<img src="<?php echo esc_url( theme_image_url( 'front-page/appeal/boat-sky.jpg' ) ); ?>" width="4032" height="3024" alt="" loading="lazy">
 			</picture>
 		</div>
 	</div>
 
-	<div class="p-front-appeal__choice">
+	<div class="l-front-appeal__choice">
 		<div class="u-container">
-			<p class="p-front-appeal__choice-text">
-				<span class="p-front-appeal__choice-prefix">その想いに</span>
-				<span class="p-front-appeal__choice-keyword u-text-fade">“海洋散骨”</span>
-				<span class="p-front-appeal__choice-suffix">という選択肢を</span>
+			<p class="l-front-appeal__choice-text">
+				<span class="l-front-appeal__choice-prefix">その想いに</span>
+				<span class="l-front-appeal__choice-keyword u-text-fade">“海洋散骨”</span>
+				<span class="l-front-appeal__choice-suffix">という選択肢を</span>
 			</p>
 		</div>
 	</div>
 </section>
 
-<section class="p-split u-section-space u-section-space--btm-large" aria-labelledby="marine-scattering-introduction-title">
-	<div class="p-split__inner u-container">
-		<div class="p-split__content">
-			<div class="p-split__title c-section-title u-fade-up">
-				<p class="c-section-title__sub u-text-fade u-text-fade--chars">Introduction</p>
-				<h2 id="marine-scattering-introduction-title" class="c-section-title__main">海洋散骨とは</h2>
-			</div>
-			<div class="p-split__body">
-				<p>海洋散骨とは、お墓へ納骨する代わりに、ご遺骨を粉骨して海へ供養する自然葬の一つです。<br>
-				ただ海に還すだけでなく、散骨した海をこれからも故人様を想う場所として残す、新しい供養のカタチです。</p>
-				<p>海洋散骨には、粉骨の手続きや必要書類の用意、当日の進行など、初めての方には分かりにくいことが多々あります。<br>
-				石垣島海洋散骨センターでは、初めての方でも安心して故人様をお見送りできるよう、分かりやすく丁寧にサポートいたします。</p>
-			</div>
-		</div>
+<?php get_template_part( 'template-parts/sec-split' ); ?>
 
-		<div class="p-split__visual" aria-hidden="true">
-			<picture class="p-split__image p-split__image--01">
-				<img src="<?php echo esc_url( theme_image_url( 'front-page/introduction/intro-sub.png' ) ); ?>" width="1254" height="1254" alt="" loading="lazy">
-			</picture>
-			<picture class="p-split__image p-split__image--02">
-				<img src="<?php echo esc_url( theme_image_url( 'front-page/introduction/intro-main.png' ) ); ?>" width="1536" height="1024" alt="" loading="lazy">
-			</picture>
-		</div>
+<?php get_template_part( 'template-parts/sec-feature' ); ?>
 
-		<div class="p-split__button c-section-btn c-section-btn--next">
-			<a href="<?php echo esc_url( home_url( '/beginner/' ) ); ?>">初めての方へ</a>
-		</div>
-	</div>
-
-</section>
-
-<section class="p-feature-sec js-feature-sec" aria-labelledby="feature-sec-title" data-feature-sec>
-	<div class="p-feature-sec__inner u-container">
-		<div class="p-feature-sec__message">
-			<div class="p-feature-sec__title c-section-title c-section-title--white u-fade-up">
-				<p class="c-section-title__sub u-text-fade u-text-fade--chars">About</p>
-				<h2 id="feature-sec-title" class="c-section-title__main">故人様を想える海を、<br>これからも</h2>
-			</div>
-			<div class="p-feature-sec__body">
-				<p>石垣島海洋散骨センターは、石垣島近海での海洋散骨を専門に行っています。</p>
-				<p>私たちが大切にしているのは、海洋散骨を「最後のお別れ」で終わらせないこと。</p>
-				<p>ご相談から散骨後の供養まで、ご家族が安心して故人様を見送れるよう、ひとつひとつ丁寧にご案内します。</p>
-			</div>
-			<div class="p-feature-sec__button c-section-btn c-section-btn--next c-section-btn--white">
-				<a href="<?php echo esc_url( home_url( '/about/' ) ); ?>">私たちについて</a>
-			</div>
-		</div>
-
-		<div class="p-feature-sec__points" data-feature-sec-points>
-			<ol class="p-feature-sec__point-list">
-				<li class="p-feature-sec__point-item p-feature-sec__point-item--01 is-active" data-feature-sec-card data-point-index="1">
-					<article class="p-feature-sec__point-card">
-						<div class="p-feature-sec__point-content">
-							<p class="p-feature-sec__point-label">
-								<span class="p-feature-sec__point-text">Point</span>
-								<span class="p-feature-sec__point-number">1</span>
-							</p>
-							<h3 class="p-feature-sec__point-title">石垣島の海のプロが一貫対応</h3>
-							<div class="p-feature-sec__point-body">
-								<p>石垣島で15年以上のダイビング経験と「海洋散骨ディレクター」の資格を持つ船長が、ご相談から操船、散骨進行まで一貫して対応。</p>
-								<p>船長自ら故人様とご家族の想いを伺い、石垣島の海でのお見送りをお手伝いします。</p>
-							</div>
-						</div>
-						<picture class="p-feature-sec__point-image">
-							<img src="<?php echo esc_url( theme_image_url( 'front-page/about/point-01.png' ) ); ?>" width="1254" height="1254" alt="石垣島の海で船を操縦する船長の手元" loading="lazy">
-						</picture>
-					</article>
-				</li>
-				<li class="p-feature-sec__point-item p-feature-sec__point-item--02" data-feature-sec-card data-point-index="2">
-					<article class="p-feature-sec__point-card">
-						<div class="p-feature-sec__point-content">
-							<p class="p-feature-sec__point-label">
-								<span class="p-feature-sec__point-text">Point</span>
-								<span class="p-feature-sec__point-number">2</span>
-							</p>
-							<h3 class="p-feature-sec__point-title">初めてでも安心のプランと料金</h3>
-							<div class="p-feature-sec__point-body">
-								<p>海洋散骨が初めての方にもわかりやすいよう、プラン内容や必要な準備、当日の流れまで丁寧にご説明。</p>
-								<p>自社船による直接対応で仲介マージンを抑え、安心できる明瞭な価格でご案内しています。</p>
-							</div>
-						</div>
-						<picture class="p-feature-sec__point-image">
-							<img src="<?php echo esc_url( theme_image_url( 'front-page/about/point-02.png' ) ); ?>" width="1254" height="1254" alt="船上で海洋散骨のプランや準備について説明する様子" loading="lazy">
-						</picture>
-					</article>
-				</li>
-				<li class="p-feature-sec__point-item p-feature-sec__point-item--03" data-feature-sec-card data-point-index="3">
-					<article class="p-feature-sec__point-card">
-						<div class="p-feature-sec__point-content">
-							<p class="p-feature-sec__point-label">
-								<span class="p-feature-sec__point-text">Point</span>
-								<span class="p-feature-sec__point-number">3</span>
-							</p>
-							<h3 class="p-feature-sec__point-title">散骨後も想える海として残す供養</h3>
-							<div class="p-feature-sec__point-body">
-								<p>散骨の際、故人様らしさとご家族の希望に合わせた見送り方のご相談が可能。</p>
-								<p>散骨後には、写真・動画、散骨証明書の発行やメモリアルクルーズの案内にも対応し、海へ還した後も続く供養をお手伝いします。</p>
-							</div>
-						</div>
-						<picture class="p-feature-sec__point-image">
-							<img src="<?php echo esc_url( theme_image_url( 'front-page/about/point-03.png' ) ); ?>" width="1086" height="1448" alt="海を背景に散骨後の供養サポートについて相談する様子" loading="lazy">
-						</picture>
-					</article>
-				</li>
-			</ol>
-		</div>
-		<div class="p-feature-sec__scrollbar" aria-hidden="true">
-			<span class="p-feature-sec__scrollbar-thumb" data-feature-sec-scrollbar></span>
-		</div>
-
-		<img class="p-feature-sec__island" src="<?php echo esc_url( theme_image_url( 'front-page/about/ishigaki.svg' ) ); ?>" width="300" height="375" alt="" loading="lazy" aria-hidden="true">
-	</div>
-</section>
-
-<section class="p-plan-sec u-section-space u-section-space--btm-large" aria-labelledby="front-plan-title">
-	<div class="p-plan-sec__heading u-container u-fade-up">
-		<div class="p-plan-sec__title c-section-title">
-			<p class="c-section-title__sub u-text-fade u-text-fade--chars">Plan</p>
-			<h2 id="front-plan-title" class="c-section-title__main">散骨プラン</h2>
-		</div>
-	</div>
-
-	<div class="p-plan-sec__list u-container">
-		<article class="p-plan-sec__card p-plan-sec__card--charter">
-			<picture class="p-plan-sec__image">
-				<img src="<?php echo esc_url( theme_image_url( 'front-page/plan/charter.png' ) ); ?>" width="1672" height="941" alt="石垣島の海を家族で見つめる貸切散骨の様子" loading="lazy">
-			</picture>
-			<div class="p-plan-sec__panel">
-				<div class="p-plan-sec__content">
-					<div class="p-plan-sec__summary">
-						<h3 class="p-plan-sec__name u-text-fade">家族で見送る、<br>海への旅立ちプラン<span class="p-plan-sec__name-note">（貸切）</span></h3>
-						<p class="p-plan-sec__price">
-							<span class="p-plan-sec__price-label">税込</span>
-							<span class="p-plan-sec__price-number">132,000</span>
-							<span class="p-plan-sec__price-unit">円〜</span>
-						</p>
-					</div>
-					<div class="p-plan-sec__body">
-						<p>完全貸切の船で、ご家族やご親族とともに散骨を行うプランです。</p>
-						<p>事前に伺ったご希望に沿って、船長が準備から進行まで担当し、故人様らしい海への旅立ちをお手伝いします。</p>
-					</div>
-					<div class="p-plan-sec__button c-section-btn c-section-btn--next c-section-btn--white c-section-btn--small">
-						<a href="<?php echo esc_url( home_url( '/kashikiri/' ) ); ?>">詳しくはこちら</a>
-					</div>
-				</div>
-			</div>
-		</article>
-
-		<article class="p-plan-sec__card p-plan-sec__card--proxy">
-			<picture class="p-plan-sec__image">
-				<img src="<?php echo esc_url( theme_image_url( 'front-page/plan/proxy.png' ) ); ?>" width="1536" height="1024" alt="石垣島の海へ花を手向ける委託散骨の様子" loading="lazy">
-			</picture>
-			<div class="p-plan-sec__panel">
-				<div class="p-plan-sec__content">
-					<div class="p-plan-sec__summary">
-						<h3 class="p-plan-sec__name u-text-fade">想いを託す、<br>委託散骨プラン<span class="p-plan-sec__name-note">（代理）</span></h3>
-						<p class="p-plan-sec__price">
-							<span class="p-plan-sec__price-label">税込</span>
-							<span class="p-plan-sec__price-number">55,000</span>
-							<span class="p-plan-sec__price-unit">円〜</span>
-						</p>
-					</div>
-					<div class="p-plan-sec__body">
-						<p>ご遺族に代わり、船長が散骨を行うプランです。</p>
-						<p>大切なご遺骨をお預かりし、ご遺族の想いを受け止めながら、責任を持って石垣島の海へお見送りします。</p>
-					</div>
-					<div class="p-plan-sec__button c-section-btn c-section-btn--next c-section-btn--white c-section-btn--small">
-						<a href="<?php echo esc_url( home_url( '/dairi/' ) ); ?>">詳しくはこちら</a>
-					</div>
-				</div>
-			</div>
-		</article>
-	</div>
-</section>
+<?php get_template_part( 'template-parts/sec-plan' ); ?>
 
 <?php
 $front_step_items = array(
@@ -276,38 +107,38 @@ $front_step_items = array(
 	),
 );
 ?>
-<section class="p-step-sec u-section-space u-section-space--btm-large" aria-labelledby="front-step-title">
-	<picture class="p-step-sec__bg" aria-hidden="true">
+<section class="l-front-step u-section-space u-section-space--btm-large" aria-labelledby="front-step-title">
+	<picture class="l-front-step__bg" aria-hidden="true">
 		<source media="(max-width: 740px)" srcset="<?php echo esc_url( theme_image_url( 'front-page/key-visual-sea-flowers-sp.png' ) ); ?>">
 		<img src="<?php echo esc_url( theme_image_url( 'front-page/key-visual-sea-flowers.png' ) ); ?>" width="2688" height="1408" alt="" loading="lazy">
 	</picture>
 
-	<div class="p-step-sec__inner u-container">
-		<div class="p-step-sec__title c-section-title c-section-title--white c-section-title--center u-fade-up">
-			<p class="c-section-title__sub u-text-fade u-text-fade--chars">Step</p>
-			<h2 id="front-step-title" class="c-section-title__main">散骨の流れ</h2>
+	<div class="l-front-step__inner u-container">
+		<div class="l-front-step__title c-sec-title c-sec-title--white c-sec-title--center u-fade-up">
+			<p class="c-sec-title__sub u-text-fade u-text-fade--chars">Step</p>
+			<h2 id="front-step-title" class="c-sec-title__main">散骨の流れ</h2>
 		</div>
 
-		<ol class="p-step-sec__list u-step-flow">
+		<ol class="l-front-step__list u-step-flow">
 			<?php foreach ( $front_step_items as $front_step_item ) : ?>
-				<li class="p-step-sec__item">
-					<article class="p-step-sec__card">
-						<p class="p-step-sec__label u-step-flow-group">
-							<span class="p-step-sec__label-text u-step-flow-label u-step-flow-label--text u-text-fade--chars">Step</span>
-							<span class="p-step-sec__number u-step-flow-label u-step-flow-label--number u-text-fade--chars"><?php echo esc_html( $front_step_item['number'] ); ?></span>
+				<li class="l-front-step__item">
+					<article class="l-front-step__card">
+						<p class="l-front-step__label u-step-flow-group">
+							<span class="l-front-step__label-text u-step-flow-label u-step-flow-label--text u-text-fade--chars">Step</span>
+							<span class="l-front-step__number u-step-flow-label u-step-flow-label--number u-text-fade--chars"><?php echo esc_html( $front_step_item['number'] ); ?></span>
 						</p>
-						<div class="p-step-sec__icon">
+						<div class="l-front-step__icon">
 							<img src="<?php echo esc_url( theme_image_url( $front_step_item['image'] ) ); ?>" width="1024" height="1024" alt="<?php echo esc_attr( $front_step_item['alt'] ); ?>">
 						</div>
-						<h3 class="p-step-sec__name"><?php echo esc_html( $front_step_item['title'] ); ?></h3>
+						<h3 class="l-front-step__name"><?php echo esc_html( $front_step_item['title'] ); ?></h3>
 					</article>
 				</li>
 			<?php endforeach; ?>
 		</ol>
 
-		<div class="p-step-sec__message">
-			<h4 class="p-step-sec__lead u-bg-wipe">初めての海洋散骨も、<br class="u-br--sp">一つずつ丁寧にご案内します。</h4>
-			<div class="p-step-sec__body">
+		<div class="l-front-step__message">
+			<h4 class="l-front-step__lead u-bg-wipe">初めての海洋散骨も、<br class="u-br--sp">一つずつ丁寧にご案内します。</h4>
+			<div class="l-front-step__body">
 				<p>海洋散骨が初めての方もご安心ください。</p>
 				<p>石垣島海洋散骨センターでは、<br class="u-br--sp">ご遺族様の不安やご希望を伺いながら、<br>最後までサポートします。</p>
 			</div>
@@ -315,213 +146,10 @@ $front_step_items = array(
 	</div>
 </section>
 
-<?php
-$front_faq_items = array(
-	array(
-		'question' => '海洋散骨が初めてでも相談できますか？',
-		'answer'   => array(
-			'はい。プラン内容や必要な準備、当日の流れまで、初めての方にも分かりやすくご案内します。',
-			'ご家族の不安やご希望を伺いながら、無理のない形で進められるよう丁寧にサポートいたします。',
-		),
-	),
-	array(
-		'question' => '散骨する場所は指定できますか？',
-		'answer'   => array(
-			'石垣島近海の海況や安全面を確認したうえで、ご希望に近い海域をご提案します。',
-			'当日の天候や波の状況によっては、船長の判断で安全に実施できる場所へ調整する場合があります。',
-		),
-	),
-	array(
-		'question' => '遺骨はどのように準備すればよいですか？',
-		'answer'   => array(
-			'海洋散骨では、ご遺骨を粉骨した状態で海へお還しします。',
-			'粉骨や必要書類についても事前にご説明しますので、分からないことがあればご相談ください。',
-		),
-	),
-	array(
-		'question' => '雨天や荒天の場合はどうなりますか？',
-		'answer'   => array(
-			'安全な出航が難しい場合は、日程の変更をご相談させていただきます。',
-			'石垣島の海況を確認しながら、ご家族にとって無理のない日程で進めます。',
-		),
-	),
-	array(
-		'question' => '散骨後に証明書は発行されますか？',
-		'answer'   => array(
-			'散骨後には、散骨証明書の発行に対応しています。',
-			'ご希望に応じて写真や動画のご案内、メモリアルクルーズのご相談も承ります。',
-		),
-	),
-);
-?>
-<section class="p-faq-sec u-section-space" aria-labelledby="front-faq-title">
-	<div class="p-faq-sec__inner u-container">
-		<div class="p-faq-sec__title c-section-title c-section-title--center u-fade-up">
-			<p class="c-section-title__sub u-text-fade u-text-fade--chars">FAQ</p>
-			<h2 id="front-faq-title" class="c-section-title__main">よくある質問</h2>
-		</div>
+<?php get_template_part( 'template-parts/sec-faq' ); ?>
 
-		<div class="p-faq-sec__list js-faq-accordion">
-			<?php foreach ( $front_faq_items as $front_faq_index => $front_faq_item ) : ?>
-				<?php
-				$front_faq_number  = $front_faq_index + 1;
-				$front_faq_panel_id = 'front-faq-panel-' . $front_faq_number;
-				?>
-				<section class="p-faq-sec__item">
-					<h3 class="p-faq-sec__question">
-						<button class="p-faq-sec__trigger js-faq-accordion-button" type="button" aria-expanded="false" aria-controls="<?php echo esc_attr( $front_faq_panel_id ); ?>">
-							<span class="p-faq-sec__mark p-faq-sec__mark--question" aria-hidden="true">Q.</span>
-							<span class="p-faq-sec__question-text"><?php echo esc_html( $front_faq_item['question'] ); ?></span>
-							<span class="p-faq-sec__toggle-icon" aria-hidden="true"></span>
-						</button>
-					</h3>
-					<div id="<?php echo esc_attr( $front_faq_panel_id ); ?>" class="p-faq-sec__answer js-faq-accordion-panel" aria-hidden="true">
-						<div class="p-faq-sec__answer-inner">
-							<span class="p-faq-sec__mark p-faq-sec__mark--answer" aria-hidden="true">A.</span>
-							<div class="p-faq-sec__answer-body">
-								<?php foreach ( $front_faq_item['answer'] as $front_faq_answer ) : ?>
-									<p><?php echo esc_html( $front_faq_answer ); ?></p>
-								<?php endforeach; ?>
-							</div>
-						</div>
-					</div>
-				</section>
-			<?php endforeach; ?>
-		</div>
+<?php get_template_part( 'template-parts/sec-news' ); ?>
 
-		<div class="p-faq-sec__more c-section-btn c-section-btn--next">
-			<a href="<?php echo esc_url( home_url( '/faq/' ) ); ?>">もっとみる</a>
-		</div>
-	</div>
-</section>
-
-<?php
-$front_news_category = get_category_by_slug( 'news' );
-$front_news_args     = array(
-	'post_type'           => 'post',
-	'post_status'         => 'publish',
-	'posts_per_page'      => 3,
-	'ignore_sticky_posts' => true,
-	'no_found_rows'       => true,
-);
-
-if ( $front_news_category ) {
-	$front_news_args['cat'] = (int) $front_news_category->term_id;
-}
-
-$front_news_query = new WP_Query( $front_news_args );
-?>
-<section class="p-news-sec u-section-space" aria-labelledby="front-news-title">
-	<div class="p-news-sec__inner u-container">
-		<div class="p-news-sec__title c-section-title u-fade-up">
-			<p class="c-section-title__sub u-text-fade u-text-fade--chars">News</p>
-			<h2 id="front-news-title" class="c-section-title__main">お知らせ</h2>
-		</div>
-
-		<div class="p-news-sec__list">
-			<?php if ( $front_news_query->have_posts() ) : ?>
-				<?php while ( $front_news_query->have_posts() ) : ?>
-					<?php
-					$front_news_query->the_post();
-					$front_news_item_id = 'front-news-item-' . get_the_ID();
-					$front_news_terms   = get_the_category();
-					$front_news_term    = null;
-					$front_news_base_id = $front_news_category ? (int) $front_news_category->term_id : 0;
-
-					foreach ( $front_news_terms as $front_news_candidate ) {
-						if ( (int) $front_news_candidate->term_id !== $front_news_base_id ) {
-							$front_news_term = $front_news_candidate;
-							break;
-						}
-					}
-
-					if ( ! $front_news_term && ! empty( $front_news_terms[0] ) ) {
-						$front_news_term = $front_news_terms[0];
-					}
-					?>
-						<article class="p-news-sec__item" aria-labelledby="<?php echo esc_attr( $front_news_item_id ); ?>">
-							<a class="p-news-sec__link" href="<?php echo esc_url( get_permalink() ); ?>">
-								<span class="p-news-sec__meta">
-									<time class="p-news-sec__date" datetime="<?php echo esc_attr( get_the_date( 'Y-m-d' ) ); ?>"><?php echo esc_html( get_the_date( 'Y.m.d' ) ); ?></time>
-									<?php if ( $front_news_term ) : ?>
-										<span class="p-news-sec__category"><?php echo esc_html( $front_news_term->name ); ?></span>
-									<?php endif; ?>
-								</span>
-								<h3 id="<?php echo esc_attr( $front_news_item_id ); ?>" class="p-news-sec__item-title"><?php echo esc_html( get_the_title() ); ?></h3>
-							</a>
-						</article>
-				<?php endwhile; ?>
-				<?php wp_reset_postdata(); ?>
-			<?php else : ?>
-				<p class="p-news-sec__empty">現在お知らせはありません。</p>
-			<?php endif; ?>
-		</div>
-
-		<div class="p-news-sec__more c-section-btn c-section-btn--next">
-			<a href="<?php echo esc_url( home_url( '/news/' ) ); ?>">もっとみる</a>
-		</div>
-	</div>
-</section>
-
-<?php
-$front_column_category = get_category_by_slug( 'column' );
-$front_column_args     = array(
-	'post_type'           => 'post',
-	'post_status'         => 'publish',
-	'posts_per_page'      => 8,
-	'ignore_sticky_posts' => true,
-	'no_found_rows'       => true,
-);
-
-if ( $front_column_category ) {
-	$front_column_args['cat'] = (int) $front_column_category->term_id;
-}
-
-$front_column_query = new WP_Query( $front_column_args );
-?>
-<section class="p-column-sec u-section-space" aria-labelledby="front-column-title">
-	<div class="p-column-sec__heading u-container">
-		<div class="p-column-sec__title c-section-title c-section-title--center u-fade-up">
-			<p class="c-section-title__sub u-text-fade u-text-fade--chars">Blog</p>
-			<h2 id="front-column-title" class="c-section-title__main">海洋散骨コラム</h2>
-		</div>
-	</div>
-
-	<div class="p-column-sec__list-wrap u-container">
-		<div class="p-column-sec__slider splide js-column-slider" aria-label="海洋散骨コラム記事一覧">
-			<div class="splide__track">
-				<?php
-				SWELL_Theme::get_parts(
-					'parts/post_list/loop_sub',
-					array(
-						'query'     => $front_column_query,
-						'list_args' => array(
-							'type'           => 'card',
-							'max_col'        => '4',
-							'max_col_sp'     => '1',
-							'ul_add_class'   => 'p-column-sec__list splide__list',
-							'show_infeed'    => false,
-							'cat_pos'        => 'on_thumb',
-							'show_date'      => true,
-							'show_modified'  => false,
-							'show_author'    => false,
-							'excerpt_length' => 80,
-							'h_tag'          => 'h3',
-						),
-					)
-				);
-				?>
-			</div>
-		</div>
-	</div>
-
-	<div class="p-column-sec__more-wrap u-container">
-		<div class="p-column-sec__more c-section-btn c-section-btn--next">
-			<a href="<?php echo esc_url( home_url( '/column/' ) ); ?>">もっと見る</a>
-		</div>
-	</div>
-</section>
-
-<?php wp_reset_postdata(); ?>
+<?php get_template_part( 'template-parts/sec-column' ); ?>
 
 <?php get_footer(); ?>

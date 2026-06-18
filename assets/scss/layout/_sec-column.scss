@@ -1,7 +1,10 @@
-@use "../../foundation/mixin" as *;
-@use "../../foundation/variables" as *;
+/*
+* 共通コラムセクション
+*/
+@use "../foundation/mixin" as *;
+@use "../foundation/variables" as *;
 
-.p-column-sec {
+.l-sec-column {
   background-color: $color-white;
 
   &__list-wrap {
@@ -82,7 +85,7 @@
     transform: scale(1.25);
   }
 
-  &__more.c-section-btn {
+  &__more.c-sec-btn {
     margin: 56px auto 0;
 
     @include bp("tb") {

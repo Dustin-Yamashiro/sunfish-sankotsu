@@ -1,7 +1,10 @@
-@use "../../foundation/mixin" as *;
-@use "../../foundation/variables" as *;
+/*
+* 共通特徴セクション
+*/
+@use "../foundation/mixin" as *;
+@use "../foundation/variables" as *;
 
-.p-feature-sec {
+.l-sec-feature {
   position: relative;
   overflow-x: clip;
   overflow-y: visible;
@@ -86,10 +89,10 @@
   }
 
   &__title {
-    --section-title-gap: 36px;
+    --sec-title-gap: 36px;
 
     @include bp("sp-l") {
-      --section-title-gap: 28px;
+      --sec-title-gap: 28px;
     }
   }
 

@@ -1,7 +1,10 @@
-@use "../../foundation/mixin" as *;
-@use "../../foundation/variables" as *;
+/*
+* トップページ訴求セクション
+*/
+@use "../foundation/mixin" as *;
+@use "../foundation/variables" as *;
 
-.p-front-appeal {
+.l-front-appeal {
   overflow: hidden;
   background-color: $color-white;
 

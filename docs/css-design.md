@@ -12,24 +12,29 @@ assets/scss/
     _mixin.scss
     _base.scss
   layout/
-    _header.scss
-    _footer.scss
+    _custom-header.scss
+    _custom-footer.scss
+    _kv.scss
     _page.scss
     _section.scss
     _form.scss
-    _single.scss
-    _archive.scss
+    _front-appeal.scss
+    _front-step.scss
+    _sec-split.scss
+    _sec-feature.scss
+    _sec-plan.scss
+    _sec-faq.scss
+    _sec-news.scss
+    _sec-column.scss
   object/
     component/
       _title.scss
-      _section-title.scss
-      _section-btn.scss
+      _sec-title.scss
+      _sec-btn.scss
       _breadcrumb.scss
       _tag.scss
     project/
-      _front-appeal.scss
-      _split.scss
-      _content.scss
+      案件固有の小さな表現が必要な場合だけ追加する
     utility/
       _bg.scss
       _br.scss
@@ -45,9 +50,9 @@ assets/scss/
 - `_reset.scss` と `_mixin.scss` は 3 案件でほぼ共通のため、このテンプレートでも共通基盤として維持する。
 - `_variables.scss` は案件ごとに最も差が出るため、白・黒・グレー・base・main・accent・border・text・muted など最低限のトークンだけを標準化する。
 - `_base.scss` は `uchina-partners` 系のシンプルな body 設定をベースにし、Instagram プラグイン調整や案件固有フォント読み込みは入れない。
-- `layout` には複数案件で繰り返し出る header、footer、page、section、form、single、archive の土台だけを置く。
+- `layout` には header、footer、page、section、form、KV、ページ内の大きなセクション骨格を置く。
 - `component` には見出し、ボタン、パンくず、タグなど複数ページで使う部品を置く。
-- `project` にはトップページやコンテンツ固有の表現を置く。案件ごとのセクション装飾はここに追加する。
+- `project` にはページや案件に強く閉じた小さな表現だけを置く。ページ全体のセクション骨格は、トップページ固有でも `layout` に置く。
 - `utility` には背景、改行、コンテナ、本文幅など単一責務の補助 class だけを置く。
 
 `portfolio-site` のアニメーション、`ryuudai-aquaxmgrid` の濃色グラデーションや独自セクション、`uchina-partners` の Instagram プラグイン調整や個別カード UI は、案件依存が強いため標準テンプレートには含めません。必要になった案件で `project` または専用 component として追加します。
@@ -56,10 +61,85 @@ assets/scss/
 
 - `l-`: レイアウト。ヘッダー、フッター、ページ全体の大枠。
 - `c-`: コンポーネント。複数ページで再利用できる UI。
-- `p-`: プロジェクト。特定ページや特定セクションの固有表現。
+- `p-`: プロジェクト。特定ページや特定機能に閉じた小さな固有表現。ページ内の大きなセクション骨格には原則使わない。
 - `u-`: ユーティリティ。余白、背景、表示制御など単一責務。
 - `is-`: 状態。開閉、現在地、アクティブ状態。
 - `js-`: JavaScript 用 hook。スタイルを書かない。
+
+## セクションのテンプレート化と配置ルール
+
+この案件では、ページ内の大きなセクションを「レイアウトのまとまり」として扱います。見出し、本文、画像、ボタン、投稿一覧などを含むセクション全体の骨格は、`object/project` ではなく `layout` に置きます。
+
+### 共通セクション
+
+複数ページで使い回す可能性があるセクションは、PHP テンプレートパーツと SCSS を分けて管理します。
+
+- PHP: `themes/swell_child/template-parts/sec-*.php`
+- SCSS: `assets/scss/layout/_sec-*.scss`
+- class: `.l-sec-*`
+
+例:
+
+```text
+template-parts/sec-plan.php
+assets/scss/layout/_sec-plan.scss
+.l-sec-plan
+.l-sec-plan__list
+.l-sec-plan__card
+```
+
+`template-parts/sections/` のような階層は作らず、現在は `template-parts/` 直下へ置きます。ファイル名には `l-` を付けず、HTML/CSS の class 名だけ `l-sec-*` にします。
+
+各 `sec-*.php` の冒頭には、日本語の docblock で「何のセクションか」「どの投稿・配列・導線を出力するか」「JS やスライダーなど関係する機能があるか」を簡潔に書きます。AI エージェントがファイルを開いた時に、本文を全部読まなくても役割を判断できる状態にしてください。
+
+共通セクションにする基準は次の通りです。
+
+- 他ページでも同じ構成を使う可能性がある。
+- セクション単位で順番を入れ替える可能性がある。
+- `front-page.php` に置くと長くなり、管理しにくい。
+- 見た目だけでなく、投稿取得やFAQ配列などセクション単位のまとまりがある。
+
+### トップページ固有セクション
+
+トップページでしか使わないセクションは、無理にテンプレートパーツ化しません。`front-page.php` に直接書き、SCSS だけ `layout` に分けます。
+
+- PHP: `themes/swell_child/front-page.php`
+- SCSS: `assets/scss/layout/_front-*.scss`
+- class: `.l-front-*`
+
+例:
+
+```text
+front-page.php
+assets/scss/layout/_front-appeal.scss
+.l-front-appeal
+
+assets/scss/layout/_front-step.scss
+.l-front-step
+```
+
+トップページ固有でも、セクション全体の配置、余白、背景、画像コラージュ、横並び、流れのカード配置などを担う場合は `l-` として扱います。`p-front-*` は使いません。
+
+### component と section の違い
+
+見出しやボタンのように、セクションの中で部品として使うものは `component` に置きます。
+
+- `assets/scss/object/component/_sec-title.scss`
+- `assets/scss/object/component/_sec-btn.scss`
+- `.c-sec-title`
+- `.c-sec-btn`
+
+`c-sec-title` や `c-sec-btn` は単独の UI 部品です。`l-sec-*` や `l-front-*` は、それらの部品を含むセクション全体のレイアウトです。
+
+### project を使う場面
+
+`object/project` は、セクション全体の骨格ではなく、特定ページや特定機能に閉じた小さな表現が必要な場合だけ使います。
+
+- WordPress 管理画面由来の特定コンテンツだけに当てる補助表現。
+- 1ページ内のごく限定的な装飾で、共通セクションとして再利用しないもの。
+- component 化するほど汎用ではないが、layout に入れるほど大きな構造でもないもの。
+
+迷った場合は、まず「セクション全体の配置を持つか」で判断します。セクション全体なら `layout`、部品なら `component`、限定的な小表現なら `project` です。
 
 ## SWELL 子テーマでの class 命名
 
@@ -67,7 +147,7 @@ assets/scss/
 
 - SWELL が使っている可能性が高い `.l-header`, `.l-footer`, `.c-gnav`, `.p-spMenu`, `.l-content`, `.post_content` などを、独自パーツの主 class として安易に使わない。
 - 独自のヘッダー、フッター、固定パーツは `l-custom-header`, `l-custom-footer` のように `custom` を含め、SWELL 標準部品と区別する。
-- ページ固有セクションは `p-front-*`, `p-about-*`, `p-plan-*` のように、ページ名や用途を含める。
+- ページ固有でもセクション全体の骨格は `l-front-*`, `l-about-*`, `l-plan-*` のように `l-` で扱う。`p-*` は小さな固有表現に限定する。
 - SWELL 標準の投稿一覧、記事本文、ブロック装飾を調整する場合は、どの SWELL class を上書きしているかを確認してから最小範囲で書く。
 - SWELL 親テーマの見た目を消すためだけに `!important` を多用しない。まず class 名の分離、詳細度、読み込み順で解決する。
 - 既存の SWELL class へ直接スタイルを書く場合は、影響範囲が投稿、固定ページ、管理画面由来ブロックに広がらないか確認する。
@@ -75,25 +155,25 @@ assets/scss/
 ## BEM の書き方
 
 ```scss
-.p-section {}
-.p-section__body {}
-.p-section__button {}
-.p-section__button--primary {}
+.l-sec-plan {}
+.l-sec-plan__body {}
+.l-sec-plan__button {}
+.l-sec-plan__button--primary {}
 ```
 
 BEM の block 名は、できるだけ接頭辞を除いて 1 単語にする。1 単語で意味が曖昧になる場合だけ、ハイフン区切りの 2 単語までを基本にする。3 単語以上の block 名は、責務が広すぎる、または component/project の分類が誤っている可能性を疑う。
 
-写真やカードなど中身の差し替えが起きる要素で、modifier が配置スロットを表す場合は、内容名ではなく `--01`, `--02` のような番号名を使う。例: `.p-front-appeal__photo--01`。写真そのものの意味に依存する `--beach`, `--flower` のような名前は、差し替え時に class 名まで変更が必要になるため避ける。
+写真やカードなど中身の差し替えが起きる要素で、modifier が配置スロットを表す場合は、内容名ではなく `--01`, `--02` のような番号名を使う。例: `.l-front-appeal__photo--01`。写真そのものの意味に依存する `--beach`, `--flower` のような名前は、差し替え時に class 名まで変更が必要になるため避ける。
 
 固定フォーマットの画像枠は、原則 `width` と `aspect-ratio` で形を定義し、任意の `width` + `height` 固定だけで縦横を決めない。`img` には `object-fit` と必要に応じた `object-position` を指定し、写真差し替え時のトリミングだけを調整できる状態にする。
 
 ## 新しいセクションを追加する手順
 
 1. 汎用化できる見出しやボタンは `object/component` に置く。
-2. 写真とテキストを横並びにするセクション構成は `object/project` の `p-split` を使う。これは見出しやボタンのような独立 UI component ではなく、案件内で使い回すセクションパターンとして扱う。
-3. ページ固有の配置や余白は `object/project` に置く。
+2. 複数ページで使い回すセクションは `template-parts/sec-*.php` と `layout/_sec-*.scss` に分け、class は `.l-sec-*` にする。
+3. トップページ固有で使い回さないセクションは `front-page.php` に直接書き、SCSS は `layout/_front-*.scss`、class は `.l-front-*` にする。
 4. `assets/scss/style.scss` に読み込みを追加する。
-5. 同じ見た目が 2 箇所以上に増えたら component 化を検討する。
+5. 同じ見た目が 2 箇所以上に増えたら component 化または共通セクション化を検討する。
 
 ## 余白とスペース調整
 
@@ -119,6 +199,11 @@ BEM の block 名は、できるだけ接頭辞を除いて 1 単語にする。
 
 - `@use "./**/_*.scss"` のようなまとめ読み込みは使わない。
 - `style.scss` で foundation、layout、component、project、utility の順に読む。
+- 共通セクションは `template-parts/sec-*.php`、`layout/_sec-*.scss`、`.l-sec-*` で揃える。
+- `template-parts/sec-*.php` の冒頭には、セクションの役割を説明する日本語 docblock を必ず書く。
+- トップページ固有セクションは `front-page.php`、`layout/_front-*.scss`、`.l-front-*` で揃える。
+- ファイル名には `l-` を付けない。`l-` は class 名の接頭辞としてだけ使う。
+- セクション見出しとセクションボタンは `.c-sec-title`、`.c-sec-btn` を使う。
 - 色やフォントは `foundation/_variables.scss` に寄せる。
 - breakpoint と計算処理は `foundation/_mixin.scss` に寄せる。
 - `js-` class に CSS を書かない。

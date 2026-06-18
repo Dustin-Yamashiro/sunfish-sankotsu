@@ -1,7 +1,10 @@
-@use "../../foundation/mixin" as *;
-@use "../../foundation/variables" as *;
+/*
+* 共通お知らせセクション
+*/
+@use "../foundation/mixin" as *;
+@use "../foundation/variables" as *;
 
-.p-news-sec {
+.l-sec-news {
   background-color: $color-gray;
 
   &__inner {
@@ -42,7 +45,7 @@
   &__item {
     border-bottom: 1px solid rgba($color-main, 0.9);
 
-    &:first-child .p-news-sec__link {
+    &:first-child .l-sec-news__link {
       padding-top: 0;
     }
   }
@@ -67,7 +70,7 @@
       padding-block: 24px;
     }
 
-    &:hover .p-news-sec__item-title {
+    &:hover .l-sec-news__item-title {
       color: $color-main;
     }
   }
@@ -148,7 +151,7 @@
     letter-spacing: 0.06em;
   }
 
-  &__more.c-section-btn {
+  &__more.c-sec-btn {
     grid-column: 1 / -1;
     margin: 64px 0 0 auto;
 

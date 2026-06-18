@@ -6,28 +6,22 @@
 @use "layout/custom-header";
 @use "layout/custom-footer";
 @use "layout/kv";
-@use "layout/page";
-@use "layout/section";
 @use "layout/form";
+@use "layout/sec-split";
+@use "layout/sec-feature";
+@use "layout/sec-plan";
+@use "layout/sec-faq";
+@use "layout/sec-news";
+@use "layout/sec-column";
 
-@use "object/component/title";
-@use "object/component/section-title";
-@use "object/component/section-btn";
-@use "object/component/breadcrumb";
-@use "object/component/tag";
+@use "object/component/sec-title";
+@use "object/component/sec-btn";
 
-@use "object/project/front-appeal";
-@use "object/project/split";
-@use "object/project/feature-sec";
-@use "object/project/plan-sec";
-@use "object/project/step-sec";
-@use "object/project/faq-sec";
-@use "object/project/news-sec";
-@use "object/project/column-sec";
+@use "layout/front-appeal";
+@use "layout/front-step";
 
 @use "object/utility/bg";
 @use "object/utility/br";
 @use "object/utility/container";
 @use "object/utility/section-space";
-@use "object/utility/contents";
 @use "object/utility/animation";

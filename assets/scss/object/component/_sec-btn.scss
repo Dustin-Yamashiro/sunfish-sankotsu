@@ -3,11 +3,11 @@
 */
 @use "../../foundation/variables" as *;
 
-.c-section-btn {
-  --section-btn-color: #{$color-main};
-  --section-btn-bg: transparent;
-  --section-btn-hover-bg: #{$color-main};
-  --section-btn-hover-color: #{$color-white};
+.c-sec-btn {
+  --sec-btn-color: #{$color-main};
+  --sec-btn-bg: transparent;
+  --sec-btn-hover-bg: #{$color-main};
+  --sec-btn-hover-color: #{$color-white};
 
   inline-size: 100%;
   max-width: 260px;
@@ -17,14 +17,14 @@
   }
 
   &--accent {
-    --section-btn-color: #{$color-accent};
-    --section-btn-hover-bg: #{$color-accent};
+    --sec-btn-color: #{$color-accent};
+    --sec-btn-hover-bg: #{$color-accent};
   }
 
   &--white {
-    --section-btn-color: #{$color-white};
-    --section-btn-hover-bg: #{$color-white};
-    --section-btn-hover-color: #{$color-main};
+    --sec-btn-color: #{$color-white};
+    --sec-btn-hover-bg: #{$color-white};
+    --sec-btn-hover-color: #{$color-main};
   }
 
   &--prev > a::before,
@@ -50,9 +50,9 @@
     inline-size: 100%;
     min-height: 4px;
     padding: 10px 20px;
-    border: 1px solid var(--section-btn-color);
-    background-color: var(--section-btn-bg);
-    color: var(--section-btn-color);
+    border: 1px solid var(--sec-btn-color);
+    background-color: var(--sec-btn-bg);
+    color: var(--sec-btn-color);
     font-size: 16px;
     font-weight: 600;
     line-height: 1.4;
@@ -65,9 +65,9 @@
 
     &:hover,
     &:focus-visible {
-      border-color: var(--section-btn-hover-bg);
-      background-color: var(--section-btn-hover-bg);
-      color: var(--section-btn-hover-color);
+      border-color: var(--sec-btn-hover-bg);
+      background-color: var(--sec-btn-hover-bg);
+      color: var(--sec-btn-hover-color);
     }
 
     &:focus-visible {

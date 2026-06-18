@@ -59,6 +59,8 @@
 
 詳細は `docs/css-design.md` を参照する。読み込み順は固定し、まとめ読み込みを使わず、FLOCSS/BEM の接頭辞を守る。
 
+共通セクションは `template-parts/sec-*.php`、`assets/scss/layout/_sec-*.scss`、`.l-sec-*` で管理する。トップページ固有セクションは `front-page.php` に直接書き、`assets/scss/layout/_front-*.scss`、`.l-front-*` で管理する。見出しやボタンなどの部品は `.c-sec-title`、`.c-sec-btn` を使う。`template-parts/sec-*.php` の冒頭には、何のセクションか分かる日本語 docblock を書く。詳しい判断基準は `docs/css-design.md` の「セクションのテンプレート化と配置ルール」を参照する。
+
 この案件は SWELL 子テーマのため、SWELL 親テーマの CSS も同時に読み込まれる。class を作成する際は親テーマの既存 class と干渉しない命名を優先し、独自のヘッダー、フッター、固定パーツは `l-custom-*` など案件側だと分かる class にする。SWELL class を直接上書きする場合は、影響範囲を確認して最小限にする。
 
 `margin`, `padding`, `gap` などの余白・スペース調整は、原則として 4 の倍数の px 値で指定する。例外は `1px` の border、画像やアイコンの実寸、フォントサイズ、line-height、デザイン上どうしても必要な厳密値に限定する。

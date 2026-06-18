@@ -8,6 +8,8 @@
 - `themes/swell_child/functions.php` へ処理を増やさず、`themes/swell_child/inc/*.php` に責務ごとに追加する。
 - PHP の URL、属性、テキスト出力は `esc_url()`, `esc_attr()`, `esc_html()` を使う。
 - SCSS は FLOCSS/BEM を守り、`l-`, `c-`, `p-`, `u-`, `is-`, `js-` の接頭辞を使う。
+- 共通セクションは `template-parts/sec-*.php`、`layout/_sec-*.scss`、`.l-sec-*` で管理する。トップページ固有セクションは `front-page.php`、`layout/_front-*.scss`、`.l-front-*` で管理する。詳細は `docs/css-design.md` を参照する。
+- `template-parts/sec-*.php` の冒頭には、何のセクションか分かる日本語 docblock を書く。
 - この案件は SWELL 子テーマのため、SWELL 親テーマの既存 class と干渉しない命名を優先する。独自のヘッダー、フッター、固定パーツは `l-custom-*` など案件側だと分かる名前にする。
 - 余白やスペース調整の `margin`, `padding`, `gap` などは、原則 4 の倍数の px 値で指定する。
 - 通常の可読テキストの `font-size` は原則 `16px` 以上にする。明示指示やデザイン上の必要性がある場合だけ例外を許容する。
