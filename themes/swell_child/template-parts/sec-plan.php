@@ -1,12 +1,12 @@
 <?php
 /**
- * 共通散骨プランセクションのテンプレート。
+ * 散骨プランセクションのテンプレート。
  *
- * 貸切散骨プランと代行散骨プランの概要、料金、写真、詳細導線を
- * 複数ページで使えるプラン紹介セクションとして出力します。
+ * 貸切散骨プランと代行散骨プランの概要、料金、写真、詳細導線を出力します。
  *
  * @package SunfishSankotsu
  */
+
 ?>
 <section class="l-sec-plan u-section-space u-section-space--btm-large" aria-labelledby="front-plan-title">
 	<div class="l-sec-plan__heading u-container u-fade-up">
@@ -19,7 +19,7 @@
 	<div class="l-sec-plan__list u-container">
 		<article class="l-sec-plan__card l-sec-plan__card--charter">
 			<picture class="l-sec-plan__image">
-				<img src="<?php echo esc_url( theme_image_url( 'front-page/plan/charter.png' ) ); ?>" width="1672" height="941" alt="石垣島の海を家族で見つめる貸切散骨の様子" loading="lazy">
+				<img src="<?php echo esc_url( theme_image_url( 'front-page/plan/charter.png' ) ); ?>" width="520" height="520" alt="石垣島の海を家族で見つめる貸切散骨の様子" loading="lazy">
 			</picture>
 			<div class="l-sec-plan__panel">
 				<div class="l-sec-plan__content">
@@ -44,7 +44,7 @@
 
 		<article class="l-sec-plan__card l-sec-plan__card--proxy">
 			<picture class="l-sec-plan__image">
-				<img src="<?php echo esc_url( theme_image_url( 'front-page/plan/proxy.png' ) ); ?>" width="1536" height="1024" alt="石垣島の海へ花を手向ける委託散骨の様子" loading="lazy">
+				<img src="<?php echo esc_url( theme_image_url( 'front-page/plan/proxy.png' ) ); ?>" width="520" height="520" alt="石垣島の海へ花を手向ける委託散骨の様子" loading="lazy">
 			</picture>
 			<div class="l-sec-plan__panel">
 				<div class="l-sec-plan__content">

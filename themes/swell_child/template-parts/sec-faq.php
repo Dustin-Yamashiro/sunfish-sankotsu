@@ -1,15 +1,14 @@
 <?php
 /**
- * 共通FAQセクションのテンプレート。
+ * FAQセクションのテンプレート。
  *
  * よくある質問の見出し、質問リスト、回答パネル、一覧導線を出力します。
- * アコーディオンの開閉は JS hook の `js-faq-accordion` 側で制御します。
  *
  * @package SunfishSankotsu
  */
-?>
-<?php
-$front_faq_items = array(
+
+$sec_faq_panel_base = 'front-faq-title';
+$sec_faq_items      = array(
 	array(
 		'question' => '海洋散骨が初めてでも相談できますか？',
 		'answer'   => array(
@@ -55,25 +54,25 @@ $front_faq_items = array(
 		</div>
 
 		<div class="l-sec-faq__list js-faq-accordion">
-			<?php foreach ( $front_faq_items as $front_faq_index => $front_faq_item ) : ?>
+			<?php foreach ( $sec_faq_items as $faq_index => $faq_item ) : ?>
 				<?php
-				$front_faq_number  = $front_faq_index + 1;
-				$front_faq_panel_id = 'front-faq-panel-' . $front_faq_number;
+				$faq_number   = $faq_index + 1;
+				$faq_panel_id = $sec_faq_panel_base . '-panel-' . $faq_number;
 				?>
 				<section class="l-sec-faq__item">
 					<h3 class="l-sec-faq__question">
-						<button class="l-sec-faq__trigger js-faq-accordion-button" type="button" aria-expanded="false" aria-controls="<?php echo esc_attr( $front_faq_panel_id ); ?>">
+						<button class="l-sec-faq__trigger js-faq-accordion-button" type="button" aria-expanded="false" aria-controls="<?php echo esc_attr( $faq_panel_id ); ?>">
 							<span class="l-sec-faq__mark l-sec-faq__mark--question" aria-hidden="true">Q.</span>
-							<span class="l-sec-faq__question-text"><?php echo esc_html( $front_faq_item['question'] ); ?></span>
+							<span class="l-sec-faq__question-text"><?php echo esc_html( $faq_item['question'] ); ?></span>
 							<span class="l-sec-faq__toggle-icon" aria-hidden="true"></span>
 						</button>
 					</h3>
-					<div id="<?php echo esc_attr( $front_faq_panel_id ); ?>" class="l-sec-faq__answer js-faq-accordion-panel" aria-hidden="true">
+					<div id="<?php echo esc_attr( $faq_panel_id ); ?>" class="l-sec-faq__answer js-faq-accordion-panel" aria-hidden="true">
 						<div class="l-sec-faq__answer-inner">
 							<span class="l-sec-faq__mark l-sec-faq__mark--answer" aria-hidden="true">A.</span>
 							<div class="l-sec-faq__answer-body">
-								<?php foreach ( $front_faq_item['answer'] as $front_faq_answer ) : ?>
-									<p><?php echo esc_html( $front_faq_answer ); ?></p>
+								<?php foreach ( $faq_item['answer'] as $faq_answer ) : ?>
+									<p><?php echo esc_html( $faq_answer ); ?></p>
 								<?php endforeach; ?>
 							</div>
 						</div>

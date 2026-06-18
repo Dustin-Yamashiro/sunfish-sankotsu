@@ -1,16 +1,14 @@
 <?php
 /**
- * 共通コラムセクションのテンプレート。
+ * コラムセクションのテンプレート。
  *
- * 投稿カテゴリー `column` の記事を、トップページや固定ページで使える
- * Splide スライダー用のコラム一覧として出力します。
+ * 投稿カテゴリー `column` の記事を、Splide スライダー用のコラム一覧として出力します。
  *
  * @package SunfishSankotsu
  */
-?>
-<?php
-$front_column_category = get_category_by_slug( 'column' );
-$front_column_args     = array(
+
+$sec_column_category = get_category_by_slug( 'column' );
+$sec_column_query_args = array(
 	'post_type'           => 'post',
 	'post_status'         => 'publish',
 	'posts_per_page'      => 8,
@@ -18,11 +16,11 @@ $front_column_args     = array(
 	'no_found_rows'       => true,
 );
 
-if ( $front_column_category ) {
-	$front_column_args['cat'] = (int) $front_column_category->term_id;
+if ( $sec_column_category ) {
+	$sec_column_query_args['cat'] = (int) $sec_column_category->term_id;
 }
 
-$front_column_query = new WP_Query( $front_column_args );
+$sec_column_query = new WP_Query( $sec_column_query_args );
 ?>
 <section class="l-sec-column u-section-space" aria-labelledby="front-column-title">
 	<div class="l-sec-column__heading u-container">
@@ -39,7 +37,7 @@ $front_column_query = new WP_Query( $front_column_args );
 				SWELL_Theme::get_parts(
 					'parts/post_list/loop_sub',
 					array(
-						'query'     => $front_column_query,
+						'query'     => $sec_column_query,
 						'list_args' => array(
 							'type'           => 'card',
 							'max_col'        => '4',
