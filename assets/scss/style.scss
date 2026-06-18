@@ -6,8 +6,13 @@
 @use "layout/custom-header";
 @use "layout/custom-footer";
 @use "layout/kv";
+@use "layout/page-kv";
+@use "layout/sec-reason";
 @use "layout/sec-split";
 @use "layout/sec-feature";
+@use "layout/sec-values";
+@use "layout/sec-plan-detail";
+@use "layout/sec-step";
 @use "layout/sec-plan";
 @use "layout/sec-faq";
 @use "layout/sec-news";
@@ -22,5 +27,4 @@
 @use "object/utility/bg";
 @use "object/utility/br";
 @use "object/utility/container";
-@use "object/utility/section-space";
 @use "object/utility/animation";

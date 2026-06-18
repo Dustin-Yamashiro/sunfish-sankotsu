@@ -47,6 +47,24 @@
     }
   }
 
+  &__main-line {
+    display: block;
+  }
+
+  &__main-accent {
+    color: $color-main;
+    font-size: 1.45em;
+    letter-spacing: 0.08em;
+
+    @include bp("sp-l") {
+      font-size: 1.32em;
+    }
+  }
+
+  &__main-suffix {
+    margin-left: 0.35em;
+  }
+
   &__sub {
     color: var(--sec-title-sub-color);
     font-family: $font-en;

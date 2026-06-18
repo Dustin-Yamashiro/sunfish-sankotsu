@@ -1,0 +1,469 @@
+/*
+* 共通プラン詳細セクション
+*/
+@use "../foundation/mixin" as *;
+@use "../foundation/variables" as *;
+
+.l-sec-plan-detail {
+  padding-block: 120px 160px;
+  background-color: $color-white;
+
+  @include bp("tb") {
+    padding-block: 104px 136px;
+  }
+
+  @include bp("sp-l") {
+    padding-block: 80px 96px;
+  }
+
+  &__inner {
+    max-width: 1200px;
+  }
+
+  &__title {
+    --sec-title-gap: 28px;
+
+    @include bp("sp-l") {
+      --sec-title-gap: 20px;
+    }
+  }
+
+  &__table {
+    width: min(100%, 800px);
+    margin: 80px auto 0;
+    border-top: 1px solid rgba($color-main, 0.9);
+    border-bottom: 1px solid rgba($color-main, 0.9);
+
+    @include bp("tb") {
+      margin-top: 72px;
+    }
+
+    @include bp("sp-l") {
+      width: 100%;
+      margin-top: 48px;
+    }
+  }
+
+  &__row {
+    display: grid;
+    grid-template-columns: 160px minmax(0, 1fr);
+    gap: 48px;
+    margin: 0;
+    padding-block: 36px;
+    padding-inline: 24px;
+
+    &:not(:first-child) {
+      border-top: 1px solid rgba($color-main, 0.9);
+    }
+
+    @include bp("tb") {
+      grid-template-columns: 144px minmax(0, 1fr);
+      gap: 40px;
+      padding-block: 32px;
+      padding-inline: 32px;
+    }
+
+    @include bp("sp-l") {
+      display: block;
+      padding-block: 28px;
+      padding-inline: 24px;
+    }
+
+    @include bp("sp") {
+      padding-inline: 20px;
+    }
+  }
+
+  &__label {
+    margin: 0;
+    color: $color-main;
+    font-family: $font-heading;
+    font-size: 19px;
+    font-weight: 700;
+    line-height: 1.6;
+    letter-spacing: 0.08em;
+
+    @include bp("sp-l") {
+      font-size: 18px;
+      line-height: 1.5;
+    }
+  }
+
+  &__value {
+    display: grid;
+    gap: 12px;
+    min-width: 0;
+    margin: 0;
+    color: $color-text;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.95;
+    letter-spacing: 0.06em;
+
+    @include bp("sp-l") {
+      gap: 10px;
+      margin-top: 16px;
+      line-height: 1.85;
+      letter-spacing: 0.04em;
+    }
+  }
+
+  &__text {
+    margin: 0;
+
+    a {
+      color: $color-main;
+      text-decoration: none;
+      text-underline-offset: 0.25em;
+      transition: color $duration-base $ease-base;
+
+      &:hover {
+        color: $color-accent;
+        text-decoration: underline;
+      }
+    }
+
+    strong {
+      font-weight: 700;
+    }
+
+    &--lead {
+      font-size: 18px;
+      line-height: 1.7;
+      letter-spacing: 0.04em;
+
+      @include bp("sp-l") {
+        font-size: 17px;
+      }
+    }
+  }
+
+  &__item-list {
+    display: grid;
+    gap: 20px;
+  }
+
+  &__item-title,
+  &__item-text {
+    margin: 0;
+  }
+
+  &__item-title {
+    font-weight: 700;
+  }
+
+  &__included,
+  &__options {
+    margin-top: 104px;
+
+    @include bp("tb") {
+      margin-top: 88px;
+    }
+
+    @include bp("sp-l") {
+      margin-top: 72px;
+    }
+  }
+
+  &__section-heading {
+    margin: 0;
+    color: $color-text;
+    font-family: $font-heading;
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 1.6;
+    letter-spacing: 0.12em;
+    text-align: center;
+
+    @include bp("sp-l") {
+      font-size: 23px;
+      line-height: 1.5;
+      letter-spacing: 0.08em;
+    }
+  }
+
+  &__included-list,
+  &__option-list {
+    margin: 64px 0 0;
+    padding: 0;
+    list-style: none;
+
+    @include bp("sp-l") {
+      margin-top: 40px;
+    }
+  }
+
+  &__included-list {
+    display: grid;
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    gap: 60px 56px;
+
+    @include bp("tb") {
+      gap: 48px 32px;
+    }
+
+    @include bp("sp-l") {
+      display: block;
+    }
+  }
+
+  &__included-item {
+    grid-column: span 2;
+
+    &:nth-child(4) {
+      grid-column: 2 / span 2;
+    }
+
+    &:nth-child(5) {
+      grid-column: 4 / span 2;
+    }
+
+    @include bp("sp-l") {
+      &:not(:first-child) {
+        margin-top: 24px;
+      }
+    }
+  }
+
+  &__included-card {
+    display: grid;
+    justify-items: center;
+    align-content: start;
+    min-height: 420px;
+    height: 100%;
+    padding: 3.25em 40px 2.75em;
+    border: 1px solid rgba($color-main, 0.9);
+    background-color: $color-white;
+    font-size: 16px;
+
+    @include bp("tb") {
+      min-height: 392px;
+      padding-inline: 28px;
+    }
+
+    @include bp("sp-l") {
+      min-height: 0;
+      padding: 2.5em 24px;
+    }
+  }
+
+  &__included-icon {
+    display: grid;
+    place-items: center;
+    width: 104px;
+    aspect-ratio: 1;
+
+    @include bp("tb") {
+      width: 92px;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+
+  &__card-title {
+    margin: 36px 0 0;
+    color: $color-main;
+    font-family: $font-heading;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 1.55;
+    letter-spacing: 0.1em;
+    text-align: center;
+
+    @include bp("tb") {
+      margin-top: 32px;
+      font-size: 21px;
+      letter-spacing: 0.08em;
+    }
+
+    @include bp("sp-l") {
+      font-size: 22px;
+    }
+  }
+
+  &__card-body {
+    display: grid;
+    gap: 8px;
+    width: 100%;
+    margin-top: 28px;
+    color: $color-text;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.9;
+    letter-spacing: 0.06em;
+
+    @include bp("tb") {
+      line-height: 1.85;
+      letter-spacing: 0.04em;
+    }
+
+    @include bp("sp-l") {
+      margin-top: 24px;
+    }
+
+    p {
+      margin: 0;
+    }
+  }
+
+  &__option-list {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 28px;
+
+    @include bp("pc-s") {
+      gap: 24px;
+    }
+
+    @include bp("tb") {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 24px;
+    }
+
+    @include bp("sp-l") {
+      display: block;
+    }
+  }
+
+  &__option-item {
+    @include bp("tb") {
+      &:last-child:nth-child(odd) {
+        grid-column: 1 / -1;
+        width: calc((100% - 24px) / 2);
+        justify-self: center;
+      }
+    }
+
+    @include bp("sp-l") {
+      &:last-child:nth-child(odd) {
+        width: auto;
+      }
+
+      &:not(:first-child) {
+        margin-top: 20px;
+      }
+    }
+  }
+
+  &__option-card {
+    display: grid;
+    grid-template-columns: 72px minmax(0, 1fr);
+    gap: 20px;
+    align-items: center;
+    height: 100%;
+    min-height: 176px;
+    padding: 1.25em 24px;
+    border: 1px solid rgba($color-main, 0.9);
+    background-color: $color-white;
+    font-size: 16px;
+
+    @include bp("pc-s") {
+      grid-template-columns: 60px minmax(0, 1fr);
+      gap: 16px;
+      padding-inline: 16px;
+    }
+
+    @include bp("tb") {
+      grid-template-columns: 64px minmax(0, 1fr);
+      gap: 16px;
+      padding-inline: 16px;
+    }
+
+    @include bp("sp-l") {
+      grid-template-columns: 72px minmax(0, 1fr);
+      gap: 16px;
+      min-height: 0;
+      padding: 1em 16px;
+    }
+
+    @include bp("sp") {
+      grid-template-columns: 64px minmax(0, 1fr);
+      gap: 16px;
+      padding-inline: 16px;
+    }
+  }
+
+  &__option-icon {
+    display: grid;
+    place-items: center;
+    width: 72px;
+    aspect-ratio: 1;
+
+    @include bp("pc-s") {
+      width: 60px;
+    }
+
+    @include bp("tb") {
+      width: 64px;
+    }
+
+    @include bp("sp-l") {
+      width: 72px;
+    }
+
+    @include bp("sp") {
+      width: 64px;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+
+  &__option-title,
+  &__option-text,
+  &__option-price {
+    margin: 0;
+  }
+
+  &__option-content {
+    display: grid;
+    gap: 10px;
+    min-width: 0;
+  }
+
+  &__option-title {
+    color: $color-main;
+    font-family: $font-heading;
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+
+    @media screen and (width > 740px) {
+      white-space: nowrap;
+    }
+
+    @include bp("tb") {
+      letter-spacing: 0.02em;
+    }
+
+    @include bp("pc-s") {
+      letter-spacing: 0;
+    }
+  }
+
+  &__option-text {
+    color: $color-text;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.7;
+    letter-spacing: 0.04em;
+  }
+
+  &__option-price {
+    color: $color-text;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+  }
+}

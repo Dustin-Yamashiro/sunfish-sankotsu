@@ -1,5 +1,7 @@
 const animationSelector =
   ".u-fade-up, .u-fade-up-group, .u-text-fade, .u-photo-fade, .u-step-flow, .u-bg-wipe";
+const loadAnimationSelector = ".u-bg-wipe--load";
+const loadAnimationDelay = 160;
 
 const splitTextToChars = (element) => {
   if (element.dataset.textSplit === "true") {
@@ -56,6 +58,33 @@ const showWithoutMotion = () => {
   });
 };
 
+const showLoadAnimations = () => {
+  const loadTargets = Array.from(document.querySelectorAll(loadAnimationSelector));
+
+  if (!loadTargets.length) {
+    return;
+  }
+
+  const play = () => {
+    window.requestAnimationFrame(() => {
+      window.requestAnimationFrame(() => {
+        window.setTimeout(() => {
+          loadTargets.forEach((element) => {
+            element.classList.add("is-inview");
+          });
+        }, loadAnimationDelay);
+      });
+    });
+  };
+
+  if (document.readyState === "complete") {
+    play();
+    return;
+  }
+
+  window.addEventListener("load", play, { once: true });
+};
+
 const initUtilityAnimation = () => {
   const targets = Array.from(document.querySelectorAll(animationSelector));
   const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
@@ -74,6 +103,7 @@ const initUtilityAnimation = () => {
   }
 
   document.documentElement.classList.add("is-anim-ready");
+  showLoadAnimations();
 
   const observer = new IntersectionObserver(
     (entries) => {
@@ -92,7 +122,13 @@ const initUtilityAnimation = () => {
     },
   );
 
-  targets.forEach((target) => observer.observe(target));
+  targets.forEach((target) => {
+    if (target.matches(loadAnimationSelector)) {
+      return;
+    }
+
+    observer.observe(target);
+  });
 };
 
 if (document.readyState === "loading") {

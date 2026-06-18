@@ -171,12 +171,14 @@
   &__point-list {
     display: grid;
     gap: 64px;
+    grid-auto-rows: 1fr;
     margin: 0;
-    padding: 0 0 180px;
+    padding: 0 0 150px;
     list-style: none;
 
     @include bp("tb") {
       display: flex;
+      align-items: stretch;
       gap: 24px;
       width: max-content;
       min-width: 100%;
@@ -191,6 +193,8 @@
   &__point-item {
     --point-color: #{$color-accent};
 
+    display: flex;
+    min-width: 0;
     position: relative;
 
     @include bp("tb") {
@@ -203,9 +207,12 @@
   &__point-card {
     display: grid;
     grid-template-columns: minmax(0, 1fr) 292px;
+    width: 100%;
+    height: 100%;
     min-height: 336px;
     overflow: hidden;
     background-color: $color-white;
+    box-shadow: 0 10px 24px rgba(48, 95, 108, 0.14);
 
     @include bp("pc-s") {
       grid-template-columns: minmax(0, 1fr) 280px;
@@ -214,24 +221,22 @@
     @include bp("tb") {
       display: flex;
       min-height: 0;
-      height: 100%;
       flex-direction: column;
     }
   }
 
   &__point-content {
+    flex: 1 1 auto;
     display: flex;
     flex-direction: column;
     padding: 32px 32px 32px;
 
     @include bp("tb") {
-      min-height: 360px;
-      padding: 32px 32px 36px;
+      padding: 36px 40px 40px;
     }
 
     @include bp("sp-l") {
-      min-height: 360px;
-      padding: 24px 24px 24px;
+      padding: 24px 24px 32px;
     }
   }
 
@@ -255,11 +260,20 @@
       background-color: currentColor;
       content: "";
     }
+
+    @include bp("sp-l") {
+      gap: 8px;
+
+      &::after {
+        margin-left: 12px;
+        // margin-bottom: 7px;
+      }
+    }
   }
 
   &__point-text {
-    font-size: 16px;
-    line-height: 1;
+    font-size: 18px;
+    line-height: 0.75;
   }
 
   &__point-number {
@@ -269,8 +283,12 @@
     line-height: 0.82;
     letter-spacing: 0;
 
+    @include bp("tb") {
+      font-size: 34px;
+    }
+
     @include bp("sp-l") {
-      font-size: 38px;
+      font-size: 28px;
     }
   }
 
@@ -283,8 +301,10 @@
     letter-spacing: 0.06em;
 
     @include bp("sp-l") {
-      margin-top: 28px;
-      font-size: 18px;
+      margin-top: 24px;
+      font-size: 19px;
+      line-height: 1.55;
+      letter-spacing: 0;
     }
   }
 
@@ -299,8 +319,11 @@
     letter-spacing: 0.06em;
 
     @include bp("sp-l") {
+      gap: 16px;
+      margin-top: 20px;
       line-height: 1.8;
       letter-spacing: 0.04em;
+      font-size: 15px;
     }
 
     p {
@@ -317,11 +340,7 @@
     @include bp("tb") {
       order: -1;
       min-height: 0;
-      aspect-ratio: 16 / 10;
-    }
-
-    @include bp("sp-l") {
-      aspect-ratio: 4 / 3;
+      aspect-ratio: 3 / 2;
     }
 
     img {
@@ -329,16 +348,8 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
-      object-position: 52% 50%;
+      object-position: center center;
     }
-  }
-
-  &__point-item--02 &__point-image img {
-    object-position: 50% 60%;
-  }
-
-  &__point-item--03 &__point-image img {
-    object-position: 50% 66%;
   }
 
   &__island {
@@ -387,5 +398,35 @@
     height: 100%;
     background-color: $color-main;
     transform: translateX(var(--feature-sec-scrollbar-thumb-x, 0));
+  }
+
+  &--compact {
+    .l-sec-feature__message {
+      min-height: 0;
+
+      &::before {
+        height: 150%;
+      }
+    }
+
+    @include bp("tb") {
+      .l-sec-feature__message::before {
+        height: calc(100% + 200px);
+      }
+
+      .l-sec-feature__points {
+        margin-top: 64px;
+      }
+    }
+
+    @include bp("sp-l") {
+      .l-sec-feature__message::before {
+        height: calc(100% + 160px);
+      }
+
+      .l-sec-feature__points {
+        margin-top: 56px;
+      }
+    }
   }
 }

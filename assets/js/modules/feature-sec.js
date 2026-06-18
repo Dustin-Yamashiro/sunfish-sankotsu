@@ -7,6 +7,10 @@ const initFeatureSec = () => {
   const scrollbarThumb = section?.querySelector("[data-feature-sec-scrollbar]");
   const motionQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
   let snapTimer = 0;
+  let scrollFrame = 0;
+  let resizeFrame = 0;
+  let isWindowScrollBound = false;
+  let lastViewportWidth = window.innerWidth;
 
   if (!section || cards.length === 0) {
     return;
@@ -76,6 +80,17 @@ const initFeatureSec = () => {
 
   const updateActiveByScroll = () => {
     setActive(isHorizontalScrollable() ? getClosestHorizontalCard() : getClosestVerticalCard());
+  };
+
+  const updateActiveByWindowScroll = () => {
+    if (isHorizontalScrollable() || scrollFrame) {
+      return;
+    }
+
+    scrollFrame = window.requestAnimationFrame(() => {
+      scrollFrame = 0;
+      updateActiveByScroll();
+    });
   };
 
   const updateActiveByHorizontalScroll = () => {
@@ -148,18 +163,77 @@ const initFeatureSec = () => {
     snapTimer = window.setTimeout(snapToClosestHorizontalCard, 140);
   };
 
+  const bindWindowScroll = () => {
+    if (isWindowScrollBound || isHorizontalScrollable()) {
+      return;
+    }
+
+    window.addEventListener("scroll", updateActiveByWindowScroll, { passive: true });
+    isWindowScrollBound = true;
+  };
+
+  const unbindWindowScroll = () => {
+    if (!isWindowScrollBound) {
+      return;
+    }
+
+    window.removeEventListener("scroll", updateActiveByWindowScroll);
+    isWindowScrollBound = false;
+
+    if (scrollFrame) {
+      window.cancelAnimationFrame(scrollFrame);
+      scrollFrame = 0;
+    }
+  };
+
+  const syncScrollMode = () => {
+    if (isHorizontalScrollable()) {
+      unbindWindowScroll();
+      updateActiveByHorizontalScroll();
+      return;
+    }
+
+    bindWindowScroll();
+    updateActiveByScroll();
+  };
+
   const updateLayout = () => {
     window.clearTimeout(snapTimer);
-    updateActiveByScroll();
+    syncScrollMode();
     updateScrollbar();
 
-    window.requestAnimationFrame(snapToClosestHorizontalCard);
+    if (isHorizontalScrollable()) {
+      window.requestAnimationFrame(snapToClosestHorizontalCard);
+    }
+  };
+
+  const queueLayoutUpdate = () => {
+    if (resizeFrame) {
+      return;
+    }
+
+    resizeFrame = window.requestAnimationFrame(() => {
+      resizeFrame = 0;
+      updateLayout();
+    });
+  };
+
+  const handleResize = () => {
+    const nextViewportWidth = window.innerWidth;
+    const widthChanged = nextViewportWidth !== lastViewportWidth;
+
+    lastViewportWidth = nextViewportWidth;
+
+    if (!widthChanged && isHorizontalScrollable()) {
+      return;
+    }
+
+    queueLayoutUpdate();
   };
 
   setActive(cards[0]);
-  updateScrollbar();
-  window.addEventListener("scroll", updateActiveByScroll, { passive: true });
-  window.addEventListener("resize", updateLayout);
+  updateLayout();
+  window.addEventListener("resize", handleResize);
 
   if (points) {
     const hasScrollEnd = "onscrollend" in points;
@@ -173,7 +247,7 @@ const initFeatureSec = () => {
   }
 
   if (typeof ResizeObserver !== "undefined" && points) {
-    const resizeObserver = new ResizeObserver(updateLayout);
+    const resizeObserver = new ResizeObserver(queueLayoutUpdate);
 
     resizeObserver.observe(points);
     cards.forEach((card) => resizeObserver.observe(card));

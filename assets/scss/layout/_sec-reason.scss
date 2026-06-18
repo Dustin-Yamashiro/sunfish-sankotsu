@@ -1,0 +1,131 @@
+/*
+* 共通理由セクション
+*/
+@use "../foundation/mixin" as *;
+@use "../foundation/variables" as *;
+
+.l-sec-reason {
+  padding-block: 120px 160px;
+  background-color: $color-white;
+
+  @include bp("tb") {
+    padding-block: 100px 120px;
+  }
+
+  @include bp("sp-l") {
+    padding-block: 80px 100px;
+  }
+
+  &__inner {
+    max-width: 1120px;
+  }
+
+  &__title {
+    margin: 0;
+    color: $color-text;
+    font-family: $font-heading;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 1.8;
+    letter-spacing: 0.16em;
+    text-align: center;
+
+    @include bp("tb") {
+      font-size: 28px;
+      line-height: 1.7;
+      letter-spacing: 0.12em;
+    }
+
+    @include bp("sp-l") {
+      font-size: 24px;
+      line-height: 1.75;
+      letter-spacing: 0.08em;
+    }
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 64px;
+    align-items: start;
+    margin-top: 64px;
+
+    @include bp("tb") {
+      gap: 32px;
+      margin-top: 48px;
+    }
+
+    @include bp("sp-l") {
+      grid-template-columns: 1fr;
+      gap: 56px;
+      max-width: 360px;
+      margin-inline: auto;
+    }
+  }
+
+  &__item {
+    display: grid;
+    justify-items: center;
+  }
+
+  &__image {
+    display: block;
+    width: min(100%, 288px);
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+    background-color: $color-gray;
+    border-radius: 50%;
+
+    @include bp("tb") {
+      width: min(88%, 232px);
+    }
+
+    @include bp("sp-l") {
+      width: min(78vw, 248px);
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center center;
+      transform: scale(1.12);
+    }
+  }
+
+  &__text-list {
+    display: grid;
+    gap: 4px;
+    width: fit-content;
+    max-width: 100%;
+    margin: 36px auto 0;
+    padding: 0;
+    color: $color-text;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.7;
+    letter-spacing: 0.08em;
+    list-style: none;
+
+    @include bp("sp-l") {
+      gap: 6px;
+      margin-top: 28px;
+      font-size: 16px;
+      line-height: 1.75;
+      letter-spacing: 0.05em;
+    }
+
+    li {
+      position: relative;
+      padding-left: 1em;
+
+      &::before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        content: "・";
+      }
+    }
+  }
+}

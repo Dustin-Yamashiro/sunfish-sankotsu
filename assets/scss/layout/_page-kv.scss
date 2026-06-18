@@ -1,0 +1,92 @@
+/*
+* 固定ページ共通キービジュアル
+*/
+@use "../foundation/mixin" as *;
+@use "../foundation/variables" as *;
+
+.l-page-kv {
+  position: relative;
+  isolation: isolate;
+  display: grid;
+  place-items: center;
+  min-height: 320px;
+  overflow: hidden;
+  background: $gradient-main;
+
+  @include bp("tb") {
+    min-height: 240px;
+  }
+
+  @include bp("sp-l") {
+    min-height: 196px;
+  }
+
+  &::before {
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    background: linear-gradient(
+      rgba($color-main, 0.24),
+      rgba($color-main, 0.16)
+    );
+    content: "";
+  }
+
+  &__media {
+    position: absolute;
+    z-index: -2;
+    inset: -48px;
+    display: block;
+
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      filter: blur(14px) brightness(1.1) contrast(0.95) saturate(0.88);
+      transform: scale(1.04);
+    }
+  }
+
+  &__inner {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    place-items: center;
+  }
+
+  &__title {
+    margin: 0;
+    padding-block: 0.69em 0.74em;
+    padding-inline: 56px;
+    color: $color-white;
+    font-family: $font-heading;
+    font-size: 35px;
+    font-weight: 600;
+    line-height: 1.35;
+    letter-spacing: 0.12em;
+    text-align: center;
+    text-shadow: 0 2px 8px rgba(37, 118, 142, 0.16);
+
+    @include bp("tb") {
+      padding-block: 0.73em 0.82em;
+      padding-inline: 40px;
+      font-size: 22px;
+      letter-spacing: 0.1em;
+      transform: translateY(-8px);
+    }
+
+    @include bp("sp-l") {
+      padding-block: 0.64em 0.73em;
+      padding-inline: 24px;
+      font-size: 22px;
+      letter-spacing: 0.08em;
+      transform: translateY(-6px);
+    }
+  }
+
+  &__title.u-bg-wipe::before {
+    background: $gradient-main;
+  }
+}
