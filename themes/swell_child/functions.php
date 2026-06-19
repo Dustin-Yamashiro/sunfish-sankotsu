@@ -10,6 +10,7 @@ $theme_includes = array(
 	'inc/setup.php',
 	'inc/assets.php',
 	'inc/post-types.php',
+	'inc/contact-form.php',
 );
 
 foreach ( $theme_includes as $theme_include ) {

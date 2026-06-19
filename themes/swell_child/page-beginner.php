@@ -306,7 +306,15 @@ $step_items = array(
 	</div>
 </section>
 
-<?php get_template_part( 'template-parts/sec-faq' ); ?>
+<?php
+get_template_part(
+	'template-parts/sec-faq',
+	null,
+	array(
+		'category' => 'beginner',
+	)
+);
+?>
 
 <?php
 get_footer();

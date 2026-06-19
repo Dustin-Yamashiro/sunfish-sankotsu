@@ -7,9 +7,15 @@
  * @package SunfishSankotsu
  */
 
-$faq_items      = isset( $args['items'] ) && is_array( $args['items'] ) ? $args['items'] : array();
-$faq_id_base    = ! empty( $args['id_base'] ) ? sanitize_title( (string) $args['id_base'] ) : 'faq-accordion';
-$faq_open_first = ! empty( $args['open_first'] );
+$faq_items         = isset( $args['items'] ) && is_array( $args['items'] ) ? $args['items'] : array();
+$faq_category_slug = ! empty( $args['category'] ) ? sanitize_title( (string) $args['category'] ) : '';
+$faq_limit         = ! empty( $args['limit'] ) ? (int) $args['limit'] : 5;
+$faq_id_base       = ! empty( $args['id_base'] ) ? sanitize_title( (string) $args['id_base'] ) : 'faq-accordion';
+$faq_open_first    = ! empty( $args['open_first'] );
+
+if ( empty( $faq_items ) && '' !== $faq_category_slug && function_exists( 'theme_get_faq_items' ) ) {
+	$faq_items = theme_get_faq_items( $faq_category_slug, $faq_limit );
+}
 
 if ( empty( $faq_items ) ) {
 	return;
@@ -20,9 +26,10 @@ if ( empty( $faq_items ) ) {
 	<?php foreach ( $faq_items as $faq_index => $faq_item ) : ?>
 		<?php
 		$faq_question = isset( $faq_item['question'] ) ? (string) $faq_item['question'] : '';
-		$faq_answers  = isset( $faq_item['answer'] ) && is_array( $faq_item['answer'] ) ? $faq_item['answer'] : array();
-		$faq_panel_id = $faq_id_base . '-panel-' . ( $faq_index + 1 );
-		$faq_is_open  = $faq_open_first && 0 === $faq_index;
+		$faq_answers     = isset( $faq_item['answer'] ) && is_array( $faq_item['answer'] ) ? $faq_item['answer'] : array();
+		$faq_answer_html = ! empty( $faq_item['answer_html'] ) ? (string) $faq_item['answer_html'] : '';
+		$faq_panel_id    = $faq_id_base . '-panel-' . ( $faq_index + 1 );
+		$faq_is_open     = $faq_open_first && 0 === $faq_index;
 		?>
 		<section class="c-faq-accordion__item js-faq-accordion-item<?php echo $faq_is_open ? ' is-open' : ''; ?>">
 			<h3 class="c-faq-accordion__question">
@@ -36,9 +43,13 @@ if ( empty( $faq_items ) ) {
 				<div class="c-faq-accordion__answer-inner">
 					<span class="c-faq-accordion__mark c-faq-accordion__mark--answer" aria-hidden="true">A.</span>
 					<div class="c-faq-accordion__answer-body">
-						<?php foreach ( $faq_answers as $faq_answer ) : ?>
-							<p><?php echo esc_html( $faq_answer ); ?></p>
-						<?php endforeach; ?>
+						<?php if ( '' !== $faq_answer_html ) : ?>
+							<?php echo wp_kses_post( $faq_answer_html ); ?>
+						<?php else : ?>
+							<?php foreach ( $faq_answers as $faq_answer ) : ?>
+								<p><?php echo esc_html( $faq_answer ); ?></p>
+							<?php endforeach; ?>
+						<?php endif; ?>
 					</div>
 				</div>
 			</div>

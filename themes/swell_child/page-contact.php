@@ -53,79 +53,30 @@ get_template_part(
 		<section class="l-contact__form-section" aria-labelledby="contact-form-title">
 			<h2 id="contact-form-title" class="l-contact__form-title">お問い合わせフォーム</h2>
 
-			<form class="l-contact__form" action="#" method="post">
-				<div class="l-contact__field">
-					<label class="l-contact__label" for="contact-name">
-						<span class="l-contact__label-text">お名前</span>
-						<span class="l-contact__required">必須</span>
-					</label>
-					<input id="contact-name" class="l-contact__control" type="text" name="your-name" value="山田 花子" required>
-				</div>
+			<?php
+			$contact_forms = get_posts(
+				array(
+					'post_type'              => 'wpcf7_contact_form',
+					'title'                  => 'お問い合わせフォーム',
+					'post_status'            => 'publish',
+					'posts_per_page'         => 1,
+					'no_found_rows'          => true,
+					'update_post_meta_cache' => false,
+					'update_post_term_cache' => false,
+				)
+			);
+			$contact_form  = ! empty( $contact_forms[0] ) ? $contact_forms[0] : null;
 
-				<div class="l-contact__field">
-					<label class="l-contact__label" for="contact-kana">
-						<span class="l-contact__label-text">ふりがな</span>
-						<span class="l-contact__required">必須</span>
-					</label>
-					<input id="contact-kana" class="l-contact__control" type="text" name="your-kana" value="やまだはなこ" required>
-				</div>
-
-				<div class="l-contact__field">
-					<label class="l-contact__label" for="contact-tel">
-						<span class="l-contact__label-text">電話番号</span>
-					</label>
-					<input id="contact-tel" class="l-contact__control" type="tel" name="your-tel" value="090-0000-0000">
-				</div>
-
-				<div class="l-contact__field">
-					<label class="l-contact__label" for="contact-email">
-						<span class="l-contact__label-text">メールアドレス</span>
-						<span class="l-contact__required">必須</span>
-					</label>
-					<input id="contact-email" class="l-contact__control" type="email" name="your-email" value="info@test.com" required>
-				</div>
-
-				<div class="l-contact__field">
-					<label class="l-contact__label" for="contact-type">
-						<span class="l-contact__label-text">お問い合わせの種類</span>
-						<span class="l-contact__required">必須</span>
-					</label>
-					<span class="l-contact__select-wrap">
-						<select id="contact-type" class="l-contact__control l-contact__control--select" name="your-type" required>
-							<option value="貸切散骨について">貸切散骨について</option>
-							<option value="代理散骨について">代理散骨について</option>
-							<option value="粉骨について">粉骨について</option>
-							<option value="メモリアルクルーズについて">メモリアルクルーズについて</option>
-							<option value="その他">その他</option>
-						</select>
-					</span>
-				</div>
-
-				<div class="l-contact__field l-contact__field--textarea">
-					<label class="l-contact__label" for="contact-message">
-						<span class="l-contact__label-text">お問い合わせ内容</span>
-						<span class="l-contact__required">必須</span>
-					</label>
-					<textarea id="contact-message" class="l-contact__control l-contact__control--textarea" name="your-message" required>テストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテスト
-
-テストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテスト</textarea>
-				</div>
-
-				<div class="l-contact__privacy">
-					<p class="l-contact__privacy-text">
-						<a href="<?php echo esc_url( home_url( '/privacy-policy/' ) ); ?>">プライバシーポリシー</a>を必ずお読みください。<br>
-						上記の内容に同意頂いた場合は、下記チェックの上、確認画面へお進みください。
-					</p>
-					<label class="l-contact__privacy-check">
-						<input type="checkbox" name="privacy-agree" checked>
-						<span>プライバシーポリシーに同意する</span>
-					</label>
-				</div>
-
-				<div class="l-contact__submit c-sec-btn c-sec-btn--next c-sec-btn--center">
-					<button type="button">送信する</button>
-				</div>
-			</form>
+			if ( $contact_form && shortcode_exists( 'contact-form-7' ) ) {
+				echo do_shortcode(
+					sprintf(
+						'[contact-form-7 id="%d" title="%s" html_class="l-contact__form"]',
+						(int) $contact_form->ID,
+						esc_attr( get_the_title( $contact_form ) )
+					)
+				);
+			}
+			?>
 		</section>
 	</div>
 </section>

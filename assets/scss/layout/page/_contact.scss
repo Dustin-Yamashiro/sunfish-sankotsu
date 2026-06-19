@@ -207,6 +207,16 @@
     }
   }
 
+  .wpcf7 {
+    width: 100%;
+  }
+
+  .wpcf7-form-control-wrap {
+    display: block;
+    width: 100%;
+    min-width: 0;
+  }
+
   &__field {
     padding: 34px 20px;
     display: grid;
@@ -400,6 +410,22 @@
       height: 16px;
       appearance: auto;
       accent-color: $color-main;
+      cursor: pointer;
+    }
+
+    .wpcf7-acceptance,
+    .wpcf7-list-item,
+    .wpcf7-list-item label {
+      display: inline-flex;
+      align-items: center;
+    }
+
+    .wpcf7-list-item {
+      margin: 0;
+    }
+
+    .wpcf7-list-item label {
+      gap: 10px;
       cursor: pointer;
     }
   }

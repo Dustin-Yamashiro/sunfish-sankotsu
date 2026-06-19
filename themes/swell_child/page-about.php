@@ -52,7 +52,15 @@ get_template_part(
 
 <?php get_template_part( 'template-parts/sec-company' ); ?>
 
-<?php get_template_part( 'template-parts/sec-faq' ); ?>
+<?php
+get_template_part(
+	'template-parts/sec-faq',
+	null,
+	array(
+		'category' => 'general',
+	)
+);
+?>
 
 <?php
 get_footer();

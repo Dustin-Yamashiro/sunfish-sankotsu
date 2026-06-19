@@ -84,19 +84,21 @@ if ( ! function_exists( 'theme_should_show_floating_contact' ) ) {
 	/**
 	 * Whether the bottom floating contact menu should be displayed.
 	 *
-	 * The floating menu is intended for the main custom-designed site pages.
-	 * Contact/legal pages and SWELL-managed post archives/details are hidden.
+	 * Contact/legal pages are hidden by default. Posts and post archive screens
+	 * show the menu so article readers can reach consultation CTAs.
 	 *
 	 * @return bool
 	 */
 	function theme_should_show_floating_contact() {
-		$excluded_page_slugs     = array( 'contact', 'terms', 'privacy-policy', 'news', 'column' );
-		$excluded_category_slugs = array( 'news', 'column', 'marine-scattering-column' );
-		$should_show             = is_front_page() || ( is_page() && ! is_page( $excluded_page_slugs ) );
-
-		if ( is_category( $excluded_category_slugs ) || ( is_singular( 'post' ) && has_category( $excluded_category_slugs ) ) ) {
-			$should_show = false;
-		}
+		$excluded_page_slugs = array( 'contact', 'terms', 'privacy-policy' );
+		$should_show         = is_front_page()
+			|| ( is_page() && ! is_page( $excluded_page_slugs ) )
+			|| is_home()
+			|| is_category()
+			|| is_tag()
+			|| is_date()
+			|| is_author()
+			|| is_singular( 'post' );
 
 		if ( is_singular() ) {
 			$hide_floating_contact = get_post_meta( get_queried_object_id(), 'hide_floating_contact', true );
