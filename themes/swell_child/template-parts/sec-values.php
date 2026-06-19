@@ -8,7 +8,7 @@
  */
 ?>
 
-<section class="l-sec-values" aria-labelledby="kashikiri-values-title">
+<section class="l-sec-values<?php echo ! empty( $args ) ? esc_attr( ' l-sec-values--' . $args ) : ''; ?>" aria-labelledby="kashikiri-values-title">
 	<div class="l-sec-values__inner u-container">
 		<div class="l-sec-values__title c-sec-title c-sec-title--center u-fade-up">
 			<p class="c-sec-title__sub u-text-fade u-text-fade--chars">Values</p>

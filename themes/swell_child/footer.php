@@ -73,7 +73,7 @@ $footer_nav_columns = array(
 					'url'   => home_url( '/kashikiri/' ),
 				),
 				array(
-					'label' => '代行散骨プラン',
+					'label' => '代理散骨プラン',
 					'url'   => home_url( '/dairi/' ),
 				),
 			),

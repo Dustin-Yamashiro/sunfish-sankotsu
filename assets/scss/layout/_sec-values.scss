@@ -16,8 +16,16 @@
     padding-bottom: 80px;
   }
 
-  &__inner {
-    max-width: 1200px;
+  &--py {
+    padding-block: 120px 160px;
+
+    @include bp("tb") {
+      padding-block: 100px 128px;
+    }
+
+    @include bp("sp-l") {
+      padding-block: 80px 80px;
+    }
   }
 
   &__title {
@@ -39,7 +47,7 @@
     @include bp("tb") {
       gap: 48px;
       max-width: 760px;
-      margin: 64px auto 0;
+      margin: 48px auto 0;
     }
 
     @include bp("sp-l") {

@@ -1,0 +1,138 @@
+/*
+* 代表メッセージセクション
+*/
+@use "../foundation/mixin" as *;
+@use "../foundation/variables" as *;
+
+.l-sec-message {
+  padding-block: 120px 140px;
+  background-color: $color-white;
+
+  @include bp("tb") {
+    padding-block: 96px 120px;
+  }
+
+  @include bp("sp-l") {
+    padding-block: 72px 88px;
+  }
+
+  &__inner {
+    display: grid;
+    grid-template-columns: minmax(0, 620px) minmax(0, 500px);
+    gap: 80px;
+    align-items: center;
+
+    @include bp("pc-s") {
+      grid-template-columns: minmax(0, 1fr) minmax(0, 500px);
+      gap: 64px;
+    }
+
+    @include bp("tb") {
+      grid-template-columns: 1fr;
+      gap: 56px;
+      max-width: 680px;
+    }
+
+    @include bp("sp-l") {
+      gap: 40px;
+    }
+  }
+
+  &__image {
+    display: block;
+    width: 100%;
+    aspect-ratio: 600 / 390;
+    overflow: hidden;
+    background-color: $color-gray;
+
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center center;
+    }
+  }
+
+  &__title {
+    --sec-title-gap: 28px;
+
+    .c-sec-title__main {
+      font-size: 30px;
+    }
+
+    @include bp("tb") {
+      .c-sec-title__main {
+        font-size: 28px;
+      }
+    }
+
+    @include bp("sp-l") {
+      --sec-title-gap: 20px;
+
+      .c-sec-title__main {
+        font-size: 26px;
+      }
+    }
+  }
+
+  &__lead {
+    margin: 56px 0 0;
+    color: $color-main;
+    font-family: $font-heading;
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 1.75;
+    letter-spacing: 0.1em;
+
+    @include bp("tb") {
+      margin-top: 48px;
+      font-size: 20px;
+    }
+
+    @include bp("sp-l") {
+      font-size: 20px;
+      line-height: 1.65;
+      letter-spacing: 0.06em;
+    }
+  }
+
+  &__body {
+    display: grid;
+    gap: 12px;
+    margin-top: 32px;
+    color: $color-text;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 2;
+    letter-spacing: 0.08em;
+
+    @include bp("sp-l") {
+      gap: 10px;
+      margin-top: 28px;
+      line-height: 1.85;
+      letter-spacing: 0.04em;
+    }
+
+    p {
+      margin: 0;
+    }
+  }
+
+  &__name {
+    margin: 48px 0 0;
+    color: $color-text;
+    font-family: $font-heading;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.6;
+    letter-spacing: 0.12em;
+    text-align: right;
+
+    @include bp("sp-l") {
+      margin-top: 36px;
+      font-size: 18px;
+      letter-spacing: 0.08em;
+    }
+  }
+}

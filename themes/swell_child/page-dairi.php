@@ -1,8 +1,8 @@
 <?php
 /**
- * Template Name: 貸切散骨プラン
+ * Template Name: 代理散骨プラン
  *
- * 貸切散骨プラン固定ページテンプレート。
+ * 代理散骨プラン固定ページテンプレート。
  *
  * @package LocalEnvTheme
  */
@@ -10,35 +10,35 @@
 get_header();
 ?>
 
-<section class="l-page-kv" aria-labelledby="kashikiri-page-title">
+<section class="l-page-kv" aria-labelledby="dairi-page-title">
 	<picture class="l-page-kv__media">
 		<source media="(max-width: 740px)" srcset="<?php echo esc_url( theme_image_url( 'front-page/key-visual-sea-flowers-sp.png' ) ); ?>">
 		<img src="<?php echo esc_url( theme_image_url( 'front-page/key-visual-sea-flowers.png' ) ); ?>" width="100%" height="320" alt="散骨の献花をしている写真" fetchpriority="high">
 	</picture>
 	<div class="l-page-kv__inner u-container">
-		<h1 id="kashikiri-page-title" class="l-page-kv__title u-bg-wipe u-bg-wipe--load">貸切散骨プラン</h1>
+		<h1 id="dairi-page-title" class="l-page-kv__title u-bg-wipe u-bg-wipe--load">代理散骨プラン</h1>
 	</div>
 </section>
 
-<section class="l-sec-split" aria-labelledby="kashikiri-about-title">
+<section class="l-sec-split" aria-labelledby="dairi-about-title">
 	<div class="l-sec-split__inner u-container">
 		<div class="l-sec-split__content">
 			<div class="l-sec-split__title c-sec-title u-fade-up">
 				<p class="c-sec-title__sub u-text-fade u-text-fade--chars">About</p>
-				<h2 id="kashikiri-about-title" class="c-sec-title__main">家族で見送る、<br>完全貸切の散骨プラン</h2>
+				<h2 id="dairi-about-title" class="c-sec-title__main">想いを託す、<br>委託型の散骨プラン</h2>
 			</div>
 			<div class="l-sec-split__body">
-				<p>貸切散骨プランは、貸切の船にご家族やご親族で乗船し、故人様を海へお見送りするプランです。<br>他のご家族と同乗しないため、周囲を気にせず、故人様との時間を大切にしながらゆっくりと故人様との時間を過ごせます。</p>
-				<p>石垣島海洋散骨センターの貸切散骨プランは、自社で船を保有しているため、完全貸切でのご案内が可能です。<br>ご相談から粉骨手配、操船、セレモニー進行まで船長が一貫して担当し、石垣島での散骨を一つずつお手伝いします。</p>
+				<p>代理散骨プランは、ご遺族の方に代わり、船長が故人様を海へお見送りするプランです。<br>遠方にお住まいの方やご事情により乗船が難しい場合でも、石垣島の海での散骨が可能です。</p>
+				<p>石垣島海洋散骨センターでは、お預かりしたご遺骨を一柱ずつ大切に扱い、船長が責任を持って散骨を行います。<br>散骨後には証明書や写真・動画で記録をお送りし、最後までご遺族の想いに寄り添います。</p>
 			</div>
 		</div>
 
 		<div class="l-sec-split__visual">
 			<picture class="l-sec-split__image l-sec-split__image--01">
-				<img src="<?php echo esc_url( theme_image_url( 'kashikiri-plan/about-sub.png' ) ); ?>" width="1536" height="1024" alt="船上で石垣島の海に花を手向け、手を合わせるご家族" loading="lazy">
+					<img src="<?php echo esc_url( theme_image_url( 'dairi-plan/about-sub.png' ) ); ?>" width="1536" height="1024" alt="白い手袋で花を石垣島の海へ手向ける様子" loading="lazy">
 			</picture>
 			<picture class="l-sec-split__image l-sec-split__image--02">
-				<img src="<?php echo esc_url( theme_image_url( 'kashikiri-plan/about-main.png' ) ); ?>" width="1619" height="972" alt="貸切船の上から石垣島の海を眺めるご家族" loading="lazy">
+					<img src="<?php echo esc_url( theme_image_url( 'dairi-plan/about-main.png' ) ); ?>" width="1672" height="941" alt="石垣島の港から船を出す船長の後ろ姿" loading="lazy">
 			</picture>
 		</div>
 	</div>
@@ -49,24 +49,24 @@ $reason_items = array(
 	array(
 		'image' => 'kashikiri-plan/reason-01.png',
 		'alt'   => '家族で写真を見ながら海洋散骨について相談する様子',
-		'text'  => '故人との最後の時間を<br>完全貸切で過ごしたい',
+		'text'  => '供養の費用を<br>出来る限り抑えたい',
 	),
 	array(
 		'image' => 'kashikiri-plan/reason-02.png',
 		'alt'   => '家族で海を見ながら故人を見送る様子',
-		'text'  => '家族や親族みんなで<br>供養がしたい',
+		'text'  => '遠方に住んでいるが<br>海洋散骨がしたい',
 	),
 	array(
 		'image' => 'kashikiri-plan/reason-03.png',
 		'alt'   => '石垣島の海に浮かぶ散骨用の船',
-		'text'  => '散骨が思い出に残る<br>日にしたい',
+		'text'  => '故人様を家族だけで<br>供養したい',
 	),
 );
 ?>
 
-<section class="l-sec-reason" aria-labelledby="kashikiri-reason-title">
+<section class="l-sec-reason" aria-labelledby="dairi-reason-title">
 	<div class="l-sec-reason__inner u-container">
-		<h2 id="kashikiri-reason-title" class="l-sec-reason__title u-fade-up">このような「想い」の方に<br>選ばれています</h2>
+		<h2 id="dairi-reason-title" class="l-sec-reason__title u-fade-up">このような「想い」の方に<br>選ばれています</h2>
 
 		<div class="l-sec-reason__list">
 			<?php foreach ( $reason_items as $item ) : ?>
@@ -91,16 +91,16 @@ $reason_items = array(
 	</div>
 </section>
 
-<section class="l-sec-feature l-sec-feature--compact js-feature-sec" aria-labelledby="kashikiri-feature-title" data-feature-sec>
+<section class="l-sec-feature l-sec-feature--compact js-feature-sec" aria-labelledby="dairi-feature-title" data-feature-sec>
 	<div class="l-sec-feature__inner u-container">
 		<div class="l-sec-feature__message">
 			<div class="l-sec-feature__title c-sec-title u-fade-up c-sec-title--white">
 				<p class="c-sec-title__sub u-text-fade u-text-fade--chars">Feature</p>
-				<h2 id="kashikiri-feature-title" class="c-sec-title__main">貸切散骨プランの魅力</h2>
+				<h2 id="dairi-feature-title" class="c-sec-title__main">代理散骨プランの魅力</h2>
 			</div>
 			<div class="l-sec-feature__body">
-				<p>貸切散骨は、ご家族やご親族だけで大切な方を海へ送り出せる供養です。</p>
-				<p>石垣島海洋散骨センターでは、自社船でのご案内と船長による一貫対応で、大切な方への想いを形にするお見送りをお手伝いします。</p>
+				<p>代理散骨は、石垣島へ来られないご家族に代わり、大切な方を海へお見送りする供養です。</p>
+				<p>石垣島海洋散骨センターでは、船長が一柱ずつ丁寧にセレモニーを行い、散骨後には写真・動画や証明書で見送りの様子をお届けします。</p>
 			</div>
 			<div class="l-sec-feature__button c-sec-btn c-sec-btn--next c-sec-btn--white">
 				<a href="<?php echo esc_url( home_url( '/contact/' ) ); ?>">お問い合わせ</a>
@@ -110,31 +110,31 @@ $reason_items = array(
 		<?php
 		$features = array(
 			array(
-				'title'  => '完全貸切のプライベート空間',
+				'title'  => '行けなくても託せるお見送り',
 				'texts'  => array(
-					'自社船での完全貸切だからこそ、ご家族やご親族だけで故人様をお見送りいただけます。',
-					'周囲に気を遣う必要のないプライベートな空間で、ゆっくりと故人様との時間を過ごすことができます。',
+					'代理散骨なら、遠方にお住まいの方や船が苦手な方でも、石垣島の海で散骨が可能です。',
+					'船長自らご家族の想いを受け取り、責任を持って故人様をお見送りします。',
 				),
-				'image'  => 'kashikiri-plan/feature-01-card.jpg',
-				'alt'    => '石垣島の海に浮かぶ貸切散骨用の自社船',
+				'image'  => 'dairi-plan/feature-01-card.png',
+				'alt'    => '船上で花束を手に海を見つめる船長',
 			),
 			array(
-				'title'  => '自分たちで送り出す供養',
+				'title'  => 'ご家族の負担を抑える供養',
 				'texts'  => array(
-					'貸切散骨では、ご遺族様自身の手で故人様を海へお送りできます。',
-					'通常の葬儀とは違い、海の景色や波の音とともに故人様を見送った時間が、散骨後もご家族の記憶に残り続けます。',
+					'代理散骨は、通常の葬儀や貸切散骨に比べて、費用の負担を抑えながら選べる供養です。',
+					'移動や宿泊、日程調整の負担も抑え、ご家族に無理のない形で故人様をお見送りできます。',
+					),
+					'image'  => 'dairi-plan/feature-02-card.png',
+					'alt'    => '石垣島の青い海に白い花びらが浮かぶ様子',
 				),
-				'image'  => 'kashikiri-plan/feature-02-card.png',
-				'alt'    => 'ご遺族が船上から石垣島の海へ散骨する様子',
-			),
 			array(
-				'title'  => '故人らしさを込める見送り',
+				'title'  => '見えない不安を残さない散骨',
 				'texts'  => array(
-					'貸切散骨では、故人様のお人柄やご家族の望みに合わせて、供養のかたちを考えることができます。',
-					'船長自ら想いを伺い、故人様らしさを大切にしたセレモニーになるようサポートします。',
+					'代理散骨では、託した供養が見えないまま終わらないよう、当日の様子を記録に残します。',
+					'写真・動画や証明書の用意に加え、メモリアルクルーズにも対応し、散骨後も石垣島の海を故人様に会いに行ける場所として残し続けます。',
 				),
-				'image'  => 'kashikiri-plan/feature-03-card.png',
-				'alt'    => '海を眺めながら船上で手を重ねるご家族',
+				'image'  => 'dairi-plan/feature-03-card.png',
+				'alt'    => '船上で散骨後の写真記録を見返す様子',
 			),
 		);
 		?>
@@ -180,42 +180,34 @@ $reason_items = array(
 
 <?php get_template_part( 'template-parts/sec-values' ); ?>
 
-<section class="l-sec-plan-detail" aria-labelledby="kashikiri-plan-detail-title">
+<section class="l-sec-plan-detail" aria-labelledby="dairi-plan-detail-title">
 	<div class="l-sec-plan-detail__inner u-container">
 		<div class="l-sec-plan-detail__title c-sec-title c-sec-title--center">
 			<p class="c-sec-title__sub u-text-fade u-text-fade--chars">Plan Details</p>
-			<h2 id="kashikiri-plan-detail-title" class="c-sec-title__main">プラン詳細</h2>
+			<h2 id="dairi-plan-detail-title" class="c-sec-title__main">プラン詳細</h2>
 		</div>
 
 		<dl class="l-sec-plan-detail__table">
 			<div class="l-sec-plan-detail__row">
 				<dt class="l-sec-plan-detail__label">料金</dt>
 				<dd class="l-sec-plan-detail__value">
-					<p class="l-sec-plan-detail__text l-sec-plan-detail__text--lead">132,000円 〜</p>
+					<p class="l-sec-plan-detail__text l-sec-plan-detail__text--lead">55,000円 〜</p>
+					<p class="l-sec-plan-detail__text">※粉骨加工費用が別途33,000円〜かかります。</p>
 				</dd>
 			</div>
 
 			<div class="l-sec-plan-detail__row">
-				<dt class="l-sec-plan-detail__label">乗船定員</dt>
+				<dt class="l-sec-plan-detail__label">散骨エリア</dt>
 				<dd class="l-sec-plan-detail__value">
-					<p class="l-sec-plan-detail__text l-sec-plan-detail__text--lead">最大10名様まで</p>
-					<p class="l-sec-plan-detail__text">※ご家族だけでゆったりとお過ごしいただけるよう、少人数制を基本としています。10名以上の場合は別途ご相談ください</p>
+					<p class="l-sec-plan-detail__text l-sec-plan-detail__text--lead">石垣島近海</p>
+					<p class="l-sec-plan-detail__text">※遺骨受領後、最適な海域へ出航します。</p>
 				</dd>
 			</div>
 
 			<div class="l-sec-plan-detail__row">
-				<dt class="l-sec-plan-detail__label">乗船場所</dt>
+				<dt class="l-sec-plan-detail__label">出航日</dt>
 				<dd class="l-sec-plan-detail__value">
-					<p class="l-sec-plan-detail__text l-sec-plan-detail__text--lead">石垣港 浜崎マリーナ（または石垣漁港）</p>
-					<p class="l-sec-plan-detail__text">※市街地のホテルから車で約5～10分。送迎については事前相談にて承ります。</p>
-				</dd>
-			</div>
-
-			<div class="l-sec-plan-detail__row">
-				<dt class="l-sec-plan-detail__label">所要時間</dt>
-				<dd class="l-sec-plan-detail__value">
-					<p class="l-sec-plan-detail__text l-sec-plan-detail__text--lead">約60分～90分（港からの往復移動を含む）</p>
-					<p class="l-sec-plan-detail__text">※セレモニー自体は約20～30分、移動時間は片道約15～20分程度です</p>
+					<p class="l-sec-plan-detail__text l-sec-plan-detail__text--lead">相談の上決定</p>
 				</dd>
 			</div>
 
@@ -235,11 +227,11 @@ $reason_items = array(
 			</div>
 
 			<div class="l-sec-plan-detail__row">
-				<dt class="l-sec-plan-detail__label">キャンセル対応</dt>
-				<dd class="l-sec-plan-detail__value">
-					<p class="l-sec-plan-detail__text">詳しくは<a href="<?php echo esc_url( home_url( '/policy/' ) ); ?>">キャンセルポリシーページ</a>を閲覧ください</p>
-				</dd>
-			</div>
+					<dt class="l-sec-plan-detail__label">キャンセル対応</dt>
+					<dd class="l-sec-plan-detail__value">
+						<p class="l-sec-plan-detail__text">詳しくはお問い合わせ時にご案内いたします。</p>
+					</dd>
+				</div>
 
 			<div class="l-sec-plan-detail__row">
 				<dt class="l-sec-plan-detail__label">準備するもの</dt>
@@ -260,47 +252,6 @@ $reason_items = array(
 						<div class="l-sec-plan-detail__item">
 							<p class="l-sec-plan-detail__item-title">④ ご遺骨（粉骨済み）</p>
 							<p class="l-sec-plan-detail__item-text">弊社提携の専門センターにて粉骨を行う場合は、お申し込み後に送付する「送骨キット」をご利用ください。</p>
-						</div>
-					</div>
-				</dd>
-			</div>
-
-			<div class="l-sec-plan-detail__row">
-				<dt class="l-sec-plan-detail__label">当日の服装</dt>
-				<dd class="l-sec-plan-detail__value">
-					<p class="l-sec-plan-detail__text">船上での安全と、一般の観光客への配慮から、以下のようにお願いしております。</p>
-					<div class="l-sec-plan-detail__item-list">
-						<div class="l-sec-plan-detail__item">
-							<p class="l-sec-plan-detail__item-title">・平服（カジュアルな服装）でお越しください</p>
-							<p class="l-sec-plan-detail__item-text">喪服でのご乗船は、港を利用する他のお客様への配慮や、船上での安全面（動きやすさ）からご遠慮いただいております。かりゆしウェア、ポロシャツ、チノパンなど、リラックスした動きやすい服装を推奨します。</p>
-						</div>
-						<div class="l-sec-plan-detail__item">
-							<p class="l-sec-plan-detail__item-title">・足元は平らな靴</p>
-							<p class="l-sec-plan-detail__item-text">船内は滑りやすい箇所があるため、ヒールのないパンプスやスニーカー、デッキシューズ、サンダルなどでお越しください。</p>
-						</div>
-					</div>
-				</dd>
-			</div>
-
-			<div class="l-sec-plan-detail__row">
-				<dt class="l-sec-plan-detail__label">推奨する持ち物</dt>
-				<dd class="l-sec-plan-detail__value">
-					<div class="l-sec-plan-detail__item-list">
-						<div class="l-sec-plan-detail__item">
-							<p class="l-sec-plan-detail__item-title">・故人様の好きだった飲み物・食べ物（少量）</p>
-							<p class="l-sec-plan-detail__item-text">お酒以外にも、お好きだった銘柄の飲料などがあればお持ち込みいただけます。</p>
-						</div>
-						<div class="l-sec-plan-detail__item">
-							<p class="l-sec-plan-detail__item-title">・酔い止め薬</p>
-							<p class="l-sec-plan-detail__item-text">船酔いが心配な方は、乗船の30分〜1時間前の服用をおすすめします。</p>
-						</div>
-						<div class="l-sec-plan-detail__item">
-							<p class="l-sec-plan-detail__item-title">・サングラス・帽子</p>
-							<p class="l-sec-plan-detail__item-text">石垣島の強い日差しを遮るために重宝します。</p>
-						</div>
-						<div class="l-sec-plan-detail__item">
-							<p class="l-sec-plan-detail__item-title">・タオル・ハンカチ</p>
-							<p class="l-sec-plan-detail__item-text">お別れの儀式の際や、万が一波しぶきがかかった際のために。</p>
 						</div>
 					</div>
 				</dd>
@@ -426,12 +377,12 @@ $reason_items = array(
 </section>
 
 <?php
-$kashikiri_step_icon  = 'front-page/step/contact.png';
-$kashikiri_step_items = array(
+$dairi_step_icon  = 'front-page/step/contact.png';
+$dairi_step_items = array(
 	array(
 		'number' => '1',
 		'title'  => '相談・問い合わせ',
-		'image'  => $kashikiri_step_icon,
+		'image'  => $dairi_step_icon,
 		'texts'  => array(
 			'公式LINE、お電話、またはフォームよりお気軽にご連絡ください。',
 			'初めてで不安な点や、ご希望の日程・人数などを船長の浜が直接お伺いし、最適なプランをご提案します。',
@@ -440,7 +391,7 @@ $kashikiri_step_items = array(
 	array(
 		'number' => '2',
 		'title'  => 'お申し込み・粉骨手配',
-		'image'  => $kashikiri_step_icon,
+		'image'  => $dairi_step_icon,
 		'texts'  => array(
 			'お申し込み後、弊社提携の粉骨専門センターより「送骨キット」をお届けします。',
 			'ご遺骨を郵送いただき、散骨に適した2mm以下のパウダー状に真心を込めて加工いたします。',
@@ -449,7 +400,7 @@ $kashikiri_step_items = array(
 	array(
 		'number' => '3',
 		'title'  => 'ご遺骨の安置',
-		'image'  => $kashikiri_step_icon,
+		'image'  => $dairi_step_icon,
 		'texts'  => array(
 			'粉骨されたご遺骨は、提携先から直接石垣島の弊社へ届けられます。',
 			'実施当日まで、船長の浜が責任を持って大切に安置・保管させていただきます。',
@@ -457,44 +408,44 @@ $kashikiri_step_items = array(
 	),
 	array(
 		'number' => '4',
-		'title'  => '実施当日・乗船',
-		'image'  => $kashikiri_step_icon,
+		'title'  => '実施日の選定・出航',
+		'image'  => $dairi_step_icon,
 		'texts'  => array(
-			'石垣島の港にて待ち合わせ。船長とご挨拶の後、自社船にて出発します。',
-			'ダイビングのプロが、その日の風向きや波を読み、最も穏やかで美しいポイント（竹富島沖など）へご案内します。',
+			'ご遺族の立ち会いがないからこそ、海が最も穏やかで美しい日をプロの視点で選定し、出航します。',
+			'ダイビングで培った知識を活かし、故人様を海へお連れします。',
 		),
 	),
 	array(
 		'number' => '5',
-		'title'  => '海洋散骨セレモニー',
-		'image'  => $kashikiri_step_icon,
+		'title'  => '代理散骨セレモニー',
+		'image'  => $dairi_step_icon,
 		'texts'  => array(
-			'ポイント到着後、エンジンを停止し、静寂の中でセレモニーを行います。',
-			'開式の辞、献酒、そしてご家族の手でゆっくりと海へ。最後に花びらを撒き、故人の旅立ちを全員で見守ります。',
+			'ポイント到着後、船長がご遺族に代わり、心を込めて儀式を執り行います。',
+			'開式の辞、献酒、そして一柱ずつ丁寧に散骨。最後に花びらを撒き、石垣島の海へお還りいただく様子を記録します。',
 		),
 	),
 	array(
 		'number' => '6',
-		'title'  => '帰港・散骨証明書の発行',
-		'image'  => $kashikiri_step_icon,
+		'title'  => '完了報告・証明書の発行',
+		'image'  => $dairi_step_icon,
 		'texts'  => array(
-			'セレモニー終了後、ゆっくりと旋回して別れを告げ、帰港します。',
-			'後日、散骨した正確な緯度経度を記載した「海洋散骨証明書」と、当日の記録写真・動画データを送付いたします。',
+			'帰港後、速やかに完了のご連絡を差し上げます。',
+			'後日、正確な緯度経度を記載した「海洋散骨証明書」を郵送し、当日の記録写真・動画データをLINEやメールにてお届けいたします。',
 		),
 	),
 	array(
 		'number' => '7',
-		'title'  => 'これからの再会',
-		'image'  => $kashikiri_step_icon,
+		'title'  => 'いつか、石垣の海での再会を',
+		'image'  => $dairi_step_icon,
 		'texts'  => array(
-			'散骨は「お別れ」ではなく、新しい繋がりの始まりです。',
-			'数年後、数十年後も「会いにいこう」と、笑顔で石垣島の海を訪れていただけるよう、メモリアルクルーズのご相談も承ります。',
+			'代理散骨は供養の「終わり」ではありません。',
+			'いつか石垣島を訪れる機会があれば、ぜひお声がけください。故人様が眠るその場所へ、今度はご家族の皆様を船長がご案内いたします。',
 		),
 	),
 );
 ?>
 
-<section class="l-sec-step" aria-labelledby="kashikiri-step-title">
+<section class="l-sec-step" aria-labelledby="dairi-step-title">
 	<picture class="l-sec-step__bg" aria-hidden="true">
 		<source media="(max-width: 740px)" srcset="<?php echo esc_url( theme_image_url( 'front-page/key-visual-sea-flowers-sp.png' ) ); ?>">
 		<img src="<?php echo esc_url( theme_image_url( 'front-page/key-visual-sea-flowers.png' ) ); ?>" width="2688" height="1408" alt="" loading="lazy">
@@ -503,37 +454,37 @@ $kashikiri_step_items = array(
 	<div class="l-sec-step__inner u-container">
 		<div class="l-sec-step__title c-sec-title c-sec-title--center c-sec-title--white u-fade-up">
 			<p class="c-sec-title__sub u-text-fade u-text-fade--chars">Step</p>
-			<h2 id="kashikiri-step-title" class="c-sec-title__main">散骨の流れ</h2>
+			<h2 id="dairi-step-title" class="c-sec-title__main">散骨の流れ</h2>
 		</div>
 
 		<ol class="l-sec-step__list">
-			<?php foreach ( $kashikiri_step_items as $kashikiri_step_item ) : ?>
+			<?php foreach ( $dairi_step_items as $dairi_step_item ) : ?>
 				<?php
-				$kashikiri_step_number = ! empty( $kashikiri_step_item['number'] ) ? (string) $kashikiri_step_item['number'] : '';
-				$kashikiri_step_name   = ! empty( $kashikiri_step_item['title'] ) ? (string) $kashikiri_step_item['title'] : '';
-				$kashikiri_step_texts  = ! empty( $kashikiri_step_item['texts'] ) && is_array( $kashikiri_step_item['texts'] ) ? $kashikiri_step_item['texts'] : array();
-				$kashikiri_step_image  = ! empty( $kashikiri_step_item['image'] ) ? (string) $kashikiri_step_item['image'] : '';
+				$dairi_step_number = ! empty( $dairi_step_item['number'] ) ? (string) $dairi_step_item['number'] : '';
+				$dairi_step_name   = ! empty( $dairi_step_item['title'] ) ? (string) $dairi_step_item['title'] : '';
+				$dairi_step_texts  = ! empty( $dairi_step_item['texts'] ) && is_array( $dairi_step_item['texts'] ) ? $dairi_step_item['texts'] : array();
+				$dairi_step_image  = ! empty( $dairi_step_item['image'] ) ? (string) $dairi_step_item['image'] : '';
 				?>
-				<?php if ( '' !== $kashikiri_step_number && '' !== $kashikiri_step_name ) : ?>
+				<?php if ( '' !== $dairi_step_number && '' !== $dairi_step_name ) : ?>
 					<li class="l-sec-step__item u-fade-up">
 						<article class="l-sec-step__card">
 							<p class="l-sec-step__label">
 								<span class="l-sec-step__label-text">Step</span>
-								<span class="l-sec-step__number"><?php echo esc_html( $kashikiri_step_number ); ?></span>
+								<span class="l-sec-step__number"><?php echo esc_html( $dairi_step_number ); ?></span>
 							</p>
 
-							<?php if ( '' !== $kashikiri_step_image ) : ?>
+							<?php if ( '' !== $dairi_step_image ) : ?>
 								<div class="l-sec-step__image" aria-hidden="true">
-									<img src="<?php echo esc_url( theme_image_url( $kashikiri_step_image ) ); ?>" width="128" height="128" alt="" loading="lazy">
+									<img src="<?php echo esc_url( theme_image_url( $dairi_step_image ) ); ?>" width="128" height="128" alt="" loading="lazy">
 								</div>
 							<?php endif; ?>
 
 							<div class="l-sec-step__content">
-								<h3 class="l-sec-step__card-title"><?php echo esc_html( $kashikiri_step_name ); ?></h3>
-								<?php if ( ! empty( $kashikiri_step_texts ) ) : ?>
+								<h3 class="l-sec-step__card-title"><?php echo esc_html( $dairi_step_name ); ?></h3>
+								<?php if ( ! empty( $dairi_step_texts ) ) : ?>
 									<div class="l-sec-step__body">
-										<?php foreach ( $kashikiri_step_texts as $kashikiri_step_text ) : ?>
-											<p><?php echo esc_html( (string) $kashikiri_step_text ); ?></p>
+										<?php foreach ( $dairi_step_texts as $dairi_step_text ) : ?>
+											<p><?php echo esc_html( (string) $dairi_step_text ); ?></p>
 										<?php endforeach; ?>
 									</div>
 								<?php endif; ?>
