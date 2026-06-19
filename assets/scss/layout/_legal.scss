@@ -1,0 +1,91 @@
+/*
+* 法務系固定ページ
+*/
+@use "../foundation/mixin" as *;
+@use "../foundation/variables" as *;
+
+.l-legal {
+  padding-block: 104px 152px;
+  background-color: $color-white;
+
+  @include bp("tb") {
+    padding-block: 88px 128px;
+  }
+
+  @include bp("sp-l") {
+    padding-block: 64px 96px;
+  }
+
+  &__inner {
+    display: grid;
+  }
+
+  &__list {
+    display: grid;
+    gap: 80px;
+
+    @include bp("tb") {
+      gap: 72px;
+    }
+
+    @include bp("sp-l") {
+      gap: 56px;
+    }
+  }
+
+  &__section {
+    min-width: 0;
+  }
+
+  &__heading {
+    margin: 0;
+    padding-bottom: 22px;
+    border-bottom: 1px solid $color-main;
+    color: $color-text;
+    font-family: $font-heading;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 1.55;
+    letter-spacing: 0.08em;
+
+    @include bp("tb") {
+      padding-bottom: 20px;
+      font-size: 22px;
+      letter-spacing: 0.06em;
+    }
+
+    @include bp("sp-l") {
+      padding-bottom: 16px;
+      font-size: 20px;
+      line-height: 1.6;
+      letter-spacing: 0.04em;
+    }
+  }
+
+  &__body {
+    display: grid;
+    gap: 16px;
+    margin-top: 32px;
+    color: $color-text;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 2;
+    letter-spacing: 0.06em;
+
+    @include bp("tb") {
+      margin-top: 28px;
+      line-height: 1.95;
+    }
+
+    @include bp("sp-l") {
+      gap: 14px;
+      margin-top: 24px;
+      line-height: 1.9;
+      letter-spacing: 0.03em;
+    }
+
+    p {
+      margin: 0;
+    }
+  }
+}

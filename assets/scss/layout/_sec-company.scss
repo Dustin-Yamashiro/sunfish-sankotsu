@@ -150,10 +150,10 @@
       position: relative;
       top: auto;
       right: auto;
-      width: 100vw;
+      width: 100%;
       max-width: none;
       aspect-ratio: 16 / 10;
-      margin-inline: calc(50% - 50vw);
+      margin-inline: auto;
       transform: none;
     }
 

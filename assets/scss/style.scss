@@ -7,7 +7,9 @@
 @use "layout/custom-footer";
 @use "layout/kv";
 @use "layout/page-kv";
+@use "layout/legal";
 @use "layout/faq";
+@use "layout/contact";
 @use "layout/sec-reason";
 @use "layout/sec-split";
 @use "layout/sec-feature";
@@ -20,6 +22,7 @@
 @use "layout/sec-column";
 @use "layout/sec-message";
 @use "layout/sec-company";
+@use "layout/business";
 
 @use "object/component/sec-title";
 @use "object/component/sec-btn";
