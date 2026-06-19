@@ -1,6 +1,6 @@
 <?php
 /**
- * 貸切散骨ページのこだわり・価値セクション。
+ * 3つのこだわりセクション
  *
  * 石垣島海洋散骨センターの3つのこだわりを固定HTMLで出力します。
  *
@@ -30,7 +30,6 @@
 							<p class="l-sec-values__number">01</p>
 							<h3 class="l-sec-values__card-title">石垣の海を知る船長が一貫対応</h3>
 						</div>
-
 						<div class="l-sec-values__body">
 							<p>石垣島で15年以上ダイビングに携わり、「海洋散骨ディレクター」の資格を持つ現役の船長が、散骨のご相談から当日の操船、散骨セレモニーの進行まで一貫して担当します。</p>
 							<p>船長自ら故人様への想いやご家族のご希望を伺い、当日の海況を見極めながら、石垣島の海での安全なお見送りをお手伝いします。</p>
@@ -38,7 +37,7 @@
 					</div>
 
 					<picture class="l-sec-values__image">
-						<img src="<?php echo esc_url( theme_image_url( 'front-page/about/point-01.png' ) ); ?>" width="928" height="928" alt="石垣島の海で船を操縦する船長の手元" loading="lazy">
+						<img src="<?php echo esc_url( theme_image_url( 'front-page/about/point-01.png' ) ); ?>" width="448" height="408" alt="石垣島の海で船を操縦する船長の手元" loading="lazy">
 					</picture>
 				</article>
 			</li>
@@ -58,7 +57,7 @@
 					</div>
 
 					<picture class="l-sec-values__image">
-						<img src="<?php echo esc_url( theme_image_url( 'front-page/about/point-02.png' ) ); ?>" width="928" height="928" alt="船上で海洋散骨のプランや準備について説明する様子" loading="lazy">
+						<img src="<?php echo esc_url( theme_image_url( 'front-page/about/point-02.png' ) ); ?>" width="448" height="408" alt="船上で海洋散骨のプランや準備について説明する様子" loading="lazy">
 					</picture>
 				</article>
 			</li>
@@ -78,7 +77,7 @@
 					</div>
 
 					<picture class="l-sec-values__image">
-						<img src="<?php echo esc_url( theme_image_url( 'front-page/about/point-03.png' ) ); ?>" width="928" height="928" alt="海を背景に散骨後の供養サポートについて相談する様子" loading="lazy">
+						<img src="<?php echo esc_url( theme_image_url( 'front-page/about/point-03.png' ) ); ?>" width="448" height="408" alt="海を背景に散骨後の供養サポートについて相談する様子" loading="lazy">
 					</picture>
 				</article>
 			</li>

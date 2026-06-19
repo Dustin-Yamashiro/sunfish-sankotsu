@@ -34,18 +34,18 @@ get_header();
 			</div>
 		</div>
 
-		<div class="l-front-appeal__collage" aria-hidden="true">
+		<div class="l-front-appeal__collage">
 			<picture class="l-front-appeal__photo l-front-appeal__photo--01 u-photo-fade u-photo-fade--left">
-				<img src="<?php echo esc_url( theme_image_url( 'front-page/appeal/beach-wave.jpg' ) ); ?>" width="204" height="147" alt="" loading="lazy">
+				<img src="<?php echo esc_url( theme_image_url( 'front-page/appeal/beach-wave.jpg' ) ); ?>" width="204" height="147" alt="石垣島の砂浜に寄せる透明な波" loading="lazy">
 			</picture>
 			<picture class="l-front-appeal__photo l-front-appeal__photo--02 u-photo-fade u-photo-fade--right">
-				<img src="<?php echo esc_url( theme_image_url( 'front-page/appeal/floating-flowers.png' ) ); ?>" width="288" height="216" alt="" loading="lazy">
+				<img src="<?php echo esc_url( theme_image_url( 'front-page/appeal/floating-flowers.png' ) ); ?>" width="288" height="216" alt="石垣島の海に浮かぶ色とりどりの花" loading="lazy">
 			</picture>
 			<picture class="l-front-appeal__photo l-front-appeal__photo--03 u-photo-fade u-photo-fade--left">
-				<img src="<?php echo esc_url( theme_image_url( 'front-page/appeal/scattering-flowers.png' ) ); ?>" width="316" height="337" alt="" loading="lazy">
+				<img src="<?php echo esc_url( theme_image_url( 'front-page/appeal/scattering-flowers.png' ) ); ?>" width="316" height="337" alt="船上から石垣島の海へ花を手向ける手元" loading="lazy">
 			</picture>
 			<picture class="l-front-appeal__photo l-front-appeal__photo--04 u-photo-fade u-photo-fade--right">
-				<img src="<?php echo esc_url( theme_image_url( 'front-page/appeal/boat-sky.jpg' ) ); ?>" width="268" height="335" alt="" loading="lazy">
+				<img src="<?php echo esc_url( theme_image_url( 'front-page/appeal/boat-sky.jpg' ) ); ?>" width="268" height="335" alt="船上から見える石垣島の穏やかな海と青空" loading="lazy">
 			</picture>
 		</div>
 	</div>
@@ -75,12 +75,12 @@ get_header();
 			</div>
 		</div>
 
-		<div class="l-sec-split__visual" aria-hidden="true">
+		<div class="l-sec-split__visual">
 			<picture class="l-sec-split__image l-sec-split__image--01">
-				<img src="<?php echo esc_url( theme_image_url( 'front-page/introduction/intro-sub.png' ) ); ?>" width="254" height="170" alt="" loading="lazy">
+				<img src="<?php echo esc_url( theme_image_url( 'front-page/introduction/intro-sub.png' ) ); ?>" width="254" height="170" alt="船のそばの海面に浮かぶ白い花" loading="lazy">
 			</picture>
 			<picture class="l-sec-split__image l-sec-split__image--02">
-				<img src="<?php echo esc_url( theme_image_url( 'front-page/introduction/intro-main.png' ) ); ?>" width="500" height="333" alt="" loading="lazy">
+				<img src="<?php echo esc_url( theme_image_url( 'front-page/introduction/intro-main.png' ) ); ?>" width="500" height="333" alt="石垣島の海に向かって船上で花を手向ける人" loading="lazy">
 			</picture>
 		</div>
 
@@ -107,62 +107,65 @@ get_header();
 			</div>
 		</div>
 
+		<?php
+		$features = array(
+			array(
+				'title'  => '石垣島の海のプロが一貫対応',
+				'texts'  => array(
+					'石垣島で15年以上のダイビング経験と「海洋散骨ディレクター」の資格を持つ船長が、ご相談から操船、散骨進行まで一貫して対応。',
+					'船長自ら故人様とご家族の想いを伺い、石垣島の海でのお見送りをお手伝いします。',
+				),
+				'image'  => 'front-page/about/point-01.png',
+				'alt'    => '石垣島の海で船を操縦する船長の手元',
+			),
+			array(
+				'title'  => '初めてでも安心のプランと料金',
+				'texts'  => array(
+					'海洋散骨が初めての方にもわかりやすいよう、プラン内容や必要な準備、当日の流れまで丁寧にご説明。',
+					'自社船による直接対応で仲介マージンを抑え、安心できる明瞭な価格でご案内しています。',
+				),
+				'image'  => 'front-page/about/point-02.png',
+				'alt'    => '船上で海洋散骨のプランや準備について説明する様子',
+			),
+			array(
+				'title'  => '散骨後も想える海として残す供養',
+				'texts'  => array(
+					'散骨の際、故人様らしさとご家族の希望に合わせた見送り方のご相談が可能。',
+					'散骨後には、写真・動画、散骨証明書の発行やメモリアルクルーズの案内にも対応し、海へ還した後も続く供養をお手伝いします。',
+				),
+				'image'  => 'front-page/about/point-03.png',
+				'alt'    => '海を背景に散骨後の供養サポートについて相談する様子',
+			),
+		);
+		?>
+
 		<div class="l-sec-feature__points" data-feature-sec-points>
 			<ol class="l-sec-feature__point-list">
-				<li class="l-sec-feature__point-item l-sec-feature__point-item--01 is-active" data-feature-sec-card data-point-index="1">
-					<article class="l-sec-feature__point-card">
-						<div class="l-sec-feature__point-content">
-							<p class="l-sec-feature__point-label">
-								<span class="l-sec-feature__point-text">Point</span>
-								<span class="l-sec-feature__point-number">1</span>
-							</p>
-							<h3 class="l-sec-feature__point-title">石垣島の海のプロが一貫対応</h3>
-							<div class="l-sec-feature__point-body">
-								<p>石垣島で15年以上のダイビング経験と「海洋散骨ディレクター」の資格を持つ船長が、ご相談から操船、散骨進行まで一貫して対応。</p>
-								<p>船長自ら故人様とご家族の想いを伺い、石垣島の海でのお見送りをお手伝いします。</p>
+				<?php foreach ( $features as $i => $item ) : ?>
+					<?php
+					$number       = $i + 1;
+					$class_number = sprintf( '%02d', $number );
+					?>
+					<li class="l-sec-feature__point-item l-sec-feature__point-item--<?php echo esc_attr( $class_number ); ?><?php echo 0 === $i ? ' is-active' : ''; ?>" data-feature-sec-card data-point-index="<?php echo esc_attr( $number ); ?>">
+						<article class="l-sec-feature__point-card">
+							<div class="l-sec-feature__point-content">
+								<p class="l-sec-feature__point-label">
+									<span class="l-sec-feature__point-text">Point</span>
+									<span class="l-sec-feature__point-number"><?php echo esc_html( $number ); ?></span>
+								</p>
+								<h3 class="l-sec-feature__point-title"><?php echo esc_html( $item['title'] ); ?></h3>
+								<div class="l-sec-feature__point-body">
+									<?php foreach ( $item['texts'] as $text ) : ?>
+										<p><?php echo esc_html( $text ); ?></p>
+									<?php endforeach; ?>
+								</div>
 							</div>
-						</div>
-						<picture class="l-sec-feature__point-image">
-							<img src="<?php echo esc_url( theme_image_url( 'front-page/about/point-01.png' ) ); ?>" width="292" height="336" alt="石垣島の海で船を操縦する船長の手元" loading="lazy">
-						</picture>
-					</article>
-				</li>
-				<li class="l-sec-feature__point-item l-sec-feature__point-item--02" data-feature-sec-card data-point-index="2">
-					<article class="l-sec-feature__point-card">
-						<div class="l-sec-feature__point-content">
-							<p class="l-sec-feature__point-label">
-								<span class="l-sec-feature__point-text">Point</span>
-								<span class="l-sec-feature__point-number">2</span>
-							</p>
-							<h3 class="l-sec-feature__point-title">初めてでも安心のプランと料金</h3>
-							<div class="l-sec-feature__point-body">
-								<p>海洋散骨が初めての方にもわかりやすいよう、プラン内容や必要な準備、当日の流れまで丁寧にご説明。</p>
-								<p>自社船による直接対応で仲介マージンを抑え、安心できる明瞭な価格でご案内しています。</p>
-							</div>
-						</div>
-						<picture class="l-sec-feature__point-image">
-							<img src="<?php echo esc_url( theme_image_url( 'front-page/about/point-02.png' ) ); ?>" width="292" height="336" alt="船上で海洋散骨のプランや準備について説明する様子" loading="lazy">
-						</picture>
-					</article>
-				</li>
-				<li class="l-sec-feature__point-item l-sec-feature__point-item--03" data-feature-sec-card data-point-index="3">
-					<article class="l-sec-feature__point-card">
-						<div class="l-sec-feature__point-content">
-							<p class="l-sec-feature__point-label">
-								<span class="l-sec-feature__point-text">Point</span>
-								<span class="l-sec-feature__point-number">3</span>
-							</p>
-							<h3 class="l-sec-feature__point-title">散骨後も想える海として残す供養</h3>
-							<div class="l-sec-feature__point-body">
-								<p>散骨の際、故人様らしさとご家族の希望に合わせた見送り方のご相談が可能。</p>
-								<p>散骨後には、写真・動画、散骨証明書の発行やメモリアルクルーズの案内にも対応し、海へ還した後も続く供養をお手伝いします。</p>
-							</div>
-						</div>
-						<picture class="l-sec-feature__point-image">
-							<img src="<?php echo esc_url( theme_image_url( 'front-page/about/point-03.png' ) ); ?>" width="292" height="336" alt="海を背景に散骨後の供養サポートについて相談する様子" loading="lazy">
-						</picture>
-					</article>
-				</li>
+							<picture class="l-sec-feature__point-image">
+								<img src="<?php echo esc_url( theme_image_url( $item['image'] ) ); ?>" width="292" height="336" alt="<?php echo esc_attr( $item['alt'] ); ?>" loading="lazy">
+							</picture>
+						</article>
+					</li>
+				<?php endforeach; ?>
 			</ol>
 		</div>
 
@@ -170,49 +173,49 @@ get_header();
 			<span class="l-sec-feature__scrollbar-thumb" data-feature-sec-scrollbar></span>
 		</div>
 
-		<img class="l-sec-feature__island" src="<?php echo esc_url( theme_image_url( 'front-page/about/ishigaki.svg' ) ); ?>" width="300" height="375" alt="石垣島の白いイメージ画像" loading="lazy" aria-hidden="true">
+		<img class="l-sec-feature__island" src="<?php echo esc_url( theme_image_url( 'front-page/about/ishigaki.svg' ) ); ?>" width="300" height="375" alt="" loading="lazy" aria-hidden="true">
 	</div>
 </section>
 
 <?php get_template_part( 'template-parts/sec-plan' ); ?>
 
 <?php
-$front_step_items = array(
+$items = array(
 	array(
 		'number' => '1',
 		'title'  => 'お問い合わせ',
 		'image'  => 'front-page/step/contact.png',
-		'alt'    => '電話で海洋散骨について問い合わせる人のイラスト',
+		'alt'    => '電話とパソコンで相談する人のイラスト',
 	),
 	array(
 		'number' => '2',
 		'title'  => '申込み',
 		'image'  => 'front-page/step/contact.png',
-		'alt'    => '海洋散骨の申込みを行うイラスト',
+		'alt'    => '電話とパソコンで相談する人のイラスト',
 	),
 	array(
 		'number' => '3',
 		'title'  => '粉骨',
 		'image'  => 'front-page/step/contact.png',
-		'alt'    => '散骨前に粉骨を行うイラスト',
+		'alt'    => '電話とパソコンで相談する人のイラスト',
 	),
 	array(
 		'number' => '4',
 		'title'  => '散骨',
 		'image'  => 'front-page/step/contact.png',
-		'alt'    => '海で散骨を行うイラスト',
+		'alt'    => '電話とパソコンで相談する人のイラスト',
 	),
 	array(
 		'number' => '5',
 		'title'  => '証明書の発行',
 		'image'  => 'front-page/step/contact.png',
-		'alt'    => '散骨証明書を発行するイラスト',
+		'alt'    => '電話とパソコンで相談する人のイラスト',
 	),
 	array(
 		'number' => '6',
 		'title'  => 'これからの再会',
 		'image'  => 'front-page/step/contact.png',
-		'alt'    => '散骨した海を再び訪れるイラスト',
+		'alt'    => '電話とパソコンで相談する人のイラスト',
 	),
 );
 ?>
@@ -224,22 +227,22 @@ $front_step_items = array(
 
 	<div class="l-front-step__inner u-container">
 		<div class="l-front-step__title c-sec-title c-sec-title--white c-sec-title--center u-fade-up">
-			<p class="c-sec-title__sub u-text-fade u-text-fade--chars">Step</p>
+			<p class="c-sec-title__sub u-text-fade">Step</p>
 			<h2 id="front-step-title" class="c-sec-title__main">散骨の流れ</h2>
 		</div>
 
-		<ol class="l-front-step__list u-step-flow">
-			<?php foreach ( $front_step_items as $front_step_item ) : ?>
-				<li class="l-front-step__item">
+		<ol class="l-front-step__list u-fade-up-group">
+			<?php foreach ( $items as $item ) : ?>
+				<li class="l-front-step__item u-fade-up-item">
 					<article class="l-front-step__card">
-						<p class="l-front-step__label u-step-flow-group">
-							<span class="l-front-step__label-text u-step-flow-label u-step-flow-label--text u-text-fade--chars">Step</span>
-							<span class="l-front-step__number u-step-flow-label u-step-flow-label--number u-text-fade--chars"><?php echo esc_html( $front_step_item['number'] ); ?></span>
+						<p class="l-front-step__label">
+							<span class="l-front-step__label-text">Step</span>
+							<span class="l-front-step__number"><?php echo esc_html( $item['number'] ); ?></span>
 						</p>
 						<div class="l-front-step__icon">
-							<img src="<?php echo esc_url( theme_image_url( $front_step_item['image'] ) ); ?>" width="128" height="128" alt="<?php echo esc_attr( $front_step_item['alt'] ); ?>">
+							<img src="<?php echo esc_url( theme_image_url( $item['image'] ) ); ?>" width="128" height="128" alt="<?php echo esc_attr( $item['alt'] ); ?>">
 						</div>
-						<h3 class="l-front-step__name"><?php echo esc_html( $front_step_item['title'] ); ?></h3>
+						<h3 class="l-front-step__name"><?php echo esc_html( $item['title'] ); ?></h3>
 					</article>
 				</li>
 			<?php endforeach; ?>

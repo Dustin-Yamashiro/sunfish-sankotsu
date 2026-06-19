@@ -1,5 +1,5 @@
 const animationSelector =
-  ".u-fade-up, .u-fade-up-group, .u-text-fade, .u-photo-fade, .u-step-flow, .u-bg-wipe";
+  ".u-fade-up, .u-fade-up-group, .u-text-fade, .u-photo-fade, .u-bg-wipe";
 const loadAnimationSelector = ".u-bg-wipe--load";
 const loadAnimationDelay = 160;
 
@@ -32,23 +32,6 @@ const splitTextToChars = (element) => {
 const setGroupDelays = (root) => {
   root.querySelectorAll(".u-fade-up-item").forEach((item, index) => {
     item.style.setProperty("--u-fade-delay", `${index * 110}ms`);
-  });
-};
-
-const setStepDelays = (root) => {
-  const groups = root.querySelectorAll(".u-step-flow-group");
-  const items = groups.length ? groups : root.querySelectorAll(".u-step-flow-label");
-
-  items.forEach((item, index) => {
-    const stepDelay = index * 220;
-    const parts = item.classList.contains("u-step-flow-label")
-      ? [item]
-      : item.querySelectorAll(".u-step-flow-label");
-
-    parts.forEach((part, partIndex) => {
-      part.style.setProperty("--u-step-delay", `${stepDelay}ms`);
-      part.style.setProperty("--u-step-part-delay", `${partIndex * 70}ms`);
-    });
   });
 };
 
@@ -95,7 +78,6 @@ const initUtilityAnimation = () => {
 
   document.querySelectorAll(".u-text-fade--chars").forEach(splitTextToChars);
   document.querySelectorAll(".u-fade-up-group").forEach(setGroupDelays);
-  document.querySelectorAll(".u-step-flow").forEach(setStepDelays);
 
   if (reduceMotion.matches || typeof IntersectionObserver === "undefined") {
     showWithoutMotion();

@@ -5,7 +5,6 @@
 .u-fade-up,
 .u-fade-up-item,
 .u-photo-fade,
-.u-step-flow-label,
 .u-bg-wipe {
   will-change: opacity, transform;
 }
@@ -123,20 +122,6 @@
   transform: translate3d(0, 0, 0);
 }
 
-.is-anim-ready .u-step-flow .u-step-flow-label .u-text-char {
-  transition-duration: 0.98s;
-  transition-delay: calc(
-    var(--u-step-delay, 0ms) + var(--u-step-part-delay, 0ms) +
-      var(--u-char-delay, 0ms)
-  );
-}
-
-.is-anim-ready .u-step-flow.is-inview .u-step-flow-label .u-text-char {
-  opacity: 1;
-  filter: blur(0);
-  transform: translate3d(0, 0, 0);
-}
-
 .u-bg-wipe {
   --u-bg-wipe-color: #{$color-white};
 
@@ -207,7 +192,6 @@
   .u-fade-up,
   .u-fade-up-item,
   .u-photo-fade,
-  .u-step-flow-label,
   .u-bg-wipe::before {
     opacity: 1;
     filter: none;

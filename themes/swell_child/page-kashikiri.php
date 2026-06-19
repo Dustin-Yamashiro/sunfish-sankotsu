@@ -10,10 +10,10 @@
 get_header();
 ?>
 
-<section class="l-page-kv l-page-kv--plan" aria-labelledby="kashikiri-page-title">
-	<picture class="l-page-kv__media" aria-hidden="true">
+<section class="l-page-kv" aria-labelledby="kashikiri-page-title">
+	<picture class="l-page-kv__media">
 		<source media="(max-width: 740px)" srcset="<?php echo esc_url( theme_image_url( 'front-page/key-visual-sea-flowers-sp.png' ) ); ?>">
-		<img src="<?php echo esc_url( theme_image_url( 'front-page/key-visual-sea-flowers.png' ) ); ?>" width="2688" height="1408" alt="" fetchpriority="high">
+		<img src="<?php echo esc_url( theme_image_url( 'front-page/key-visual-sea-flowers.png' ) ); ?>" width="100%" height="320" alt="散骨の献花をしている写真" fetchpriority="high">
 	</picture>
 	<div class="l-page-kv__inner u-container">
 		<h1 id="kashikiri-page-title" class="l-page-kv__title u-bg-wipe u-bg-wipe--load">貸切散骨プラン</h1>
@@ -33,42 +33,33 @@ get_header();
 			</div>
 		</div>
 
-		<div class="l-sec-split__visual" aria-hidden="true">
+		<div class="l-sec-split__visual">
 			<picture class="l-sec-split__image l-sec-split__image--01">
-				<img src="<?php echo esc_url( theme_image_url( 'kashikiri-plan/about-sub.png' ) ); ?>" width="1536" height="1024" alt="" loading="lazy">
+				<img src="<?php echo esc_url( theme_image_url( 'kashikiri-plan/about-sub.png' ) ); ?>" width="1536" height="1024" alt="船上で石垣島の海に花を手向け、手を合わせるご家族" loading="lazy">
 			</picture>
 			<picture class="l-sec-split__image l-sec-split__image--02">
-				<img src="<?php echo esc_url( theme_image_url( 'kashikiri-plan/about-main.png' ) ); ?>" width="1619" height="972" alt="" loading="lazy">
+				<img src="<?php echo esc_url( theme_image_url( 'kashikiri-plan/about-main.png' ) ); ?>" width="1619" height="972" alt="貸切船の上から石垣島の海を眺めるご家族" loading="lazy">
 			</picture>
 		</div>
 	</div>
 </section>
 
 <?php
-$kashikiri_reason_items = array(
+$reason_items = array(
 	array(
 		'image' => 'kashikiri-plan/reason-01.png',
 		'alt'   => '家族で写真を見ながら海洋散骨について相談する様子',
-		'texts' => array(
-			'お墓の後継者がいない',
-			'子や孫に負担をかけたくない',
-		),
+		'text'  => '故人との最後の時間を<br>完全貸切で過ごしたい',
 	),
 	array(
 		'image' => 'kashikiri-plan/reason-02.png',
 		'alt'   => '家族で海を見ながら故人を見送る様子',
-		'texts' => array(
-			'故人が好きだった海で散骨がしたい',
-			'石垣の海で散骨がしたい',
-		),
+		'text'  => '家族や親族みんなで<br>供養がしたい',
 	),
 	array(
 		'image' => 'kashikiri-plan/reason-03.png',
 		'alt'   => '石垣島の海に浮かぶ散骨用の船',
-		'texts' => array(
-			'宗教に縛られず自由に還したい',
-			'お墓ではなく自然に供養したい',
-		),
+		'text'  => '散骨が思い出に残る<br>日にしたい',
 	),
 );
 ?>
@@ -78,25 +69,21 @@ $kashikiri_reason_items = array(
 		<h2 id="kashikiri-reason-title" class="l-sec-reason__title u-fade-up">このような「想い」の方に<br>選ばれています</h2>
 
 		<div class="l-sec-reason__list">
-			<?php foreach ( $kashikiri_reason_items as $kashikiri_reason_item ) : ?>
+			<?php foreach ( $reason_items as $item ) : ?>
 				<?php
-				$kashikiri_reason_image = ! empty( $kashikiri_reason_item['image'] ) ? (string) $kashikiri_reason_item['image'] : '';
-				$kashikiri_reason_alt   = ! empty( $kashikiri_reason_item['alt'] ) ? (string) $kashikiri_reason_item['alt'] : '';
-				$kashikiri_reason_texts = ! empty( $kashikiri_reason_item['texts'] ) && is_array( $kashikiri_reason_item['texts'] ) ? $kashikiri_reason_item['texts'] : array();
+				$image = ! empty( $item['image'] ) ? (string) $item['image'] : '';
+				$alt   = ! empty( $item['alt'] ) ? (string) $item['alt'] : '';
+				$text  = ! empty( $item['text'] ) ? (string) $item['text'] : '';
 				?>
 				<article class="l-sec-reason__item">
-					<?php if ( '' !== $kashikiri_reason_image ) : ?>
+					<?php if ( '' !== $image ) : ?>
 						<picture class="l-sec-reason__image">
-							<img src="<?php echo esc_url( theme_image_url( $kashikiri_reason_image ) ); ?>" width="1254" height="1254" alt="<?php echo esc_attr( $kashikiri_reason_alt ); ?>" loading="lazy">
+							<img src="<?php echo esc_url( theme_image_url( $image ) ); ?>" width="1254" height="1254" alt="<?php echo esc_attr( $alt ); ?>" loading="lazy">
 						</picture>
 					<?php endif; ?>
 
-					<?php if ( ! empty( $kashikiri_reason_texts ) ) : ?>
-						<ul class="l-sec-reason__text-list">
-							<?php foreach ( $kashikiri_reason_texts as $kashikiri_reason_text ) : ?>
-								<li><?php echo esc_html( (string) $kashikiri_reason_text ); ?></li>
-							<?php endforeach; ?>
-						</ul>
+					<?php if ( '' !== $text ) : ?>
+						<p class="l-sec-reason__text"><?php echo wp_kses( $text, array( 'br' => array() ) ); ?></p>
 					<?php endif; ?>
 				</article>
 			<?php endforeach; ?>
@@ -120,62 +107,66 @@ $kashikiri_reason_items = array(
 			</div>
 		</div>
 
+		<?php
+		$features = array(
+			array(
+				'title'  => '完全貸切のプライベート空間',
+				'texts'  => array(
+					'自社船での完全貸切だからこそ、ご家族やご親族だけで故人様をお見送りいただけます。',
+					'周囲に気を遣う必要のないプライベートな空間で、ゆっくりと故人様との時間を過ごすことができます。',
+				),
+				'image'  => 'kashikiri-plan/feature-01-card.jpg',
+				'alt'    => '石垣島の海に浮かぶ貸切散骨用の自社船',
+			),
+			array(
+				'title'  => '自分たちで送り出す供養',
+				'texts'  => array(
+					'貸切散骨では、ご遺族様自身の手で故人様を海へお送りできます。',
+					'通常の葬儀とは違い、海の景色や波の音とともに故人様を見送った時間が、散骨後もご家族の記憶に残り続けます。',
+				),
+				'image'  => 'kashikiri-plan/feature-02-card.png',
+				'alt'    => 'ご遺族が船上から石垣島の海へ散骨する様子',
+			),
+			array(
+				'title'  => '故人らしさを込める見送り',
+				'texts'  => array(
+					'貸切散骨では、故人様のお人柄やご家族の望みに合わせて、供養のかたちを考えることができます。',
+					'船長自ら想いを伺い、故人様らしさを大切にしたセレモニーになるようサポートします。',
+				),
+				'image'  => 'kashikiri-plan/feature-03-card.png',
+				'alt'    => '海を眺めながら船上で手を重ねるご家族',
+			),
+		);
+		?>
+
+
 		<div class="l-sec-feature__points" data-feature-sec-points>
 			<ol class="l-sec-feature__point-list">
-				<li class="l-sec-feature__point-item l-sec-feature__point-item--01 is-active" data-feature-sec-card data-point-index="1">
-					<article class="l-sec-feature__point-card">
-						<div class="l-sec-feature__point-content">
-							<p class="l-sec-feature__point-label">
-								<span class="l-sec-feature__point-text">Point</span>
-								<span class="l-sec-feature__point-number">1</span>
-							</p>
-							<h3 class="l-sec-feature__point-title">完全貸切のプライベート空間</h3>
-							<div class="l-sec-feature__point-body">
-								<p>自社船での完全貸切だからこそ、ご家族やご親族だけで故人様をお見送りいただけます。</p>
-								<p>周囲に気を遣う必要のないプライベートな空間で、ゆっくりと故人様との時間を過ごすことができます。</p>
+				<?php foreach ( $features as $i => $item ) : ?>
+					<?php
+					$number       = $i + 1;
+					$class_number = sprintf( '%02d', $number );
+					?>
+					<li class="l-sec-feature__point-item l-sec-feature__point-item--<?php echo esc_attr( $class_number ); ?><?php echo 0 === $i ? ' is-active' : ''; ?>" data-feature-sec-card data-point-index="<?php echo esc_attr( $number ); ?>">
+						<article class="l-sec-feature__point-card">
+							<div class="l-sec-feature__point-content">
+								<p class="l-sec-feature__point-label">
+									<span class="l-sec-feature__point-text">Point</span>
+									<span class="l-sec-feature__point-number"><?php echo esc_html( $number ); ?></span>
+								</p>
+								<h3 class="l-sec-feature__point-title"><?php echo esc_html( $item['title'] ); ?></h3>
+								<div class="l-sec-feature__point-body">
+									<?php foreach ( $item['texts'] as $text ) : ?>
+										<p><?php echo esc_html( $text ); ?></p>
+									<?php endforeach; ?>
+								</div>
 							</div>
-						</div>
-						<picture class="l-sec-feature__point-image">
-							<img src="<?php echo esc_url( theme_image_url( 'kashikiri-plan/feature-01-card.jpg' ) ); ?>" width="584" height="672" alt="石垣島の海に浮かぶ貸切散骨用の自社船" loading="lazy">
-						</picture>
-					</article>
-				</li>
-				<li class="l-sec-feature__point-item l-sec-feature__point-item--02" data-feature-sec-card data-point-index="2">
-					<article class="l-sec-feature__point-card">
-						<div class="l-sec-feature__point-content">
-							<p class="l-sec-feature__point-label">
-								<span class="l-sec-feature__point-text">Point</span>
-								<span class="l-sec-feature__point-number">2</span>
-							</p>
-							<h3 class="l-sec-feature__point-title">自分たちで送り出す供養</h3>
-							<div class="l-sec-feature__point-body">
-								<p>貸切散骨では、ご遺族様自身の手で故人様を海へお送りできます。</p>
-								<p>通常の葬儀とは違い、海の景色や波の音とともに故人様を見送った時間が、散骨後もご家族の記憶に残り続けます。</p>
-							</div>
-						</div>
-						<picture class="l-sec-feature__point-image">
-							<img src="<?php echo esc_url( theme_image_url( 'kashikiri-plan/feature-02-card.png' ) ); ?>" width="584" height="672" alt="ご遺族が船上から石垣島の海へ散骨する様子" loading="lazy">
-						</picture>
-					</article>
-				</li>
-				<li class="l-sec-feature__point-item l-sec-feature__point-item--03" data-feature-sec-card data-point-index="3">
-					<article class="l-sec-feature__point-card">
-						<div class="l-sec-feature__point-content">
-							<p class="l-sec-feature__point-label">
-								<span class="l-sec-feature__point-text">Point</span>
-								<span class="l-sec-feature__point-number">3</span>
-							</p>
-							<h3 class="l-sec-feature__point-title">故人らしさを込める見送り</h3>
-							<div class="l-sec-feature__point-body">
-								<p>貸切散骨では、故人様のお人柄やご家族の望みに合わせて、供養のかたちを考えることができます。</p>
-								<p>船長自ら想いを伺い、故人様らしさを大切にしたセレモニーになるようサポートします。</p>
-							</div>
-						</div>
-						<picture class="l-sec-feature__point-image">
-							<img src="<?php echo esc_url( theme_image_url( 'kashikiri-plan/feature-03-card.png' ) ); ?>" width="584" height="672" alt="海を眺めながら船上で手を重ねるご家族" loading="lazy">
-						</picture>
-					</article>
-				</li>
+							<picture class="l-sec-feature__point-image">
+								<img src="<?php echo esc_url( theme_image_url( $item['image'] ) ); ?>" width="292" height="336" alt="<?php echo esc_attr( $item['alt'] ); ?>" loading="lazy">
+							</picture>
+						</article>
+					</li>
+				<?php endforeach; ?>
 			</ol>
 		</div>
 
@@ -236,9 +227,9 @@ $kashikiri_reason_items = array(
 			</div>
 
 			<div class="l-sec-plan-detail__row">
-				<dt class="l-sec-plan-detail__label">キャンセルポリシー</dt>
+				<dt class="l-sec-plan-detail__label">キャンセル対応</dt>
 				<dd class="l-sec-plan-detail__value">
-					<p class="l-sec-plan-detail__text">詳しくは<a href="<?php echo esc_url( home_url( '/cancel-policy/' ) ); ?>">キャンセルポリシーページ</a>を閲覧ください</p>
+					<p class="l-sec-plan-detail__text">詳しくは<a href="<?php echo esc_url( home_url( '/policy/' ) ); ?>">キャンセルポリシーページ</a>を閲覧ください</p>
 				</dd>
 			</div>
 

@@ -69,6 +69,8 @@
     --step-number-line-height: 0.9;
     --step-label-size: 14px;
     --step-number-size: 32px;
+    --step-arrow-width: 20px;
+    --step-arrow-half-height: 16px;
 
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -85,6 +87,8 @@
       --step-label-icon-gap: 24px;
       --step-label-size: 13px;
       --step-number-size: 28px;
+      --step-arrow-width: 18px;
+      --step-arrow-half-height: 14px;
 
       margin-top: 48px;
     }
@@ -94,6 +98,8 @@
       --step-row-gap: 52px;
       --step-col-gap: 32px;
       --step-number-size: 24px;
+      --step-arrow-width: 14px;
+      --step-arrow-half-height: 10px;
 
       grid-template-columns: repeat(2, minmax(0, 1fr));
       margin-top: 48px;
@@ -110,22 +116,14 @@
           var(--step-label-icon-gap) + (var(--step-circle-size) / 2)
       );
       left: calc(100% + (var(--step-col-gap) / 2));
-      color: rgba($color-white, 0.95);
-      content: "\2192";
-      font-family: $font-heading;
-      font-size: 36px;
-      font-weight: 600;
-      line-height: 1;
-      text-shadow: 0 2px 12px rgba($color-main, 0.35);
+      width: 0;
+      height: 0;
+      border-top: var(--step-arrow-half-height) solid transparent;
+      border-bottom: var(--step-arrow-half-height) solid transparent;
+      border-left: var(--step-arrow-width) solid rgba($color-white, 0.96);
+      content: "";
+      filter: drop-shadow(0 2px 8px rgba($color-main, 0.18));
       transform: translate(-50%, -50%);
-
-      @include bp("tb") {
-        font-size: 30px;
-      }
-
-      @include bp("sp-l") {
-        font-size: 26px;
-      }
     }
 
     &:nth-child(3)::after {
