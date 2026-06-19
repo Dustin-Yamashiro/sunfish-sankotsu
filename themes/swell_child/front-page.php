@@ -231,7 +231,7 @@ $items = array(
 			<h2 id="sec-step-short-title" class="c-sec-title__main">散骨の流れ</h2>
 		</div>
 
-		<ol class="p-sec-step-short__list u-fade-up-group">
+		<ol class="p-sec-step-short__list u-fade-up-group" data-fade-base-delay="180" data-fade-stagger="180">
 			<?php foreach ( $items as $item ) : ?>
 				<li class="p-sec-step-short__item u-fade-up-item">
 					<article class="p-sec-step-short__card">

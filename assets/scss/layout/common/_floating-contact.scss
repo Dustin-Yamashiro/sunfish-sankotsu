@@ -1,0 +1,108 @@
+/*
+* タブレット・スマホ共通の下固定フローティング問い合わせメニュー
+*/
+@use "../../foundation/mixin" as *;
+@use "../../foundation/variables" as *;
+
+.l-floating-contact {
+  display: none;
+
+  @include bp("tb") {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 11;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+    padding: 8px;
+  }
+
+  &__link {
+    width: 100%;
+    height: 56px;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: 1fr;
+    place-items: center;
+    align-content: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 0 12px;
+    color: $color-white;
+    box-shadow: 0 -8px 20px rgba(37, 105, 122, 0.16);
+    transition:
+      opacity $duration-base $ease-base,
+      transform $duration-base $ease-base;
+
+    @media (hover: hover) {
+      &:hover {
+        opacity: 0.9;
+        transform: translateY(-3px);
+      }
+    }
+
+    &:focus-visible {
+      outline: 2px solid $color-text;
+      outline-offset: 3px;
+    }
+
+    @include bp("tb") {
+      height: 56px;
+    }
+
+    @include bp("sp-l") {
+      height: 48px;
+    }
+  }
+
+  &__link--contact {
+    background-color: $color-main;
+  }
+
+  &__link--line {
+    background-color: $color-line;
+  }
+
+  &__icon {
+    width: 20px;
+    height: 20px;
+    display: grid;
+    place-items: center;
+
+    @include bp("tb") {
+      width: 20px;
+      height: 20px;
+    }
+
+    @include bp("sp-l") {
+      width: 20px;
+      height: 20px;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+
+  &__label {
+    color: inherit;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: 0.08em;
+    white-space: nowrap;
+
+    @include bp("tb") {
+      font-size: 15px;
+      letter-spacing: 0.04em;
+    }
+
+    @include bp("sp-l") {
+      font-size: 14px;
+    }
+  }
+}

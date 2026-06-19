@@ -2,6 +2,20 @@ const animationSelector =
   ".u-fade-up, .u-fade-up-group, .u-text-fade, .u-photo-fade, .u-bg-wipe";
 const loadAnimationSelector = ".u-bg-wipe--load";
 const loadAnimationDelay = 160;
+const narrowViewportQuery = "(max-width: 960px)";
+const desktopObserverRootMargin = "0px 0px -20% 0px";
+const narrowObserverRootMargin = "0px 0px -14% 0px";
+
+const getAnimationDelayValue = (element, name, fallback) => {
+  const value = Number.parseInt(element.dataset[name] ?? "", 10);
+
+  return Number.isFinite(value) ? value : fallback;
+};
+
+const getObserverRootMargin = () =>
+  window.matchMedia(narrowViewportQuery).matches
+    ? narrowObserverRootMargin
+    : desktopObserverRootMargin;
 
 const splitTextToChars = (element) => {
   if (element.dataset.textSplit === "true") {
@@ -30,8 +44,14 @@ const splitTextToChars = (element) => {
 };
 
 const setGroupDelays = (root) => {
+  const baseDelay = getAnimationDelayValue(root, "fadeBaseDelay", 0);
+  const stagger = getAnimationDelayValue(root, "fadeStagger", 110);
+
   root.querySelectorAll(".u-fade-up-item").forEach((item, index) => {
-    item.style.setProperty("--u-fade-delay", `${index * 110}ms`);
+    item.style.setProperty(
+      "--u-fade-delay",
+      `${baseDelay + index * stagger}ms`,
+    );
   });
 };
 
@@ -99,7 +119,7 @@ const initUtilityAnimation = () => {
       });
     },
     {
-      rootMargin: "0px 0px -16% 0px",
+      rootMargin: getObserverRootMargin(),
       threshold: 0.16,
     },
   );

@@ -163,6 +163,23 @@ $header_mobile_links = array_merge( $header_primary_links, $header_utility_links
 		</div>
 	</div>
 </header>
+<?php if ( theme_should_show_floating_contact() ) : ?>
+	<nav class="l-floating-contact" aria-label="固定問い合わせメニュー">
+		<a class="l-floating-contact__link l-floating-contact__link--contact" href="<?php echo esc_url( home_url( '/contact/' ) ); ?>" aria-label="お問い合わせページへ移動">
+			<span class="l-floating-contact__icon" aria-hidden="true">
+				<img src="<?php echo esc_url( theme_image_url( 'header/icon-mail.svg' ) ); ?>" width="22" height="18" alt="">
+			</span>
+			<span class="l-floating-contact__label">お問い合わせ</span>
+		</a>
+
+		<a class="l-floating-contact__link l-floating-contact__link--line" href="<?php echo esc_url( home_url( '/contact/#line-consultation' ) ); ?>" aria-label="LINEで相談する">
+			<span class="l-floating-contact__icon" aria-hidden="true">
+				<img src="<?php echo esc_url( theme_image_url( 'header/icon-line.svg' ) ); ?>" width="30" height="30" alt="">
+			</span>
+			<span class="l-floating-contact__label">ご相談</span>
+		</a>
+	</nav>
+<?php endif; ?>
 <?php if ( $use_swell_content_shell ) : ?>
 	<?php
 	if ( class_exists( 'SWELL_Theme' ) ) {

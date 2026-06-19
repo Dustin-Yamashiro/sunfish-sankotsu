@@ -80,6 +80,36 @@ if ( ! function_exists( 'theme_should_show_footer_contact' ) ) {
 	}
 }
 
+if ( ! function_exists( 'theme_should_show_floating_contact' ) ) {
+	/**
+	 * Whether the bottom floating contact menu should be displayed.
+	 *
+	 * The floating menu is intended for the main custom-designed site pages.
+	 * Contact/legal pages and SWELL-managed post archives/details are hidden.
+	 *
+	 * @return bool
+	 */
+	function theme_should_show_floating_contact() {
+		$excluded_page_slugs     = array( 'contact', 'terms', 'privacy-policy', 'news', 'column' );
+		$excluded_category_slugs = array( 'news', 'column', 'marine-scattering-column' );
+		$should_show             = is_front_page() || ( is_page() && ! is_page( $excluded_page_slugs ) );
+
+		if ( is_category( $excluded_category_slugs ) || ( is_singular( 'post' ) && has_category( $excluded_category_slugs ) ) ) {
+			$should_show = false;
+		}
+
+		if ( is_singular() ) {
+			$hide_floating_contact = get_post_meta( get_queried_object_id(), 'hide_floating_contact', true );
+
+			if ( in_array( strtolower( (string) $hide_floating_contact ), array( '1', 'true', 'yes' ), true ) ) {
+				$should_show = false;
+			}
+		}
+
+		return (bool) apply_filters( 'theme_should_show_floating_contact', $should_show );
+	}
+}
+
 if ( ! function_exists( 'theme_uses_swell_content_shell' ) ) {
 	/**
 	 * Whether the current request should keep SWELL's standard content wrapper.
