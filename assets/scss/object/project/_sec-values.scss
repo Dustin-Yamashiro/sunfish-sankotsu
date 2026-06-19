@@ -5,28 +5,7 @@
 @use "../../foundation/variables" as *;
 
 .p-sec-values {
-  padding-bottom: 160px;
   background-color: $color-gray;
-
-  @include bp("tb") {
-    padding-bottom: 128px;
-  }
-
-  @include bp("sp-l") {
-    padding-bottom: 80px;
-  }
-
-  &--py {
-    padding-block: 120px 160px;
-
-    @include bp("tb") {
-      padding-block: 100px 128px;
-    }
-
-    @include bp("sp-l") {
-      padding-block: 80px 80px;
-    }
-  }
 
   &__title {
     --sec-title-gap: 28px;

@@ -4,17 +4,8 @@
 @use "../../foundation/mixin" as *;
 @use "../../foundation/variables" as *;
 
-.l-business {
-  padding-block: 120px 160px;
+.p-sec-business {
   background-color: $color-white;
-
-  @include bp("tb") {
-    padding-block: 96px 120px;
-  }
-
-  @include bp("sp-l") {
-    padding-block: 72px 88px;
-  }
 
   &__inner {
     max-width: 1100px;
@@ -59,11 +50,11 @@
       grid-template-columns: 1fr;
       gap: 32px;
 
-      .l-business__media {
+      .p-sec-business__media {
         order: 1;
       }
 
-      .l-business__content {
+      .p-sec-business__content {
         order: 2;
       }
     }
@@ -72,22 +63,22 @@
   &__item--reverse {
     grid-template-columns: minmax(280px, 400px) minmax(0, 1fr);
 
-    .l-business__content {
+    .p-sec-business__content {
       order: 2;
     }
 
-    .l-business__media {
+    .p-sec-business__media {
       order: 1;
     }
 
     @include bp("tb") {
       grid-template-columns: 1fr;
 
-      .l-business__content {
+      .p-sec-business__content {
         order: 2;
       }
 
-      .l-business__media {
+      .p-sec-business__media {
         order: 1;
       }
     }

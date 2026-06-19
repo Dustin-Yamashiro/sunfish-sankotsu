@@ -1,0 +1,93 @@
+/*
+* セクションpaddingユーティリティ
+*/
+@use "sass:map";
+@use "../../foundation/mixin" as *;
+
+$u-pd-scale: (
+  0: (
+    pc: 0,
+    tb: 0,
+    sp: 0,
+  ),
+  1: (
+    pc: 40px,
+    tb: 40px,
+    sp: 40px,
+  ),
+  2: (
+    pc: 64px,
+    tb: 56px,
+    sp: 48px,
+  ),
+  3: (
+    pc: 80px,
+    tb: 72px,
+    sp: 64px,
+  ),
+  4: (
+    pc: 100px,
+    tb: 80px,
+    sp: 64px,
+  ),
+  5: (
+    pc: 120px,
+    tb: 100px,
+    sp: 80px,
+  ),
+  6: (
+    pc: 160px,
+    tb: 120px,
+    sp: 100px,
+  ),
+);
+
+$u-pd-utilities: (
+  p: padding,
+  px: padding-inline,
+  py: padding-block,
+  pt: padding-top,
+  pb: padding-bottom,
+);
+
+@mixin u-pd-props($properties, $value) {
+  @each $property in $properties {
+    #{$property}: $value;
+  }
+}
+
+@mixin u-pd-size($properties, $values) {
+  @include u-pd-props($properties, map.get($values, pc));
+
+  @include bp("tb") {
+    @include u-pd-props($properties, map.get($values, tb));
+  }
+
+  @include bp("sp-l") {
+    @include u-pd-props($properties, map.get($values, sp));
+  }
+}
+
+@each $abbr, $properties in $u-pd-utilities {
+  @each $size, $values in $u-pd-scale {
+    .u-pd-#{$abbr}-#{$size} {
+      @include u-pd-size($properties, $values);
+    }
+  }
+}
+
+@each $abbr, $properties in $u-pd-utilities {
+  @each $size, $values in $u-pd-scale {
+    @include bp("tb") {
+      .u-pd-#{$abbr}-tb-#{$size} {
+        @include u-pd-props($properties, map.get($values, tb));
+      }
+    }
+
+    @include bp("sp-l") {
+      .u-pd-#{$abbr}-sp-#{$size} {
+        @include u-pd-props($properties, map.get($values, sp));
+      }
+    }
+  }
+}

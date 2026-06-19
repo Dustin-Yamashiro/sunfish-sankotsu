@@ -8,7 +8,7 @@
  */
 ?>
 
-<section class="p-sec-message" aria-labelledby="about-message-title">
+<section class="p-sec-message u-pd-pt-3 u-pd-pb-6" aria-labelledby="about-message-title">
 	<div class="p-sec-message__inner u-container">
 		<picture class="p-sec-message__image">
 			<img src="<?php echo esc_url( theme_image_url( 'about/message-main.png' ) ); ?>" width="620" height="400" alt="船上で石垣島の海を案内する船長とご家族" loading="lazy">

@@ -6,9 +6,15 @@
  *
  * @package SunfishSankotsu
  */
+
+$sec_values_padding_class = 'u-pd-pb-6';
+
+if ( is_string( $args ) && '' !== $args ) {
+	$sec_values_padding_class .= ' u-pd-' . sanitize_html_class( $args );
+}
 ?>
 
-<section class="p-sec-values<?php echo ! empty( $args ) ? esc_attr( ' p-sec-values--' . $args ) : ''; ?>" aria-labelledby="kashikiri-values-title">
+<section class="p-sec-values <?php echo esc_attr( $sec_values_padding_class ); ?>" aria-labelledby="kashikiri-values-title">
 	<div class="p-sec-values__inner u-container">
 		<div class="p-sec-values__title c-sec-title c-sec-title--center u-fade-up">
 			<p class="c-sec-title__sub u-text-fade u-text-fade--chars">Values</p>

@@ -5,16 +5,7 @@
 @use "../../foundation/variables" as *;
 
 .p-sec-plan-detail {
-  padding-block: 120px 160px;
   background-color: $color-white;
-
-  @include bp("tb") {
-    padding-block: 104px 136px;
-  }
-
-  @include bp("sp-l") {
-    padding-block: 80px 96px;
-  }
 
   &__title {
     --sec-title-gap: 28px;

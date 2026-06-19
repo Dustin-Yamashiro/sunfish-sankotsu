@@ -11,18 +11,9 @@
   }
 
   &-contact {
-    padding-block: 120px;
     color: $color-white;
     letter-spacing: 0.08em;
     text-align: center;
-
-    @include bp("tb") {
-      padding-block: 100px;
-    }
-
-    @include bp("sp-l") {
-      padding-block: 80px;
-    }
 
     &__inner {
       display: grid;
@@ -148,7 +139,6 @@
   }
 
   &__inner {
-    padding-block: 92px 82px;
     display: grid;
     grid-template-columns: minmax(0, 1fr) minmax(500px, 520px);
     gap: 80px;
@@ -158,12 +148,10 @@
       width: min(88.8%, 720px);
       grid-template-columns: 1fr;
       gap: 56px;
-      padding-block: 68px 56px;
     }
 
     @include bp("sp-l") {
       gap: 64px;
-      padding-block: 54px 48px;
     }
   }
 

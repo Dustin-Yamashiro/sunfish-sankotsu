@@ -10,7 +10,7 @@
 $section_modifier = is_string( $args ) && '' !== $args ? ' p-sec-company--' . sanitize_html_class( $args ) : '';
 ?>
 
-<section class="p-sec-company<?php echo esc_attr( $section_modifier ); ?>" aria-labelledby="about-company-title">
+<section class="p-sec-company<?php echo esc_attr( $section_modifier ); ?> u-pd-py-5" aria-labelledby="about-company-title">
 	<div class="p-sec-company__inner u-container">
 		<div class="p-sec-company__title c-sec-title c-sec-title--center u-fade-up">
 			<p class="c-sec-title__sub u-text-fade u-text-fade--chars">Company</p>

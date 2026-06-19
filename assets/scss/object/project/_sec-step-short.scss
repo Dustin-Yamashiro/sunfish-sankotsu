@@ -8,16 +8,7 @@
   position: relative;
   isolation: isolate;
   overflow: hidden;
-  padding-block: 120px 160px;
   color: $color-white;
-
-  @include bp("tb") {
-    padding-block: 100px 120px;
-  }
-
-  @include bp("sp-l") {
-    padding-block: 80px 100px;
-  }
 
   &::before {
     position: absolute;

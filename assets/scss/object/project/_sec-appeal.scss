@@ -6,17 +6,6 @@
 
 .p-sec-appeal {
   overflow: hidden;
-  padding-block: 120px 0;
-  background-color: $color-white;
-
-  @include bp("tb") {
-    padding-block: 96px 0;
-  }
-
-  @include bp("sp-l") {
-    padding-block: 80px 0;
-  }
-
   &__main {
     display: grid;
     position: relative;

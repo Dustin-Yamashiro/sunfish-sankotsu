@@ -21,7 +21,7 @@ get_template_part(
 );
 ?>
 
-<section class="p-sec-split" aria-labelledby="beginner-introduction-title">
+<section class="p-sec-split u-pd-pt-3" aria-labelledby="beginner-introduction-title">
 	<div class="p-sec-split__inner u-container">
 		<div class="p-sec-split__content">
 			<div class="p-sec-split__title c-sec-title u-fade-up">
@@ -75,7 +75,7 @@ $reason_items = array(
 );
 ?>
 
-<section class="p-sec-reason" aria-labelledby="beginner-reason-title">
+<section class="p-sec-reason u-pd-pt-5 u-pd-pb-6" aria-labelledby="beginner-reason-title">
 	<div class="p-sec-reason__inner u-container">
 		<h2 id="beginner-reason-title" class="p-sec-reason__title u-fade-up">このような「想い」の方に<br>選ばれています</h2>
 
@@ -254,7 +254,7 @@ $step_items = array(
 );
 ?>
 
-<section class="p-sec-step" aria-labelledby="beginner-step-title">
+<section class="p-sec-step u-pd-pt-5 u-pd-pb-6" aria-labelledby="beginner-step-title">
 	<picture class="p-sec-step__bg" aria-hidden="true">
 		<source media="(max-width: 740px)" srcset="<?php echo esc_url( theme_image_url( 'front-page/key-visual-sea-flowers-sp.png' ) ); ?>">
 		<img src="<?php echo esc_url( theme_image_url( 'front-page/key-visual-sea-flowers.png' ) ); ?>" width="2688" height="1408" alt="" loading="lazy">

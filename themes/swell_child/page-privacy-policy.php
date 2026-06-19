@@ -66,7 +66,7 @@ get_template_part(
 );
 ?>
 
-<section class="l-legal">
+<section class="l-legal u-pd-pt-4 u-pd-pb-6">
 	<div class="l-legal__inner u-container u-container--narrow">
 		<div class="l-legal__list">
 			<?php foreach ( $privacy_sections as $index => $section ) : ?>

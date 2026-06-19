@@ -114,7 +114,7 @@ $footer_nav_columns = array(
 
 <div class="l-custom-footer-area u-bg--gradient my-setting">
 	<?php if ( $show_footer_contact ) : ?>
-		<section class="l-custom-footer-contact" aria-labelledby="footer-contact-title">
+		<section class="l-custom-footer-contact u-pd-py-5" aria-labelledby="footer-contact-title">
 			<div class="l-custom-footer-contact__inner u-container">
 				<div class="c-sec-title c-sec-title--center c-sec-title--white u-fade-up">
 					<p class="c-sec-title__sub u-text-fade u-text-fade--chars">Contact</p>
@@ -146,7 +146,7 @@ $footer_nav_columns = array(
 	<?php endif; ?>
 
 	<footer class="l-custom-footer<?php echo $show_footer_contact ? '' : ' l-custom-footer--standalone'; ?>">
-		<div class="l-custom-footer__inner u-container">
+		<div class="l-custom-footer__inner u-container u-pd-py-3">
 			<div class="l-custom-footer__company">
 				<a class="l-custom-footer__logo" href="<?php echo esc_url( home_url( '/' ) ); ?>" aria-label="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>">
 					<img src="<?php echo esc_url( theme_image_url( 'footer/logo-white.png' ) ); ?>" width="511" height="511" alt="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>">

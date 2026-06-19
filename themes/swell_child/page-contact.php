@@ -19,7 +19,7 @@ get_template_part(
 );
 ?>
 
-<section class="l-contact" aria-labelledby="contact-page-title">
+<section class="l-contact u-pd-pt-4 u-pd-pb-6" aria-labelledby="contact-page-title">
 	<div class="l-contact__inner u-container">
 		<div class="l-contact__lead">
 			<p>ご相談やご不明な点がございましたら、お電話、LINE、フォームよりお気軽にご連絡ください。</p>

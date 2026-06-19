@@ -8,7 +8,7 @@
  */
 
 ?>
-<section class="p-sec-plan" aria-labelledby="front-plan-title">
+<section class="p-sec-plan u-pd-pt-5 u-pd-pb-6" aria-labelledby="front-plan-title">
 	<div class="p-sec-plan__heading u-container u-fade-up">
 		<div class="p-sec-plan__title c-sec-title">
 			<p class="c-sec-title__sub u-text-fade u-text-fade--chars">Plan</p>

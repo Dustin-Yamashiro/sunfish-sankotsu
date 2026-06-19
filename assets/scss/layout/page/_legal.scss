@@ -5,16 +5,7 @@
 @use "../../foundation/variables" as *;
 
 .l-legal {
-  padding-block: 104px 152px;
   background-color: $color-white;
-
-  @include bp("tb") {
-    padding-block: 88px 128px;
-  }
-
-  @include bp("sp-l") {
-    padding-block: 64px 96px;
-  }
 
   &__inner {
     display: grid;

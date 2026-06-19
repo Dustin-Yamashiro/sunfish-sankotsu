@@ -18,7 +18,7 @@ get_header();
 	</div>
 </section>
 
-<section class="p-sec-appeal" aria-labelledby="sec-appeal-title">
+<section class="p-sec-appeal u-pd-pt-5" aria-labelledby="sec-appeal-title">
 	<div class="p-sec-appeal__main u-container">
 		<div class="p-sec-appeal__content">
 			<h2 id="sec-appeal-title" class="p-sec-appeal__title u-fade-up">お墓ではない<br>「想い」を残す、供養のカタチ</h2>
@@ -61,7 +61,7 @@ get_header();
 	</div>
 </section>
 
-<section class="p-sec-split p-sec-split--front" aria-labelledby="front--title">
+<section class="p-sec-split u-pd-pt-5 u-pd-pb-6" aria-labelledby="front--title">
 	<div class="p-sec-split__inner u-container">
 		<div class="p-sec-split__content">
 			<div class="p-sec-split__title c-sec-title u-fade-up">
@@ -219,7 +219,7 @@ $items = array(
 	),
 );
 ?>
-<section class="p-sec-step-short" aria-labelledby="sec-step-short-title">
+<section class="p-sec-step-short u-pd-pt-5 u-pd-pb-6" aria-labelledby="sec-step-short-title">
 	<picture class="p-sec-step-short__bg" aria-hidden="true">
 		<source media="(max-width: 740px)" srcset="<?php echo esc_url( theme_image_url( 'front-page/key-visual-sea-flowers-sp.png' ) ); ?>">
 		<img src="<?php echo esc_url( theme_image_url( 'front-page/key-visual-sea-flowers.png' ) ); ?>" width="2688" height="1408" alt="" loading="lazy">

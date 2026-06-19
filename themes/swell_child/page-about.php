@@ -21,7 +21,7 @@ get_template_part(
 );
 ?>
 
-<section class="p-sec-split" aria-labelledby="about-vision-title">
+<section class="p-sec-split u-pd-pt-3 u-pd-pb-1" aria-labelledby="about-vision-title">
 	<div class="p-sec-split__inner u-container">
 		<div class="p-sec-split__content">
 			<div class="p-sec-split__title c-sec-title u-fade-up">
@@ -48,7 +48,7 @@ get_template_part(
 
 <?php get_template_part( 'template-parts/sec-message' ); ?>
 
-<?php get_template_part( 'template-parts/sec-values', null, 'py' ); ?>
+<?php get_template_part( 'template-parts/sec-values', null, 'pt-5' ); ?>
 
 <?php get_template_part( 'template-parts/sec-company' ); ?>
 

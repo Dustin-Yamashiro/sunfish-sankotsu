@@ -5,16 +5,7 @@
 @use "../../foundation/variables" as *;
 
 .p-sec-message {
-  padding-block: 120px 140px;
   background-color: $color-white;
-
-  @include bp("tb") {
-    padding-block: 96px 120px;
-  }
-
-  @include bp("sp-l") {
-    padding-block: 72px 88px;
-  }
 
   &__inner {
     display: grid;

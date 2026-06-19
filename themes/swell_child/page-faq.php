@@ -35,7 +35,7 @@ get_template_part(
 );
 ?>
 
-<section class="l-faq" aria-labelledby="faq-list-title">
+<section class="l-faq u-pd-pt-4 u-pd-pb-6" aria-labelledby="faq-list-title">
 	<div class="l-faq__inner u-container">
 		<nav class="l-faq__nav" aria-label="FAQカテゴリー">
 			<ul class="l-faq__nav-list">

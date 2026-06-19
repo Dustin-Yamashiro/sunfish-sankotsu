@@ -58,29 +58,29 @@ get_template_part(
 
 <?php get_template_part( 'template-parts/sec-company', null, 'pale' ); ?>
 
-<section class="l-business" aria-labelledby="company-business-title">
-	<div class="l-business__inner u-container">
-		<div class="l-business__title c-sec-title c-sec-title--center u-fade-up">
+<section class="p-sec-business u-pd-pt-5 u-pd-pb-6" aria-labelledby="company-business-title">
+	<div class="p-sec-business__inner u-container">
+		<div class="p-sec-business__title c-sec-title c-sec-title--center u-fade-up">
 			<p class="c-sec-title__sub u-text-fade u-text-fade--chars">Company</p>
 			<h2 id="company-business-title" class="c-sec-title__main">その他の事業</h2>
 		</div>
 
-		<div class="l-business__list">
+		<div class="p-sec-business__list">
 			<?php foreach ( $company_business_items as $index => $item ) : ?>
-				<article class="l-business__item<?php echo 1 === $index ? ' l-business__item--reverse' : ''; ?>">
-					<div class="l-business__content">
-						<h3 class="l-business__item-title"><?php echo esc_html( $item['title'] ); ?></h3>
-						<div class="l-business__body">
+				<article class="p-sec-business__item<?php echo 1 === $index ? ' p-sec-business__item--reverse' : ''; ?>">
+					<div class="p-sec-business__content">
+						<h3 class="p-sec-business__item-title"><?php echo esc_html( $item['title'] ); ?></h3>
+						<div class="p-sec-business__body">
 							<?php foreach ( $item['texts'] as $text ) : ?>
 								<p><?php echo esc_html( $text ); ?></p>
 							<?php endforeach; ?>
 						</div>
-						<div class="l-business__button c-sec-btn c-sec-btn--next">
+						<div class="p-sec-business__button c-sec-btn c-sec-btn--next">
 							<a href="<?php echo esc_url( $item['url'] ); ?>" target="_blank" rel="noopener noreferrer">詳細はこちら</a>
 						</div>
 					</div>
 
-					<picture class="l-business__media">
+					<picture class="p-sec-business__media">
 						<img src="<?php echo esc_url( theme_image_url( $item['image'] ) ); ?>" width="511" height="511" alt="<?php echo esc_attr( $item['alt'] ); ?>" loading="lazy">
 					</picture>
 				</article>

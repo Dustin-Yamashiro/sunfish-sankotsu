@@ -21,7 +21,7 @@ get_template_part(
 );
 ?>
 
-<section class="p-sec-split" aria-labelledby="dairi-about-title">
+<section class="p-sec-split u-pd-pt-3" aria-labelledby="dairi-about-title">
 	<div class="p-sec-split__inner u-container">
 		<div class="p-sec-split__content">
 			<div class="p-sec-split__title c-sec-title u-fade-up">
@@ -65,7 +65,7 @@ $reason_items = array(
 );
 ?>
 
-<section class="p-sec-reason" aria-labelledby="dairi-reason-title">
+<section class="p-sec-reason u-pd-pt-5 u-pd-pb-6" aria-labelledby="dairi-reason-title">
 	<div class="p-sec-reason__inner u-container">
 		<h2 id="dairi-reason-title" class="p-sec-reason__title u-fade-up">このような「想い」の方に<br>選ばれています</h2>
 
@@ -181,7 +181,7 @@ $reason_items = array(
 
 <?php get_template_part( 'template-parts/sec-values' ); ?>
 
-<section class="p-sec-plan-detail" aria-labelledby="dairi-plan-detail-title">
+<section class="p-sec-plan-detail u-pd-pt-5 u-pd-pb-6" aria-labelledby="dairi-plan-detail-title">
 	<div class="p-sec-plan-detail__inner u-container">
 		<div class="p-sec-plan-detail__title c-sec-title c-sec-title--center">
 			<p class="c-sec-title__sub u-text-fade u-text-fade--chars">Plan Details</p>
@@ -446,7 +446,7 @@ $dairi_step_items = array(
 );
 ?>
 
-<section class="p-sec-step" aria-labelledby="dairi-step-title">
+<section class="p-sec-step u-pd-pt-5 u-pd-pb-6" aria-labelledby="dairi-step-title">
 	<picture class="p-sec-step__bg" aria-hidden="true">
 		<source media="(max-width: 740px)" srcset="<?php echo esc_url( theme_image_url( 'front-page/key-visual-sea-flowers-sp.png' ) ); ?>">
 		<img src="<?php echo esc_url( theme_image_url( 'front-page/key-visual-sea-flowers.png' ) ); ?>" width="2688" height="1408" alt="" loading="lazy">

@@ -10,7 +10,6 @@
 @use "layout/page/legal";
 @use "layout/page/faq";
 @use "layout/page/contact";
-@use "layout/page/business";
 
 @use "object/component/sec-title";
 @use "object/component/sec-btn";
@@ -27,6 +26,7 @@
 @use "object/project/sec-news";
 @use "object/project/sec-column";
 @use "object/project/sec-message";
+@use "object/project/sec-business";
 @use "object/project/sec-company";
 @use "object/project/sec-appeal";
 @use "object/project/sec-step-short";
@@ -34,4 +34,5 @@
 @use "object/utility/bg";
 @use "object/utility/br";
 @use "object/utility/container";
+@use "object/utility/u-pd";
 @use "object/utility/animation";
