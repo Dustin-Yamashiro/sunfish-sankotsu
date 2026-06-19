@@ -112,7 +112,7 @@ $footer_nav_columns = array(
 );
 ?>
 
-<div class="l-custom-footer-area u-bg--gradient">
+<div class="l-custom-footer-area u-bg--gradient my-setting">
 	<?php if ( $show_footer_contact ) : ?>
 		<section class="l-custom-footer-contact" aria-labelledby="footer-contact-title">
 			<div class="l-custom-footer-contact__inner u-container">

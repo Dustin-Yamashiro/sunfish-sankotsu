@@ -114,7 +114,7 @@ if ( ! function_exists( 'theme_uses_swell_content_shell' ) ) {
 	/**
 	 * Whether the current request should keep SWELL's standard content wrapper.
 	 *
-	 * Custom-designed pages use the child theme's `#primary.l-page` wrapper.
+	 * Custom-designed pages use the child theme's `#primary.my-setting` wrapper.
 	 * Posts, archives, search, and 404 screens rely on SWELL templates and need
 	 * `#content.l-content.l-container` plus sidebar/breadcrumb handling.
 	 *

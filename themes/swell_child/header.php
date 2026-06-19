@@ -63,7 +63,7 @@ $header_primary_links = array(
 
 $header_mobile_links = array_merge( $header_primary_links, $header_utility_links );
 ?>
-<header class="l-custom-header js-header">
+<header class="l-custom-header js-header my-setting">
 	<div class="l-custom-header__inner">
 		<a class="l-custom-header__logo" href="<?php echo esc_url( home_url( '/' ) ); ?>" aria-label="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>">
 			<img src="<?php echo esc_url( theme_image_url( 'header/logo.jpg' ) ); ?>" width="540" height="200" alt="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>">
@@ -164,7 +164,7 @@ $header_mobile_links = array_merge( $header_primary_links, $header_utility_links
 	</div>
 </header>
 <?php if ( theme_should_show_floating_contact() ) : ?>
-	<nav class="l-floating-contact" aria-label="固定問い合わせメニュー">
+	<nav class="l-floating-contact my-setting" aria-label="固定問い合わせメニュー">
 		<a class="l-floating-contact__link l-floating-contact__link--contact" href="<?php echo esc_url( home_url( '/contact/' ) ); ?>" aria-label="お問い合わせページへ移動">
 			<span class="l-floating-contact__icon" aria-hidden="true">
 				<img src="<?php echo esc_url( theme_image_url( 'header/icon-mail.svg' ) ); ?>" width="22" height="18" alt="">
@@ -203,5 +203,5 @@ $header_mobile_links = array_merge( $header_primary_links, $header_utility_links
 		?>
 <?php else : ?>
 	<?php theme_output_swell_breadcrumb( 'top' ); ?>
-	<main id="primary" class="l-page">
+	<main id="primary" class="my-setting">
 <?php endif; ?>
