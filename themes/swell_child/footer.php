@@ -116,8 +116,8 @@ $footer_nav_columns = array(
 	<?php if ( $show_footer_contact ) : ?>
 		<section class="l-custom-footer-contact" aria-labelledby="footer-contact-title">
 			<div class="l-custom-footer-contact__inner u-container">
-				<div class="c-sec-title c-sec-title--center c-sec-title--white">
-					<p class="c-sec-title__sub">Contact</p>
+				<div class="c-sec-title c-sec-title--center c-sec-title--white u-fade-up">
+					<p class="c-sec-title__sub u-text-fade u-text-fade--chars">Contact</p>
 					<h2 id="footer-contact-title" class="c-sec-title__main">お問い合わせ</h2>
 				</div>
 

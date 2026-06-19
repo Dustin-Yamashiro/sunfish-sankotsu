@@ -11,7 +11,7 @@ const initColumnSlider = () => {
   ).matches;
 
   sliders.forEach((slider) => {
-    const list = slider.querySelector(".l-sec-column__list");
+    const list = slider.querySelector(".p-sec-column__list");
     const slides = list ? Array.from(list.children) : [];
 
     if (!slides.length) {

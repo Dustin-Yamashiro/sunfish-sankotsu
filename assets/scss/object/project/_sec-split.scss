@@ -1,10 +1,10 @@
 /*
 * 共通スプリットセクション
 */
-@use "../foundation/mixin" as *;
-@use "../foundation/variables" as *;
+@use "../../foundation/mixin" as *;
+@use "../../foundation/variables" as *;
 
-.l-sec-split {
+.p-sec-split {
   overflow: hidden;
   background-color: $color-white;
 

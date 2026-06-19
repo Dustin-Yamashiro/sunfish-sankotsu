@@ -1,10 +1,10 @@
 /*
 * 共通FAQセクション
 */
-@use "../foundation/mixin" as *;
-@use "../foundation/variables" as *;
+@use "../../foundation/mixin" as *;
+@use "../../foundation/variables" as *;
 
-.l-sec-faq {
+.p-sec-faq {
   padding-block: 120px;
   background-color: $color-white;
 

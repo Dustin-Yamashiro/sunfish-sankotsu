@@ -1,10 +1,10 @@
 /*
 * トップページ訴求セクション
 */
-@use "../foundation/mixin" as *;
-@use "../foundation/variables" as *;
+@use "../../foundation/mixin" as *;
+@use "../../foundation/variables" as *;
 
-.l-front-appeal {
+.p-sec-appeal {
   overflow: hidden;
   padding-block: 120px 0;
   background-color: $color-white;

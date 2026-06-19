@@ -1,10 +1,10 @@
 /*
 * 会社概要セクション
 */
-@use "../foundation/mixin" as *;
-@use "../foundation/variables" as *;
+@use "../../foundation/mixin" as *;
+@use "../../foundation/variables" as *;
 
-.l-sec-company {
+.p-sec-company {
   padding-block: 120px;
   background-color: $color-white;
 

@@ -1,10 +1,10 @@
 /*
 * 共通お知らせセクション
 */
-@use "../foundation/mixin" as *;
-@use "../foundation/variables" as *;
+@use "../../foundation/mixin" as *;
+@use "../../foundation/variables" as *;
 
-.l-sec-news {
+.p-sec-news {
   padding-block: 120px;
   background-color: $color-gray;
 
@@ -54,7 +54,7 @@
   &__item {
     border-bottom: 1px solid rgba($color-main, 0.9);
 
-    &:first-child .l-sec-news__link {
+    &:first-child .p-sec-news__link {
       padding-top: 0;
     }
   }
@@ -79,7 +79,7 @@
       padding-block: 24px;
     }
 
-    &:hover .l-sec-news__item-title {
+    &:hover .p-sec-news__item-title {
       color: $color-main;
     }
   }

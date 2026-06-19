@@ -22,16 +22,16 @@ if ( $sec_column_category ) {
 
 $sec_column_query = new WP_Query( $sec_column_query_args );
 ?>
-<section class="l-sec-column" aria-labelledby="front-column-title">
-	<div class="l-sec-column__heading u-container">
-		<div class="l-sec-column__title c-sec-title c-sec-title--center u-fade-up">
+<section class="p-sec-column" aria-labelledby="front-column-title">
+	<div class="p-sec-column__heading u-container">
+		<div class="p-sec-column__title c-sec-title c-sec-title--center u-fade-up">
 			<p class="c-sec-title__sub u-text-fade u-text-fade--chars">Blog</p>
 			<h2 id="front-column-title" class="c-sec-title__main">海洋散骨コラム</h2>
 		</div>
 	</div>
 
-	<div class="l-sec-column__list-wrap u-container">
-		<div class="l-sec-column__slider splide js-column-slider" aria-label="海洋散骨コラム記事一覧">
+	<div class="p-sec-column__list-wrap u-container">
+		<div class="p-sec-column__slider splide js-column-slider" aria-label="海洋散骨コラム記事一覧">
 			<div class="splide__track">
 				<?php
 				SWELL_Theme::get_parts(
@@ -42,7 +42,7 @@ $sec_column_query = new WP_Query( $sec_column_query_args );
 							'type'           => 'card',
 							'max_col'        => '4',
 							'max_col_sp'     => '1',
-							'ul_add_class'   => 'l-sec-column__list splide__list',
+							'ul_add_class'   => 'p-sec-column__list splide__list',
 							'show_infeed'    => false,
 							'cat_pos'        => 'on_thumb',
 							'show_date'      => true,
@@ -58,8 +58,8 @@ $sec_column_query = new WP_Query( $sec_column_query_args );
 		</div>
 	</div>
 
-	<div class="l-sec-column__more-wrap u-container">
-		<div class="l-sec-column__more c-sec-btn c-sec-btn--next">
+	<div class="p-sec-column__more-wrap u-container">
+		<div class="p-sec-column__more c-sec-btn c-sec-btn--next">
 			<a href="<?php echo esc_url( home_url( '/column/' ) ); ?>">もっと見る</a>
 		</div>
 	</div>

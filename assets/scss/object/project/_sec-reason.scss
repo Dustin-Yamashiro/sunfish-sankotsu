@@ -1,10 +1,10 @@
 /*
 * 共通理由セクション
 */
-@use "../foundation/mixin" as *;
-@use "../foundation/variables" as *;
+@use "../../foundation/mixin" as *;
+@use "../../foundation/variables" as *;
 
-.l-sec-reason {
+.p-sec-reason {
   padding-block: 120px 160px;
   background-color: $color-white;
 

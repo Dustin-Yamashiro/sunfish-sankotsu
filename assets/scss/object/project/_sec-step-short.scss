@@ -1,10 +1,10 @@
 /*
 * トップページ散骨の流れセクション
 */
-@use "../foundation/mixin" as *;
-@use "../foundation/variables" as *;
+@use "../../foundation/mixin" as *;
+@use "../../foundation/variables" as *;
 
-.l-front-step {
+.p-sec-step-short {
   position: relative;
   isolation: isolate;
   overflow: hidden;

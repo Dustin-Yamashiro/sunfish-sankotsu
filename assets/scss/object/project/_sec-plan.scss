@@ -1,10 +1,10 @@
 /*
 * 共通プランセクション
 */
-@use "../foundation/mixin" as *;
-@use "../foundation/variables" as *;
+@use "../../foundation/mixin" as *;
+@use "../../foundation/variables" as *;
 
-.l-sec-plan {
+.p-sec-plan {
   overflow: hidden;
   padding-block: 120px 160px;
   background-color: $color-white;
@@ -57,58 +57,58 @@
 
     &--charter {
       @media screen and (width > 960px) {
-        .l-sec-plan__panel {
+        .p-sec-plan__panel {
           width: calc(100% + (50vw - 50%) - 260px);
           margin-left: calc(50% - 50vw);
           padding: 84px 340px 72px max(24px, calc((100vw - 1200px) / 2));
         }
 
-        .l-sec-plan__image {
+        .p-sec-plan__image {
           top: -92px;
           right: 0;
         }
       }
 
       @media screen and (960px < width <= 1100px) {
-        .l-sec-plan__panel {
+        .p-sec-plan__panel {
           width: calc(100% + (50vw - 50%) - 220px);
           padding-right: 292px;
         }
 
-        .l-sec-plan__image {
+        .p-sec-plan__image {
           top: -80px;
         }
       }
     }
 
     &--proxy {
-      .l-sec-plan__image {
+      .p-sec-plan__image {
         img {
           object-position: 42% 50%;
         }
       }
 
       @media screen and (width > 960px) {
-        .l-sec-plan__panel {
+        .p-sec-plan__panel {
           width: calc(100% + (50vw - 50%) - 260px);
           margin-left: 260px;
           padding: 84px max(24px, calc((100vw - 1200px) / 2)) 72px 340px;
         }
 
-        .l-sec-plan__image {
+        .p-sec-plan__image {
           top: -92px;
           left: 0;
         }
       }
 
       @media screen and (960px < width <= 1100px) {
-        .l-sec-plan__panel {
+        .p-sec-plan__panel {
           width: calc(100% + (50vw - 50%) - 220px);
           margin-left: 220px;
           padding-left: 292px;
         }
 
-        .l-sec-plan__image {
+        .p-sec-plan__image {
           top: -80px;
         }
       }

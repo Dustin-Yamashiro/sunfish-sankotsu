@@ -1,10 +1,10 @@
 /*
 * 共通こだわりセクション
 */
-@use "../foundation/mixin" as *;
-@use "../foundation/variables" as *;
+@use "../../foundation/mixin" as *;
+@use "../../foundation/variables" as *;
 
-.l-sec-values {
+.p-sec-values {
   padding-bottom: 160px;
   background-color: $color-gray;
 

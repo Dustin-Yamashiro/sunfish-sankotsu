@@ -1,10 +1,10 @@
 /*
 * 共通特徴セクション
 */
-@use "../foundation/mixin" as *;
-@use "../foundation/variables" as *;
+@use "../../foundation/mixin" as *;
+@use "../../foundation/variables" as *;
 
-.l-sec-feature {
+.p-sec-feature {
   position: relative;
   overflow-x: clip;
   overflow-y: visible;
@@ -400,7 +400,7 @@
   }
 
   &--compact {
-    .l-sec-feature__message {
+    .p-sec-feature__message {
       min-height: 0;
 
       &::before {
@@ -409,21 +409,21 @@
     }
 
     @include bp("tb") {
-      .l-sec-feature__message::before {
+      .p-sec-feature__message::before {
         height: calc(100% + 200px);
       }
 
-      .l-sec-feature__points {
+      .p-sec-feature__points {
         margin-top: 64px;
       }
     }
 
     @include bp("sp-l") {
-      .l-sec-feature__message::before {
+      .p-sec-feature__message::before {
         height: calc(100% + 160px);
       }
 
-      .l-sec-feature__points {
+      .p-sec-feature__points {
         margin-top: 56px;
       }
     }

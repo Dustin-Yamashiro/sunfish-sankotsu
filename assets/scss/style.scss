@@ -3,33 +3,33 @@
 @use "foundation/mixin";
 @use "foundation/base";
 
-@use "layout/custom-header";
-@use "layout/custom-footer";
-@use "layout/kv";
-@use "layout/page-kv";
-@use "layout/legal";
-@use "layout/faq";
-@use "layout/contact";
-@use "layout/sec-reason";
-@use "layout/sec-split";
-@use "layout/sec-feature";
-@use "layout/sec-values";
-@use "layout/sec-plan-detail";
-@use "layout/sec-step";
-@use "layout/sec-plan";
-@use "layout/sec-faq";
-@use "layout/sec-news";
-@use "layout/sec-column";
-@use "layout/sec-message";
-@use "layout/sec-company";
-@use "layout/business";
+@use "layout/common/custom-header";
+@use "layout/common/custom-footer";
+@use "layout/common/kv";
+@use "layout/common/page-kv";
+@use "layout/page/legal";
+@use "layout/page/faq";
+@use "layout/page/contact";
+@use "layout/page/business";
 
 @use "object/component/sec-title";
 @use "object/component/sec-btn";
-@use "object/project/faq-accordion";
+@use "object/component/faq-accordion";
 
-@use "layout/front-appeal";
-@use "layout/front-step";
+@use "object/project/sec-reason";
+@use "object/project/sec-split";
+@use "object/project/sec-feature";
+@use "object/project/sec-values";
+@use "object/project/sec-plan-detail";
+@use "object/project/sec-step";
+@use "object/project/sec-plan";
+@use "object/project/sec-faq";
+@use "object/project/sec-news";
+@use "object/project/sec-column";
+@use "object/project/sec-message";
+@use "object/project/sec-company";
+@use "object/project/sec-appeal";
+@use "object/project/sec-step-short";
 
 @use "object/utility/bg";
 @use "object/utility/br";

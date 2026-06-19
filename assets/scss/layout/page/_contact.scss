@@ -1,8 +1,8 @@
 /*
 * お問い合わせページ
 */
-@use "../foundation/mixin" as *;
-@use "../foundation/variables" as *;
+@use "../../foundation/mixin" as *;
+@use "../../foundation/variables" as *;
 
 .l-contact {
   color: $color-text;

@@ -4,7 +4,7 @@
 @use "../../foundation/mixin" as *;
 @use "../../foundation/variables" as *;
 
-.p-faq-accordion {
+.c-faq-accordion {
   display: grid;
   gap: var(--faq-accordion-gap, 24px);
 

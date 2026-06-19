@@ -46,14 +46,14 @@ $sec_faq_items      = array(
 	),
 );
 ?>
-<section class="l-sec-faq" aria-labelledby="front-faq-title">
-	<div class="l-sec-faq__inner u-container">
-		<div class="l-sec-faq__title c-sec-title c-sec-title--center u-fade-up">
+<section class="p-sec-faq" aria-labelledby="front-faq-title">
+	<div class="p-sec-faq__inner u-container">
+		<div class="p-sec-faq__title c-sec-title c-sec-title--center u-fade-up">
 			<p class="c-sec-title__sub u-text-fade u-text-fade--chars">FAQ</p>
 			<h2 id="front-faq-title" class="c-sec-title__main">よくある質問</h2>
 		</div>
 
-		<div class="l-sec-faq__list">
+		<div class="p-sec-faq__list">
 			<?php
 			get_template_part(
 				'template-parts/faq-accordion',
@@ -66,7 +66,7 @@ $sec_faq_items      = array(
 			?>
 		</div>
 
-		<div class="l-sec-faq__more c-sec-btn c-sec-btn--next">
+		<div class="p-sec-faq__more c-sec-btn c-sec-btn--next">
 			<a href="<?php echo esc_url( home_url( '/faq/' ) ); ?>">もっとみる</a>
 		</div>
 	</div>

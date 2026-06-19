@@ -1,10 +1,10 @@
 /*
 * 代表メッセージセクション
 */
-@use "../foundation/mixin" as *;
-@use "../foundation/variables" as *;
+@use "../../foundation/mixin" as *;
+@use "../../foundation/variables" as *;
 
-.l-sec-message {
+.p-sec-message {
   padding-block: 120px 140px;
   background-color: $color-white;
 

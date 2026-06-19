@@ -1,10 +1,10 @@
 /*
 * 共通コラムセクション
 */
-@use "../foundation/mixin" as *;
-@use "../foundation/variables" as *;
+@use "../../foundation/mixin" as *;
+@use "../../foundation/variables" as *;
 
-.l-sec-column {
+.p-sec-column {
   padding-block: 120px;
   background-color: $color-white;
 

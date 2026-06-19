@@ -18,12 +18,12 @@ get_header();
 	</div>
 </section>
 
-<section class="l-front-appeal" aria-labelledby="front-appeal-title">
-	<div class="l-front-appeal__main u-container">
-		<div class="l-front-appeal__content">
-			<h2 id="front-appeal-title" class="l-front-appeal__title u-fade-up">お墓ではない<br>「想い」を残す、供養のカタチ</h2>
-			<div class="l-front-appeal__body">
-				<ul class="l-front-appeal__list">
+<section class="p-sec-appeal" aria-labelledby="sec-appeal-title">
+	<div class="p-sec-appeal__main u-container">
+		<div class="p-sec-appeal__content">
+			<h2 id="sec-appeal-title" class="p-sec-appeal__title u-fade-up">お墓ではない<br>「想い」を残す、供養のカタチ</h2>
+			<div class="p-sec-appeal__body">
+				<ul class="p-sec-appeal__list">
 					<li>お墓を継ぐ人がいない。</li>
 					<li>子どもや孫に負担を残したくない。</li>
 					<li>墓じまい後の遺骨の供養先に悩んでいる。</li>
@@ -34,75 +34,75 @@ get_header();
 			</div>
 		</div>
 
-		<div class="l-front-appeal__collage">
-			<picture class="l-front-appeal__photo l-front-appeal__photo--01 u-photo-fade u-photo-fade--left">
+		<div class="p-sec-appeal__collage">
+			<picture class="p-sec-appeal__photo p-sec-appeal__photo--01 u-photo-fade u-photo-fade--left">
 				<img src="<?php echo esc_url( theme_image_url( 'front-page/appeal/beach-wave.jpg' ) ); ?>" width="204" height="147" alt="石垣島の砂浜に寄せる透明な波" loading="lazy">
 			</picture>
-			<picture class="l-front-appeal__photo l-front-appeal__photo--02 u-photo-fade u-photo-fade--right">
+			<picture class="p-sec-appeal__photo p-sec-appeal__photo--02 u-photo-fade u-photo-fade--right">
 				<img src="<?php echo esc_url( theme_image_url( 'front-page/appeal/floating-flowers.png' ) ); ?>" width="288" height="216" alt="石垣島の海に浮かぶ色とりどりの花" loading="lazy">
 			</picture>
-			<picture class="l-front-appeal__photo l-front-appeal__photo--03 u-photo-fade u-photo-fade--left">
+			<picture class="p-sec-appeal__photo p-sec-appeal__photo--03 u-photo-fade u-photo-fade--left">
 				<img src="<?php echo esc_url( theme_image_url( 'front-page/appeal/scattering-flowers.png' ) ); ?>" width="316" height="337" alt="船上から石垣島の海へ花を手向ける手元" loading="lazy">
 			</picture>
-			<picture class="l-front-appeal__photo l-front-appeal__photo--04 u-photo-fade u-photo-fade--right">
+			<picture class="p-sec-appeal__photo p-sec-appeal__photo--04 u-photo-fade u-photo-fade--right">
 				<img src="<?php echo esc_url( theme_image_url( 'front-page/appeal/boat-sky.jpg' ) ); ?>" width="268" height="335" alt="船上から見える石垣島の穏やかな海と青空" loading="lazy">
 			</picture>
 		</div>
 	</div>
 
-	<div class="l-front-appeal__choice">
+	<div class="p-sec-appeal__choice">
 		<div class="u-container">
-			<p class="l-front-appeal__choice-text">
-				<span class="l-front-appeal__choice-prefix">その想いに</span>
-				<span class="l-front-appeal__choice-keyword u-text-fade">“海洋散骨”</span>
-				<span class="l-front-appeal__choice-suffix">という選択肢を</span>
+			<p class="p-sec-appeal__choice-text">
+				<span class="p-sec-appeal__choice-prefix">その想いに</span>
+				<span class="p-sec-appeal__choice-keyword u-text-fade">“海洋散骨”</span>
+				<span class="p-sec-appeal__choice-suffix">という選択肢を</span>
 			</p>
 		</div>
 	</div>
 </section>
 
-<section class="l-sec-split l-sec-split--front" aria-labelledby="front--title">
-	<div class="l-sec-split__inner u-container">
-		<div class="l-sec-split__content">
-			<div class="l-sec-split__title c-sec-title u-fade-up">
+<section class="p-sec-split p-sec-split--front" aria-labelledby="front--title">
+	<div class="p-sec-split__inner u-container">
+		<div class="p-sec-split__content">
+			<div class="p-sec-split__title c-sec-title u-fade-up">
 				<p class="c-sec-title__sub u-text-fade u-text-fade--chars">Introduction</p>
 				<h2 id="front--title" class="c-sec-title__main">海洋散骨とは</h2>
 			</div>
-			<div class="l-sec-split__body">
+			<div class="p-sec-split__body">
 				<p>海洋散骨とは、お墓へ納骨する代わりに、ご遺骨を粉骨して海へ供養する自然葬の一つです。</p>
 				<p>ただ海に還すだけでなく、散骨した海をこれからも故人様を想う場所として残す、新しい供養のカタチ。</p>
 				<p>石垣島海洋散骨センターでは、海洋散骨が初めての方でも安心して故人様をお見送りできるよう、分かりやすく丁寧にサポートいたします。</p>
 			</div>
 		</div>
 
-		<div class="l-sec-split__visual">
-			<picture class="l-sec-split__image l-sec-split__image--01">
+		<div class="p-sec-split__visual">
+			<picture class="p-sec-split__image p-sec-split__image--01">
 				<img src="<?php echo esc_url( theme_image_url( 'front-page/introduction/intro-sub.png' ) ); ?>" width="254" height="170" alt="船のそばの海面に浮かぶ白い花" loading="lazy">
 			</picture>
-			<picture class="l-sec-split__image l-sec-split__image--02">
+			<picture class="p-sec-split__image p-sec-split__image--02">
 				<img src="<?php echo esc_url( theme_image_url( 'front-page/introduction/intro-main.png' ) ); ?>" width="500" height="333" alt="石垣島の海に向かって船上で花を手向ける人" loading="lazy">
 			</picture>
 		</div>
 
-		<div class="l-sec-split__button c-sec-btn c-sec-btn--next">
+		<div class="p-sec-split__button c-sec-btn c-sec-btn--next">
 			<a href="<?php echo esc_url( home_url( '/beginner/' ) ); ?>">初めての方へ</a>
 		</div>
 	</div>
 </section>
 
-<section class="l-sec-feature js-feature-sec" aria-labelledby="feature-sec-title" data-feature-sec>
-	<div class="l-sec-feature__inner u-container">
-		<div class="l-sec-feature__message">
-			<div class="l-sec-feature__title c-sec-title u-fade-up c-sec-title--white">
+<section class="p-sec-feature js-feature-sec" aria-labelledby="feature-sec-title" data-feature-sec>
+	<div class="p-sec-feature__inner u-container">
+		<div class="p-sec-feature__message">
+			<div class="p-sec-feature__title c-sec-title u-fade-up c-sec-title--white">
 				<p class="c-sec-title__sub u-text-fade u-text-fade--chars">About</p>
 				<h2 id="feature-sec-title" class="c-sec-title__main">故人様を想える海を、<br>これからも</h2>
 			</div>
-			<div class="l-sec-feature__body">
+			<div class="p-sec-feature__body">
 				<p>石垣島海洋散骨センターは、石垣島近海での海洋散骨を専門に行っています。</p>
 				<p>私たちが大切にしているのは、海洋散骨を「最後のお別れ」で終わらせないこと。</p>
 				<p>ご相談から散骨後の供養まで、ご家族が安心して故人様を見送れるよう、ひとつひとつ丁寧にご案内します。</p>
 			</div>
-			<div class="l-sec-feature__button c-sec-btn c-sec-btn--next c-sec-btn--white">
+			<div class="p-sec-feature__button c-sec-btn c-sec-btn--next c-sec-btn--white">
 				<a href="<?php echo esc_url( home_url( '/about/' ) ); ?>">私たちについて</a>
 			</div>
 		</div>
@@ -139,28 +139,28 @@ get_header();
 		);
 		?>
 
-		<div class="l-sec-feature__points" data-feature-sec-points>
-			<ol class="l-sec-feature__point-list">
+		<div class="p-sec-feature__points" data-feature-sec-points>
+			<ol class="p-sec-feature__point-list">
 				<?php foreach ( $features as $i => $item ) : ?>
 					<?php
 					$number       = $i + 1;
 					$class_number = sprintf( '%02d', $number );
 					?>
-					<li class="l-sec-feature__point-item l-sec-feature__point-item--<?php echo esc_attr( $class_number ); ?><?php echo 0 === $i ? ' is-active' : ''; ?>" data-feature-sec-card data-point-index="<?php echo esc_attr( $number ); ?>">
-						<article class="l-sec-feature__point-card">
-							<div class="l-sec-feature__point-content">
-								<p class="l-sec-feature__point-label">
-									<span class="l-sec-feature__point-text">Point</span>
-									<span class="l-sec-feature__point-number"><?php echo esc_html( $number ); ?></span>
+					<li class="p-sec-feature__point-item p-sec-feature__point-item--<?php echo esc_attr( $class_number ); ?><?php echo 0 === $i ? ' is-active' : ''; ?>" data-feature-sec-card data-point-index="<?php echo esc_attr( $number ); ?>">
+						<article class="p-sec-feature__point-card">
+							<div class="p-sec-feature__point-content">
+								<p class="p-sec-feature__point-label">
+									<span class="p-sec-feature__point-text">Point</span>
+									<span class="p-sec-feature__point-number"><?php echo esc_html( $number ); ?></span>
 								</p>
-								<h3 class="l-sec-feature__point-title"><?php echo esc_html( $item['title'] ); ?></h3>
-								<div class="l-sec-feature__point-body">
+								<h3 class="p-sec-feature__point-title"><?php echo esc_html( $item['title'] ); ?></h3>
+								<div class="p-sec-feature__point-body">
 									<?php foreach ( $item['texts'] as $text ) : ?>
 										<p><?php echo esc_html( $text ); ?></p>
 									<?php endforeach; ?>
 								</div>
 							</div>
-							<picture class="l-sec-feature__point-image">
+							<picture class="p-sec-feature__point-image">
 								<img src="<?php echo esc_url( theme_image_url( $item['image'] ) ); ?>" width="292" height="336" alt="<?php echo esc_attr( $item['alt'] ); ?>" loading="lazy">
 							</picture>
 						</article>
@@ -169,11 +169,11 @@ get_header();
 			</ol>
 		</div>
 
-		<div class="l-sec-feature__scrollbar" aria-hidden="true">
-			<span class="l-sec-feature__scrollbar-thumb" data-feature-sec-scrollbar></span>
+		<div class="p-sec-feature__scrollbar" aria-hidden="true">
+			<span class="p-sec-feature__scrollbar-thumb" data-feature-sec-scrollbar></span>
 		</div>
 
-		<img class="l-sec-feature__island" src="<?php echo esc_url( theme_image_url( 'front-page/about/ishigaki.svg' ) ); ?>" width="300" height="375" alt="" loading="lazy" aria-hidden="true">
+		<img class="p-sec-feature__island" src="<?php echo esc_url( theme_image_url( 'front-page/about/ishigaki.svg' ) ); ?>" width="300" height="375" alt="" loading="lazy" aria-hidden="true">
 	</div>
 </section>
 
@@ -219,38 +219,38 @@ $items = array(
 	),
 );
 ?>
-<section class="l-front-step" aria-labelledby="front-step-title">
-	<picture class="l-front-step__bg" aria-hidden="true">
+<section class="p-sec-step-short" aria-labelledby="sec-step-short-title">
+	<picture class="p-sec-step-short__bg" aria-hidden="true">
 		<source media="(max-width: 740px)" srcset="<?php echo esc_url( theme_image_url( 'front-page/key-visual-sea-flowers-sp.png' ) ); ?>">
 		<img src="<?php echo esc_url( theme_image_url( 'front-page/key-visual-sea-flowers.png' ) ); ?>" width="2688" height="1408" alt="" loading="lazy">
 	</picture>
 
-	<div class="l-front-step__inner u-container">
-		<div class="l-front-step__title c-sec-title c-sec-title--white c-sec-title--center u-fade-up">
+	<div class="p-sec-step-short__inner u-container">
+		<div class="p-sec-step-short__title c-sec-title c-sec-title--white c-sec-title--center u-fade-up">
 			<p class="c-sec-title__sub u-text-fade">Step</p>
-			<h2 id="front-step-title" class="c-sec-title__main">散骨の流れ</h2>
+			<h2 id="sec-step-short-title" class="c-sec-title__main">散骨の流れ</h2>
 		</div>
 
-		<ol class="l-front-step__list u-fade-up-group">
+		<ol class="p-sec-step-short__list u-fade-up-group">
 			<?php foreach ( $items as $item ) : ?>
-				<li class="l-front-step__item u-fade-up-item">
-					<article class="l-front-step__card">
-						<p class="l-front-step__label">
-							<span class="l-front-step__label-text">Step</span>
-							<span class="l-front-step__number"><?php echo esc_html( $item['number'] ); ?></span>
+				<li class="p-sec-step-short__item u-fade-up-item">
+					<article class="p-sec-step-short__card">
+						<p class="p-sec-step-short__label">
+							<span class="p-sec-step-short__label-text">Step</span>
+							<span class="p-sec-step-short__number"><?php echo esc_html( $item['number'] ); ?></span>
 						</p>
-						<div class="l-front-step__icon">
+						<div class="p-sec-step-short__icon">
 							<img src="<?php echo esc_url( theme_image_url( $item['image'] ) ); ?>" width="128" height="128" alt="<?php echo esc_attr( $item['alt'] ); ?>">
 						</div>
-						<h3 class="l-front-step__name"><?php echo esc_html( $item['title'] ); ?></h3>
+						<h3 class="p-sec-step-short__name"><?php echo esc_html( $item['title'] ); ?></h3>
 					</article>
 				</li>
 			<?php endforeach; ?>
 		</ol>
 
-		<div class="l-front-step__message">
-			<h4 class="l-front-step__lead u-bg-wipe">初めての海洋散骨も、<br class="u-br--sp">一つずつ丁寧にご案内します。</h4>
-			<div class="l-front-step__body">
+		<div class="p-sec-step-short__message">
+			<h4 class="p-sec-step-short__lead u-bg-wipe">初めての海洋散骨も、<br class="u-br--sp">一つずつ丁寧にご案内します。</h4>
+			<div class="p-sec-step-short__body">
 				<p>海洋散骨が初めての方もご安心ください。</p>
 				<p>石垣島海洋散骨センターでは、<br class="u-br--sp">ご遺族様の不安やご希望を伺いながら、<br>最後までサポートします。</p>
 			</div>

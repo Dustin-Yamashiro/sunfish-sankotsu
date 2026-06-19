@@ -1,10 +1,10 @@
 /*
 * 共通プラン詳細セクション
 */
-@use "../foundation/mixin" as *;
-@use "../foundation/variables" as *;
+@use "../../foundation/mixin" as *;
+@use "../../foundation/variables" as *;
 
-.l-sec-plan-detail {
+.p-sec-plan-detail {
   padding-block: 120px 160px;
   background-color: $color-white;
 
