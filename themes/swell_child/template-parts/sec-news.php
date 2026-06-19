@@ -16,7 +16,7 @@ $sec_news_query_args = array(
 	'no_found_rows'       => true,
 );
 
-if ( $sec_news_category ) {
+if ( $sec_news_category && 0 < (int) $sec_news_category->count ) {
 	$sec_news_query_args['cat'] = (int) $sec_news_category->term_id;
 }
 

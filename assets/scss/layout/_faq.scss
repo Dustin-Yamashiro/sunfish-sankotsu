@@ -1,0 +1,136 @@
+/*
+* よくある質問ページ
+*/
+@use "../foundation/mixin" as *;
+@use "../foundation/variables" as *;
+
+.l-faq {
+  padding-block: 120px 160px;
+  background-color: $color-white;
+
+  @include bp("tb") {
+    padding-block: 96px 128px;
+  }
+
+  @include bp("sp-l") {
+    padding-block: 72px 96px;
+  }
+
+  &__inner {
+    display: grid;
+    grid-template-columns: minmax(220px, 280px) minmax(0, 760px);
+    gap: 80px;
+    align-items: start;
+    max-width: 1200px;
+
+    @include bp("tb") {
+      grid-template-columns: 1fr;
+      gap: 64px;
+      max-width: 760px;
+    }
+
+    @include bp("sp-l") {
+      gap: 48px;
+    }
+  }
+
+  &__nav {
+    position: sticky;
+    top: 120px;
+    padding: 40px 28px;
+    background: $gradient-main;
+
+    @include bp("tb") {
+      position: static;
+      padding: 32px;
+    }
+
+    @include bp("sp-l") {
+      padding: 28px 24px;
+    }
+  }
+
+  &__nav-list {
+    display: grid;
+    gap: 24px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    @include bp("tb") {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 20px 24px;
+    }
+
+    @include bp("sp-l") {
+      grid-template-columns: 1fr;
+      gap: 18px;
+    }
+  }
+
+  &__nav-link {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    justify-content: space-between;
+    color: $color-white;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.6;
+    letter-spacing: 0.08em;
+    text-decoration: none;
+
+    &::after {
+      flex: 0 0 auto;
+      width: 8px;
+      height: 8px;
+      border-right: 2px solid currentColor;
+      border-bottom: 2px solid currentColor;
+      content: "";
+      opacity: 0.85;
+      transform: rotate(45deg) translateY(-2px);
+    }
+  }
+
+  &__content {
+    display: grid;
+    gap: 80px;
+
+    @include bp("tb") {
+      gap: 72px;
+    }
+
+    @include bp("sp-l") {
+      gap: 64px;
+    }
+  }
+
+  &__hidden-title {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+  }
+
+  &__heading {
+    margin: 0 0 40px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid $color-main;
+    color: $color-text;
+    font-family: $font-heading;
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 1.5;
+    letter-spacing: 0.08em;
+
+    @include bp("sp-l") {
+      margin-bottom: 32px;
+      padding-bottom: 20px;
+      font-size: 24px;
+      letter-spacing: 0.06em;
+    }
+  }
+}

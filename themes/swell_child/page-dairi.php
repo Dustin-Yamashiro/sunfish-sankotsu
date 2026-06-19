@@ -10,15 +10,16 @@
 get_header();
 ?>
 
-<section class="l-page-kv" aria-labelledby="dairi-page-title">
-	<picture class="l-page-kv__media">
-		<source media="(max-width: 740px)" srcset="<?php echo esc_url( theme_image_url( 'front-page/key-visual-sea-flowers-sp.png' ) ); ?>">
-		<img src="<?php echo esc_url( theme_image_url( 'front-page/key-visual-sea-flowers.png' ) ); ?>" width="100%" height="320" alt="散骨の献花をしている写真" fetchpriority="high">
-	</picture>
-	<div class="l-page-kv__inner u-container">
-		<h1 id="dairi-page-title" class="l-page-kv__title u-bg-wipe u-bg-wipe--load">代理散骨プラン</h1>
-	</div>
-</section>
+<?php
+get_template_part(
+	'template-parts/page-kv',
+	null,
+	array(
+		'id'    => 'dairi-page-title',
+		'title' => '代理散骨プラン',
+	)
+);
+?>
 
 <section class="l-sec-split" aria-labelledby="dairi-about-title">
 	<div class="l-sec-split__inner u-container">
@@ -192,7 +193,7 @@ $reason_items = array(
 				<dt class="l-sec-plan-detail__label">料金</dt>
 				<dd class="l-sec-plan-detail__value">
 					<p class="l-sec-plan-detail__text l-sec-plan-detail__text--lead">55,000円 〜</p>
-					<p class="l-sec-plan-detail__text">※粉骨加工費用が別途33,000円〜かかります。</p>
+					<p class="l-sec-plan-detail__text l-sec-plan-detail__text--note">※粉骨加工費用が別途33,000円〜かかります。</p>
 				</dd>
 			</div>
 
@@ -200,7 +201,7 @@ $reason_items = array(
 				<dt class="l-sec-plan-detail__label">散骨エリア</dt>
 				<dd class="l-sec-plan-detail__value">
 					<p class="l-sec-plan-detail__text l-sec-plan-detail__text--lead">石垣島近海</p>
-					<p class="l-sec-plan-detail__text">※遺骨受領後、最適な海域へ出航します。</p>
+					<p class="l-sec-plan-detail__text l-sec-plan-detail__text--note">※遺骨受領後、最適な海域へ出航します。</p>
 				</dd>
 			</div>
 

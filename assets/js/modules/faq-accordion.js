@@ -7,7 +7,7 @@ const initFaqAccordion = () => {
     buttons.forEach((button) => {
       const panelId = button.getAttribute("aria-controls");
       const panel = panelId ? document.getElementById(panelId) : null;
-      const item = button.closest(".l-sec-faq__item");
+      const item = button.closest(".js-faq-accordion-item");
 
       if (!panel || !item) {
         return;

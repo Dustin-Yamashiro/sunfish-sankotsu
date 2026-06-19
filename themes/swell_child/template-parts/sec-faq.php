@@ -53,32 +53,17 @@ $sec_faq_items      = array(
 			<h2 id="front-faq-title" class="c-sec-title__main">よくある質問</h2>
 		</div>
 
-		<div class="l-sec-faq__list js-faq-accordion">
-			<?php foreach ( $sec_faq_items as $faq_index => $faq_item ) : ?>
-				<?php
-				$faq_number   = $faq_index + 1;
-				$faq_panel_id = $sec_faq_panel_base . '-panel-' . $faq_number;
-				?>
-				<section class="l-sec-faq__item">
-					<h3 class="l-sec-faq__question">
-						<button class="l-sec-faq__trigger js-faq-accordion-button" type="button" aria-expanded="false" aria-controls="<?php echo esc_attr( $faq_panel_id ); ?>">
-							<span class="l-sec-faq__mark l-sec-faq__mark--question" aria-hidden="true">Q.</span>
-							<span class="l-sec-faq__question-text"><?php echo esc_html( $faq_item['question'] ); ?></span>
-							<span class="l-sec-faq__toggle-icon" aria-hidden="true"></span>
-						</button>
-					</h3>
-					<div id="<?php echo esc_attr( $faq_panel_id ); ?>" class="l-sec-faq__answer js-faq-accordion-panel" aria-hidden="true">
-						<div class="l-sec-faq__answer-inner">
-							<span class="l-sec-faq__mark l-sec-faq__mark--answer" aria-hidden="true">A.</span>
-							<div class="l-sec-faq__answer-body">
-								<?php foreach ( $faq_item['answer'] as $faq_answer ) : ?>
-									<p><?php echo esc_html( $faq_answer ); ?></p>
-								<?php endforeach; ?>
-							</div>
-						</div>
-					</div>
-				</section>
-			<?php endforeach; ?>
+		<div class="l-sec-faq__list">
+			<?php
+			get_template_part(
+				'template-parts/faq-accordion',
+				null,
+				array(
+					'items'   => $sec_faq_items,
+					'id_base' => $sec_faq_panel_base,
+				)
+			);
+			?>
 		</div>
 
 		<div class="l-sec-faq__more c-sec-btn c-sec-btn--next">

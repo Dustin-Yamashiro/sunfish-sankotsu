@@ -17,7 +17,7 @@
 				<span class="c-sec-title__main-line">石垣島海洋散骨センターの</span>
 				<span class="c-sec-title__main-line">
 					<span class="c-sec-title__main-accent">3つ</span>
-					<span class="c-sec-title__main-suffix">のこだわり</span>
+					<span>のこだわり</span>
 				</span>
 			</h2>
 		</div>

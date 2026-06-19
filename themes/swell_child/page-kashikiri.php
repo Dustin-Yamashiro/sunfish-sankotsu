@@ -10,15 +10,16 @@
 get_header();
 ?>
 
-<section class="l-page-kv" aria-labelledby="kashikiri-page-title">
-	<picture class="l-page-kv__media">
-		<source media="(max-width: 740px)" srcset="<?php echo esc_url( theme_image_url( 'front-page/key-visual-sea-flowers-sp.png' ) ); ?>">
-		<img src="<?php echo esc_url( theme_image_url( 'front-page/key-visual-sea-flowers.png' ) ); ?>" width="100%" height="320" alt="散骨の献花をしている写真" fetchpriority="high">
-	</picture>
-	<div class="l-page-kv__inner u-container">
-		<h1 id="kashikiri-page-title" class="l-page-kv__title u-bg-wipe u-bg-wipe--load">貸切散骨プラン</h1>
-	</div>
-</section>
+<?php
+get_template_part(
+	'template-parts/page-kv',
+	null,
+	array(
+		'id'    => 'kashikiri-page-title',
+		'title' => '貸切散骨プラン',
+	)
+);
+?>
 
 <section class="l-sec-split" aria-labelledby="kashikiri-about-title">
 	<div class="l-sec-split__inner u-container">
@@ -199,7 +200,7 @@ $reason_items = array(
 				<dt class="l-sec-plan-detail__label">乗船定員</dt>
 				<dd class="l-sec-plan-detail__value">
 					<p class="l-sec-plan-detail__text l-sec-plan-detail__text--lead">最大10名様まで</p>
-					<p class="l-sec-plan-detail__text">※ご家族だけでゆったりとお過ごしいただけるよう、少人数制を基本としています。10名以上の場合は別途ご相談ください</p>
+					<p class="l-sec-plan-detail__text l-sec-plan-detail__text--note">※ご家族だけでゆったりとお過ごしいただけるよう、少人数制を基本としています。10名以上の場合は別途ご相談ください</p>
 				</dd>
 			</div>
 
@@ -207,7 +208,7 @@ $reason_items = array(
 				<dt class="l-sec-plan-detail__label">乗船場所</dt>
 				<dd class="l-sec-plan-detail__value">
 					<p class="l-sec-plan-detail__text l-sec-plan-detail__text--lead">石垣港 浜崎マリーナ（または石垣漁港）</p>
-					<p class="l-sec-plan-detail__text">※市街地のホテルから車で約5～10分。送迎については事前相談にて承ります。</p>
+					<p class="l-sec-plan-detail__text l-sec-plan-detail__text--note">※市街地のホテルから車で約5～10分。送迎については事前相談にて承ります。</p>
 				</dd>
 			</div>
 
@@ -215,7 +216,7 @@ $reason_items = array(
 				<dt class="l-sec-plan-detail__label">所要時間</dt>
 				<dd class="l-sec-plan-detail__value">
 					<p class="l-sec-plan-detail__text l-sec-plan-detail__text--lead">約60分～90分（港からの往復移動を含む）</p>
-					<p class="l-sec-plan-detail__text">※セレモニー自体は約20～30分、移動時間は片道約15～20分程度です</p>
+					<p class="l-sec-plan-detail__text l-sec-plan-detail__text--note">※セレモニー自体は約20～30分、移動時間は片道約15～20分程度です</p>
 				</dd>
 			</div>
 

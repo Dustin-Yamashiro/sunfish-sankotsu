@@ -10,15 +10,16 @@
 get_header();
 ?>
 
-<section class="l-page-kv" aria-labelledby="about-page-title">
-	<picture class="l-page-kv__media">
-		<source media="(max-width: 740px)" srcset="<?php echo esc_url( theme_image_url( 'front-page/key-visual-sea-flowers-sp.png' ) ); ?>">
-		<img src="<?php echo esc_url( theme_image_url( 'front-page/key-visual-sea-flowers.png' ) ); ?>" width="2688" height="1408" alt="石垣島の海に花を手向ける様子" fetchpriority="high">
-	</picture>
-	<div class="l-page-kv__inner u-container">
-		<h1 id="about-page-title" class="l-page-kv__title u-bg-wipe u-bg-wipe--load">私たちについて</h1>
-	</div>
-</section>
+<?php
+get_template_part(
+	'template-parts/page-kv',
+	null,
+	array(
+		'id'    => 'about-page-title',
+		'title' => '私たちについて',
+	)
+);
+?>
 
 <section class="l-sec-split" aria-labelledby="about-vision-title">
 	<div class="l-sec-split__inner u-container">

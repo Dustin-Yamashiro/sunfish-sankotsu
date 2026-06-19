@@ -10,15 +10,16 @@
 get_header();
 ?>
 
-<section class="l-page-kv" aria-labelledby="beginner-page-title">
-	<picture class="l-page-kv__media">
-		<source media="(max-width: 740px)" srcset="<?php echo esc_url( theme_image_url( 'front-page/key-visual-sea-flowers-sp.png' ) ); ?>">
-		<img src="<?php echo esc_url( theme_image_url( 'front-page/key-visual-sea-flowers.png' ) ); ?>" width="2688" height="1408" alt="石垣島の海に花を手向ける様子" fetchpriority="high">
-	</picture>
-	<div class="l-page-kv__inner u-container">
-		<h1 id="beginner-page-title" class="l-page-kv__title u-bg-wipe u-bg-wipe--load">初めての方へ</h1>
-	</div>
-</section>
+<?php
+get_template_part(
+	'template-parts/page-kv',
+	null,
+	array(
+		'id'    => 'beginner-page-title',
+		'title' => '初めての方へ',
+	)
+);
+?>
 
 <section class="l-sec-split" aria-labelledby="beginner-introduction-title">
 	<div class="l-sec-split__inner u-container">

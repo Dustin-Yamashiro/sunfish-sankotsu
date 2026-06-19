@@ -1,10 +1,6 @@
 @use "../foundation/variables" as *;
 @use "../foundation/mixin" as *;
 
-html {
-  scroll-behavior: smooth;
-}
-
 body {
   font-size: $base-font-size;
   line-height: $base-line-height;

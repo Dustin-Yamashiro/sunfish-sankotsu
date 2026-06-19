@@ -27,6 +27,14 @@
     --sec-btn-hover-color: #{$color-main};
   }
 
+  &.c-sec-btn--center > a,
+  &.c-sec-btn--center > button {
+    position: relative;
+    justify-content: center;
+    padding-inline: 44px;
+    text-align: center;
+  }
+
   &--prev > a::before,
   &--prev > button::before {
     content: "←";
@@ -41,6 +49,18 @@
     transition: transform $duration-base $ease-base;
   }
 
+  &.c-sec-btn--center.c-sec-btn--prev > a::before,
+  &.c-sec-btn--center.c-sec-btn--prev > button::before {
+    position: absolute;
+    left: 20px;
+  }
+
+  &.c-sec-btn--center.c-sec-btn--next > a::after,
+  &.c-sec-btn--center.c-sec-btn--next > button::after {
+    position: absolute;
+    right: 20px;
+  }
+
   & > a,
   & > button {
     display: inline-flex;
@@ -49,7 +69,8 @@
     gap: 16px;
     inline-size: 100%;
     min-height: 4px;
-    padding: 10px 20px;
+    padding-block: 0.625em;
+    padding-inline: 20px;
     border: 1px solid var(--sec-btn-color);
     background-color: var(--sec-btn-bg);
     color: var(--sec-btn-color);

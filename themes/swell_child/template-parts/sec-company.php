@@ -6,9 +6,11 @@
  *
  * @package SunfishSankotsu
  */
+
+$section_modifier = is_string( $args ) && '' !== $args ? ' l-sec-company--' . sanitize_html_class( $args ) : '';
 ?>
 
-<section class="l-sec-company" aria-labelledby="about-company-title">
+<section class="l-sec-company<?php echo esc_attr( $section_modifier ); ?>" aria-labelledby="about-company-title">
 	<div class="l-sec-company__inner u-container">
 		<div class="l-sec-company__title c-sec-title c-sec-title--center u-fade-up">
 			<p class="c-sec-title__sub u-text-fade u-text-fade--chars">Company</p>
