@@ -238,7 +238,7 @@ $reason_items = array(
 			<div class="p-sec-plan-detail__row">
 				<dt class="p-sec-plan-detail__label">キャンセル対応</dt>
 				<dd class="p-sec-plan-detail__value">
-					<p class="p-sec-plan-detail__text">詳しくは<a href="<?php echo esc_url( home_url( '/policy/' ) ); ?>">キャンセルポリシーページ</a>を閲覧ください</p>
+					<p class="p-sec-plan-detail__text">詳しくは<a href="<?php echo esc_url( home_url( '/terms/' ) ); ?>">ご利用規約ページ</a>をご確認ください。</p>
 				</dd>
 			</div>
 
