@@ -26,9 +26,8 @@
 
     @include bp("tb") {
       grid-row: auto;
-      order: 2;
+      order: 1;
       max-width: 640px;
-      margin-top: 56px;
       margin-inline: auto;
     }
   }
@@ -69,10 +68,14 @@
     @include bp("tb") {
       grid-column: 1;
       grid-row: auto;
-      order: 1;
+      order: 2;
       width: min(100%, 640px);
       max-width: none;
-      margin: 0 auto;
+      margin: 56px auto 0;
+    }
+
+    @include bp("sp-l") {
+      margin-top: 40px;
     }
   }
 

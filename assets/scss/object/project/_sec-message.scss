@@ -36,12 +36,22 @@
     overflow: hidden;
     background-color: $color-gray;
 
+    @include bp("tb") {
+      order: 2;
+    }
+
     img {
       display: block;
       width: 100%;
       height: 100%;
       object-fit: cover;
       object-position: center center;
+    }
+  }
+
+  &__content {
+    @include bp("tb") {
+      order: 1;
     }
   }
 

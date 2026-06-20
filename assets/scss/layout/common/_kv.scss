@@ -38,11 +38,7 @@
   }
 
   @include bp("sp-l") {
-    height: clamp(
-      620px,
-      calc(100svh - var(--kv-header-height) - 24px),
-      700px
-    );
+    height: clamp(620px, 162vw, 700px);
   }
 
   &__media {

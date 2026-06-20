@@ -8,15 +8,12 @@
   color: $color-text;
   letter-spacing: 0.1em;
 
-  & img,
-  & video,
-  & picture {
+  :where(img, video, picture) {
     max-width: 100%;
     height: auto;
   }
 
-  & a,
-  & button {
+  :where(a, button) {
     transition-duration: $duration-base;
     transition-timing-function: $ease-base;
   }
