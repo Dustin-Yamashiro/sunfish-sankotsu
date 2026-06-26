@@ -7,6 +7,15 @@ $swell_setting           = class_exists( 'SWELL_Theme' ) ? SWELL_Theme::get_sett
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script>
+		(function () {
+			var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+			if (!reduceMotion) {
+				document.documentElement.classList.add('is-anim-ready');
+			}
+		}());
+	</script>
 	<?php wp_head(); ?>
 </head>
 <body>
@@ -25,7 +34,11 @@ $header_utility_links = array(
 	array(
 		'label' => '利用規約',
 		'url'   => home_url( '/terms/' ),
-	)
+	),
+	array(
+		'label' => 'プライバシーポリシー',
+		'url'   => home_url( '/privacy-policy/' ),
+	),
 );
 
 $header_primary_links = array(
@@ -155,7 +168,7 @@ $header_mobile_links = array_merge( $header_primary_links, $header_utility_links
 					<img class="l-custom-header__action-icon" src="<?php echo esc_url( theme_image_url( 'header/icon-mail.svg' ) ); ?>" width="22" height="18" alt="" aria-hidden="true">
 					<span class="l-custom-header__action-text">問い合わせ</span>
 				</a>
-				<a class="l-custom-header__action l-custom-header__action--line" href="#line-consultation">
+				<a class="l-custom-header__action l-custom-header__action--line" href="<?php echo esc_url( 'https://lin.ee/S6W9e0r' ); ?>" target="_blank" rel="noopener noreferrer">
 					<img class="l-custom-header__action-icon" src="<?php echo esc_url( theme_image_url( 'header/icon-line.svg' ) ); ?>" width="30" height="30" alt="" aria-hidden="true">
 					<span class="l-custom-header__action-text">LINEで相談</span>
 				</a>
@@ -172,7 +185,7 @@ $header_mobile_links = array_merge( $header_primary_links, $header_utility_links
 			<span class="l-floating-contact__label">お問い合わせ</span>
 		</a>
 
-		<a class="l-floating-contact__link l-floating-contact__link--line" href="<?php echo esc_url( home_url( '/contact/#line-consultation' ) ); ?>" aria-label="LINEで相談する">
+		<a class="l-floating-contact__link l-floating-contact__link--line" href="<?php echo esc_url( 'https://lin.ee/S6W9e0r' ); ?>" target="_blank" rel="noopener noreferrer" aria-label="LINEで相談する">
 			<span class="l-floating-contact__icon" aria-hidden="true">
 				<img src="<?php echo esc_url( theme_image_url( 'header/icon-line.svg' ) ); ?>" width="30" height="30" alt="">
 			</span>

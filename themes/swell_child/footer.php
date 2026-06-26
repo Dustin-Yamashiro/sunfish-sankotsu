@@ -40,10 +40,11 @@ $footer_contact_cards = array(
 	array(
 		'label' => 'LINEでご相談',
 		'text'  => '1〜2営業日以内を目処に回答しております',
-		'url'   => '#line-consultation',
+		'url'   => 'https://lin.ee/S6W9e0r',
 		'icon'  => 'footer/icon-line.svg',
 		'width' => 26,
 		'height' => 26,
+		'is_external' => true,
 	),
 	array(
 		'label' => '050-5799-0684',
@@ -132,7 +133,7 @@ $footer_nav_columns = array(
 
 				<div class="l-custom-footer-contact__cards">
 					<?php foreach ( $footer_contact_cards as $card ) : ?>
-						<a class="l-custom-footer-contact__card" href="<?php echo esc_url( $card['url'] ); ?>">
+						<a class="l-custom-footer-contact__card" href="<?php echo esc_url( $card['url'] ); ?>"<?php echo ! empty( $card['is_external'] ) ? ' target="_blank" rel="noopener noreferrer"' : ''; ?>>
 							<span class="l-custom-footer-contact__card-heading">
 								<img class="l-custom-footer-contact__card-icon" src="<?php echo esc_url( theme_image_url( $card['icon'] ) ); ?>" width="<?php echo esc_attr( $card['width'] ); ?>" height="<?php echo esc_attr( $card['height'] ); ?>" alt="" aria-hidden="true">
 								<span class="l-custom-footer-contact__card-label"><?php echo esc_html( $card['label'] ); ?></span>

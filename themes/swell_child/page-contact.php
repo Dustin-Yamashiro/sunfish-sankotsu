@@ -40,7 +40,7 @@ get_template_part(
 
 			<section class="l-contact__method" aria-labelledby="contact-line-title">
 				<h2 id="contact-line-title" class="l-contact__method-title">LINEでのご相談</h2>
-				<a id="line-consultation" class="l-contact__method-card" href="#line-consultation">
+				<a id="line-consultation" class="l-contact__method-card" href="<?php echo esc_url( 'https://lin.ee/S6W9e0r' ); ?>" target="_blank" rel="noopener noreferrer">
 					<span class="l-contact__method-heading">
 						<img class="l-contact__method-icon" src="<?php echo esc_url( theme_image_url( 'footer/icon-line.svg' ) ); ?>" width="26" height="26" alt="" aria-hidden="true">
 						<span class="l-contact__method-label">LINEでご相談</span>

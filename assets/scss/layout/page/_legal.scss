@@ -79,4 +79,48 @@
       margin: 0;
     }
   }
+
+  &__items {
+    display: grid;
+    gap: 8px;
+    margin: 0;
+    padding-left: 1.4em;
+  }
+
+  &__item {
+    padding-left: 0.1em;
+  }
+
+  &__contact-list {
+    display: grid;
+    gap: 8px;
+    margin: 0;
+  }
+
+  &__contact-row {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr);
+    gap: 8px;
+    margin: 0;
+
+    @include bp("sp-l") {
+      grid-template-columns: 1fr;
+      gap: 2px;
+    }
+  }
+
+  &__contact-term {
+    font-weight: 600;
+  }
+
+  &__contact-description {
+    margin: 0;
+    word-break: break-word;
+
+    a {
+      color: $color-main;
+      text-decoration: underline;
+      text-underline-offset: 0.18em;
+    }
+  }
 }

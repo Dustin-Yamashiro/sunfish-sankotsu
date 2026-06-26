@@ -11,34 +11,31 @@ get_header();
 
 $company_business_items = array(
 	array(
-		'title' => 'マリンサービスサンフィッシュ石垣島',
+		'title' => 'サンフィッシュ石垣島',
 		'texts' => array(
-			'石垣島の海をフィールドに、少人数制で安心して楽しめるマリンアクティビティを案内しています。',
-			'海を熟知したスタッフが、初めての方にも分かりやすくサポートします。',
+			'石垣島で初心者向けシュノーケリングツアーを毎日運営。幻の島上陸・ウミガメなど石垣の海を丸ごと体験できます。現場に出続けるガイドが、安全・丁寧にご案内します。',
 		),
-		'image' => 'company/business-logo.jpg',
-		'alt'   => 'マリンサービスサンフィッシュ石垣島のロゴ',
-		'url'   => 'https://isigakijima-diving.com/',
+		'image'  => 'company/sunfish-ishigaki-logo.png',
+		'alt'    => 'サンフィッシュ石垣島のロゴ',
+		'url'    => 'https://isigakijima-diving.com/',
 	),
 	array(
-		'title' => 'マリンサービスサンフィッシュ石垣島',
+		'title' => 'フィッシュソング（釣り船）',
 		'texts' => array(
-			'石垣島の海をフィールドに、少人数制で安心して楽しめるマリンアクティビティを案内しています。',
-			'海を熟知したスタッフが、初めての方にも分かりやすくサポートします。',
+			'石垣島発の釣り船ツアー。初心者から経験者まで楽しめる海釣り体験を提供しています。南国の青い海で、非日常のフィッシング体験をお楽しみください。',
 		),
-		'image' => 'company/business-logo.jpg',
-		'alt'   => 'マリンサービスサンフィッシュ石垣島のロゴ',
-		'url'   => 'https://isigakijima-diving.com/',
+		'image'  => 'company/fish-song-logo.png',
+		'alt'    => 'フィッシュソングのロゴ',
+		'url'    => 'https://fishsong-ishigakijima.com/',
 	),
 	array(
-		'title' => 'マリンサービスサンフィッシュ石垣島',
+		'title' => 'サンフィッシュ宮古島',
 		'texts' => array(
-			'石垣島の海をフィールドに、少人数制で安心して楽しめるマリンアクティビティを案内しています。',
-			'海を熟知したスタッフが、初めての方にも分かりやすくサポートします。',
+			'宮古島のシュノーケリングツアー専門店。エメラルドグリーンの透明度抜群の海で、サンゴや熱帯魚との出会いを初心者でも安心してお楽しみいただけます。',
 		),
-		'image' => 'company/business-logo.jpg',
-		'alt'   => 'マリンサービスサンフィッシュ石垣島のロゴ',
-		'url'   => 'https://isigakijima-diving.com/',
+		'image'  => 'company/sunfish-miyakojima-logo.png',
+		'alt'    => 'サンフィッシュ宮古島のロゴ',
+		'url'    => 'https://miyakojima-snorkeling-tours.com/',
 	),
 );
 ?>
@@ -75,13 +72,15 @@ get_template_part(
 								<p><?php echo esc_html( $text ); ?></p>
 							<?php endforeach; ?>
 						</div>
-						<div class="p-sec-business__button c-sec-btn c-sec-btn--next">
-							<a href="<?php echo esc_url( $item['url'] ); ?>" target="_blank" rel="noopener noreferrer">詳細はこちら</a>
-						</div>
+						<?php if ( ! empty( $item['url'] ) ) : ?>
+							<div class="p-sec-business__button c-sec-btn c-sec-btn--next">
+								<a href="<?php echo esc_url( $item['url'] ); ?>" target="_blank" rel="noopener noreferrer">詳細はこちら</a>
+							</div>
+						<?php endif; ?>
 					</div>
 
 					<picture class="p-sec-business__media">
-						<img src="<?php echo esc_url( theme_image_url( $item['image'] ) ); ?>" width="511" height="511" alt="<?php echo esc_attr( $item['alt'] ); ?>" loading="lazy">
+						<img src="<?php echo esc_url( theme_image_url( $item['image'] ) ); ?>" width="400" height="400" alt="<?php echo esc_attr( $item['alt'] ); ?>" loading="lazy">
 					</picture>
 				</article>
 			<?php endforeach; ?>

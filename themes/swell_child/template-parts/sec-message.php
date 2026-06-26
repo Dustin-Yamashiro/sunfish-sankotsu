@@ -11,7 +11,7 @@
 <section class="p-sec-message u-pd-pt-3 u-pd-pb-6" aria-labelledby="about-message-title">
 	<div class="p-sec-message__inner u-container">
 		<picture class="p-sec-message__image">
-			<img src="<?php echo esc_url( theme_image_url( 'about/message-main.png' ) ); ?>" width="620" height="400" alt="船上で石垣島の海を案内する船長とご家族" loading="lazy">
+			<img src="<?php echo esc_url( theme_image_url( 'about/message-hama-yusuke.png' ) ); ?>" width="620" height="400" alt="石垣島の海に立つ代表の浜佑介" loading="lazy">
 		</picture>
 
 		<div class="p-sec-message__content">
@@ -20,15 +20,15 @@
 				<h2 id="about-message-title" class="c-sec-title__main">代表メッセージ</h2>
 			</div>
 
-			<p class="p-sec-message__lead">石垣島から海に還る、一番温かいお別れを。</p>
+			<p class="p-sec-message__lead">毎日出る海だから、託せる</p>
 
 			<div class="p-sec-message__body">
-				<p>テストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテスト。</p>
-				<p>テストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテスト。</p>
-				<p>テストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテスト。</p>
+				<p>私自身、ほぼ毎日シュノーケリングやダイビングのガイドとして、石垣島の海に出続けてきました。</p>
+				<p>日々見てきたからこそ、石垣の海は美しいだけの場所ではなく、人の心に残り、人生の大切な時間と結びついていく場所だと感じています。</p>
+				<p>大切な方を海へお還しする時間が、ご家族の心に穏やかに残るよう、船長として一つひとつ誠実にお手伝いします。</p>
 			</div>
 
-			<p class="p-sec-message__name">代表 / 船長　浜 佑介</p>
+			<p class="p-sec-message__name">代表　浜 佑介</p>
 		</div>
 	</div>
 </section>

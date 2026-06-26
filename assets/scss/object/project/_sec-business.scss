@@ -25,13 +25,13 @@
     margin-top: 80px;
 
     @include bp("tb") {
-      gap: 88px;
+      gap: 48px;
       max-width: 680px;
       margin: 64px auto 0;
     }
 
     @include bp("sp-l") {
-      gap: 72px;
+      gap: 48px;
       margin-top: 48px;
     }
   }
@@ -39,7 +39,7 @@
   &__item {
     display: grid;
     grid-template-columns: minmax(0, 1fr) minmax(280px, 400px);
-    gap: 96px;
+    gap: 40px;
     align-items: center;
 
     @include bp("pc-s") {
@@ -48,7 +48,7 @@
 
     @include bp("tb") {
       grid-template-columns: 1fr;
-      gap: 32px;
+      gap: 24px;
 
       .p-sec-business__media {
         order: 1;
@@ -134,17 +134,37 @@
   }
 
   &__media {
-    width: min(100%, 400px);
+    display: grid;
+    min-height: 360px;
+    place-items: center;
+    width: min(100%, 440px);
     margin-inline: auto;
 
     @include bp("tb") {
-      width: min(100%, 220px);
+      min-height: 200px;
+      width: min(100%, 320px);
     }
 
     img {
       display: block;
-      width: 100%;
-      height: auto;
+      width: min(100%, 360px);
+      height: 292px;
+      object-fit: contain;
+
+      @include bp("tb") {
+        width: min(100%, 260px);
+        height: 212px;
+      }
+    }
+  }
+
+  &__item:first-child &__media img {
+    width: min(100%, 300px);
+    height: 244px;
+
+    @include bp("tb") {
+      width: min(100%, 224px);
+      height: 184px;
     }
   }
 }
