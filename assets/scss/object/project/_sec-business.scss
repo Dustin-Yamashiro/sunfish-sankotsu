@@ -21,17 +21,15 @@
 
   &__list {
     display: grid;
-    gap: 112px;
+    gap: 48px;
     margin-top: 80px;
 
     @include bp("tb") {
-      gap: 48px;
       max-width: 680px;
       margin: 64px auto 0;
     }
 
     @include bp("sp-l") {
-      gap: 48px;
       margin-top: 48px;
     }
   }

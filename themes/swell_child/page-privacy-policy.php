@@ -74,8 +74,8 @@ $privacy_sections = array(
 			),
 			array(
 				'term'  => 'Email',
-				'value' => 'sunfish.ishigaki@gmail.com',
-				'url'   => 'mailto:sunfish.ishigaki@gmail.com',
+				'value' => 'info@ishigaki-sankotsu.com',
+				'url'   => 'mailto:info@ishigaki-sankotsu.com',
 			),
 			array(
 				'term'  => 'LINE',

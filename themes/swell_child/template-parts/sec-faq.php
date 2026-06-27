@@ -11,7 +11,7 @@ $sec_faq_category   = ! empty( $args['category'] ) ? sanitize_title( (string) $a
 $sec_faq_limit      = ! empty( $args['limit'] ) ? (int) $args['limit'] : 5;
 $sec_faq_panel_base = 'sec-faq-' . $sec_faq_category;
 ?>
-<section class="p-sec-faq u-pd-py-5" aria-labelledby="front-faq-title">
+<section class="p-sec-faq u-pd-pt-5 u-pd-pb-6" aria-labelledby="front-faq-title">
 	<div class="p-sec-faq__inner u-container">
 		<div class="p-sec-faq__title c-sec-title c-sec-title--center u-fade-up">
 			<p class="c-sec-title__sub u-text-fade u-text-fade--chars">FAQ</p>

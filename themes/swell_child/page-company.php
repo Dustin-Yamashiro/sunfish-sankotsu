@@ -2,7 +2,7 @@
 /**
  * Template Name: 会社概要
  *
- * 代表メッセージ、会社概要、その他の事業を掲載する固定ページテンプレート。
+ * 会社概要、その他の事業を掲載する固定ページテンプレート。
  *
  * @package LocalEnvTheme
  */
@@ -51,9 +51,7 @@ get_template_part(
 );
 ?>
 
-<?php get_template_part( 'template-parts/sec-message' ); ?>
-
-<?php get_template_part( 'template-parts/sec-company', null, 'pale' ); ?>
+<?php get_template_part( 'template-parts/sec-company' ); ?>
 
 <section class="p-sec-business u-pd-pt-5 u-pd-pb-6" aria-labelledby="company-business-title">
 	<div class="p-sec-business__inner u-container">

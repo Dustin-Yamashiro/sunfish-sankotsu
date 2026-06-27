@@ -22,7 +22,7 @@ if ( $sec_news_category && 0 < (int) $sec_news_category->count ) {
 
 $sec_news_query = new WP_Query( $sec_news_query_args );
 ?>
-<section class="p-sec-news u-pd-py-5" aria-labelledby="front-news-title">
+<section class="p-sec-news u-pd-pt-5 u-pd-pb-6" aria-labelledby="front-news-title">
 	<div class="p-sec-news__inner u-container">
 		<div class="p-sec-news__title c-sec-title u-fade-up">
 			<p class="c-sec-title__sub u-text-fade u-text-fade--chars">News</p>
