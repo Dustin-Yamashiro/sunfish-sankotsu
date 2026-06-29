@@ -11,7 +11,7 @@
 <section class="p-sec-message u-pd-pt-3 u-pd-pb-6" aria-labelledby="about-message-title">
 	<div class="p-sec-message__inner u-container">
 		<picture class="p-sec-message__image">
-			<img src="<?php echo esc_url( theme_image_url( 'about/message-hama-yusuke.png' ) ); ?>" width="620" height="400" alt="石垣島の海に立つ船長" loading="lazy">
+			<img src="<?php echo esc_url( theme_image_url( 'visuals/message/president.png' ) ); ?>" width="620" height="400" alt="石垣島の海に立つ船長" loading="lazy">
 		</picture>
 
 		<div class="p-sec-message__content">

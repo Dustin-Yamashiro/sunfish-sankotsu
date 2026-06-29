@@ -13,7 +13,7 @@ if ( ! in_array( $sec_plan_step_plan, array( 'kashikiri', 'dairi' ), true ) ) {
 	$sec_plan_step_plan = 'kashikiri';
 }
 
-$sec_plan_step_page_slug = get_post_field( 'post_name', get_queried_object_id() );
+$sec_plan_step_page_slug = sanitize_key( (string) get_post_field( 'post_name', get_queried_object_id() ) );
 $sec_plan_step_title_id  = sanitize_title( ( $sec_plan_step_page_slug ? $sec_plan_step_page_slug : $sec_plan_step_plan ) . '-step-title' );
 $sec_plan_step_items     = array(
 	array(
@@ -87,8 +87,8 @@ $sec_plan_step_items[3] = 'dairi' === $sec_plan_step_plan
 
 <section class="p-sec-step u-pd-pt-5 u-pd-pb-6" aria-labelledby="<?php echo esc_attr( $sec_plan_step_title_id ); ?>">
 	<picture class="p-sec-step__bg" aria-hidden="true">
-		<source media="(max-width: 740px)" srcset="<?php echo esc_url( theme_image_url( 'front-page/key-visual-sea-flowers-sp.png' ) ); ?>">
-		<img src="<?php echo esc_url( theme_image_url( 'front-page/key-visual-sea-flowers.png' ) ); ?>" width="2688" height="1408" alt="" loading="lazy">
+		<source media="(max-width: 740px)" srcset="<?php echo esc_url( theme_image_url( 'visuals/bg/sea-flowers-sp.png' ) ); ?>">
+		<img src="<?php echo esc_url( theme_image_url( 'visuals/bg/sea-flowers.png' ) ); ?>" width="2688" height="1408" alt="" loading="lazy">
 	</picture>
 
 	<div class="p-sec-step__inner u-container">

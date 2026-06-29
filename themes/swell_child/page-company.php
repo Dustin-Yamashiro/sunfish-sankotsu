@@ -15,7 +15,7 @@ $company_business_items = array(
 		'texts' => array(
 			'石垣島で初心者向けシュノーケリングツアーを毎日運営。幻の島上陸・ウミガメなど石垣の海を丸ごと体験できます。現場に出続けるガイドが、安全・丁寧にご案内します。',
 		),
-		'image'  => 'company/sunfish-ishigaki-logo.png',
+		'image'  => 'common/logo/sunfish-ishigaki-logo.png',
 		'alt'    => 'サンフィッシュ石垣島のロゴ',
 		'url'    => 'https://isigakijima-diving.com/',
 	),
@@ -24,7 +24,7 @@ $company_business_items = array(
 		'texts' => array(
 			'石垣島発の釣り船ツアー。初心者から経験者まで楽しめる海釣り体験を提供しています。南国の青い海で、非日常のフィッシング体験をお楽しみください。',
 		),
-		'image'  => 'company/fish-song-logo.png',
+		'image'  => 'common/logo/fish-song-logo.png',
 		'alt'    => 'フィッシュソングのロゴ',
 		'url'    => 'https://fishsong-ishigakijima.com/',
 	),
@@ -33,7 +33,7 @@ $company_business_items = array(
 		'texts' => array(
 			'宮古島のシュノーケリングツアー専門店。エメラルドグリーンの透明度抜群の海で、サンゴや熱帯魚との出会いを初心者でも安心してお楽しみいただけます。',
 		),
-		'image'  => 'company/sunfish-miyakojima-logo.png',
+		'image'  => 'common/logo/sunfish-miyakojima-logo.png',
 		'alt'    => 'サンフィッシュ宮古島のロゴ',
 		'url'    => 'https://miyakojima-snorkeling-tours.com/',
 	),

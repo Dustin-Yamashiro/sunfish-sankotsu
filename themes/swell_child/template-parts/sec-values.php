@@ -43,7 +43,7 @@ if ( is_string( $args ) && '' !== $args ) {
 					</div>
 
 					<picture class="p-sec-values__image">
-						<img src="<?php echo esc_url( theme_image_url( 'front-page/about/point-01.png' ) ); ?>" width="448" height="408" alt="石垣島の海で船を操縦する船長の手元" loading="lazy">
+						<img src="<?php echo esc_url( theme_image_url( 'visuals/values/01.png' ) ); ?>" width="448" height="408" alt="石垣島の海で船を操縦する船長の手元" loading="lazy">
 					</picture>
 				</article>
 			</li>
@@ -63,7 +63,7 @@ if ( is_string( $args ) && '' !== $args ) {
 					</div>
 
 					<picture class="p-sec-values__image">
-						<img src="<?php echo esc_url( theme_image_url( 'front-page/about/point-02.png' ) ); ?>" width="448" height="408" alt="船上で海洋散骨のプランや準備について説明する様子" loading="lazy">
+						<img src="<?php echo esc_url( theme_image_url( 'visuals/values/02.png' ) ); ?>" width="448" height="408" alt="船上で海洋散骨のプランや準備について説明する様子" loading="lazy">
 					</picture>
 				</article>
 			</li>
@@ -83,7 +83,7 @@ if ( is_string( $args ) && '' !== $args ) {
 					</div>
 
 					<picture class="p-sec-values__image">
-						<img src="<?php echo esc_url( theme_image_url( 'front-page/about/point-03.png' ) ); ?>" width="448" height="408" alt="海を背景に散骨後の供養サポートについて相談する様子" loading="lazy">
+						<img src="<?php echo esc_url( theme_image_url( 'visuals/values/03.png' ) ); ?>" width="448" height="408" alt="海を背景に散骨後の供養サポートについて相談する様子" loading="lazy">
 					</picture>
 				</article>
 			</li>

@@ -33,7 +33,7 @@ $footer_contact_cards = array(
 		'label' => 'メールでお問い合わせ',
 		'text'  => '1〜2営業日以内を目処に回答しております',
 		'url'   => home_url( '/contact/' ),
-		'icon'  => 'footer/icon-mail.svg',
+		'icon'  => 'common/icon/mail-blue.svg',
 		'width' => 21,
 		'height' => 15,
 	),
@@ -41,7 +41,7 @@ $footer_contact_cards = array(
 		'label' => 'LINEでご相談',
 		'text'  => '1〜2営業日以内を目処に回答しております',
 		'url'   => 'https://lin.ee/S6W9e0r',
-		'icon'  => 'footer/icon-line.svg',
+		'icon'  => 'common/icon/line.svg',
 		'width' => 26,
 		'height' => 26,
 		'is_external' => true,
@@ -50,7 +50,7 @@ $footer_contact_cards = array(
 		'label' => '050-5799-0684',
 		'text'  => '12時〜18時・不定休',
 		'url'   => 'tel:05057990684',
-		'icon'  => 'footer/icon-phone.svg',
+		'icon'  => 'common/icon/phone.svg',
 		'width' => 26,
 		'height' => 26,
 	),
@@ -150,7 +150,7 @@ $footer_nav_columns = array(
 		<div class="l-custom-footer__inner u-container u-pd-py-3">
 			<div class="l-custom-footer__company">
 				<a class="l-custom-footer__logo" href="<?php echo esc_url( home_url( '/' ) ); ?>" aria-label="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>">
-					<img src="<?php echo esc_url( theme_image_url( 'footer/logo-white.png' ) ); ?>" width="511" height="511" alt="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>">
+					<img src="<?php echo esc_url( theme_image_url( 'common/logo/logo-white.png' ) ); ?>" width="511" height="511" alt="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>">
 				</a>
 				<address class="l-custom-footer__address">
 					<span>運営：合同会社サンフィッシュ</span>

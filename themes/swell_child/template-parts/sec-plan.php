@@ -19,7 +19,7 @@
 	<div class="p-sec-plan__list u-container">
 		<article class="p-sec-plan__card p-sec-plan__card--charter">
 			<picture class="p-sec-plan__image">
-				<img src="<?php echo esc_url( theme_image_url( 'front-page/plan/charter.png' ) ); ?>" width="520" height="520" alt="石垣島の海を家族で見つめる貸切散骨の様子" loading="lazy">
+				<img src="<?php echo esc_url( theme_image_url( 'visuals/plan/01.png' ) ); ?>" width="520" height="520" alt="石垣島の海を家族で見つめる貸切散骨の様子" loading="lazy">
 			</picture>
 			<div class="p-sec-plan__panel">
 				<div class="p-sec-plan__content">
@@ -44,7 +44,7 @@
 
 		<article class="p-sec-plan__card p-sec-plan__card--proxy">
 			<picture class="p-sec-plan__image">
-				<img src="<?php echo esc_url( theme_image_url( 'front-page/plan/proxy.png' ) ); ?>" width="520" height="520" alt="石垣島の海へ花を手向ける委託散骨の様子" loading="lazy">
+				<img src="<?php echo esc_url( theme_image_url( 'visuals/plan/02.png' ) ); ?>" width="520" height="520" alt="石垣島の海へ花を手向ける委託散骨の様子" loading="lazy">
 			</picture>
 			<div class="p-sec-plan__panel">
 				<div class="p-sec-plan__content">

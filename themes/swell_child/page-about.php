@@ -37,10 +37,10 @@ get_template_part(
 
 		<div class="p-sec-split__visual">
 			<picture class="p-sec-split__image p-sec-split__image--01">
-				<img src="<?php echo esc_url( theme_image_url( 'about/vision-sub.jpeg' ) ); ?>" width="254" height="170" alt="石垣島の透明な海と青空" loading="lazy">
+				<img src="<?php echo esc_url( theme_image_url( 'visuals/split/about/01.jpeg' ) ); ?>" width="254" height="170" alt="石垣島の透明な海と青空" loading="lazy">
 			</picture>
 			<picture class="p-sec-split__image p-sec-split__image--02">
-				<img src="<?php echo esc_url( theme_image_url( 'about/vision-main.jpg' ) ); ?>" width="500" height="333" alt="石垣島の浅瀬に浮かぶサンフィッシュの船" loading="lazy">
+				<img src="<?php echo esc_url( theme_image_url( 'visuals/split/about/02.jpg' ) ); ?>" width="500" height="333" alt="石垣島の浅瀬に浮かぶサンフィッシュの船" loading="lazy">
 			</picture>
 		</div>
 	</div>

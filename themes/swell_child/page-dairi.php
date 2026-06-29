@@ -37,10 +37,10 @@ get_template_part(
 
 		<div class="p-sec-split__visual">
 			<picture class="p-sec-split__image p-sec-split__image--01">
-					<img src="<?php echo esc_url( theme_image_url( 'dairi-plan/about-sub.png' ) ); ?>" width="1536" height="1024" alt="白い手袋で花を石垣島の海へ手向ける様子" loading="lazy">
+					<img src="<?php echo esc_url( theme_image_url( 'visuals/split/dairi/01.png' ) ); ?>" width="1536" height="1024" alt="白い手袋で花を石垣島の海へ手向ける様子" loading="lazy">
 			</picture>
 			<picture class="p-sec-split__image p-sec-split__image--02">
-					<img src="<?php echo esc_url( theme_image_url( 'dairi-plan/about-main.png' ) ); ?>" width="1672" height="941" alt="石垣島の港から船を出す船長の後ろ姿" loading="lazy">
+					<img src="<?php echo esc_url( theme_image_url( 'visuals/split/dairi/02.png' ) ); ?>" width="1672" height="941" alt="石垣島の港から船を出す船長の後ろ姿" loading="lazy">
 			</picture>
 		</div>
 	</div>
@@ -117,7 +117,7 @@ $reason_items = array(
 					'代理散骨なら、遠方にお住まいの方や船が苦手な方でも、石垣島の海で散骨が可能です。',
 					'船長自らご家族の想いを受け取り、責任を持って故人様をお見送りします。',
 				),
-				'image'  => 'dairi-plan/feature-01-card.png',
+				'image'  => 'visuals/feature/dairi/01.png',
 				'alt'    => '船上で花束を手に海を見つめる船長',
 			),
 			array(
@@ -126,7 +126,7 @@ $reason_items = array(
 					'代理散骨は、通常の葬儀や貸切散骨に比べて、費用の負担を抑えながら選べる供養です。',
 					'移動や宿泊、日程調整の負担も抑え、ご家族に無理のない形で故人様をお見送りできます。',
 					),
-					'image'  => 'dairi-plan/feature-02-card.png',
+					'image'  => 'visuals/feature/dairi/02.png',
 					'alt'    => '石垣島の青い海に白い花びらが浮かぶ様子',
 				),
 			array(
@@ -135,7 +135,7 @@ $reason_items = array(
 					'代理散骨では、託した供養が見えないまま終わらないよう、当日の様子を記録に残します。',
 					'散骨後のメモリアルクルーズにも対応し、散骨後も石垣島の海を故人様に会いに行ける場所として残し続けます。',
 				),
-				'image'  => 'dairi-plan/feature-03-card.png',
+				'image'  => 'visuals/feature/dairi/03.png',
 				'alt'    => '船上で散骨後の写真記録を見返す様子',
 			),
 		);
@@ -176,7 +176,7 @@ $reason_items = array(
 			<span class="p-sec-feature__scrollbar-thumb" data-feature-sec-scrollbar></span>
 		</div>
 
-		<img class="p-sec-feature__island" src="<?php echo esc_url( theme_image_url( 'front-page/about/ishigaki.svg' ) ); ?>" width="300" height="375" alt="" loading="lazy" aria-hidden="true">
+		<img class="p-sec-feature__island" src="<?php echo esc_url( theme_image_url( 'common/icon/ishigaki.svg' ) ); ?>" width="300" height="375" alt="" loading="lazy" aria-hidden="true">
 	</div>
 </section>
 

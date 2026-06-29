@@ -10,8 +10,8 @@ get_header();
 
 <section class="l-kv" aria-labelledby="front-hero-title">
 	<picture class="l-kv__media">
-		<source media="(max-width: 740px)" srcset="<?php echo esc_url( theme_image_url( 'front-page/key-visual-sea-flowers-sp.png' ) ); ?>">
-		<img src="<?php echo esc_url( theme_image_url( 'front-page/key-visual-sea-flowers.png' ) ); ?>" width="2688" height="1408" alt="石垣島の海に花を手向ける様子" fetchpriority="high">
+		<source media="(max-width: 740px)" srcset="<?php echo esc_url( theme_image_url( 'visuals/bg/sea-flowers-sp.png' ) ); ?>">
+		<img src="<?php echo esc_url( theme_image_url( 'visuals/bg/sea-flowers.png' ) ); ?>" width="2688" height="1408" alt="石垣島の海に花を手向ける様子" fetchpriority="high">
 	</picture>
 	<div class="l-kv__content u-container">
 		<h1 id="front-hero-title" class="l-kv__title">石垣の海を、<br>「あの人と繋がる場所」へ</h1>
@@ -36,16 +36,16 @@ get_header();
 
 		<div class="p-sec-appeal__collage">
 			<picture class="p-sec-appeal__photo p-sec-appeal__photo--01 u-photo-fade u-photo-fade--left">
-				<img src="<?php echo esc_url( theme_image_url( 'front-page/appeal/beach-wave.jpg' ) ); ?>" width="204" height="147" alt="石垣島の砂浜に寄せる透明な波" loading="lazy">
+				<img src="<?php echo esc_url( theme_image_url( 'visuals/front-appeal/01.jpg' ) ); ?>" width="204" height="147" alt="石垣島の砂浜に寄せる透明な波" loading="lazy">
 			</picture>
 			<picture class="p-sec-appeal__photo p-sec-appeal__photo--02 u-photo-fade u-photo-fade--right">
-				<img src="<?php echo esc_url( theme_image_url( 'front-page/appeal/floating-flowers.png' ) ); ?>" width="288" height="216" alt="石垣島の海に浮かぶ色とりどりの花" loading="lazy">
+				<img src="<?php echo esc_url( theme_image_url( 'visuals/front-appeal/02.png' ) ); ?>" width="288" height="216" alt="石垣島の海に浮かぶ色とりどりの花" loading="lazy">
 			</picture>
 			<picture class="p-sec-appeal__photo p-sec-appeal__photo--03 u-photo-fade u-photo-fade--left">
-				<img src="<?php echo esc_url( theme_image_url( 'front-page/appeal/scattering-flowers.png' ) ); ?>" width="316" height="337" alt="船上から石垣島の海へ花を手向ける手元" loading="lazy">
+				<img src="<?php echo esc_url( theme_image_url( 'visuals/front-appeal/03.png' ) ); ?>" width="316" height="337" alt="船上から石垣島の海へ花を手向ける手元" loading="lazy">
 			</picture>
 			<picture class="p-sec-appeal__photo p-sec-appeal__photo--04 u-photo-fade u-photo-fade--right">
-				<img src="<?php echo esc_url( theme_image_url( 'front-page/appeal/boat-sky.jpg' ) ); ?>" width="268" height="335" alt="船上から見える石垣島の穏やかな海と青空" loading="lazy">
+				<img src="<?php echo esc_url( theme_image_url( 'visuals/front-appeal/04.jpg' ) ); ?>" width="268" height="335" alt="船上から見える石垣島の穏やかな海と青空" loading="lazy">
 			</picture>
 		</div>
 	</div>
@@ -77,10 +77,10 @@ get_header();
 
 		<div class="p-sec-split__visual">
 			<picture class="p-sec-split__image p-sec-split__image--01">
-				<img src="<?php echo esc_url( theme_image_url( 'front-page/introduction/intro-sub.png' ) ); ?>" width="254" height="170" alt="船のそばの海面に浮かぶ白い花" loading="lazy">
+				<img src="<?php echo esc_url( theme_image_url( 'visuals/split/front/01.png' ) ); ?>" width="254" height="170" alt="船のそばの海面に浮かぶ白い花" loading="lazy">
 			</picture>
 			<picture class="p-sec-split__image p-sec-split__image--02">
-				<img src="<?php echo esc_url( theme_image_url( 'front-page/introduction/intro-main.png' ) ); ?>" width="500" height="333" alt="石垣島の海に向かって船上で花を手向ける人" loading="lazy">
+				<img src="<?php echo esc_url( theme_image_url( 'visuals/split/front/02.png' ) ); ?>" width="500" height="333" alt="石垣島の海に向かって船上で花を手向ける人" loading="lazy">
 			</picture>
 		</div>
 
@@ -115,7 +115,7 @@ get_header();
 					'石垣島で15年以上のダイビング経験と「海洋散骨ディレクター」の資格を持つ船長が、ご相談からセレモニー進行まで一貫して対応。',
 					'船長自ら想いを伺い、石垣島の海でのお見送りをサポートします。',
 				),
-				'image'  => 'front-page/about/point-01.png',
+				'image'  => 'visuals/feature/front/01.png',
 				'alt'    => '石垣島の海で船を操縦する船長の手元',
 			),
 			array(
@@ -124,7 +124,7 @@ get_header();
 					'海洋散骨が初めての方にもわかりやすいよう、プラン内容や必要な準備、当日の流れを丁寧にご説明。',
 					'自社船による直接対応で仲介料を抑え、安心できる明瞭な価格でご案内しています。',
 				),
-				'image'  => 'front-page/about/point-02.png',
+				'image'  => 'visuals/feature/front/02.png',
 				'alt'    => '船上で海洋散骨のプランや準備について説明する様子',
 			),
 			array(
@@ -133,7 +133,7 @@ get_header();
 					'故人様らしさとご家族の希望に合わせた散骨方法のご相談が可能。',
 					'散骨後には、写真・動画、散骨証明書の発行や、メモリアルクルーズにも対応し、散骨後も続く供養をお手伝いします。',
 				),
-				'image'  => 'front-page/about/point-03.png',
+				'image'  => 'visuals/feature/front/03.png',
 				'alt'    => '海を背景に散骨後の供養サポートについて相談する様子',
 			),
 		);
@@ -173,7 +173,7 @@ get_header();
 			<span class="p-sec-feature__scrollbar-thumb" data-feature-sec-scrollbar></span>
 		</div>
 
-		<img class="p-sec-feature__island" src="<?php echo esc_url( theme_image_url( 'front-page/about/ishigaki.svg' ) ); ?>" width="300" height="375" alt="" loading="lazy" aria-hidden="true">
+		<img class="p-sec-feature__island" src="<?php echo esc_url( theme_image_url( 'common/icon/ishigaki.svg' ) ); ?>" width="300" height="375" alt="" loading="lazy" aria-hidden="true">
 	</div>
 </section>
 
@@ -221,8 +221,8 @@ $items = array(
 ?>
 <section class="p-sec-step-short u-pd-pt-5 u-pd-pb-6" aria-labelledby="sec-step-short-title">
 	<picture class="p-sec-step-short__bg" aria-hidden="true">
-		<source media="(max-width: 740px)" srcset="<?php echo esc_url( theme_image_url( 'front-page/key-visual-sea-flowers-sp.png' ) ); ?>">
-		<img src="<?php echo esc_url( theme_image_url( 'front-page/key-visual-sea-flowers.png' ) ); ?>" width="2688" height="1408" alt="" loading="lazy">
+		<source media="(max-width: 740px)" srcset="<?php echo esc_url( theme_image_url( 'visuals/bg/sea-flowers-sp.png' ) ); ?>">
+		<img src="<?php echo esc_url( theme_image_url( 'visuals/bg/sea-flowers.png' ) ); ?>" width="2688" height="1408" alt="" loading="lazy">
 	</picture>
 
 	<div class="p-sec-step-short__inner u-container">

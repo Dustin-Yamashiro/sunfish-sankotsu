@@ -37,10 +37,10 @@ get_template_part(
 
 		<div class="p-sec-split__visual">
 			<picture class="p-sec-split__image p-sec-split__image--01">
-				<img src="<?php echo esc_url( theme_image_url( 'beginner/introduction-sub.png' ) ); ?>" width="254" height="170" alt="船のそばの海面に浮かぶ白い花" loading="lazy">
+				<img src="<?php echo esc_url( theme_image_url( 'visuals/split/beginner/01.png' ) ); ?>" width="254" height="170" alt="船のそばの海面に浮かぶ白い花" loading="lazy">
 			</picture>
 			<picture class="p-sec-split__image p-sec-split__image--02">
-				<img src="<?php echo esc_url( theme_image_url( 'beginner/introduction-main.png' ) ); ?>" width="500" height="333" alt="船上で石垣島の海に手を合わせるご家族" loading="lazy">
+				<img src="<?php echo esc_url( theme_image_url( 'visuals/split/beginner/02.png' ) ); ?>" width="500" height="333" alt="船上で石垣島の海に手を合わせるご家族" loading="lazy">
 			</picture>
 		</div>
 	</div>
@@ -119,7 +119,7 @@ $reason_items = array(
 					'海洋散骨は、従来のお墓の形にとらわれず、自然の中へ故人様を送り出せる供養です。',
 					'ご家族の想いを大切にしながら、海や空、風に包まれた場所で故人様を見送ることができます。',
 				),
-				'image' => 'beginner/feature-01.png',
+				'image' => 'visuals/feature/beginner/01.png',
 				'alt'   => '海へ花びらを手向ける手元',
 			),
 			array(
@@ -128,7 +128,7 @@ $reason_items = array(
 					'海洋散骨では、散骨した海そのものが故人様を想う場所になります。',
 					'お墓がなくても、海を見るたびに故人様を思い出せる、ご家族様の大切な記憶として残り続けます。',
 				),
-				'image' => 'beginner/feature-02.jpeg',
+				'image' => 'visuals/feature/beginner/02.jpeg',
 				'alt'   => '石垣島の青い海と空',
 			),
 			array(
@@ -137,7 +137,7 @@ $reason_items = array(
 					'海洋散骨は、故人様らしさを大切にしつつ、ご家族の状況に合わせた供養が可能です。',
 					'乗船の有無や日程、ご予算に合わせて、ご家族にとって無理のないお見送りの形を選べます。',
 				),
-				'image' => 'beginner/feature-03.png',
+				'image' => 'visuals/feature/beginner/03.png',
 				'alt'   => '船上から海に向かって手を合わせる人',
 			),
 		);
@@ -177,7 +177,7 @@ $reason_items = array(
 			<span class="p-sec-feature__scrollbar-thumb" data-feature-sec-scrollbar></span>
 		</div>
 
-		<img class="p-sec-feature__island" src="<?php echo esc_url( theme_image_url( 'front-page/about/ishigaki.svg' ) ); ?>" width="300" height="375" alt="" loading="lazy" aria-hidden="true">
+		<img class="p-sec-feature__island" src="<?php echo esc_url( theme_image_url( 'common/icon/ishigaki.svg' ) ); ?>" width="300" height="375" alt="" loading="lazy" aria-hidden="true">
 	</div>
 </section>
 

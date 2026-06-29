@@ -79,7 +79,7 @@ $header_mobile_links = array_merge( $header_primary_links, $header_utility_links
 <header class="l-custom-header js-header my-setting">
 	<div class="l-custom-header__inner">
 		<a class="l-custom-header__logo" href="<?php echo esc_url( home_url( '/' ) ); ?>" aria-label="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>">
-			<img src="<?php echo esc_url( theme_image_url( 'header/logo.jpg' ) ); ?>" width="540" height="200" alt="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>">
+			<img src="<?php echo esc_url( theme_image_url( 'common/logo/logo.jpg' ) ); ?>" width="540" height="200" alt="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>">
 		</a>
 
 		<button class="l-custom-header__toggle js-header-toggle" type="button" aria-controls="site-header-menu" aria-expanded="false" aria-label="メニューを開閉する">
@@ -165,11 +165,11 @@ $header_mobile_links = array_merge( $header_primary_links, $header_utility_links
 
 			<div class="l-custom-header__actions">
 				<a class="l-custom-header__action l-custom-header__action--contact" href="<?php echo esc_url( home_url( '/contact/' ) ); ?>">
-					<img class="l-custom-header__action-icon" src="<?php echo esc_url( theme_image_url( 'header/icon-mail.svg' ) ); ?>" width="22" height="18" alt="" aria-hidden="true">
+					<img class="l-custom-header__action-icon" src="<?php echo esc_url( theme_image_url( 'common/icon/mail-white.svg' ) ); ?>" width="22" height="18" alt="" aria-hidden="true">
 					<span class="l-custom-header__action-text">問い合わせ</span>
 				</a>
 				<a class="l-custom-header__action l-custom-header__action--line" href="<?php echo esc_url( 'https://lin.ee/S6W9e0r' ); ?>" target="_blank" rel="noopener noreferrer">
-					<img class="l-custom-header__action-icon" src="<?php echo esc_url( theme_image_url( 'header/icon-line.svg' ) ); ?>" width="30" height="30" alt="" aria-hidden="true">
+					<img class="l-custom-header__action-icon" src="<?php echo esc_url( theme_image_url( 'common/icon/line-large.svg' ) ); ?>" width="30" height="30" alt="" aria-hidden="true">
 					<span class="l-custom-header__action-text">LINEで相談</span>
 				</a>
 			</div>
@@ -180,14 +180,14 @@ $header_mobile_links = array_merge( $header_primary_links, $header_utility_links
 	<nav class="l-floating-contact my-setting" aria-label="固定問い合わせメニュー">
 		<a class="l-floating-contact__link l-floating-contact__link--contact" href="<?php echo esc_url( home_url( '/contact/' ) ); ?>" aria-label="お問い合わせページへ移動">
 			<span class="l-floating-contact__icon" aria-hidden="true">
-				<img src="<?php echo esc_url( theme_image_url( 'header/icon-mail.svg' ) ); ?>" width="22" height="18" alt="">
+				<img src="<?php echo esc_url( theme_image_url( 'common/icon/mail-white.svg' ) ); ?>" width="22" height="18" alt="">
 			</span>
 			<span class="l-floating-contact__label">お問い合わせ</span>
 		</a>
 
 		<a class="l-floating-contact__link l-floating-contact__link--line" href="<?php echo esc_url( 'https://lin.ee/S6W9e0r' ); ?>" target="_blank" rel="noopener noreferrer" aria-label="LINEで相談する">
 			<span class="l-floating-contact__icon" aria-hidden="true">
-				<img src="<?php echo esc_url( theme_image_url( 'header/icon-line.svg' ) ); ?>" width="30" height="30" alt="">
+				<img src="<?php echo esc_url( theme_image_url( 'common/icon/line-large.svg' ) ); ?>" width="30" height="30" alt="">
 			</span>
 			<span class="l-floating-contact__label">ご相談</span>
 		</a>

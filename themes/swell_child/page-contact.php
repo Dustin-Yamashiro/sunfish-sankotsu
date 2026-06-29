@@ -31,7 +31,7 @@ get_template_part(
 				<h2 id="contact-tel-title" class="l-contact__method-title">電話でのお問い合わせ</h2>
 				<a class="l-contact__method-card" href="tel:05057990684">
 					<span class="l-contact__method-heading">
-						<img class="l-contact__method-icon" src="<?php echo esc_url( theme_image_url( 'footer/icon-phone.svg' ) ); ?>" width="26" height="26" alt="" aria-hidden="true">
+						<img class="l-contact__method-icon" src="<?php echo esc_url( theme_image_url( 'common/icon/phone.svg' ) ); ?>" width="26" height="26" alt="" aria-hidden="true">
 						<span class="l-contact__method-label">050-5799-0684</span>
 					</span>
 					<span class="l-contact__method-text">12時〜18時・不定休</span>
@@ -42,7 +42,7 @@ get_template_part(
 				<h2 id="contact-line-title" class="l-contact__method-title">LINEでのご相談</h2>
 				<a id="line-consultation" class="l-contact__method-card" href="<?php echo esc_url( 'https://lin.ee/S6W9e0r' ); ?>" target="_blank" rel="noopener noreferrer">
 					<span class="l-contact__method-heading">
-						<img class="l-contact__method-icon" src="<?php echo esc_url( theme_image_url( 'footer/icon-line.svg' ) ); ?>" width="26" height="26" alt="" aria-hidden="true">
+						<img class="l-contact__method-icon" src="<?php echo esc_url( theme_image_url( 'common/icon/line.svg' ) ); ?>" width="26" height="26" alt="" aria-hidden="true">
 						<span class="l-contact__method-label">LINEでご相談</span>
 					</span>
 					<span class="l-contact__method-text">1〜2営業日以内を目処に回答しております</span>
