@@ -67,7 +67,7 @@ $sec_plan_step_items     = array(
 $sec_plan_step_items[3] = 'dairi' === $sec_plan_step_plan
 	? array(
 		'number' => '4',
-		'title'  => '実施日の選定・散骨セレモニー',
+		'title'  => '選定・散骨セレモニー',
 		'image'  => 'illustrations/flow/step4-selection.png',
 		'texts'  => array(
 			'ご遺族の立ち会いがないからこそ、海が穏やかな日を選定し、散骨ポイントへ出航します。',
