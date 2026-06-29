@@ -29,7 +29,7 @@ get_template_part(
 				<h2 id="dairi-about-title" class="c-sec-title__main">想いを託す、<br>委託型の散骨プラン</h2>
 			</div>
 			<div class="p-sec-split__body">
-				<p>代理散骨プランは、ご遺族の方に代わり、船長が故人様を海へお見送りするプランです。<br>遠方にお住まいの方やご事情により乗船が難しい場合でも、石垣島の海での散骨が可能です。</p>
+				<p>代理散骨プランは、ご遺族の方に代わり、船長が故人様を海へお見送りするプランです。<br>遠方にお住まいの方や、ご事情により乗船が難しい場合でも、石垣島の海での散骨が可能です。</p>
 				<p>石垣島海洋散骨センターでは、お預かりしたご遺骨を一柱ずつ大切に扱い、船長が責任を持って散骨を行います。<br>散骨後には証明書や写真・動画で記録をお送りし、最後までご遺族の想いに寄り添います。</p>
 			</div>
 		</div>
@@ -48,24 +48,24 @@ get_template_part(
 <?php
 $reason_items = array(
 	array(
-		'image' => 'kashikiri-plan/reason-01.png',
+		'image' => 'illustrations/appeal/dairi/reason1.png',
 		'alt'   => '家族で写真を見ながら海洋散骨について相談する様子',
 		'text'  => '供養の費用を<br>出来る限り抑えたい',
 	),
 	array(
-		'image' => 'kashikiri-plan/reason-02.png',
+		'image' => 'illustrations/appeal/dairi/reason2.png',
 		'alt'   => '家族で海を見ながら故人を見送る様子',
 		'text'  => '遠方に住んでいるが<br>海洋散骨がしたい',
 	),
 	array(
-		'image' => 'kashikiri-plan/reason-03.png',
+		'image' => 'illustrations/appeal/dairi/reason3.png',
 		'alt'   => '石垣島の海に浮かぶ散骨用の船',
 		'text'  => '故人様を家族だけで<br>供養したい',
 	),
 );
 ?>
 
-<section class="p-sec-reason u-pd-pt-5 u-pd-pb-6" aria-labelledby="dairi-reason-title">
+<section class="p-sec-reason u-pd-pt-5 u-pd-pb-7" aria-labelledby="dairi-reason-title">
 	<div class="p-sec-reason__inner u-container">
 		<h2 id="dairi-reason-title" class="p-sec-reason__title u-fade-up">このような「想い」の方に<br>選ばれています</h2>
 
@@ -259,235 +259,19 @@ $reason_items = array(
 			</div>
 		</dl>
 
-		<div class="p-sec-plan-detail__included">
-			<h3 class="p-sec-plan-detail__section-heading">［ プランに含まれるもの ］</h3>
-
-			<ul class="p-sec-plan-detail__included-list">
-				<li class="p-sec-plan-detail__included-item">
-					<article class="p-sec-plan-detail__included-card">
-						<div class="p-sec-plan-detail__included-icon" aria-hidden="true">
-							<img src="<?php echo esc_url( theme_image_url( 'front-page/step/contact.png' ) ); ?>" width="128" height="128" alt="" loading="lazy">
-						</div>
-						<h4 class="p-sec-plan-detail__card-title">献花用の花びら</h4>
-						<div class="p-sec-plan-detail__card-body">
-							<p>石垣島の自然に配慮し、環境負荷の少ない季節の色鮮やかな生花（花びらのみ）をご用意します。</p>
-							<p>海一面に広がる花びらが、故人様の旅立ちを美しく彩ります。</p>
-						</div>
-					</article>
-				</li>
-
-				<li class="p-sec-plan-detail__included-item">
-					<article class="p-sec-plan-detail__included-card">
-						<div class="p-sec-plan-detail__included-icon" aria-hidden="true">
-							<img src="<?php echo esc_url( theme_image_url( 'front-page/step/contact.png' ) ); ?>" width="128" height="128" alt="" loading="lazy">
-						</div>
-						<h4 class="p-sec-plan-detail__card-title">献酒（地酒・日本酒）</h4>
-						<div class="p-sec-plan-detail__card-body">
-							<p>故人様を偲び、海を清めるための献酒をご用意します。</p>
-							<p>石垣島の地酒（泡盛）または日本酒を使用し、古来からの儀礼を大切に守ります。</p>
-						</div>
-					</article>
-				</li>
-
-				<li class="p-sec-plan-detail__included-item">
-					<article class="p-sec-plan-detail__included-card">
-						<div class="p-sec-plan-detail__included-icon" aria-hidden="true">
-							<img src="<?php echo esc_url( theme_image_url( 'front-page/step/contact.png' ) ); ?>" width="128" height="128" alt="" loading="lazy">
-						</div>
-						<h4 class="p-sec-plan-detail__card-title">環境対応・散骨用資材</h4>
-						<div class="p-sec-plan-detail__card-body">
-							<p>遺骨を納める袋は、海中で速やかに溶ける特殊な水溶性紙を使用。</p>
-							<p>環境保護のガイドラインを遵守した、海に優しいお見送りをお約束します。</p>
-						</div>
-					</article>
-				</li>
-
-				<li class="p-sec-plan-detail__included-item">
-					<article class="p-sec-plan-detail__included-card">
-						<div class="p-sec-plan-detail__included-icon" aria-hidden="true">
-							<img src="<?php echo esc_url( theme_image_url( 'front-page/step/contact.png' ) ); ?>" width="128" height="128" alt="" loading="lazy">
-						</div>
-						<h4 class="p-sec-plan-detail__card-title">写真・動画撮影データ</h4>
-						<div class="p-sec-plan-detail__card-body">
-							<p>現役ダイバーの撮影技術を活かし、セレモニーの様子を記録します。</p>
-							<p>青い海、献花の瞬間など、一生の記憶に残るシーンをデータ形式で無料提供いたします。</p>
-						</div>
-					</article>
-				</li>
-
-				<li class="p-sec-plan-detail__included-item">
-					<article class="p-sec-plan-detail__included-card">
-						<div class="p-sec-plan-detail__included-icon" aria-hidden="true">
-							<img src="<?php echo esc_url( theme_image_url( 'front-page/step/contact.png' ) ); ?>" width="128" height="128" alt="" loading="lazy">
-						</div>
-						<h4 class="p-sec-plan-detail__card-title">海洋散骨証明書</h4>
-						<div class="p-sec-plan-detail__card-body">
-							<p>散骨を実施した正確な日時と、GPSによる緯度経度を記載したオリジナルの証明書を発行します。</p>
-							<p>後日、ご自宅へ大切に郵送いたします。</p>
-						</div>
-					</article>
-				</li>
-			</ul>
-		</div>
-
-		<div class="p-sec-plan-detail__options">
-			<h3 class="p-sec-plan-detail__section-heading">［ 追加オプション ］</h3>
-
-			<ul class="p-sec-plan-detail__option-list">
-				<li class="p-sec-plan-detail__option-item">
-					<article class="p-sec-plan-detail__option-card">
-						<div class="p-sec-plan-detail__option-icon" aria-hidden="true">
-							<img src="<?php echo esc_url( theme_image_url( 'front-page/step/contact.png' ) ); ?>" width="128" height="128" alt="" loading="lazy">
-						</div>
-						<div class="p-sec-plan-detail__option-content">
-							<h4 class="p-sec-plan-detail__option-title">安心粉骨・洗浄パック</h4>
-							<p class="p-sec-plan-detail__option-text">提携専門業者による粉骨・六価クロム除去・洗浄。散骨に必須な工程をワンストップで代理。</p>
-							<p class="p-sec-plan-detail__option-price">税込 33,000円〜</p>
-						</div>
-					</article>
-				</li>
-
-				<li class="p-sec-plan-detail__option-item">
-					<article class="p-sec-plan-detail__option-card">
-						<div class="p-sec-plan-detail__option-icon" aria-hidden="true">
-							<img src="<?php echo esc_url( theme_image_url( 'front-page/step/contact.png' ) ); ?>" width="128" height="128" alt="" loading="lazy">
-						</div>
-						<div class="p-sec-plan-detail__option-content">
-							<h4 class="p-sec-plan-detail__option-title">献花用・特別フラワー</h4>
-							<p class="p-sec-plan-detail__option-text">故人様の好きだった花や色に合わせた花材をご用意。故人様に合った形で還すことができます。</p>
-							<p class="p-sec-plan-detail__option-price">税込 11,000円〜</p>
-						</div>
-					</article>
-				</li>
-
-				<li class="p-sec-plan-detail__option-item">
-					<article class="p-sec-plan-detail__option-card">
-						<div class="p-sec-plan-detail__option-icon" aria-hidden="true">
-							<img src="<?php echo esc_url( theme_image_url( 'front-page/step/contact.png' ) ); ?>" width="128" height="128" alt="" loading="lazy">
-						</div>
-						<div class="p-sec-plan-detail__option-content">
-							<h4 class="p-sec-plan-detail__option-title">メモリアル・クルーズ</h4>
-							<p class="p-sec-plan-detail__option-text">一周忌や三回忌に合わせたクルーズが可能。GPSで記録した散骨ポイントへ再びご案内します。</p>
-							<p class="p-sec-plan-detail__option-price">税込 55,000円〜</p>
-						</div>
-					</article>
-				</li>
-			</ul>
-		</div>
+		<?php get_template_part( 'template-parts/sec-plan-options' ); ?>
 	</div>
 </section>
 
 <?php
-$dairi_step_icon  = 'front-page/step/contact.png';
-$dairi_step_items = array(
+get_template_part(
+	'template-parts/sec-plan-step',
+	null,
 	array(
-		'number' => '1',
-		'title'  => '相談・問い合わせ',
-		'image'  => $dairi_step_icon,
-		'texts'  => array(
-			'公式LINE、お電話、またはフォームよりお気軽にご連絡ください。',
-			'初めてで不安な点や、ご希望の日程・人数等を直接お伺いし、最適なプランをご提案します。',
-		),
-	),
-	array(
-		'number' => '2',
-		'title'  => 'お申し込み・粉骨手配',
-		'image'  => $dairi_step_icon,
-		'texts'  => array(
-			'お申し込み後、弊社提携の粉骨専門センターより「送骨キット」をお届けします。',
-			'ご遺族には、届いた送骨キットを使ってご遺骨を郵送していただきます。',
-		),
-	),
-	array(
-		'number' => '3',
-		'title'  => '粉骨・ご遺骨の安置',
-		'image'  => $dairi_step_icon,
-		'texts'  => array(
-			'到着後、ご遺骨を散骨に適した2mm以下のパウダー状に加工いたします。',
-			'粉骨されたご遺骨は弊社へ届けられ、実施日まで責任を持って大切に安置・保管させていただきます。',
-		),
-	),
-	array(
-		'number' => '4',
-		'title'  => '実施日の選定・散骨セレモニー',
-		'image'  => $dairi_step_icon,
-		'texts'  => array(
-			'ご遺族の立ち会いがないからこそ、海が穏やかな日を選定し、散骨ポイントへ出航します。',
-			'ポイント到着後は、船長がご遺族に代わり、献酒・散骨・花びらを撒くお見送りを丁寧に行い、その様子を記録します。',
-		),
-	),
-	array(
-		'number' => '5',
-		'title'  => '完了報告・証明書の発行',
-		'image'  => $dairi_step_icon,
-		'texts'  => array(
-			'帰港後、速やかに完了のご連絡を差し上げます。',
-			'後日、正確な緯度経度を記載した「海洋散骨証明書」を郵送し、当日の記録写真・動画データをLINEやメールにてお届けいたします。',
-		),
-	),
-	array(
-		'number' => '6',
-		'title'  => 'いつか、石垣の海での再会を',
-		'image'  => $dairi_step_icon,
-		'texts'  => array(
-			'代理散骨は供養の「終わり」ではありません。',
-			'いつか石垣島を訪れる機会があれば、ぜひお声がけください。故人様が眠るその場所へ、今度はご家族の皆様を船長がご案内いたします。',
-		),
-	),
+		'plan' => 'dairi',
+	)
 );
 ?>
-
-<section class="p-sec-step u-pd-pt-5 u-pd-pb-6" aria-labelledby="dairi-step-title">
-	<picture class="p-sec-step__bg" aria-hidden="true">
-		<source media="(max-width: 740px)" srcset="<?php echo esc_url( theme_image_url( 'front-page/key-visual-sea-flowers-sp.png' ) ); ?>">
-		<img src="<?php echo esc_url( theme_image_url( 'front-page/key-visual-sea-flowers.png' ) ); ?>" width="2688" height="1408" alt="" loading="lazy">
-	</picture>
-
-	<div class="p-sec-step__inner u-container">
-		<div class="p-sec-step__title c-sec-title c-sec-title--center c-sec-title--white u-fade-up">
-			<p class="c-sec-title__sub u-text-fade u-text-fade--chars">Step</p>
-			<h2 id="dairi-step-title" class="c-sec-title__main">散骨の流れ</h2>
-		</div>
-
-		<ol class="p-sec-step__list">
-			<?php foreach ( $dairi_step_items as $dairi_step_item ) : ?>
-				<?php
-				$dairi_step_number = ! empty( $dairi_step_item['number'] ) ? (string) $dairi_step_item['number'] : '';
-				$dairi_step_name   = ! empty( $dairi_step_item['title'] ) ? (string) $dairi_step_item['title'] : '';
-				$dairi_step_texts  = ! empty( $dairi_step_item['texts'] ) && is_array( $dairi_step_item['texts'] ) ? $dairi_step_item['texts'] : array();
-				$dairi_step_image  = ! empty( $dairi_step_item['image'] ) ? (string) $dairi_step_item['image'] : '';
-				?>
-				<?php if ( '' !== $dairi_step_number && '' !== $dairi_step_name ) : ?>
-					<li class="p-sec-step__item u-fade-up">
-						<article class="p-sec-step__card">
-							<p class="p-sec-step__label">
-								<span class="p-sec-step__label-text">Step</span>
-								<span class="p-sec-step__number"><?php echo esc_html( $dairi_step_number ); ?></span>
-							</p>
-
-							<?php if ( '' !== $dairi_step_image ) : ?>
-								<div class="p-sec-step__image" aria-hidden="true">
-									<img src="<?php echo esc_url( theme_image_url( $dairi_step_image ) ); ?>" width="128" height="128" alt="" loading="lazy">
-								</div>
-							<?php endif; ?>
-
-							<div class="p-sec-step__content">
-								<h3 class="p-sec-step__card-title"><?php echo esc_html( $dairi_step_name ); ?></h3>
-								<?php if ( ! empty( $dairi_step_texts ) ) : ?>
-									<div class="p-sec-step__body">
-										<?php foreach ( $dairi_step_texts as $dairi_step_text ) : ?>
-											<p><?php echo esc_html( (string) $dairi_step_text ); ?></p>
-										<?php endforeach; ?>
-									</div>
-								<?php endif; ?>
-							</div>
-						</article>
-					</li>
-				<?php endif; ?>
-			<?php endforeach; ?>
-		</ol>
-	</div>
-</section>
 
 <?php
 get_template_part(

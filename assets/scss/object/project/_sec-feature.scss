@@ -48,7 +48,7 @@
     isolation: isolate;
     max-width: 360px;
     color: $color-white;
-    padding-top: 80px;
+    padding-top: 40px;
 
     &::before {
       position: absolute;
@@ -355,7 +355,7 @@
     position: absolute;
     z-index: 1;
     right: 120px;
-    bottom: -300px;
+    bottom: -320px;
     width: min(300px, 24vw);
     height: auto;
     pointer-events: none;

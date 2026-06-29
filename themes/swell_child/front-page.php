@@ -70,7 +70,7 @@ get_header();
 			</div>
 			<div class="p-sec-split__body">
 				<p>海洋散骨とは、お墓へ納骨する代わりに、ご遺骨を粉骨して海へ供養する自然葬の一つです。</p>
-				<p>ただ海に還すだけでなく、散骨した海をこれからも故人様を想う場所として残す、新しい供養のカタチ。</p>
+				<p>通常の供養とは違い、散骨した海をこれからも故人様を想う場所として残せる供養として選ばれています。</p>
 				<p>石垣島海洋散骨センターでは、海洋散骨が初めての方でも安心して故人様をお見送りできるよう、分かりやすく丁寧にサポートいたします。</p>
 			</div>
 		</div>
@@ -184,38 +184,38 @@ $items = array(
 	array(
 		'number' => '1',
 		'title'  => 'お問い合わせ',
-		'image'  => 'front-page/step/contact.png',
+		'image'  => 'illustrations/flow/step1-contact.png',
 		'alt'    => '電話とパソコンで相談する人のイラスト',
 	),
 	array(
 		'number' => '2',
-		'title'  => '申込み',
-		'image'  => 'front-page/step/contact.png',
-		'alt'    => '電話とパソコンで相談する人のイラスト',
+		'title'  => '申込み・送骨',
+		'image'  => 'illustrations/flow/step2-arrangement.png',
+		'alt'    => '送骨キットとご遺骨を納める箱のイラスト',
 	),
 	array(
 		'number' => '3',
-		'title'  => '粉骨',
-		'image'  => 'front-page/step/contact.png',
-		'alt'    => '電話とパソコンで相談する人のイラスト',
+		'title'  => '粉骨・安置',
+		'image'  => 'illustrations/flow/step3-custody.png',
+		'alt'    => 'ご遺骨を大切に預かるスタッフのイラスト',
 	),
 	array(
 		'number' => '4',
-		'title'  => '散骨',
-		'image'  => 'front-page/step/contact.png',
-		'alt'    => '電話とパソコンで相談する人のイラスト',
+		'title'  => '集合・散骨',
+		'image'  => 'illustrations/flow/step4-ceremony.png',
+		'alt'    => '献花と献酒のための花びら、徳利、杯のイラスト',
 	),
 	array(
 		'number' => '5',
-		'title'  => '証明書の発行',
-		'image'  => 'front-page/step/contact.png',
-		'alt'    => '電話とパソコンで相談する人のイラスト',
+		'title'  => '証明書発行',
+		'image'  => 'illustrations/flow/step5-certificate.png',
+		'alt'    => '封筒を添えた海洋散骨証明書のイラスト',
 	),
 	array(
 		'number' => '6',
-		'title'  => 'これからの再会',
-		'image'  => 'front-page/step/contact.png',
-		'alt'    => '電話とパソコンで相談する人のイラスト',
+		'title'  => 'いつかの再会',
+		'image'  => 'illustrations/flow/step6-reunion.png',
+		'alt'    => '石垣島の海を写した写真立てのイラスト',
 	),
 );
 ?>

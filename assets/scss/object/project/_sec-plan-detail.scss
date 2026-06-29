@@ -239,14 +239,9 @@
   }
 
   &__included-icon {
-    display: grid;
-    place-items: center;
-    width: 104px;
+    width: 120px;
+    height: 120px;
     aspect-ratio: 1;
-
-    @include bp("tb") {
-      width: 92px;
-    }
 
     img {
       display: block;
@@ -257,7 +252,7 @@
   }
 
   &__card-title {
-    margin: 36px 0 0;
+    margin: 28px 0 0;
     color: $color-main;
     font-family: $font-heading;
     font-size: 24px;
@@ -267,13 +262,9 @@
     text-align: center;
 
     @include bp("tb") {
-      margin-top: 32px;
-      font-size: 21px;
-      letter-spacing: 0.08em;
-    }
-
-    @include bp("sp-l") {
+      margin-top: 24px;
       font-size: 22px;
+      letter-spacing: 0.08em;
     }
   }
 
@@ -344,62 +335,37 @@
   &__option-card {
     display: grid;
     grid-template-columns: 72px minmax(0, 1fr);
-    gap: 20px;
+    gap: 24px;
     align-items: center;
     height: 100%;
     min-height: 176px;
-    padding: 1.25em 24px;
+    padding: 1.25em 20px;
     border: 1px solid rgba($color-main, 0.9);
     background-color: $color-white;
     font-size: 16px;
 
     @include bp("pc-s") {
       grid-template-columns: 60px minmax(0, 1fr);
-      gap: 16px;
+      gap: 20px;
       padding-inline: 16px;
     }
 
     @include bp("tb") {
       grid-template-columns: 64px minmax(0, 1fr);
-      gap: 16px;
       padding-inline: 16px;
     }
 
     @include bp("sp-l") {
       grid-template-columns: 72px minmax(0, 1fr);
-      gap: 16px;
       min-height: 0;
-      padding: 1em 16px;
-    }
-
-    @include bp("sp") {
-      grid-template-columns: 64px minmax(0, 1fr);
-      gap: 16px;
-      padding-inline: 16px;
+      padding: 20px 16px;
     }
   }
 
   &__option-icon {
-    display: grid;
-    place-items: center;
-    width: 72px;
+    width: 80px;
+    height: 80px;
     aspect-ratio: 1;
-
-    @include bp("pc-s") {
-      width: 60px;
-    }
-
-    @include bp("tb") {
-      width: 64px;
-    }
-
-    @include bp("sp-l") {
-      width: 72px;
-    }
-
-    @include bp("sp") {
-      width: 64px;
-    }
 
     img {
       display: block;
@@ -456,5 +422,8 @@
     font-weight: 500;
     line-height: 1.5;
     letter-spacing: 0.04em;
+    @include bp("tb") {
+      font-size: 16px;
+    }
   }
 }

@@ -22,8 +22,10 @@ const initColumnSlider = () => {
       slide.classList.add("splide__slide");
     });
 
+    const canLoop = slides.length > 3;
+
     const splide = new Splide(slider, {
-      type: "slide",
+      type: canLoop ? "loop" : "slide",
       arrows: false,
       pagination: slides.length > 1,
       autoplay: !prefersReducedMotion && slides.length > 1,
@@ -34,20 +36,17 @@ const initColumnSlider = () => {
       perPage: 3,
       perMove: 3,
       gap: "24px",
-      rewind: slides.length > 3,
       speed: prefersReducedMotion ? 0 : 500,
       breakpoints: {
         960: {
           perPage: 2,
           perMove: 2,
           gap: "20px",
-          rewind: slides.length > 2,
         },
         740: {
           perPage: 1,
           perMove: 1,
           gap: "16px",
-          rewind: slides.length > 1,
         },
       },
     });

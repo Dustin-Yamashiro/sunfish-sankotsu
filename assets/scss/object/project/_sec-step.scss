@@ -113,10 +113,10 @@
     position: relative;
     display: grid;
     grid-template-columns: 156px minmax(0, 1fr);
-    gap: 80px;
+    gap: 48px;
     align-items: center;
     min-height: 260px;
-    padding: 4.75em 80px 3.75em 64px;
+    padding: 4.5em 80px 3.75em 90px;
     background-color: $color-white;
     box-shadow: 0 12px 28px rgba(47, 95, 108, 0.12);
     color: $color-text;
@@ -170,7 +170,7 @@
   }
 
   &__image {
-    width: 156px;
+    width: 140px;
     aspect-ratio: 1;
 
     @include bp("tb") {
