@@ -1,6 +1,7 @@
 /*
 * セクションボタンコンポーネント
 */
+@use "../../foundation/mixin" as *;
 @use "../../foundation/variables" as *;
 
 .c-sec-btn {
@@ -12,7 +13,7 @@
   inline-size: 100%;
   max-width: 260px;
 
-  @media screen and (width <= 960px) {
+  @include bp("tb") {
     max-width: 200px;
   }
 
@@ -27,42 +28,8 @@
     --sec-btn-hover-color: #{$color-main};
   }
 
-  &.c-sec-btn--center > a,
-  &.c-sec-btn--center > button {
-    position: relative;
-    justify-content: center;
-    padding-inline: 44px;
-    text-align: center;
-  }
-
-  &--prev > a::before,
-  &--prev > button::before {
-    content: "←";
-    display: inline-block;
-    transition: transform $duration-base $ease-base;
-  }
-
-  &--next > a::after,
-  &--next > button::after {
-    content: "→";
-    display: inline-block;
-    transition: transform $duration-base $ease-base;
-  }
-
-  &.c-sec-btn--center.c-sec-btn--prev > a::before,
-  &.c-sec-btn--center.c-sec-btn--prev > button::before {
-    position: absolute;
-    left: 20px;
-  }
-
-  &.c-sec-btn--center.c-sec-btn--next > a::after,
-  &.c-sec-btn--center.c-sec-btn--next > button::after {
-    position: absolute;
-    right: 20px;
-  }
-
-  & > a,
-  & > button {
+  > a,
+  > button {
     display: inline-flex;
     align-items: center;
     justify-content: space-between;
@@ -70,7 +37,7 @@
     inline-size: 100%;
     min-height: 4px;
     padding-block: 0.625em;
-    padding-inline: 20px;
+    padding-inline: 1.25em;
     border: 1px solid var(--sec-btn-color);
     background-color: var(--sec-btn-bg);
     color: var(--sec-btn-color);
@@ -95,19 +62,67 @@
       outline: 2px solid rgba($color-main, 0.35);
       outline-offset: 4px;
     }
+
+    @include bp("sp-l") {
+      font-size: 15px;
+    }
   }
 
-  &--prev > a:hover::before,
-  &--prev > a:focus-visible::before,
-  &--prev > button:hover::before,
-  &--prev > button:focus-visible::before {
-    transform: translateX(-6px);
+  &.c-sec-btn--center {
+    > a,
+    > button {
+      position: relative;
+      justify-content: center;
+      padding-inline: 2.75em;
+      text-align: center;
+    }
   }
 
-  &--next > a:hover::after,
-  &--next > a:focus-visible::after,
-  &--next > button:hover::after,
-  &--next > button:focus-visible::after {
-    transform: translateX(6px);
+  &--prev {
+    > a,
+    > button {
+      &::before {
+        content: "←";
+        display: inline-block;
+        transition: transform $duration-base $ease-base;
+      }
+
+      &:hover::before,
+      &:focus-visible::before {
+        transform: translateX(-6px);
+      }
+    }
+  }
+
+  &--next {
+    > a,
+    > button {
+      &::after {
+        content: "→";
+        display: inline-block;
+        transition: transform $duration-base $ease-base;
+      }
+
+      &:hover::after,
+      &:focus-visible::after {
+        transform: translateX(6px);
+      }
+    }
+  }
+
+  &.c-sec-btn--center.c-sec-btn--prev {
+    > a::before,
+    > button::before {
+      position: absolute;
+      left: 20px;
+    }
+  }
+
+  &.c-sec-btn--center.c-sec-btn--next {
+    > a::after,
+    > button::after {
+      position: absolute;
+      right: 20px;
+    }
   }
 }
