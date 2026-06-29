@@ -414,6 +414,9 @@
     font-weight: 500;
     line-height: 1.7;
     letter-spacing: 0.04em;
+    @include bp("tb") {
+      font-size: 13px;
+    }
   }
 
   &__option-price {
