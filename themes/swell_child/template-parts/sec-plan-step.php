@@ -20,6 +20,7 @@ $sec_plan_step_items     = array(
 		'number' => '1',
 		'title'  => '相談・問い合わせ',
 		'image'  => 'illustrations/flow/step1-contact.png',
+		'alt'    => '電話とパソコンで相談する人のイラスト',
 		'texts'  => array(
 			'公式LINE、お電話、またはフォームよりお気軽にご連絡ください。',
 			'初めてで不安な点や、ご希望の日程・人数等を直接お伺いし、最適なプランをご提案します。',
@@ -29,6 +30,7 @@ $sec_plan_step_items     = array(
 		'number' => '2',
 		'title'  => 'お申し込み・粉骨手配',
 		'image'  => 'illustrations/flow/step2-arrangement.png',
+		'alt'    => '送骨キットとご遺骨を納める箱のイラスト',
 		'texts'  => array(
 			'お申し込み後、弊社提携の粉骨専門センターより「送骨キット」をお届けします。',
 			'ご遺族には、届いた送骨キットを使ってご遺骨を郵送していただきます。',
@@ -38,6 +40,7 @@ $sec_plan_step_items     = array(
 		'number' => '3',
 		'title'  => '粉骨・ご遺骨の安置',
 		'image'  => 'illustrations/flow/step3-custody.png',
+		'alt'    => 'ご遺骨を大切に預かるスタッフのイラスト',
 		'texts'  => array(
 			'ご遺骨が到着後、散骨に適した2mm以下のパウダー状に加工いたします。',
 			'粉骨されたご遺骨は弊社へ届けられ、実施当日まで責任を持って大切に安置・保管させていただきます。',
@@ -48,6 +51,7 @@ $sec_plan_step_items     = array(
 		'number' => '5',
 		'title'  => '帰港・散骨証明書の発行',
 		'image'  => 'illustrations/flow/step5-certificate.png',
+		'alt'    => '封筒を添えた海洋散骨証明書のイラスト',
 		'texts'  => array(
 			'セレモニー終了後、ゆっくりと旋回して別れを告げ、帰港します。',
 			'後日、散骨した正確な緯度経度を記載した「海洋散骨証明書」と、当日の記録写真・動画データを送付いたします。',
@@ -57,6 +61,7 @@ $sec_plan_step_items     = array(
 		'number' => '6',
 		'title'  => '再訪のご案内',
 		'image'  => 'illustrations/flow/step6-reunion.png',
+		'alt'    => '石垣島の海を写した写真立てのイラスト',
 		'texts'  => array(
 			'散骨は「お別れ」ではなく、新しい繋がりの始まりです。',
 			'数年後、数十年後も「会いにいこう」と、笑顔で石垣島の海を訪れていただけるよう、メモリアルクルーズのご相談も承ります。',
@@ -69,6 +74,7 @@ $sec_plan_step_items[3] = 'dairi' === $sec_plan_step_plan
 		'number' => '4',
 		'title'  => '選定・散骨セレモニー',
 		'image'  => 'illustrations/flow/step4-selection.png',
+		'alt'    => '海況を確認して散骨ポイントを選ぶ船長のイラスト',
 		'texts'  => array(
 			'ご遺族の立ち会いがないからこそ、海が穏やかな日を選定し、散骨ポイントへ出航します。',
 			'ポイント到着後は、船長がご遺族に代わり、献酒・散骨・献花でのお見送りを丁寧に行い、その様子を記録します。',
@@ -78,6 +84,7 @@ $sec_plan_step_items[3] = 'dairi' === $sec_plan_step_plan
 		'number' => '4',
 		'title'  => '港集合・散骨セレモニー',
 		'image'  => 'illustrations/flow/step4-ceremony.png',
+		'alt'    => '献花と献酒のための花びら、徳利、杯のイラスト',
 		'texts'  => array(
 			'自社所有の船が停泊する港に集合し、船長より流れをご説明した後、散骨ポイントへ出港します。',
 			'ポイント到着後、開式の辞と各セレモニーを行い、ご家族の手で故人様のご遺骨を海へお還ししていただきます。',
@@ -104,6 +111,7 @@ $sec_plan_step_items[3] = 'dairi' === $sec_plan_step_plan
 				$sec_plan_step_name   = ! empty( $sec_plan_step_item['title'] ) ? (string) $sec_plan_step_item['title'] : '';
 				$sec_plan_step_texts  = ! empty( $sec_plan_step_item['texts'] ) && is_array( $sec_plan_step_item['texts'] ) ? $sec_plan_step_item['texts'] : array();
 				$sec_plan_step_image  = ! empty( $sec_plan_step_item['image'] ) ? (string) $sec_plan_step_item['image'] : '';
+				$sec_plan_step_alt    = ! empty( $sec_plan_step_item['alt'] ) ? (string) $sec_plan_step_item['alt'] : '';
 				?>
 				<?php if ( '' !== $sec_plan_step_number && '' !== $sec_plan_step_name ) : ?>
 					<li class="p-sec-step__item u-fade-up">
@@ -114,8 +122,8 @@ $sec_plan_step_items[3] = 'dairi' === $sec_plan_step_plan
 							</p>
 
 							<?php if ( '' !== $sec_plan_step_image ) : ?>
-								<div class="p-sec-step__image" aria-hidden="true">
-									<img src="<?php echo esc_url( theme_image_url( $sec_plan_step_image ) ); ?>" width="128" height="128" alt="" loading="lazy">
+								<div class="p-sec-step__image">
+									<img src="<?php echo esc_url( theme_image_url( $sec_plan_step_image ) ); ?>" width="128" height="128" alt="<?php echo esc_attr( $sec_plan_step_alt ); ?>" loading="lazy">
 								</div>
 							<?php endif; ?>
 

@@ -69,7 +69,7 @@ $sec_news_query = new WP_Query( $sec_news_query_args );
 		</div>
 
 		<div class="p-sec-news__more c-sec-btn c-sec-btn--next">
-			<a href="<?php echo esc_url( home_url( '/news/' ) ); ?>">もっとみる</a>
+			<a href="<?php echo esc_url( home_url( '/news/' ) ); ?>">お知らせ一覧</a>
 		</div>
 	</div>
 </section>

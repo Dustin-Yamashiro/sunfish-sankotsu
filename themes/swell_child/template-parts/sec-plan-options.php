@@ -14,8 +14,8 @@
 	<ul class="p-sec-plan-detail__included-list">
 		<li class="p-sec-plan-detail__included-item">
 			<article class="p-sec-plan-detail__included-card">
-				<div class="p-sec-plan-detail__included-icon" aria-hidden="true">
-					<img src="<?php echo esc_url( theme_image_url( 'illustrations/options/flower.png' ) ); ?>" width="128" height="128" alt="" loading="lazy">
+				<div class="p-sec-plan-detail__included-icon">
+					<img src="<?php echo esc_url( theme_image_url( 'illustrations/options/flower.png' ) ); ?>" width="128" height="128" alt="献花用の花びらのイラスト" loading="lazy">
 				</div>
 				<h4 class="p-sec-plan-detail__card-title">献花用の花びら</h4>
 				<div class="p-sec-plan-detail__card-body">
@@ -27,8 +27,8 @@
 
 		<li class="p-sec-plan-detail__included-item">
 			<article class="p-sec-plan-detail__included-card">
-				<div class="p-sec-plan-detail__included-icon" aria-hidden="true">
-					<img src="<?php echo esc_url( theme_image_url( 'illustrations/options/sake.png' ) ); ?>" width="128" height="128" alt="" loading="lazy">
+				<div class="p-sec-plan-detail__included-icon">
+					<img src="<?php echo esc_url( theme_image_url( 'illustrations/options/sake.png' ) ); ?>" width="128" height="128" alt="献酒用の徳利と杯のイラスト" loading="lazy">
 				</div>
 				<h4 class="p-sec-plan-detail__card-title">献酒（地酒・日本酒）</h4>
 				<div class="p-sec-plan-detail__card-body">
@@ -40,8 +40,8 @@
 
 		<li class="p-sec-plan-detail__included-item">
 			<article class="p-sec-plan-detail__included-card">
-				<div class="p-sec-plan-detail__included-icon" aria-hidden="true">
-					<img src="<?php echo esc_url( theme_image_url( 'illustrations/options/materials.png' ) ); ?>" width="128" height="128" alt="" loading="lazy">
+				<div class="p-sec-plan-detail__included-icon">
+					<img src="<?php echo esc_url( theme_image_url( 'illustrations/options/materials.png' ) ); ?>" width="128" height="128" alt="散骨用資材のイラスト" loading="lazy">
 				</div>
 				<h4 class="p-sec-plan-detail__card-title">環境対応・散骨用資材</h4>
 				<div class="p-sec-plan-detail__card-body">
@@ -53,8 +53,8 @@
 
 		<li class="p-sec-plan-detail__included-item">
 			<article class="p-sec-plan-detail__included-card">
-				<div class="p-sec-plan-detail__included-icon" aria-hidden="true">
-					<img src="<?php echo esc_url( theme_image_url( 'illustrations/options/photo-video.png' ) ); ?>" width="128" height="128" alt="" loading="lazy">
+				<div class="p-sec-plan-detail__included-icon">
+					<img src="<?php echo esc_url( theme_image_url( 'illustrations/options/photo-video.png' ) ); ?>" width="128" height="128" alt="写真・動画撮影データのイラスト" loading="lazy">
 				</div>
 				<h4 class="p-sec-plan-detail__card-title">写真・動画撮影データ</h4>
 				<div class="p-sec-plan-detail__card-body">
@@ -66,8 +66,8 @@
 
 		<li class="p-sec-plan-detail__included-item">
 			<article class="p-sec-plan-detail__included-card">
-				<div class="p-sec-plan-detail__included-icon" aria-hidden="true">
-					<img src="<?php echo esc_url( theme_image_url( 'illustrations/options/shoumeisyo.png' ) ); ?>" width="128" height="128" alt="" loading="lazy">
+				<div class="p-sec-plan-detail__included-icon">
+					<img src="<?php echo esc_url( theme_image_url( 'illustrations/options/shoumeisyo.png' ) ); ?>" width="128" height="128" alt="海洋散骨証明書のイラスト" loading="lazy">
 				</div>
 				<h4 class="p-sec-plan-detail__card-title">海洋散骨証明書</h4>
 				<div class="p-sec-plan-detail__card-body">
@@ -85,8 +85,8 @@
 	<ul class="p-sec-plan-detail__option-list">
 		<li class="p-sec-plan-detail__option-item">
 			<article class="p-sec-plan-detail__option-card">
-				<div class="p-sec-plan-detail__option-icon" aria-hidden="true">
-					<img src="<?php echo esc_url( theme_image_url( 'illustrations/options/urn.png' ) ); ?>" width="128" height="128" alt="" loading="lazy">
+				<div class="p-sec-plan-detail__option-icon">
+					<img src="<?php echo esc_url( theme_image_url( 'illustrations/options/urn.png' ) ); ?>" width="128" height="128" alt="粉骨・洗浄パックのイラスト" loading="lazy">
 				</div>
 				<div class="p-sec-plan-detail__option-content">
 					<h4 class="p-sec-plan-detail__option-title">安心粉骨・洗浄パック</h4>
@@ -98,8 +98,8 @@
 
 		<li class="p-sec-plan-detail__option-item">
 			<article class="p-sec-plan-detail__option-card">
-				<div class="p-sec-plan-detail__option-icon" aria-hidden="true">
-					<img src="<?php echo esc_url( theme_image_url( 'illustrations/options/special-flower.png' ) ); ?>" width="128" height="128" alt="" loading="lazy">
+				<div class="p-sec-plan-detail__option-icon">
+					<img src="<?php echo esc_url( theme_image_url( 'illustrations/options/special-flower.png' ) ); ?>" width="128" height="128" alt="献花用の特別フラワーのイラスト" loading="lazy">
 				</div>
 				<div class="p-sec-plan-detail__option-content">
 					<h4 class="p-sec-plan-detail__option-title">献花用・特別フラワー</h4>
@@ -111,8 +111,8 @@
 
 		<li class="p-sec-plan-detail__option-item">
 			<article class="p-sec-plan-detail__option-card">
-				<div class="p-sec-plan-detail__option-icon" aria-hidden="true">
-					<img src="<?php echo esc_url( theme_image_url( 'illustrations/options/memorial-cruise.png' ) ); ?>" width="128" height="128" alt="" loading="lazy">
+				<div class="p-sec-plan-detail__option-icon">
+					<img src="<?php echo esc_url( theme_image_url( 'illustrations/options/memorial-cruise.png' ) ); ?>" width="128" height="128" alt="メモリアルクルーズのイラスト" loading="lazy">
 				</div>
 				<div class="p-sec-plan-detail__option-content">
 					<h4 class="p-sec-plan-detail__option-title">メモリアル・クルーズ</h4>

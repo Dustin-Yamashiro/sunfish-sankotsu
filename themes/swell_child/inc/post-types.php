@@ -20,16 +20,20 @@ function theme_register_faq_post_type() {
 				'add_new_item'  => 'よくある質問を追加',
 				'edit_item'     => 'よくある質問を編集',
 			),
-			'public'       => true,
-			'show_in_rest' => true,
-			'menu_position' => 20,
-			'menu_icon'    => 'dashicons-editor-help',
-			'has_archive'  => false,
-			'rewrite'      => array(
-				'slug'       => 'faq-item',
-				'with_front' => false,
-			),
-			'supports'     => array( 'title', 'editor', 'page-attributes' ),
+			'public'              => false,
+			'publicly_queryable'  => false,
+			'exclude_from_search' => true,
+			'show_ui'             => true,
+			'show_in_menu'        => true,
+			'show_in_admin_bar'   => true,
+			'show_in_nav_menus'   => false,
+			'show_in_rest'        => true,
+			'query_var'           => false,
+			'menu_position'       => 20,
+			'menu_icon'           => 'dashicons-editor-help',
+			'has_archive'         => false,
+			'rewrite'             => false,
+			'supports'            => array( 'title', 'editor', 'page-attributes' ),
 		)
 	);
 
@@ -43,18 +47,34 @@ function theme_register_faq_post_type() {
 				'add_new_item'  => 'FAQカテゴリーを追加',
 				'edit_item'     => 'FAQカテゴリーを編集',
 			),
-			'public'            => true,
+			'public'            => false,
 			'hierarchical'      => true,
+			'show_ui'           => true,
 			'show_admin_column' => true,
 			'show_in_rest'      => true,
-			'rewrite'           => array(
-				'slug'       => 'faq-category',
-				'with_front' => false,
-			),
+			'query_var'         => false,
+			'rewrite'           => false,
 		)
 	);
 }
 add_action( 'init', 'theme_register_faq_post_type' );
+
+/**
+ * Redirect legacy FAQ single URLs to the FAQ index.
+ */
+function theme_redirect_legacy_faq_item_urls() {
+	global $wp;
+
+	$request_path = isset( $wp->request ) ? trim( (string) $wp->request, '/' ) : '';
+
+	if ( 'faq-item' !== $request_path && 0 !== strpos( $request_path, 'faq-item/' ) ) {
+		return;
+	}
+
+	wp_safe_redirect( home_url( '/faq/' ), 301 );
+	exit;
+}
+add_action( 'template_redirect', 'theme_redirect_legacy_faq_item_urls', 1 );
 
 /**
  * Return FAQ items for accordion templates.
@@ -104,15 +124,126 @@ function theme_get_faq_items( $category_slug = '', $limit = 5 ) {
 }
 
 /**
+ * Return the shortened category archive path for news and column categories.
+ *
+ * @param WP_Term $term Category term.
+ * @return string
+ */
+function theme_get_news_column_category_path( $term ) {
+	if ( ! $term instanceof WP_Term || 'category' !== $term->taxonomy ) {
+		return '';
+	}
+
+	$ancestors = array_reverse( get_ancestors( $term->term_id, 'category' ) );
+	$terms     = array();
+
+	foreach ( $ancestors as $ancestor_id ) {
+		$ancestor = get_term( $ancestor_id, 'category' );
+		if ( $ancestor instanceof WP_Term ) {
+			$terms[] = $ancestor;
+		}
+	}
+
+	$terms[] = $term;
+
+	if ( empty( $terms[0] ) || ! in_array( $terms[0]->slug, array( 'news', 'column' ), true ) ) {
+		return '';
+	}
+
+	return implode(
+		'/',
+		array_map(
+			static function ( $path_term ) {
+				return $path_term->slug;
+			},
+			$terms
+		)
+	);
+}
+
+/**
  * Add short category archive URLs for news and column parent categories.
  */
 function theme_add_category_archive_rewrite_rules() {
-	add_rewrite_rule( '^news/?$', 'index.php?category_name=news', 'top' );
-	add_rewrite_rule( '^news/([^/]+)/?$', 'index.php?category_name=news/$matches[1]', 'top' );
-	add_rewrite_rule( '^column/?$', 'index.php?category_name=column', 'top' );
-	add_rewrite_rule( '^column/([^/]+)/?$', 'index.php?category_name=column/$matches[1]', 'top' );
+	foreach ( array( 'news', 'column' ) as $root_slug ) {
+		add_rewrite_rule(
+			'^' . $root_slug . '/?$',
+			'index.php?category_name=' . $root_slug,
+			'top'
+		);
+		add_rewrite_rule(
+			'^' . $root_slug . '/([0-9]+)/?$',
+			'index.php?category_name=' . $root_slug . '&paged=$matches[1]',
+			'top'
+		);
+		add_rewrite_rule(
+			'^' . $root_slug . '/(.+?)/([0-9]+)/?$',
+			'index.php?category_name=' . $root_slug . '/$matches[1]&paged=$matches[2]',
+			'top'
+		);
+		add_rewrite_rule(
+			'^' . $root_slug . '/([^/]+)/?$',
+			'index.php?category_name=' . $root_slug . '/$matches[1]',
+			'top'
+		);
+	}
 }
 add_action( 'init', 'theme_add_category_archive_rewrite_rules' );
+
+/**
+ * Use /column/2/ style pagination for shortened news and column archives.
+ *
+ * @param string $link Page number link.
+ * @param int    $pagenum Page number.
+ * @return string
+ */
+function theme_filter_news_column_pagenum_link( $link, $pagenum ) {
+	if ( ! is_category() ) {
+		return $link;
+	}
+
+	$path = theme_get_news_column_category_path( get_queried_object() );
+
+	if ( '' === $path ) {
+		return $link;
+	}
+
+	$pagenum = max( 1, (int) $pagenum );
+	$path    = 1 < $pagenum ? $path . '/' . $pagenum : $path;
+
+	return home_url( user_trailingslashit( $path ) );
+}
+add_filter( 'get_pagenum_link', 'theme_filter_news_column_pagenum_link', 10, 2 );
+
+/**
+ * Redirect /column/page/2/ style URLs to /column/2/.
+ */
+function theme_redirect_legacy_news_column_pagination_urls() {
+	global $wp;
+
+	$request_path = isset( $wp->request ) ? trim( (string) $wp->request, '/' ) : '';
+
+	if ( ! preg_match( '#^(news|column)(?:/(.+))?/page/([0-9]+)$#', $request_path, $matches ) ) {
+		return;
+	}
+
+	$root_slug     = $matches[1];
+	$category_path = isset( $matches[2] ) ? trim( $matches[2], '/' ) : '';
+	$page_number   = max( 1, (int) $matches[3] );
+	$target_path   = $root_slug;
+
+	if ( '' !== $category_path ) {
+		$target_path .= '/' . $category_path;
+	}
+
+	if ( 1 < $page_number ) {
+		$target_path .= '/' . $page_number;
+	}
+
+	wp_safe_redirect( home_url( user_trailingslashit( $target_path ) ), 301 );
+	exit;
+}
+add_action( 'template_redirect', 'theme_redirect_legacy_news_column_pagination_urls', 1 );
 
 /**
  * Prefer child categories in post permalinks.
@@ -169,31 +300,11 @@ function theme_filter_news_column_category_link( $termlink, $term, $taxonomy ) {
 		return $termlink;
 	}
 
-	$ancestors = array_reverse( get_ancestors( $term->term_id, 'category' ) );
-	$terms     = array();
+	$path = theme_get_news_column_category_path( $term );
 
-	foreach ( $ancestors as $ancestor_id ) {
-		$ancestor = get_term( $ancestor_id, 'category' );
-		if ( $ancestor instanceof WP_Term ) {
-			$terms[] = $ancestor;
-		}
-	}
-
-	$terms[] = $term;
-
-	if ( empty( $terms[0] ) || ! in_array( $terms[0]->slug, array( 'news', 'column' ), true ) ) {
+	if ( '' === $path ) {
 		return $termlink;
 	}
-
-	$path = implode(
-		'/',
-		array_map(
-			static function ( $path_term ) {
-				return $path_term->slug;
-			},
-			$terms
-		)
-	);
 
 	return home_url( user_trailingslashit( $path ) );
 }

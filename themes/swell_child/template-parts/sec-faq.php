@@ -33,7 +33,7 @@ $sec_faq_panel_base = 'sec-faq-' . $sec_faq_category;
 		</div>
 
 		<div class="p-sec-faq__more c-sec-btn c-sec-btn--next">
-			<a href="<?php echo esc_url( home_url( '/faq/' ) ); ?>">もっとみる</a>
+			<a href="<?php echo esc_url( home_url( '/faq/' ) ); ?>">よくある質問</a>
 		</div>
 	</div>
 </section>

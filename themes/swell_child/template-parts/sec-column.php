@@ -34,6 +34,8 @@ $sec_column_query = new WP_Query( $sec_column_query_args );
 		<div class="p-sec-column__slider splide js-column-slider" aria-label="海洋散骨コラム記事一覧">
 			<div class="splide__track">
 				<?php
+				ob_start();
+
 				SWELL_Theme::get_parts(
 					'parts/post_list/loop_sub',
 					array(
@@ -53,6 +55,24 @@ $sec_column_query = new WP_Query( $sec_column_query_args );
 						),
 					)
 				);
+
+				$sec_column_list_html = (string) ob_get_clean();
+
+				if ( class_exists( 'WP_HTML_Tag_Processor' ) ) {
+					$sec_column_html_processor = new WP_HTML_Tag_Processor( $sec_column_list_html );
+
+					while ( $sec_column_html_processor->next_tag( array( 'tag_name' => 'IMG' ) ) ) {
+						if ( ! $sec_column_html_processor->has_class( 'c-postThumb__img' ) ) {
+							continue;
+						}
+
+						$sec_column_html_processor->set_attribute( 'loading', 'lazy' );
+					}
+
+					$sec_column_list_html = $sec_column_html_processor->get_updated_html();
+				}
+
+				echo $sec_column_list_html; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 				?>
 			</div>
 		</div>
@@ -60,7 +80,7 @@ $sec_column_query = new WP_Query( $sec_column_query_args );
 
 	<div class="p-sec-column__more-wrap u-container">
 		<div class="p-sec-column__more c-sec-btn c-sec-btn--next">
-			<a href="<?php echo esc_url( home_url( '/column/' ) ); ?>">もっと見る</a>
+			<a href="<?php echo esc_url( home_url( '/column/' ) ); ?>">海洋散骨コラム</a>
 		</div>
 	</div>
 </section>

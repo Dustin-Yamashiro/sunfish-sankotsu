@@ -135,7 +135,7 @@ $footer_nav_columns = array(
 					<?php foreach ( $footer_contact_cards as $card ) : ?>
 						<a class="l-custom-footer-contact__card" href="<?php echo esc_url( $card['url'] ); ?>"<?php echo ! empty( $card['is_external'] ) ? ' target="_blank" rel="noopener noreferrer"' : ''; ?>>
 							<span class="l-custom-footer-contact__card-heading">
-								<img class="l-custom-footer-contact__card-icon" src="<?php echo esc_url( theme_image_url( $card['icon'] ) ); ?>" width="<?php echo esc_attr( $card['width'] ); ?>" height="<?php echo esc_attr( $card['height'] ); ?>" alt="" aria-hidden="true">
+								<img class="l-custom-footer-contact__card-icon" src="<?php echo esc_url( theme_image_url( $card['icon'] ) ); ?>" width="<?php echo esc_attr( $card['width'] ); ?>" height="<?php echo esc_attr( $card['height'] ); ?>" alt="" aria-hidden="true" loading="lazy">
 								<span class="l-custom-footer-contact__card-label"><?php echo esc_html( $card['label'] ); ?></span>
 							</span>
 							<span class="l-custom-footer-contact__card-text"><?php echo esc_html( $card['text'] ); ?></span>
@@ -150,7 +150,7 @@ $footer_nav_columns = array(
 		<div class="l-custom-footer__inner u-container u-pd-py-3">
 			<div class="l-custom-footer__company">
 				<a class="l-custom-footer__logo" href="<?php echo esc_url( home_url( '/' ) ); ?>" aria-label="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>">
-					<img src="<?php echo esc_url( theme_image_url( 'common/logo/logo-white.png' ) ); ?>" width="511" height="511" alt="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>">
+					<img src="<?php echo esc_url( theme_image_url( 'common/logo/logo-white.png' ) ); ?>" width="511" height="511" alt="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>" loading="lazy">
 				</a>
 				<address class="l-custom-footer__address">
 					<span>運営：合同会社サンフィッシュ</span>

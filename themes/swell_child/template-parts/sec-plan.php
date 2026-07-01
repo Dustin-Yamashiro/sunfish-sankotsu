@@ -36,7 +36,7 @@
 						<p>事前に伺ったご希望に沿って、船長が準備から進行まで担当し、故人様らしい海への旅立ちをお手伝いします。</p>
 					</div>
 					<div class="p-sec-plan__button c-sec-btn c-sec-btn--next c-sec-btn--white c-sec-btn--small">
-						<a href="<?php echo esc_url( home_url( '/kashikiri/' ) ); ?>">詳しくはこちら</a>
+						<a href="<?php echo esc_url( home_url( '/kashikiri/' ) ); ?>">貸切散骨プラン</a>
 					</div>
 				</div>
 			</div>
@@ -61,7 +61,7 @@
 						<p>大切なご遺骨をお預かりし、ご遺族の想いを受け止めながら、責任を持って石垣島の海へお見送りします。</p>
 					</div>
 					<div class="p-sec-plan__button c-sec-btn c-sec-btn--next c-sec-btn--white c-sec-btn--small">
-						<a href="<?php echo esc_url( home_url( '/dairi/' ) ); ?>">詳しくはこちら</a>
+						<a href="<?php echo esc_url( home_url( '/dairi/' ) ); ?>">代理散骨プラン</a>
 					</div>
 				</div>
 			</div>

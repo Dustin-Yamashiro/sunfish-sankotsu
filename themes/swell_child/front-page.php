@@ -240,7 +240,7 @@ $items = array(
 							<span class="p-sec-step-short__number"><?php echo esc_html( $item['number'] ); ?></span>
 						</p>
 						<div class="p-sec-step-short__icon">
-							<img src="<?php echo esc_url( theme_image_url( $item['image'] ) ); ?>" width="128" height="128" alt="<?php echo esc_attr( $item['alt'] ); ?>">
+							<img src="<?php echo esc_url( theme_image_url( $item['image'] ) ); ?>" width="128" height="128" alt="<?php echo esc_attr( $item['alt'] ); ?>" loading="lazy">
 						</div>
 						<h3 class="p-sec-step-short__name"><?php echo esc_html( $item['title'] ); ?></h3>
 					</article>
