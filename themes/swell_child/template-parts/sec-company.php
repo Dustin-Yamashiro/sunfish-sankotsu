@@ -52,7 +52,7 @@ if ( is_page( 'about' ) ) {
 					</div>
 					<div class="p-sec-company__item">
 						<dt class="p-sec-company__term">メールアドレス</dt>
-						<dd class="p-sec-company__description"><a href="mailto:info@ishigaki-sankotsu.com">info@ishigaki-sankotsu.com</a></dd>
+						<dd class="p-sec-company__description"><a href="mailto:sunfish.ishigaki@gmail.com">sunfish.ishigaki@gmail.com</a></dd>
 					</div>
 					<div class="p-sec-company__item">
 						<dt class="p-sec-company__term">保有船舶 / 提携マリーナ</dt>

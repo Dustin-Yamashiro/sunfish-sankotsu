@@ -72,7 +72,7 @@ get_template_part(
 						</div>
 						<?php if ( ! empty( $item['url'] ) ) : ?>
 							<div class="p-sec-business__button c-sec-btn c-sec-btn--next">
-								<a href="<?php echo esc_url( $item['url'] ); ?>" target="_blank" rel="noopener noreferrer"><?php echo esc_html( $item['title'] ); ?></a>
+								<a href="<?php echo esc_url( $item['url'] ); ?>" target="_blank" rel="noopener noreferrer">公式ページ</a>
 							</div>
 						<?php endif; ?>
 					</div>
