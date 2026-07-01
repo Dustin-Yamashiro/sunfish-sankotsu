@@ -11,6 +11,12 @@
   &__heading {
     position: relative;
     z-index: 2;
+
+    &.u-container {
+      @media screen and (740px < width <= 960px) {
+        width: min(100%, 520px);
+      }
+    }
   }
 
   &__list {

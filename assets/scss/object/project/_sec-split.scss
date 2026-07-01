@@ -17,6 +17,11 @@
     @include bp("tb") {
       grid-template-columns: 1fr;
     }
+
+    @media screen and (740px < width <= 960px) {
+      grid-template-columns: minmax(0, min(100%, 600px));
+      justify-content: center;
+    }
   }
 
   &__content {
