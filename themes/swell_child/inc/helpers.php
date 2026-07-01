@@ -61,12 +61,14 @@ if ( ! function_exists( 'theme_should_show_footer_contact' ) ) {
 	 * Whether the shared footer contact section should be displayed.
 	 *
 	 * Pages can opt out with a custom field named `hide_footer_contact`
-	 * set to `1`, `true`, or `yes`. The contact page is hidden by default.
+	 * set to `1`, `true`, or `yes`. Contact, completion, and 404 pages hide
+	 * this section by default to keep utility pages simple.
 	 *
 	 * @return bool
 	 */
 	function theme_should_show_footer_contact() {
-		$should_show = ! is_page( 'contact' );
+		$excluded_page_slugs = array( 'contact', 'thanks' );
+		$should_show         = ! is_page( $excluded_page_slugs ) && ! is_404();
 
 		if ( is_singular() ) {
 			$hide_footer_contact = get_post_meta( get_queried_object_id(), 'hide_footer_contact', true );
@@ -90,7 +92,7 @@ if ( ! function_exists( 'theme_should_show_floating_contact' ) ) {
 	 * @return bool
 	 */
 	function theme_should_show_floating_contact() {
-		$excluded_page_slugs = array( 'contact', 'terms', 'privacy-policy' );
+		$excluded_page_slugs = array( 'contact', 'thanks', 'terms', 'privacy-policy' );
 		$should_show         = is_front_page()
 			|| ( is_page() && ! is_page( $excluded_page_slugs ) )
 			|| is_home()
@@ -116,14 +118,15 @@ if ( ! function_exists( 'theme_uses_swell_content_shell' ) ) {
 	/**
 	 * Whether the current request should keep SWELL's standard content wrapper.
 	 *
-	 * Custom-designed pages use the child theme's `#primary.my-setting` wrapper.
-	 * Posts, archives, search, and 404 screens rely on SWELL templates and need
+	 * Custom-designed pages and 404 screens use the child theme's
+	 * `#primary.my-setting` wrapper. Posts, archives, and search screens rely
+	 * on SWELL templates and need
 	 * `#content.l-content.l-container` plus sidebar/breadcrumb handling.
 	 *
 	 * @return bool
 	 */
 	function theme_uses_swell_content_shell() {
-		$uses_swell_shell = ! is_front_page() && ! is_page();
+		$uses_swell_shell = ! is_front_page() && ! is_page() && ! is_404();
 
 		return (bool) apply_filters( 'theme_uses_swell_content_shell', $uses_swell_shell );
 	}

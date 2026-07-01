@@ -50,7 +50,7 @@ get_template_part(
 			</section>
 		</div>
 
-		<section class="l-contact__form-section" aria-labelledby="contact-form-title">
+		<section class="l-contact__form-section" aria-labelledby="contact-form-title" data-thanks-url="<?php echo esc_url( home_url( '/thanks/' ) ); ?>">
 			<h2 id="contact-form-title" class="l-contact__form-title">お問い合わせフォーム</h2>
 
 			<?php

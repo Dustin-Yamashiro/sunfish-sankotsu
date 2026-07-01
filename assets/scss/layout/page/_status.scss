@@ -1,0 +1,68 @@
+/*
+* 完了・404ページ
+*/
+@use "../../foundation/mixin" as *;
+@use "../../foundation/variables" as *;
+
+.l-status {
+  color: $color-text;
+  background-color: $color-white;
+
+  &__inner {
+    display: grid;
+    justify-items: center;
+    row-gap: 48px;
+    text-align: center;
+
+    @include bp("tb") {
+      width: min(90%, 760px);
+    }
+  }
+
+  &__title {
+    margin: 0;
+    color: $color-main;
+    font-family: $font-heading;
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 1.55;
+
+    @include bp("tb") {
+      font-size: 24px;
+    }
+
+    @include bp("sp-l") {
+      font-size: 23px;
+    }
+  }
+
+  &__lead {
+    width: min(100%, 760px);
+    display: grid;
+    gap: 12px;
+
+    @include bp("tb") {
+      text-align: left;
+    }
+
+    p {
+      margin: 0;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 2;
+
+      @include bp("tb") {
+        line-height: 1.9;
+      }
+    }
+  }
+
+  &__button.c-sec-btn {
+    max-width: 240px;
+
+    @include bp("sp-l") {
+      width: min(100%, 260px);
+      max-width: none;
+    }
+  }
+}
