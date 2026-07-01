@@ -5,6 +5,9 @@
 @use "../../foundation/variables" as *;
 
 .p-sec-feature {
+  --feature-sec-container-width: min(calc(100vw - 48px), 1200px);
+  --feature-sec-container-gutter: calc((100vw - var(--feature-sec-container-width)) / 2);
+
   position: relative;
   overflow-x: clip;
   overflow-y: visible;
@@ -54,8 +57,8 @@
       position: absolute;
       z-index: -1;
       top: -100px;
-      left: calc((100vw - min(100vw, 1200px)) / -2);
-      width: max(50vw, calc((100vw - 1200px) / 2 + 560px));
+      left: calc(var(--feature-sec-container-gutter) * -1);
+      width: max(50vw, calc(var(--feature-sec-container-gutter) + 560px));
       height: 140%;
       background-color: $color-main;
       content: "";
@@ -64,7 +67,7 @@
     @include bp("tb") {
       position: relative;
       top: auto;
-      max-width: 680px;
+      max-width: 600px;
       margin-inline: auto;
       padding: 80px 0 0;
       background-color: transparent;
@@ -143,8 +146,14 @@
     }
 
     @include bp("tb") {
+      --feature-sec-card-width: min(72vw, 520px);
+      --feature-sec-edge-space: max(
+        48px,
+        calc((100vw - var(--feature-sec-card-width)) / 2)
+      );
+
       width: auto;
-      margin: 80px calc(50% - 50vw) 0;
+      margin: 64px calc(50% - 50vw) 0;
       padding-inline: var(--feature-sec-edge-space);
       overflow-x: auto;
       overscroll-behavior-x: contain;
@@ -232,7 +241,7 @@
     padding: 32px 32px 32px;
 
     @include bp("tb") {
-      padding: 36px 40px 40px;
+      padding: 32px 36px 36px;
     }
 
     @include bp("sp-l") {
@@ -339,6 +348,10 @@
     @include bp("tb") {
       order: -1;
       min-height: 0;
+      aspect-ratio: 16 / 10;
+    }
+
+    @include bp("sp-l") {
       aspect-ratio: 3 / 2;
     }
 

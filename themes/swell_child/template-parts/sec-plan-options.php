@@ -90,7 +90,7 @@
 				</div>
 				<div class="p-sec-plan-detail__option-content">
 					<h4 class="p-sec-plan-detail__option-title">安心粉骨・洗浄パック</h4>
-					<p class="p-sec-plan-detail__option-text">提携専門業者による粉骨・六価クロム除去・洗浄。散骨に必須な工程をワンストップで代理。</p>
+					<p class="p-sec-plan-detail__option-text">提携専門業者による粉骨・六価クロム除去・洗浄。散骨に必須な工程をワンストップで行います。</p>
 					<p class="p-sec-plan-detail__option-price">税込 33,000円〜</p>
 				</div>
 			</article>

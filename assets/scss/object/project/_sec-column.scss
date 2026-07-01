@@ -12,10 +12,13 @@
     margin-top: 80px;
 
     @include bp("tb") {
+      width: min(100%, 760px);
       margin-top: 64px;
+      margin-inline: auto;
     }
 
     @include bp("sp-l") {
+      width: 90%;
       margin-top: 48px;
     }
   }

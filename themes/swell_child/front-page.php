@@ -252,7 +252,7 @@ $items = array(
 			<h4 class="p-sec-step-short__lead u-bg-wipe">初めての海洋散骨も、<br class="u-br--sp">一つずつ丁寧に対応します。</h4>
 			<div class="p-sec-step-short__body">
 				<p>海洋散骨が初めての方もご安心ください。</p>
-				<p>石垣島海洋散骨センターでは、<br class="u-br--sp">ご遺族様の不安やご希望を伺いながら、<br>最後までサポートします。</p>
+				<p>石垣島海洋散骨センターでは、<br class="u-br--sp">ご遺族の不安やご希望を伺いながら、<br>最後までサポートします。</p>
 			</div>
 		</div>
 	</div>

@@ -53,12 +53,12 @@ if ( is_string( $args ) && '' !== $args ) {
 					<div class="p-sec-values__content">
 						<div class="p-sec-values__head">
 							<p class="p-sec-values__number">02</p>
-							<h3 class="p-sec-values__card-title">初めてでも安心のプランと料金</h3>
+							<h3 class="p-sec-values__card-title">初めてでも安心のプラン内容</h3>
 						</div>
 
 						<div class="p-sec-values__body">
 							<p>石垣島海洋散骨センターでは、必要な準備や粉骨の流れ、当日の対応まで、初めての方にもわかりやすいよう、一つずつ丁寧にご説明します。</p>
-							<p>費用面でも自社船での直接対応により仲介料を抑え、追加料金なしの安心できる明瞭な価格でご案内しています。</p>
+							<p>費用面でも自社船での直接対応により仲介料を抑え、必要な費用が分かりやすい、安心できる明瞭な価格でご案内しています。</p>
 						</div>
 					</div>
 

@@ -194,6 +194,7 @@ $reason_items = array(
 				<dt class="p-sec-plan-detail__label">料金</dt>
 				<dd class="p-sec-plan-detail__value">
 					<p class="p-sec-plan-detail__text p-sec-plan-detail__text--lead">132,000円 〜</p>
+					<p class="p-sec-plan-detail__text p-sec-plan-detail__text--note">※粉骨加工費用は別途33,000円〜となります。</p>
 				</dd>
 			</div>
 

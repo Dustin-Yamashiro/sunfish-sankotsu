@@ -72,15 +72,17 @@
     list-style: none;
 
     @include bp("tb") {
-      --step-circle-size: clamp(140px, 18vw, 164px);
+      --step-circle-size: clamp(132px, 17vw, 152px);
       --step-row-gap: 56px;
-      --step-col-gap: 40px;
+      --step-col-gap: 48px;
       --step-label-icon-gap: 24px;
       --step-label-size: 13px;
       --step-number-size: 28px;
       --step-arrow-width: 18px;
       --step-arrow-half-height: 14px;
 
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      max-width: 560px;
       margin-top: 48px;
     }
 
@@ -93,6 +95,7 @@
       --step-arrow-half-height: 10px;
 
       grid-template-columns: repeat(2, minmax(0, 1fr));
+      max-width: 920px;
       margin-top: 48px;
     }
   }
@@ -118,13 +121,13 @@
     }
 
     &:nth-child(3)::after {
-      @media screen and (width > 740px) {
+      @media screen and (width > 960px) {
         content: none;
       }
     }
 
     &:nth-child(2n)::after {
-      @include bp("sp-l") {
+      @include bp("tb") {
         content: none;
       }
     }
@@ -228,11 +231,14 @@
     letter-spacing: 0.08em;
 
     @include bp("tb") {
-      width: 100%;
-      max-width: 100%;
+      width: fit-content;
+      max-width: min(100%, 640px);
+      padding-inline: 28px;
     }
 
     @include bp("sp-l") {
+      width: 100%;
+      max-width: 100%;
       padding: 12px 16px;
       font-size: 16px;
     }
@@ -251,10 +257,11 @@
 
     @include bp("tb") {
       width: 100%;
-      max-width: 100%;
+      max-width: 640px;
     }
 
     @include bp("sp-l") {
+      max-width: 100%;
       line-height: 1.9;
       letter-spacing: 0.04em;
     }

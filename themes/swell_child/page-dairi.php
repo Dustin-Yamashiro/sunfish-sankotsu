@@ -61,7 +61,7 @@ $reason_items = array(
 	array(
 		'image' => 'illustrations/appeal/dairi/reason3.png',
 		'alt'   => '石垣島の海に浮かぶ散骨用の船',
-		'text'  => '故人様を家族だけで<br>供養したい',
+		'text'  => '故人様を家族だけで<br>静かに供養したい',
 	),
 );
 ?>
@@ -217,14 +217,6 @@ $reason_items = array(
 				<dt class="p-sec-plan-detail__label">支払い方法</dt>
 				<dd class="p-sec-plan-detail__value">
 					<p class="p-sec-plan-detail__text p-sec-plan-detail__text--lead">事前決済：銀行振込 / クレジットカード</p>
-				</dd>
-			</div>
-
-			<div class="p-sec-plan-detail__row">
-				<dt class="p-sec-plan-detail__label">天候不良時の対応</dt>
-				<dd class="p-sec-plan-detail__value">
-					<p class="p-sec-plan-detail__text"><strong>【弊社判断による中止の場合：キャンセル料無料】</strong></p>
-					<p class="p-sec-plan-detail__text">前日18:00までに海況を判断しご連絡します。滞在中の別日程への振替、または代理散骨への切り替え（差額返金）、全額返金のいずれかを選択いただけます。</p>
 				</dd>
 			</div>
 

@@ -38,6 +38,12 @@
 
     @include bp("tb") {
       order: 2;
+      width: min(100%, 560px);
+      margin-inline: auto;
+    }
+
+    @include bp("sp-l") {
+      width: 100%;
     }
 
     img {

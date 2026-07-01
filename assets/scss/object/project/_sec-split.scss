@@ -27,7 +27,7 @@
     @include bp("tb") {
       grid-row: auto;
       order: 1;
-      max-width: 640px;
+      max-width: 600px;
       margin-inline: auto;
     }
   }
@@ -69,7 +69,7 @@
       grid-column: 1;
       grid-row: auto;
       order: 2;
-      width: min(100%, 640px);
+      width: min(100%, 560px);
       max-width: none;
       margin: 56px auto 0;
     }
@@ -102,7 +102,7 @@
       }
 
       @include bp("tb") {
-        width: min(48%, 268px);
+        width: min(44%, 240px);
       }
     }
 
@@ -118,8 +118,8 @@
       }
 
       @include bp("tb") {
-        width: calc(100% - 40px);
-        margin-top: -40px;
+        width: calc(100% - 32px);
+        margin-top: -32px;
       }
 
       @include bp("sp-l") {

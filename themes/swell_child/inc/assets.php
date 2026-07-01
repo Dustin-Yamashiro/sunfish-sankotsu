@@ -248,7 +248,7 @@ function theme_script_loader_tag( $tag, $handle, $src ) {
 add_filter( 'script_loader_tag', 'theme_script_loader_tag', 10, 3 );
 
 /**
- * Register optional third-party assets without loading them by default.
+ * Register third-party assets used by the project.
  */
 function theme_register_vendor_assets() {
 	wp_register_style(
@@ -262,27 +262,6 @@ function theme_register_vendor_assets() {
 		'https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js',
 		array(),
 		'4.1.4',
-		array( 'strategy' => 'defer' )
-	);
-	wp_register_script(
-		'splide-auto-scroll',
-		'https://cdn.jsdelivr.net/npm/@splidejs/splide-extension-auto-scroll@0.5.3/dist/js/splide-extension-auto-scroll.min.js',
-		array( 'splide' ),
-		'0.5.3',
-		array( 'strategy' => 'defer' )
-	);
-	wp_register_script(
-		'gsap',
-		'https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js',
-		array(),
-		'3.13.0',
-		array( 'strategy' => 'defer' )
-	);
-	wp_register_script(
-		'gsap-scrolltrigger',
-		'https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js',
-		array( 'gsap' ),
-		'3.13.0',
 		array( 'strategy' => 'defer' )
 	);
 }
@@ -302,20 +281,13 @@ function theme_enqueue_fonts() {
 add_action( 'wp_enqueue_scripts', 'theme_enqueue_fonts', 10 );
 
 /**
- * Enqueue assets used only on the front page.
+ * Enqueue third-party assets used by site scripts.
  */
-function theme_enqueue_front_page_assets() {
-	if ( ! is_front_page() ) {
-		return;
-	}
-
+function theme_enqueue_vendor_assets() {
 	wp_enqueue_style( 'splide' );
 	wp_enqueue_script( 'splide' );
-	wp_enqueue_script( 'splide-auto-scroll' );
-	wp_enqueue_script( 'gsap' );
-	wp_enqueue_script( 'gsap-scrolltrigger' );
 }
-add_action( 'wp_enqueue_scripts', 'theme_enqueue_front_page_assets', 15 );
+add_action( 'wp_enqueue_scripts', 'theme_enqueue_vendor_assets', 15 );
 
 /**
  * Enqueue one Vite manifest entry.

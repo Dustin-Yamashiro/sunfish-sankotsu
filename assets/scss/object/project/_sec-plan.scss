@@ -25,7 +25,17 @@
     }
 
     @include bp("tb") {
+      grid-template-columns: 1fr;
       gap: 48px;
+      width: min(100%, 480px);
+      margin: 48px auto 0;
+    }
+
+    @include bp("sp-l") {
+      grid-template-columns: 1fr;
+      gap: 48px;
+      width: auto;
+      margin-inline: 0;
       margin-top: 48px;
     }
   }
@@ -35,16 +45,17 @@
     min-width: 0;
 
     @include bp("tb") {
-      --plan-panel-padding: 48px 48px 64px;
+      --plan-panel-padding: 40px 40px 56px;
       display: grid;
-      width: 100%;
-      max-width: 480px;
+      width: min(100%, 520px);
+      max-width: 520px;
       min-height: 0;
       margin-inline: auto;
     }
 
     @include bp("sp-l") {
       --plan-panel-padding: 36px 28px 48px;
+      width: 100%;
       max-width: none;
     }
 
@@ -124,6 +135,10 @@
   &__content {
     display: grid;
     gap: 36px;
+
+    @include bp("tb") {
+      gap: 28px;
+    }
   }
 
   &__summary {

@@ -25,12 +25,13 @@
 
     @include bp("tb") {
       gap: 48px;
-      max-width: 760px;
+      max-width: 560px;
       margin: 48px auto 0;
     }
 
     @include bp("sp-l") {
       gap: 40px;
+      max-width: 760px;
     }
   }
 
@@ -41,7 +42,7 @@
 
   &__card {
     display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(344px, 448px);
+    grid-template-columns: minmax(0, 1fr) minmax(344px, 420px);
     align-items: stretch;
     width: 100%;
     height: 100%;
@@ -50,7 +51,7 @@
     box-shadow: 0 10px 24px rgba(48, 95, 108, 0.14);
 
     @include bp("pc-s") {
-      grid-template-columns: minmax(0, 1fr) minmax(320px, 408px);
+      grid-template-columns: minmax(0, 1fr) minmax(320px, 400px);
     }
 
     @include bp("tb") {
@@ -188,6 +189,10 @@
       order: -1;
       height: auto;
       min-height: 0;
+      aspect-ratio: 16 / 10;
+    }
+
+    @include bp("sp-l") {
       aspect-ratio: 3 / 2;
     }
 

@@ -17,6 +17,7 @@
     @include bp("tb") {
       --faq-accordion-gap: 24px;
 
+      max-width: 680px;
       margin-top: 64px;
     }
 

@@ -156,7 +156,7 @@ $footer_nav_columns = array(
 					<span>運営：合同会社サンフィッシュ</span>
 					<span>URL：<a href="https://isigakijima-diving.com/" target="_blank" rel="noopener noreferrer">https://isigakijima-diving.com/</a></span>
 					<span>〒907-0002 沖縄県石垣市真栄里393-32</span>
-					<span><a href="tel:050-5799-0684">TEL：050-5799-0684</a></span>
+					<span><a href="tel:05057990684">TEL：050-5799-0684</a></span>
 				</address>
 			</div>
 
